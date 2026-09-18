@@ -1,0 +1,11 @@
+DOCUMENT (Turkish):
+{text}
+
+Named persons in this document: {persons}
+
+For EACH claim below, decide whether the document attributes the value to the named person (attributed = true) or not (false: it belongs to someone else, or is not attributed). Quote the shortest evidence phrase (empty if false).
+
+CLAIMS:
+{claims}
+
+Answer with one JSON object: {{"checks": [{{"index": <int>, "attributed": <bool>, "evidence": "<quote>"}}, ...]}} — one per claim, in order.

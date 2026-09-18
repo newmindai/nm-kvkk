@@ -1,0 +1,381 @@
+{
+ "_convention": "Her ilişki adı, gold yönünün TAIL argümanını adlandıran kısa bir Türkçe isim tamlamasıdır. Varsayılan şablon '<head özelliği> sahibi' (aidiyet bağları, ~75 tip). Sahiplik olmayan bağlarda aynı dilbilgisel şekil korunur, yalnız rol adı değişir: '<rolü> olduğu <tail türü>' (kişi-kişi ve parça-bütün bağları: 'babası olduğu kişi' = head, tail kişinin babasıdır), '<head> kullanıcısı' (kullanım bağları), '<head> muhatabı' (hukuki teslim bağları), sıfat-fiil + kişi ('tanı konulan kişi', tıbbi/izleme bağları). Adlar küçük harf; özel adlar (IP, SIM, MERSİS, Medula, UETS, Yupass, MRZ) büyük harfini korur. Açıklamalar gold head->tail yönünde, head özne olacak şekilde yazılmıştır; hiçbir yön çevrilmemiştir.",
+ "_notes": {
+  "prescribed_by": "'reçeteyi yazan doktor': head doktor diploma numarası, tail reçeteyi yazan doktordur; 'sahibi' kalıbı reçete nüansını kaybederdi.",
+  "tax_office_of": "'vergi dairesi mükellefi': mükellef, vergi dairesine kayıtlı kişinin kanonik vergi terimidir.",
+  "part_of_address": "Açıklama e07'deki gerçek head'leri de kapsar (posta kodu, ilçe, şehir); İngilizce açıklamadaki 'street line' v2 mirasıdır, yön aynıdır.",
+  "phone_of|email_of": "Ad baskın head ile kısa tutuldu ('telefon numarası sahibi', 'e-posta adresi sahibi'); açıklama faks/KEP'i açıkça sayar (anlam daralması yok).",
+  "iban_of|account_of": "'banka hesabı sahibi' (IBAN + hesap numarası head'lerini kapsar) ile 'kullanıcı hesabı sahibi' (kullanıcı adı + sosyal medya hesabı) bilinçli olarak ayrıştırıldı.",
+  "child_of|father_of|mother_of": "'X olduğu kişi' kalıbı yönü korur: father_of(A,B) = A, B'nin babasıdır -> ad tail'i (çocuğu değil, babası head olan kişiyi) adlandırır; child_of ile karışma yoktur.",
+  "entity_collision_check": "92 ilişki adının hiçbiri 103 Türkçe varlık etiketiyle birebir çakışmaz; varlık etiketini içeren adlar her zaman rol ekiyle ayrışır ('kimlik numarası' -> 'kimlik numarası sahibi')."
+ },
+ "account_of": {
+  "tr": "kullanıcı hesabı sahibi",
+  "desc_tr": ""
+ },
+ "advertising_id_of": {
+  "tr": "reklam kimliği sahibi",
+  "desc_tr": ""
+ },
+ "age_of": {
+  "tr": "yaş bilgisi sahibi",
+  "desc_tr": ""
+ },
+ "bank_of_account": {
+  "tr": "bankası olduğu hesap",
+  "desc_tr": ""
+ },
+ "bar_registry_of": {
+  "tr": "baro sicil numarası sahibi",
+  "desc_tr": ""
+ },
+ "biometric_of": {
+  "tr": "biyometrik veri sahibi",
+  "desc_tr": ""
+ },
+ "blood_type_of": {
+  "tr": "kan grubu sahibi",
+  "desc_tr": ""
+ },
+ "card_component_of": {
+  "tr": "parçası olduğu kart",
+  "desc_tr": ""
+ },
+ "card_of": {
+  "tr": "kart sahibi",
+  "desc_tr": ""
+ },
+ "child_of": {
+  "tr": "çocuğu olduğu kişi",
+  "desc_tr": ""
+ },
+ "civil_registry_of": {
+  "tr": "nüfus kaydı sahibi",
+  "desc_tr": ""
+ },
+ "company_tax_of": {
+  "tr": "şirket vergi numarası sahibi",
+  "desc_tr": ""
+ },
+ "cookie_of": {
+  "tr": "çerezle izlenen kişi",
+  "desc_tr": ""
+ },
+ "coordinates_of": {
+  "tr": "konum verisi sahibi",
+  "desc_tr": ""
+ },
+ "credential_of": {
+  "tr": "giriş bilgisi sahibi",
+  "desc_tr": ""
+ },
+ "credit_score_of": {
+  "tr": "kredi notu sahibi",
+  "desc_tr": ""
+ },
+ "crypto_wallet_of": {
+  "tr": "kripto cüzdanı sahibi",
+  "desc_tr": ""
+ },
+ "customer_number_of": {
+  "tr": "müşteri numarası sahibi",
+  "desc_tr": ""
+ },
+ "date_of_birth_of": {
+  "tr": "doğum tarihi sahibi",
+  "desc_tr": ""
+ },
+ "device_used_by": {
+  "tr": "cihaz kullanıcısı",
+  "desc_tr": ""
+ },
+ "diagnosis_of": {
+  "tr": "tanı konulan kişi",
+  "desc_tr": ""
+ },
+ "disciplinary_of": {
+  "tr": "disiplin kaydı sahibi",
+  "desc_tr": ""
+ },
+ "drivers_license_of": {
+  "tr": "ehliyet sahibi",
+  "desc_tr": ""
+ },
+ "education_of": {
+  "tr": "eğitim bilgisi sahibi",
+  "desc_tr": ""
+ },
+ "email_of": {
+  "tr": "e-posta adresi sahibi",
+  "desc_tr": ""
+ },
+ "emergency_contact_of": {
+  "tr": "acil durum irtibatı olduğu kişi",
+  "desc_tr": ""
+ },
+ "employee_id_of": {
+  "tr": "personel numarası sahibi",
+  "desc_tr": ""
+ },
+ "employer_of": {
+  "tr": "işvereni olduğu kişi",
+  "desc_tr": ""
+ },
+ "eprescription_of": {
+  "tr": "e-reçete sahibi",
+  "desc_tr": ""
+ },
+ "expert_registry_of": {
+  "tr": "bilirkişi sicil numarası sahibi",
+  "desc_tr": ""
+ },
+ "father_of": {
+  "tr": "babası olduğu kişi",
+  "desc_tr": ""
+ },
+ "former_surname_of": {
+  "tr": "önceki soyadı sahibi",
+  "desc_tr": ""
+ },
+ "gender_of": {
+  "tr": "cinsiyet bilgisi sahibi",
+  "desc_tr": ""
+ },
+ "genetic_of": {
+  "tr": "genetik veri sahibi",
+  "desc_tr": ""
+ },
+ "health_file_of": {
+  "tr": "sağlık dosyası sahibi",
+  "desc_tr": ""
+ },
+ "iban_of": {
+  "tr": "banka hesabı sahibi",
+  "desc_tr": ""
+ },
+ "id_serial_of": {
+  "tr": "kimlik seri numarası sahibi",
+  "desc_tr": ""
+ },
+ "initials_of": {
+  "tr": "isim baş harfleri sahibi",
+  "desc_tr": ""
+ },
+ "insurance_policy_of": {
+  "tr": "sigorta poliçesi sahibi",
+  "desc_tr": ""
+ },
+ "invoice_recipient": {
+  "tr": "fatura muhatabı",
+  "desc_tr": ""
+ },
+ "ip_used_by": {
+  "tr": "IP adresi kullanıcısı",
+  "desc_tr": ""
+ },
+ "judiciary_registry_of": {
+  "tr": "hakim savcı sicil numarası sahibi",
+  "desc_tr": ""
+ },
+ "located_at": {
+  "tr": "konumda bulunan kişi",
+  "desc_tr": ""
+ },
+ "loyalty_card_of": {
+  "tr": "sadakat kartı sahibi",
+  "desc_tr": ""
+ },
+ "marital_status_of": {
+  "tr": "medeni durum bilgisi sahibi",
+  "desc_tr": ""
+ },
+ "medication_of": {
+  "tr": "ilacı kullanan kişi",
+  "desc_tr": ""
+ },
+ "medula_of": {
+  "tr": "Medula takip numarası sahibi",
+  "desc_tr": ""
+ },
+ "member_of": {
+  "tr": "üyesi olduğu kuruluş",
+  "desc_tr": ""
+ },
+ "mersis_of": {
+  "tr": "MERSİS numarası sahibi",
+  "desc_tr": ""
+ },
+ "mother_of": {
+  "tr": "annesi olduğu kişi",
+  "desc_tr": ""
+ },
+ "mothers_maiden_name_of": {
+  "tr": "anne kızlık soyadı sahibi",
+  "desc_tr": ""
+ },
+ "mrz_of": {
+  "tr": "pasaport MRZ kodu sahibi",
+  "desc_tr": ""
+ },
+ "national_id_of": {
+  "tr": "kimlik numarası sahibi",
+  "desc_tr": ""
+ },
+ "nationality_of": {
+  "tr": "uyruk bilgisi sahibi",
+  "desc_tr": ""
+ },
+ "notary_act_of": {
+  "tr": "noter kaydı sahibi",
+  "desc_tr": ""
+ },
+ "notified_via": {
+  "tr": "tebligat muhatabı",
+  "desc_tr": ""
+ },
+ "order_of": {
+  "tr": "sipariş sahibi",
+  "desc_tr": ""
+ },
+ "part_of_address": {
+  "tr": "parçası olduğu adres",
+  "desc_tr": ""
+ },
+ "part_of_name": {
+  "tr": "parçası olduğu ad soyad",
+  "desc_tr": ""
+ },
+ "party_in_case": {
+  "tr": "tarafı olduğu dosya",
+  "desc_tr": ""
+ },
+ "passport_of": {
+  "tr": "pasaport sahibi",
+  "desc_tr": ""
+ },
+ "phone_of": {
+  "tr": "telefon numarası sahibi",
+  "desc_tr": ""
+ },
+ "place_of_birth_of": {
+  "tr": "doğum yeri sahibi",
+  "desc_tr": ""
+ },
+ "political_view_of": {
+  "tr": "siyasi görüş sahibi",
+  "desc_tr": ""
+ },
+ "position_of": {
+  "tr": "iş unvanı sahibi",
+  "desc_tr": ""
+ },
+ "prescribed_by": {
+  "tr": "reçeteyi yazan doktor",
+  "desc_tr": ""
+ },
+ "profile_url_of": {
+  "tr": "profil bağlantısı sahibi",
+  "desc_tr": ""
+ },
+ "property_of": {
+  "tr": "taşınmaz sahibi",
+  "desc_tr": ""
+ },
+ "provision_of": {
+  "tr": "provizyon numarası sahibi",
+  "desc_tr": ""
+ },
+ "relative_of": {
+  "tr": "akrabası olduğu kişi",
+  "desc_tr": ""
+ },
+ "residence_of": {
+  "tr": "ikamet adresi sahibi",
+  "desc_tr": ""
+ },
+ "risk_report_of": {
+  "tr": "risk raporu sahibi",
+  "desc_tr": ""
+ },
+ "salary_of": {
+  "tr": "maaş bilgisi sahibi",
+  "desc_tr": ""
+ },
+ "shipment_of": {
+  "tr": "gönderi sahibi",
+  "desc_tr": ""
+ },
+ "signature_of": {
+  "tr": "imza sahibi",
+  "desc_tr": ""
+ },
+ "sim_of": {
+  "tr": "SIM kartı sahibi",
+  "desc_tr": ""
+ },
+ "social_security_of": {
+  "tr": "sosyal güvenlik numarası sahibi",
+  "desc_tr": ""
+ },
+ "spouse_of": {
+  "tr": "eşi olduğu kişi",
+  "desc_tr": ""
+ },
+ "student_number_of": {
+  "tr": "öğrenci numarası sahibi",
+  "desc_tr": ""
+ },
+ "subscription_of": {
+  "tr": "abonelik sahibi",
+  "desc_tr": ""
+ },
+ "tax_id_of": {
+  "tr": "vergi kimlik numarası sahibi",
+  "desc_tr": ""
+ },
+ "tax_office_of": {
+  "tr": "vergi dairesi mükellefi",
+  "desc_tr": ""
+ },
+ "trade_registry_of": {
+  "tr": "ticaret sicil numarası sahibi",
+  "desc_tr": ""
+ },
+ "treatment_of": {
+  "tr": "tedavi uygulanan kişi",
+  "desc_tr": ""
+ },
+ "uets_of": {
+  "tr": "UETS adresi sahibi",
+  "desc_tr": ""
+ },
+ "vehicle_plate_of": {
+  "tr": "araç plakası sahibi",
+  "desc_tr": ""
+ },
+ "vehicle_registration_of": {
+  "tr": "araç tescil belgesi sahibi",
+  "desc_tr": ""
+ },
+ "vehicle_vin_of": {
+  "tr": "şasi numarası sahibi",
+  "desc_tr": ""
+ },
+ "voice_of": {
+  "tr": "ses kaydı sahibi",
+  "desc_tr": ""
+ },
+ "work_history_of": {
+  "tr": "iş geçmişi sahibi",
+  "desc_tr": ""
+ },
+ "workplace_of": {
+  "tr": "işyerinde çalışan kişi",
+  "desc_tr": ""
+ },
+ "yupass_of": {
+  "tr": "Yupass numarası sahibi",
+  "desc_tr": ""
+ },
+ "_comment_nodesc": "Same relation names as e07/relation_mapping_tr.json with EMPTY descriptions = the bare-name prompt (schema.relations skips empty descriptions). The e07 training records carried relation NAMES only, so this is the in-distribution prompt shape for rele07tr."
+}

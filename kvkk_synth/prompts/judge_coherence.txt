@@ -1,0 +1,12 @@
+You are a Turkish-speaking reviewer of synthetic documents used as training data.
+Document type: "{{ document_type }}" (domain: {{ domain }}).
+
+DOCUMENT:
+{{ text }}
+
+Judge only COHERENCE / PLAUSIBILITY: would a Turkish reader find this a plausible document of
+its stated type, with every piece of personal information having a natural reason to be there?
+Score 1 (facts forced into a document type that would never contain them, self-justifying
+disclaimers, contradictions) to 5 (every fact belongs naturally). Set plausible_host=false when
+at least one category of personal data has no legitimate reason to appear in this document
+type. List the forced facts as short Turkish phrases (empty if none). One-sentence reason.

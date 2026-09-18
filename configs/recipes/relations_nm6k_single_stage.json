@@ -1,0 +1,28 @@
+{
+  "run_name": "relations_nm6k_single_stage",
+  "seed": 42,
+  "model": {
+    "from_pretrained": "models/kvkk-champion"
+  },
+  "training": {
+    "num_epochs": 10000,
+    "batch_size": 4,
+    "gradient_accumulation_steps": 1,
+    "encoder_lr": 1e-05,
+    "task_lr": 0.0005,
+    "warmup_steps": 20,
+    "scheduler_type": "constant",
+    "fp16": false,
+    "bf16": true,
+    "eval_strategy": "steps",
+    "eval_steps": 2000,
+    "save_total_limit": 0,
+    "save_best": false,
+    "logging_steps": 10,
+    "num_workers": 0,
+    "pin_memory": false,
+    "validate_data": true,
+    "report_to_wandb": false
+  },
+  "_comment": "Single-stage nm6k arm (registry: nm6ktr-5178_gliner25-kvkk_1gpu): the e07tr recipe on the 6x larger nm-kvkk-pii-6K set, 13,000 steps = 10 epochs, checkpoint every 2,000 at zero eval cost (eval_strategy=steps with no eval set; save_total_limit=0 keeps them all). In-distribution 97.9 / 74.5 but OVERFITS THE GENERATOR: real-document entity F1 falls 76.8 (step 2,000) -> 67.8 (step 13,000). Prefer the curriculum recipe with early stopping."
+}

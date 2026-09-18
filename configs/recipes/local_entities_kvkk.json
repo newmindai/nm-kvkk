@@ -1,0 +1,38 @@
+{
+  "run_name": "local_entities_kvkk",
+  "seed": 42,
+  "model": {
+    "from_pretrained": "models/gliner2.5-multi-v1"
+  },
+  "training": {
+    "max_steps": 3000,
+    "batch_size": 4,
+    "gradient_accumulation_steps": 8,
+    "eval_batch_size": 16,
+    "encoder_lr": 2e-05,
+    "task_lr": 0.0005,
+    "warmup_ratio": 0.1,
+    "scheduler_type": "linear",
+    "fp16": false,
+    "bf16": false,
+    "eval_strategy": "steps",
+    "eval_steps": 1000,
+    "save_total_limit": 2,
+    "save_best": true,
+    "metric_for_best": "exact_f1_micro",
+    "greater_is_better": true,
+    "logging_steps": 50,
+    "max_len": 256,
+    "on_capacity_exceeded": "skip_sample",
+    "num_workers": 0,
+    "pin_memory": false,
+    "validate_data": true,
+    "report_to_wandb": false,
+    "allow_invalid_samples": true
+  },
+  "eval": {
+    "batch_size": 16,
+    "threshold": 0.5
+  },
+  "_comment": "LOCAL (Apple Silicon / 24 GB) version of the KVKK champion recipe: same optimiser and effective batch 32 (4 x 8), fp32 (MPS has no bf16 autocast), max_len 256 words to fit memory, 3,000 steps (~1 epoch of 50k rows; the H100 recipe runs 6 epochs). Expect a few hours on an M4; use it to validate the pipeline, not to reproduce the published numbers."
+}

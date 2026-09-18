@@ -1,0 +1,75 @@
+{
+ "4": {
+  "coherence": 4,
+  "plausible_host": true,
+  "forced_facts": [],
+  "reason": "Form, abonelik ödeme güncellemesi için gerekli tüm bilgileri (müşteri kimliği, kart, IBAN, kefil) doğal biçimde içeriyor; kefil bilgisi sözleşme güvencesi olarak makul."
+ },
+ "2": {
+  "coherence": 5,
+  "plausible_host": true,
+  "forced_facts": [],
+  "reason": "Rapor, bir akademisyenin bilimsel etkinlik kampanyasını değerlendiren doğal bir pazarlama analizi olup, tüm kişisel bilgiler (Prof. Dr. Işın Akman) bu bağlamda meşru bir amaca hizmet etmektedir."
+ },
+ "1": {
+  "coherence": 4,
+  "plausible_host": true,
+  "forced_facts": [],
+  "reason": "Lisans sözleşmesinde tarafların kimlik ve temsilci bilgileri doğal olarak yer alır; ancak T.C. kimlik numarası ve baro sicil numarası gibi detaylar olağan olsa da biraz fazla spesifiktir, yine de makul bir çerçevededir."
+ },
+ "3": {
+  "coherence": 2,
+  "plausible_host": false,
+  "forced_facts": [
+   "T.C. kimlik numarası",
+   "Kurum sicil numarası",
+   "Medeni durum: Boşanmış",
+   "Gizli başvuru kısaltması: M.C.A."
+  ],
+  "reason": "Bir etik politikasında, politikanın kapsamını ve uygulayıcısını belirtmek için kişisel bilgilerin (ad, unvan, e-posta) bulunması makul olsa da, T.C. kimlik numarası, sicil numarası, medeni durum ve gizli başvuru kısaltması gibi ayrıntıların bu belge türünde hiçbir doğal gerekçesi yoktur ve belgenin yapay olduğunu ele verir."
+ },
+ "8": {
+  "coherence": 3,
+  "plausible_host": false,
+  "forced_facts": [
+   "Yabancı kimlik numarası",
+   "Kimlik kartı seri numarası",
+   "Kurum içi sicil numarası"
+  ],
+  "reason": "Yabancı kimlik numarası, kimlik kartı seri numarası ve kurum içi sicil numarası gibi bilgiler bir sigorta kayıt formunda doğal olarak bulunmaz; bu veriler daha çok işveren veya devlet kayıtlarında yer alır."
+ },
+ "6": {
+  "coherence": 4,
+  "plausible_host": true,
+  "forced_facts": [],
+  "reason": "Belge, adayın uyruğu ve doğum yeri gibi bilgileri doğrulama amacıyla doğal olarak içeriyor ve tüm kişisel veriler bu tür bir arka plan kontrol raporunun kapsamına uygun."
+ },
+ "5": {
+  "coherence": 4,
+  "plausible_host": true,
+  "forced_facts": [],
+  "reason": "Tüm kişisel bilgiler (ad, T.C. kimlik, kart numarası, sadakat kartı, kredi notu) kredi kartı hesap özetinde doğal olarak yer alır; ancak Findeks kredi notu ve sadakat kartı numarası bu tür belgelerde her zaman bulunmayabilir, yine de olasıdır."
+ },
+ "7": {
+  "coherence": 4,
+  "plausible_host": true,
+  "forced_facts": [],
+  "reason": "Belge türüne uygun olarak hasar inceleme süresinin uzatılması talebi, tanık ve destekleyici belgelerle doğal bir şekilde ilişkilendirilmiş; ancak tanık bilgisi ve beyanı bu tür bir talepte her zaman zorunlu olmayıp yine de makul bir gerekçe sunulmuştur."
+ },
+ "9": {
+  "coherence": 3,
+  "plausible_host": false,
+  "forced_facts": [
+   "kart numarası",
+   "kart güvenlik kodu",
+   "son kullanma tarihi"
+  ],
+  "reason": "Bir kredi kartı politikası belgesinde kart sahibinin tam kart numarası, güvenlik kodu ve son kullanma tarihi gibi hassas verilerin yer alması gerçekçi değildir; bu bilgiler politika metninde değil, yalnızca güvenli kart kayıt formlarında bulunur."
+ },
+ "10": {
+  "coherence": 4,
+  "plausible_host": true,
+  "forced_facts": [],
+  "reason": "Findeks notu, kredi amacı ve teminat koşulları doğal olarak tüketici kredisi değerlendirme profiline ait bilgilerdir; ancak 'yatırım amaçlı tüketici kredisi' ifadesi ile 'ek gelir ve teminat' vurgusu, tipik bir tüketici kredisi profilinde biraz zorlama görünse de yine de makul bir bağlamda yer almaktadır."
+ }
+}

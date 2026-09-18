@@ -1,0 +1,24 @@
+Write a Turkish document of the type "{{ genre }}" (domain: {{ domain }}).
+What this document type contains: {{ description }}
+Format: {{ document_format }} — "structured" = a form/record-like layout with field labels and values; "unstructured" = free-flowing prose. Plain text only: no markdown symbols (no **, #, |, ---).
+
+The document concerns {{ subject }}. Below is a POOL of candidate facts (each fact names the person it belongs to).
+{{ persons_block }}
+{{ profile_block }} Decide, from what a real Turkish document of this type would contain, WHICH of them belong here: include those — the subject's name always, and at least one further fact — and OMIT the others entirely. Never mention an omitted fact, never explain why something is included or omitted, never reproduce a hint verbatim:
+{{ facts_block }}
+
+ENTITIES. Each value you use must appear EXACTLY as given (character for character) and EVERY occurrence must be tagged inline as [value]label with the label shown; the values of omitted facts must not appear anywhere:
+{{ entity_block }}
+{{ optional_block }}
+{{ tierb_block }}
+
+Label definitions (boundary rules — follow them exactly):
+{{ desc_block }}
+
+Rules:
+- A tag holds exactly ONE value; the label is written immediately after the closing bracket, e.g. [value]label. Never nest tags.
+- Tag only the value itself. Turkish suffixes attached with an apostrophe stay OUTSIDE the tag: [Ankara]city'da, not [Ankara'da]city.
+- Apart from the listed values and the additional kinds allowed above, do NOT introduce any other personal data (no other names, ID numbers, phone numbers, addresses, birth dates, accounts or codes); other people are referred to by role only. Fill non-personal fields with plausible generic content instead of placeholders.
+- Square brackets appear ONLY as tag delimiters. Label names must never appear as ordinary words.
+- Output ONLY the document text. No preamble, no explanation, no code fences.
+- End your output with a final line containing exactly: ===SON===

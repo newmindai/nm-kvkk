@@ -1,0 +1,1432 @@
+{
+ "model": "newmindai/gliner2.5-mursit-kvkk-tr-v1",
+ "label_language": "tr",
+ "relation_prompt": "bare",
+ "_how": "schema = model.create_schema().entities([e['name'] for e in entities]).relations({r['name']: r['description'] for r in relations}) (or .relations([r['name'] ...]) when relation_prompt is 'bare'); map the names in the output back to ids with the same lists.",
+ "entities": [
+  {
+   "id": "full_name",
+   "name": "ad soyad",
+   "group": "person_name",
+   "out_of_scope": false,
+   "trained": true
+  },
+  {
+   "id": "first_name",
+   "name": "ad",
+   "group": "person_name",
+   "out_of_scope": false,
+   "trained": true
+  },
+  {
+   "id": "middle_name",
+   "name": "ikinci ad",
+   "group": "person_name",
+   "out_of_scope": false,
+   "trained": true
+  },
+  {
+   "id": "last_name",
+   "name": "soyad",
+   "group": "person_name",
+   "out_of_scope": false,
+   "trained": true
+  },
+  {
+   "id": "maiden_name",
+   "name": "kızlık soyadı",
+   "group": "person_name",
+   "out_of_scope": false,
+   "trained": true
+  },
+  {
+   "id": "mothers_maiden_name",
+   "name": "anne kızlık soyadı",
+   "group": "person_name",
+   "out_of_scope": false,
+   "trained": true
+  },
+  {
+   "id": "initials",
+   "name": "isim baş harfleri",
+   "group": "person_name",
+   "out_of_scope": false,
+   "trained": true
+  },
+  {
+   "id": "nickname",
+   "name": "lakap",
+   "group": "person_name",
+   "out_of_scope": false,
+   "trained": true
+  },
+  {
+   "id": "title_honorific",
+   "name": "hitap unvanı",
+   "group": "person_name",
+   "out_of_scope": false,
+   "trained": true
+  },
+  {
+   "id": "national_id_number",
+   "name": "kimlik numarası",
+   "group": "identity_number",
+   "out_of_scope": false,
+   "trained": true
+  },
+  {
+   "id": "id_document_serial",
+   "name": "kimlik seri numarası",
+   "group": "identity_number",
+   "out_of_scope": false,
+   "trained": true
+  },
+  {
+   "id": "passport_number",
+   "name": "pasaport numarası",
+   "group": "identity_number",
+   "out_of_scope": false,
+   "trained": true
+  },
+  {
+   "id": "drivers_license_number",
+   "name": "ehliyet numarası",
+   "group": "identity_number",
+   "out_of_scope": false,
+   "trained": true
+  },
+  {
+   "id": "tax_id_number",
+   "name": "vergi kimlik numarası",
+   "group": "identity_number",
+   "out_of_scope": false,
+   "trained": true
+  },
+  {
+   "id": "social_security_number",
+   "name": "sosyal güvenlik numarası",
+   "group": "identity_number",
+   "out_of_scope": false,
+   "trained": true
+  },
+  {
+   "id": "yupass_number",
+   "name": "Yupass numarası",
+   "group": "identity_number",
+   "out_of_scope": false,
+   "trained": true
+  },
+  {
+   "id": "passport_mrz",
+   "name": "pasaport MRZ kodu",
+   "group": "identity_number",
+   "out_of_scope": false,
+   "trained": true
+  },
+  {
+   "id": "phone_number",
+   "name": "telefon numarası",
+   "group": "contact_info",
+   "out_of_scope": false,
+   "trained": true
+  },
+  {
+   "id": "email_address",
+   "name": "e-posta adresi",
+   "group": "contact_info",
+   "out_of_scope": false,
+   "trained": true
+  },
+  {
+   "id": "full_address",
+   "name": "adres",
+   "group": "contact_info",
+   "out_of_scope": false,
+   "trained": true
+  },
+  {
+   "id": "street_line",
+   "name": "sokak adresi",
+   "group": "contact_info",
+   "out_of_scope": false,
+   "trained": true
+  },
+  {
+   "id": "district",
+   "name": "ilçe",
+   "group": "contact_info",
+   "out_of_scope": false,
+   "trained": true
+  },
+  {
+   "id": "city",
+   "name": "şehir",
+   "group": "contact_info",
+   "out_of_scope": false,
+   "trained": true
+  },
+  {
+   "id": "postal_code",
+   "name": "posta kodu",
+   "group": "contact_info",
+   "out_of_scope": false,
+   "trained": true
+  },
+  {
+   "id": "date_of_birth",
+   "name": "doğum tarihi",
+   "group": "birth_civil_status",
+   "out_of_scope": false,
+   "trained": true
+  },
+  {
+   "id": "place_of_birth",
+   "name": "doğum yeri",
+   "group": "birth_civil_status",
+   "out_of_scope": false,
+   "trained": true
+  },
+  {
+   "id": "age",
+   "name": "yaş",
+   "group": "birth_civil_status",
+   "out_of_scope": false,
+   "trained": true
+  },
+  {
+   "id": "gender",
+   "name": "cinsiyet",
+   "group": "birth_civil_status",
+   "out_of_scope": false,
+   "trained": true
+  },
+  {
+   "id": "marital_status",
+   "name": "medeni durum",
+   "group": "birth_civil_status",
+   "out_of_scope": false,
+   "trained": true
+  },
+  {
+   "id": "nationality",
+   "name": "uyruk",
+   "group": "birth_civil_status",
+   "out_of_scope": false,
+   "trained": true
+  },
+  {
+   "id": "iban",
+   "name": "IBAN",
+   "group": "financial_info",
+   "out_of_scope": false,
+   "trained": true
+  },
+  {
+   "id": "card_number",
+   "name": "kredi kartı numarası",
+   "group": "financial_info",
+   "out_of_scope": false,
+   "trained": true
+  },
+  {
+   "id": "card_cvv",
+   "name": "kart güvenlik kodu",
+   "group": "financial_info",
+   "out_of_scope": false,
+   "trained": true
+  },
+  {
+   "id": "card_expiry",
+   "name": "kart son kullanma tarihi",
+   "group": "financial_info",
+   "out_of_scope": false,
+   "trained": true
+  },
+  {
+   "id": "bank_account_number",
+   "name": "banka hesap numarası",
+   "group": "financial_info",
+   "out_of_scope": false,
+   "trained": true
+  },
+  {
+   "id": "swift_bic",
+   "name": "SWIFT kodu",
+   "group": "financial_info",
+   "out_of_scope": false,
+   "trained": true
+  },
+  {
+   "id": "salary_info",
+   "name": "maaş bilgisi",
+   "group": "financial_info",
+   "out_of_scope": false,
+   "trained": true
+  },
+  {
+   "id": "credit_score",
+   "name": "kredi notu",
+   "group": "financial_info",
+   "out_of_scope": false,
+   "trained": true
+  },
+  {
+   "id": "risk_report",
+   "name": "risk raporu bilgisi",
+   "group": "financial_info",
+   "out_of_scope": false,
+   "trained": true
+  },
+  {
+   "id": "crypto_wallet_address",
+   "name": "kripto cüzdan adresi",
+   "group": "financial_info",
+   "out_of_scope": false,
+   "trained": true
+  },
+  {
+   "id": "insurance_policy_number",
+   "name": "sigorta poliçe numarası",
+   "group": "financial_info",
+   "out_of_scope": false,
+   "trained": true
+  },
+  {
+   "id": "ip_address",
+   "name": "IP adresi",
+   "group": "digital_identifier",
+   "out_of_scope": false,
+   "trained": true
+  },
+  {
+   "id": "username",
+   "name": "kullanıcı adı",
+   "group": "digital_identifier",
+   "out_of_scope": false,
+   "trained": true
+  },
+  {
+   "id": "password",
+   "name": "parola",
+   "group": "digital_identifier",
+   "out_of_scope": false,
+   "trained": true
+  },
+  {
+   "id": "device_id",
+   "name": "cihaz kimliği",
+   "group": "digital_identifier",
+   "out_of_scope": false,
+   "trained": true
+  },
+  {
+   "id": "social_media_handle",
+   "name": "sosyal medya hesabı",
+   "group": "digital_identifier",
+   "out_of_scope": false,
+   "trained": true
+  },
+  {
+   "id": "url_with_pii",
+   "name": "web sitesi",
+   "group": "digital_identifier",
+   "out_of_scope": false,
+   "trained": true
+  },
+  {
+   "id": "session_or_token",
+   "name": "oturum anahtarı",
+   "group": "digital_identifier",
+   "out_of_scope": false,
+   "trained": true
+  },
+  {
+   "id": "advertising_id",
+   "name": "reklam kimliği",
+   "group": "digital_identifier",
+   "out_of_scope": false,
+   "trained": true
+  },
+  {
+   "id": "cookie_id",
+   "name": "çerez kimliği",
+   "group": "digital_identifier",
+   "out_of_scope": false,
+   "trained": true
+  },
+  {
+   "id": "sim_identifier",
+   "name": "SIM kart kimliği",
+   "group": "digital_identifier",
+   "out_of_scope": false,
+   "trained": true
+  },
+  {
+   "id": "gps_coordinates",
+   "name": "coğrafi koordinat",
+   "group": "location_data",
+   "out_of_scope": false,
+   "trained": true
+  },
+  {
+   "id": "tracked_location",
+   "name": "takip edilen konum",
+   "group": "location_data",
+   "out_of_scope": false,
+   "trained": true
+  },
+  {
+   "id": "workplace_location",
+   "name": "işyeri konumu",
+   "group": "location_data",
+   "out_of_scope": false,
+   "trained": true
+  },
+  {
+   "id": "license_plate",
+   "name": "araç plakası",
+   "group": "vehicle_identifier",
+   "out_of_scope": false,
+   "trained": true
+  },
+  {
+   "id": "vin_chassis_number",
+   "name": "şasi numarası",
+   "group": "vehicle_identifier",
+   "out_of_scope": false,
+   "trained": true
+  },
+  {
+   "id": "vehicle_registration_number",
+   "name": "araç tescil numarası",
+   "group": "vehicle_identifier",
+   "out_of_scope": false,
+   "trained": true
+  },
+  {
+   "id": "medical_condition",
+   "name": "hastalık",
+   "group": "health_data",
+   "out_of_scope": false,
+   "trained": true
+  },
+  {
+   "id": "medication",
+   "name": "ilaç",
+   "group": "health_data",
+   "out_of_scope": false,
+   "trained": true
+  },
+  {
+   "id": "medical_procedure",
+   "name": "tıbbi işlem",
+   "group": "health_data",
+   "out_of_scope": false,
+   "trained": true
+  },
+  {
+   "id": "disability_status",
+   "name": "engellilik durumu",
+   "group": "health_data",
+   "out_of_scope": false,
+   "trained": true
+  },
+  {
+   "id": "blood_type",
+   "name": "kan grubu",
+   "group": "health_data",
+   "out_of_scope": false,
+   "trained": true
+  },
+  {
+   "id": "mental_health_info",
+   "name": "ruh sağlığı bilgisi",
+   "group": "health_data",
+   "out_of_scope": false,
+   "trained": true
+  },
+  {
+   "id": "health_report_id",
+   "name": "sağlık raporu numarası",
+   "group": "health_data",
+   "out_of_scope": false,
+   "trained": true
+  },
+  {
+   "id": "medula_tracking_number",
+   "name": "Medula takip numarası",
+   "group": "health_data",
+   "out_of_scope": false,
+   "trained": true
+  },
+  {
+   "id": "provision_number",
+   "name": "provizyon numarası",
+   "group": "health_data",
+   "out_of_scope": false,
+   "trained": true
+  },
+  {
+   "id": "eprescription_number",
+   "name": "e-reçete numarası",
+   "group": "health_data",
+   "out_of_scope": false,
+   "trained": true
+  },
+  {
+   "id": "doctor_license_number",
+   "name": "doktor diploma numarası",
+   "group": "health_data",
+   "out_of_scope": false,
+   "trained": true
+  },
+  {
+   "id": "ethnicity",
+   "name": "etnik köken",
+   "group": "special_category_data",
+   "out_of_scope": false,
+   "trained": true
+  },
+  {
+   "id": "political_opinion",
+   "name": "siyasi görüş",
+   "group": "special_category_data",
+   "out_of_scope": false,
+   "trained": true
+  },
+  {
+   "id": "religious_belief",
+   "name": "dini inanç",
+   "group": "special_category_data",
+   "out_of_scope": false,
+   "trained": true
+  },
+  {
+   "id": "philosophical_belief",
+   "name": "felsefi inanç",
+   "group": "special_category_data",
+   "out_of_scope": false,
+   "trained": true
+  },
+  {
+   "id": "attire_info",
+   "name": "kıyafet bilgisi",
+   "group": "special_category_data",
+   "out_of_scope": false,
+   "trained": true
+  },
+  {
+   "id": "union_membership",
+   "name": "sendika üyeliği",
+   "group": "special_category_data",
+   "out_of_scope": false,
+   "trained": true
+  },
+  {
+   "id": "association_foundation_membership",
+   "name": "dernek veya vakıf üyeliği",
+   "group": "special_category_data",
+   "out_of_scope": false,
+   "trained": true
+  },
+  {
+   "id": "sexual_life_info",
+   "name": "cinsel yaşam bilgisi",
+   "group": "special_category_data",
+   "out_of_scope": false,
+   "trained": true
+  },
+  {
+   "id": "criminal_record",
+   "name": "ceza mahkumiyeti bilgisi",
+   "group": "special_category_data",
+   "out_of_scope": false,
+   "trained": true
+  },
+  {
+   "id": "biometric_data_reference",
+   "name": "biyometrik veri",
+   "group": "special_category_data",
+   "out_of_scope": false,
+   "trained": true
+  },
+  {
+   "id": "genetic_data_reference",
+   "name": "genetik veri",
+   "group": "special_category_data",
+   "out_of_scope": false,
+   "trained": true
+  },
+  {
+   "id": "signature_handwriting",
+   "name": "imza veya el yazısı",
+   "group": "special_category_data",
+   "out_of_scope": false,
+   "trained": true
+  },
+  {
+   "id": "voice_record",
+   "name": "ses kaydı",
+   "group": "special_category_data",
+   "out_of_scope": false,
+   "trained": true
+  },
+  {
+   "id": "job_title",
+   "name": "iş unvanı",
+   "group": "employment_info",
+   "out_of_scope": false,
+   "trained": true
+  },
+  {
+   "id": "employee_id",
+   "name": "personel numarası",
+   "group": "employment_info",
+   "out_of_scope": false,
+   "trained": true
+  },
+  {
+   "id": "work_history",
+   "name": "iş geçmişi",
+   "group": "employment_info",
+   "out_of_scope": false,
+   "trained": true
+  },
+  {
+   "id": "performance_disciplinary",
+   "name": "performans ve disiplin bilgisi",
+   "group": "employment_info",
+   "out_of_scope": false,
+   "trained": true
+  },
+  {
+   "id": "education_info",
+   "name": "eğitim bilgisi",
+   "group": "employment_info",
+   "out_of_scope": false,
+   "trained": true
+  },
+  {
+   "id": "military_service_status",
+   "name": "askerlik durumu",
+   "group": "employment_info",
+   "out_of_scope": false,
+   "trained": true
+  },
+  {
+   "id": "student_number",
+   "name": "öğrenci numarası",
+   "group": "employment_info",
+   "out_of_scope": false,
+   "trained": true
+  },
+  {
+   "id": "company_name",
+   "name": "şirket adı",
+   "group": "organization_identifier",
+   "out_of_scope": true,
+   "trained": true
+  },
+  {
+   "id": "mersis_number",
+   "name": "MERSİS numarası",
+   "group": "organization_identifier",
+   "out_of_scope": true,
+   "trained": true
+  },
+  {
+   "id": "trade_registry_number",
+   "name": "ticaret sicil numarası",
+   "group": "organization_identifier",
+   "out_of_scope": true,
+   "trained": true
+  },
+  {
+   "id": "invoice_document_id",
+   "name": "fatura numarası",
+   "group": "organization_identifier",
+   "out_of_scope": true,
+   "trained": true
+  },
+  {
+   "id": "company_tax_number",
+   "name": "şirket vergi numarası",
+   "group": "organization_identifier",
+   "out_of_scope": true,
+   "trained": true
+  },
+  {
+   "id": "tax_office_name",
+   "name": "vergi dairesi adı",
+   "group": "organization_identifier",
+   "out_of_scope": true,
+   "trained": true
+  },
+  {
+   "id": "legal_case_number",
+   "name": "dava dosya numarası",
+   "group": "legal_customer_records",
+   "out_of_scope": false,
+   "trained": true
+  },
+  {
+   "id": "customer_number",
+   "name": "müşteri numarası",
+   "group": "legal_customer_records",
+   "out_of_scope": false,
+   "trained": true
+  },
+  {
+   "id": "subscription_number",
+   "name": "abonelik numarası",
+   "group": "legal_customer_records",
+   "out_of_scope": false,
+   "trained": true
+  },
+  {
+   "id": "order_reference",
+   "name": "referans kodu",
+   "group": "legal_customer_records",
+   "out_of_scope": false,
+   "trained": true
+  },
+  {
+   "id": "audiovisual_record_reference",
+   "name": "fotoğraf dosyası",
+   "group": "legal_customer_records",
+   "out_of_scope": false,
+   "trained": true
+  },
+  {
+   "id": "investigation_number",
+   "name": "soruşturma numarası",
+   "group": "legal_customer_records",
+   "out_of_scope": false,
+   "trained": true
+  },
+  {
+   "id": "uets_address",
+   "name": "UETS adresi",
+   "group": "legal_customer_records",
+   "out_of_scope": false,
+   "trained": true
+  },
+  {
+   "id": "notification_barcode",
+   "name": "tebligat barkodu",
+   "group": "legal_customer_records",
+   "out_of_scope": false,
+   "trained": true
+  },
+  {
+   "id": "notary_record_number",
+   "name": "noter yevmiye numarası",
+   "group": "legal_customer_records",
+   "out_of_scope": false,
+   "trained": true
+  },
+  {
+   "id": "bar_registry_number",
+   "name": "baro sicil numarası",
+   "group": "legal_customer_records",
+   "out_of_scope": false,
+   "trained": true
+  },
+  {
+   "id": "expert_registry_number",
+   "name": "bilirkişi sicil numarası",
+   "group": "legal_customer_records",
+   "out_of_scope": false,
+   "trained": true
+  },
+  {
+   "id": "judge_prosecutor_registry_number",
+   "name": "hakim savcı sicil numarası",
+   "group": "legal_customer_records",
+   "out_of_scope": false,
+   "trained": true
+  },
+  {
+   "id": "enforcement_file_number",
+   "name": "icra dosya numarası",
+   "group": "legal_customer_records",
+   "out_of_scope": false,
+   "trained": true
+  },
+  {
+   "id": "loyalty_card_number",
+   "name": "sadakat kartı numarası",
+   "group": "legal_customer_records",
+   "out_of_scope": false,
+   "trained": true
+  },
+  {
+   "id": "cargo_tracking_number",
+   "name": "kargo takip numarası",
+   "group": "legal_customer_records",
+   "out_of_scope": false,
+   "trained": true
+  },
+  {
+   "id": "civil_registry_volume_number",
+   "name": "nüfus cilt numarası",
+   "group": "registry_records",
+   "out_of_scope": false,
+   "trained": true
+  },
+  {
+   "id": "family_order_number",
+   "name": "aile sıra numarası",
+   "group": "registry_records",
+   "out_of_scope": false,
+   "trained": true
+  },
+  {
+   "id": "individual_order_number",
+   "name": "birey sıra numarası",
+   "group": "registry_records",
+   "out_of_scope": false,
+   "trained": true
+  },
+  {
+   "id": "registered_place",
+   "name": "nüfusa kayıtlı yer",
+   "group": "registry_records",
+   "out_of_scope": false,
+   "trained": true
+  },
+  {
+   "id": "land_parcel_number",
+   "name": "ada parsel numarası",
+   "group": "registry_records",
+   "out_of_scope": false,
+   "trained": true
+  },
+  {
+   "id": "independent_section_number",
+   "name": "bağımsız bölüm numarası",
+   "group": "registry_records",
+   "out_of_scope": false,
+   "trained": true
+  }
+ ],
+ "merged": {
+  "foreigner_id_number": "national_id_number",
+  "kep_address": "email_address",
+  "fax_number": "phone_number"
+ },
+ "_merged": "ids that share a query name with another id in this vocabulary; the model cannot tell them apart, so they are reported under the id they are merged into",
+ "relations": [
+  {
+   "id": "mother_of",
+   "name": "annesi olduğu kişi",
+   "description": "İlk kişi, ikinci kişinin annesidir"
+  },
+  {
+   "id": "father_of",
+   "name": "babası olduğu kişi",
+   "description": "İlk kişi, ikinci kişinin babasıdır"
+  },
+  {
+   "id": "spouse_of",
+   "name": "eşi olduğu kişi",
+   "description": "İlk kişi, ikinci kişinin eşidir"
+  },
+  {
+   "id": "child_of",
+   "name": "çocuğu olduğu kişi",
+   "description": "İlk kişi, ikinci kişinin çocuğudur"
+  },
+  {
+   "id": "sibling_of",
+   "name": "kardeşi olduğu kişi",
+   "description": "Kişi, diğer kişinin kardeşidir"
+  },
+  {
+   "id": "relative_of",
+   "name": "akrabası olduğu kişi",
+   "description": "İlk kişi, ikinci kişinin akrabasıdır"
+  },
+  {
+   "id": "part_of_name",
+   "name": "parçası olduğu ad soyad",
+   "description": "İsim bileşeni veya hitap unvanı, kişinin tam adının parçasıdır"
+  },
+  {
+   "id": "nickname_of",
+   "name": "lakap sahibi",
+   "description": "Lakap kişiye aittir"
+  },
+  {
+   "id": "initials_of",
+   "name": "isim baş harfleri sahibi",
+   "description": "İsim baş harfleri kişiyi ifade eder"
+  },
+  {
+   "id": "former_surname_of",
+   "name": "önceki soyadı sahibi",
+   "description": "Kızlık soyadı veya önceki soyadı kişiye aittir"
+  },
+  {
+   "id": "mothers_maiden_name_of",
+   "name": "anne kızlık soyadı sahibi",
+   "description": "Anne kızlık soyadı kişiye aittir"
+  },
+  {
+   "id": "date_of_birth_of",
+   "name": "doğum tarihi sahibi",
+   "description": "Doğum tarihi kişiye aittir"
+  },
+  {
+   "id": "place_of_birth_of",
+   "name": "doğum yeri sahibi",
+   "description": "Doğum yeri bilgisi kişiye aittir"
+  },
+  {
+   "id": "age_of",
+   "name": "yaş bilgisi sahibi",
+   "description": "Yaş bilgisi kişiye aittir"
+  },
+  {
+   "id": "gender_of",
+   "name": "cinsiyet bilgisi sahibi",
+   "description": "Cinsiyet bilgisi kişiye aittir"
+  },
+  {
+   "id": "marital_status_of",
+   "name": "medeni durum bilgisi sahibi",
+   "description": "Medeni durum bilgisi kişiye aittir"
+  },
+  {
+   "id": "nationality_of",
+   "name": "uyruk bilgisi sahibi",
+   "description": "Uyruk bilgisi kişiye aittir"
+  },
+  {
+   "id": "blood_type_of",
+   "name": "kan grubu sahibi",
+   "description": "Kan grubu kişiye aittir"
+  },
+  {
+   "id": "national_id_of",
+   "name": "kimlik numarası sahibi",
+   "description": "Kimlik numarası kişiye aittir"
+  },
+  {
+   "id": "foreigner_id_of",
+   "name": "yabancı kimlik numarası sahibi",
+   "description": "Yabancı kimlik numarası kişiye aittir"
+  },
+  {
+   "id": "id_serial_of",
+   "name": "kimlik seri numarası sahibi",
+   "description": "Kimlik belgesi seri numarası kişiye aittir"
+  },
+  {
+   "id": "passport_of",
+   "name": "pasaport sahibi",
+   "description": "Pasaport numarası kişiye aittir"
+  },
+  {
+   "id": "drivers_license_of",
+   "name": "ehliyet sahibi",
+   "description": "Ehliyet numarası kişiye aittir"
+  },
+  {
+   "id": "tax_id_of",
+   "name": "vergi kimlik numarası sahibi",
+   "description": "Vergi kimlik numarası kişiye aittir"
+  },
+  {
+   "id": "social_security_of",
+   "name": "sosyal güvenlik numarası sahibi",
+   "description": "Sosyal güvenlik numarası kişiye aittir"
+  },
+  {
+   "id": "yupass_of",
+   "name": "Yupass numarası sahibi",
+   "description": "Yupass numarası kişiye aittir"
+  },
+  {
+   "id": "mrz_of",
+   "name": "pasaport MRZ kodu sahibi",
+   "description": "Pasaport MRZ kodu kişiye aittir"
+  },
+  {
+   "id": "phone_of",
+   "name": "telefon numarası sahibi",
+   "description": "Telefon veya faks numarası kişiye aittir"
+  },
+  {
+   "id": "email_of",
+   "name": "e-posta adresi sahibi",
+   "description": "E-posta veya KEP adresi kişiye aittir"
+  },
+  {
+   "id": "residence_of",
+   "name": "ikamet adresi sahibi",
+   "description": "Adres, kişinin ikamet ettiği yerdir"
+  },
+  {
+   "id": "part_of_address",
+   "name": "parçası olduğu adres",
+   "description": "Sokak satırı, posta kodu, ilçe veya şehir tam adresin parçasıdır"
+  },
+  {
+   "id": "iban_of",
+   "name": "banka hesabı sahibi",
+   "description": "IBAN veya banka hesap numarası kişiye aittir"
+  },
+  {
+   "id": "card_of",
+   "name": "kart sahibi",
+   "description": "Ödeme kartı numarası kişiye aittir"
+  },
+  {
+   "id": "card_component_of",
+   "name": "parçası olduğu kart",
+   "description": "Kart son kullanma tarihi, ödeme kartı numarasına aittir"
+  },
+  {
+   "id": "bank_of_account",
+   "name": "bankası olduğu hesap",
+   "description": "SWIFT veya BIC kodu, hesap numarasının bankasını belirtir"
+  },
+  {
+   "id": "salary_of",
+   "name": "maaş bilgisi sahibi",
+   "description": "Maaş bilgisi kişiye aittir"
+  },
+  {
+   "id": "credit_score_of",
+   "name": "kredi notu sahibi",
+   "description": "Kredi notu kişiye aittir"
+  },
+  {
+   "id": "risk_report_of",
+   "name": "risk raporu sahibi",
+   "description": "Kredi risk raporu bilgisi kişiye aittir"
+  },
+  {
+   "id": "crypto_wallet_of",
+   "name": "kripto cüzdanı sahibi",
+   "description": "Kripto cüzdan adresi kişiye aittir"
+  },
+  {
+   "id": "insurance_policy_of",
+   "name": "sigorta poliçesi sahibi",
+   "description": "Sigorta poliçe numarası kişiye aittir"
+  },
+  {
+   "id": "account_of",
+   "name": "kullanıcı hesabı sahibi",
+   "description": "Kullanıcı adı veya sosyal medya hesabı kişiye aittir"
+  },
+  {
+   "id": "credential_of",
+   "name": "giriş bilgisi sahibi",
+   "description": "Parola veya oturum anahtarı kişiye aittir"
+  },
+  {
+   "id": "device_used_by",
+   "name": "cihaz kullanıcısı",
+   "description": "Cihaz kimliği kişi tarafından kullanılır"
+  },
+  {
+   "id": "ip_used_by",
+   "name": "IP adresi kullanıcısı",
+   "description": "IP adresi kişi tarafından kullanılır"
+  },
+  {
+   "id": "profile_url_of",
+   "name": "profil bağlantısı sahibi",
+   "description": "Profil bağlantısı kişiye aittir"
+  },
+  {
+   "id": "advertising_id_of",
+   "name": "reklam kimliği sahibi",
+   "description": "Reklam tanımlayıcısı kişiye aittir"
+  },
+  {
+   "id": "cookie_of",
+   "name": "çerezle izlenen kişi",
+   "description": "Çerez kimliği kişiyi izler"
+  },
+  {
+   "id": "sim_of",
+   "name": "SIM kartı sahibi",
+   "description": "SIM kart kimliği kişiye aittir"
+  },
+  {
+   "id": "located_at",
+   "name": "konumda bulunan kişi",
+   "description": "Takip edilen konum, kişinin bulunduğu yerdir"
+  },
+  {
+   "id": "coordinates_of",
+   "name": "konum verisi sahibi",
+   "description": "GPS koordinatları kişinin konumunu gösterir"
+  },
+  {
+   "id": "workplace_of",
+   "name": "işyerinde çalışan kişi",
+   "description": "İşyeri konumu, kişinin çalıştığı yerdir"
+  },
+  {
+   "id": "vehicle_plate_of",
+   "name": "araç plakası sahibi",
+   "description": "Araç plakası kişiye aittir"
+  },
+  {
+   "id": "vehicle_vin_of",
+   "name": "şasi numarası sahibi",
+   "description": "Araç şasi (VIN) numarası kişiye aittir"
+  },
+  {
+   "id": "vehicle_registration_of",
+   "name": "araç tescil belgesi sahibi",
+   "description": "Araç tescil belge numarası kişiye aittir"
+  },
+  {
+   "id": "same_vehicle",
+   "name": "aynı aracın kaydı",
+   "description": "Plaka ile şasi veya ruhsat numarası aynı araca aittir"
+  },
+  {
+   "id": "diagnosis_of",
+   "name": "tanı konulan kişi",
+   "description": "Tıbbi veya ruhsal hastalık tanısı kişiye konulmuştur"
+  },
+  {
+   "id": "medication_of",
+   "name": "ilacı kullanan kişi",
+   "description": "İlaç kişi tarafından kullanılır"
+  },
+  {
+   "id": "treatment_of",
+   "name": "tedavi uygulanan kişi",
+   "description": "Tıbbi işlem veya tedavi kişiye uygulanmıştır"
+  },
+  {
+   "id": "disability_of",
+   "name": "engellilik durumu sahibi",
+   "description": "Engellilik durumu kişiye aittir"
+  },
+  {
+   "id": "health_file_of",
+   "name": "sağlık dosyası sahibi",
+   "description": "Sağlık raporu veya dosya numarası kişiye aittir"
+  },
+  {
+   "id": "medula_of",
+   "name": "Medula takip numarası sahibi",
+   "description": "Medula takip numarası kişiye aittir"
+  },
+  {
+   "id": "provision_of",
+   "name": "provizyon numarası sahibi",
+   "description": "Provizyon numarası kişiye aittir"
+  },
+  {
+   "id": "eprescription_of",
+   "name": "e-reçete sahibi",
+   "description": "E-reçete numarası kişiye aittir"
+  },
+  {
+   "id": "prescribed_by",
+   "name": "reçeteyi yazan doktor",
+   "description": "Doktor diploma numarası, reçeteyi yazan doktora aittir"
+  },
+  {
+   "id": "ethnicity_of",
+   "name": "etnik köken bilgisi sahibi",
+   "description": "Etnik köken bilgisi kişiye aittir"
+  },
+  {
+   "id": "political_view_of",
+   "name": "siyasi görüş sahibi",
+   "description": "Siyasi görüş kişiye aittir"
+  },
+  {
+   "id": "belief_of",
+   "name": "inanç bilgisi sahibi",
+   "description": "Dini veya felsefi inanç bilgisi kişiye aittir"
+  },
+  {
+   "id": "attire_of",
+   "name": "kılık kıyafet bilgisi sahibi",
+   "description": "Kılık kıyafet bilgisi kişiye aittir"
+  },
+  {
+   "id": "member_of",
+   "name": "üyesi olduğu kuruluş",
+   "description": "Kişi, kuruluşun üyesidir"
+  },
+  {
+   "id": "sexual_life_of",
+   "name": "cinsel hayat bilgisi sahibi",
+   "description": "Cinsel hayata ilişkin bilgi kişiye aittir"
+  },
+  {
+   "id": "conviction_of",
+   "name": "adli sicil kaydı sahibi",
+   "description": "Ceza mahkumiyeti veya güvenlik tedbiri kaydı kişiye aittir"
+  },
+  {
+   "id": "biometric_of",
+   "name": "biyometrik veri sahibi",
+   "description": "Biyometrik veri kişiye aittir"
+  },
+  {
+   "id": "genetic_of",
+   "name": "genetik veri sahibi",
+   "description": "Genetik veri kişiye aittir"
+  },
+  {
+   "id": "signature_of",
+   "name": "imza sahibi",
+   "description": "İmza veya el yazısı kişiye aittir"
+  },
+  {
+   "id": "voice_of",
+   "name": "ses kaydı sahibi",
+   "description": "Ses kaydı kişiye aittir"
+  },
+  {
+   "id": "employer_of",
+   "name": "işvereni olduğu kişi",
+   "description": "Şirket, kişinin işverenidir"
+  },
+  {
+   "id": "position_of",
+   "name": "iş unvanı sahibi",
+   "description": "İş unvanı kişiye aittir"
+  },
+  {
+   "id": "employee_id_of",
+   "name": "personel numarası sahibi",
+   "description": "Personel numarası kişiye aittir"
+  },
+  {
+   "id": "work_history_of",
+   "name": "iş geçmişi sahibi",
+   "description": "İş geçmişi bilgisi kişiye aittir"
+  },
+  {
+   "id": "disciplinary_of",
+   "name": "disiplin kaydı sahibi",
+   "description": "Performans veya disiplin kaydı kişiye aittir"
+  },
+  {
+   "id": "education_of",
+   "name": "eğitim bilgisi sahibi",
+   "description": "Eğitim bilgisi kişiye aittir"
+  },
+  {
+   "id": "military_status_of",
+   "name": "askerlik durumu sahibi",
+   "description": "Askerlik durumu kişiye aittir"
+  },
+  {
+   "id": "student_number_of",
+   "name": "öğrenci numarası sahibi",
+   "description": "Öğrenci numarası kişiye aittir"
+  },
+  {
+   "id": "emergency_contact_of",
+   "name": "acil durum irtibatı olduğu kişi",
+   "description": "İlk kişi, ikinci kişinin acil durumda ulaşılacak kişisidir"
+  },
+  {
+   "id": "party_in_case",
+   "name": "tarafı olduğu dosya",
+   "description": "Kişi, dava, icra veya soruşturma dosyasının tarafıdır"
+  },
+  {
+   "id": "verdict_in_case",
+   "name": "hükmün verildiği dava",
+   "description": "Ceza mahkumiyeti bu dava dosyasında verilmiştir"
+  },
+  {
+   "id": "customer_number_of",
+   "name": "müşteri numarası sahibi",
+   "description": "Müşteri numarası kişiye aittir"
+  },
+  {
+   "id": "subscription_of",
+   "name": "abonelik sahibi",
+   "description": "Abonelik numarası kişiye aittir"
+  },
+  {
+   "id": "order_of",
+   "name": "sipariş sahibi",
+   "description": "Sipariş referansı kişiye aittir"
+  },
+  {
+   "id": "depicted_in",
+   "name": "görüntüsü kaydedilen kişi",
+   "description": "Görsel veya işitsel kayıtta kişinin görüntüsü veya sesi yer alır"
+  },
+  {
+   "id": "uets_of",
+   "name": "UETS adresi sahibi",
+   "description": "UETS adresi kişiye aittir"
+  },
+  {
+   "id": "notified_via",
+   "name": "tebligat muhatabı",
+   "description": "Tebligat barkodu kişiye tebligat yapılmasında kullanılır"
+  },
+  {
+   "id": "notary_act_of",
+   "name": "noter kaydı sahibi",
+   "description": "Noter yevmiye numarası kişiye aittir"
+  },
+  {
+   "id": "bar_registry_of",
+   "name": "baro sicil numarası sahibi",
+   "description": "Baro sicil numarası kişiye aittir"
+  },
+  {
+   "id": "expert_registry_of",
+   "name": "bilirkişi sicil numarası sahibi",
+   "description": "Bilirkişi sicil numarası kişiye aittir"
+  },
+  {
+   "id": "judiciary_registry_of",
+   "name": "hakim savcı sicil numarası sahibi",
+   "description": "Hakim veya savcı sicil numarası kişiye aittir"
+  },
+  {
+   "id": "loyalty_card_of",
+   "name": "sadakat kartı sahibi",
+   "description": "Sadakat kartı numarası kişiye aittir"
+  },
+  {
+   "id": "shipment_of",
+   "name": "gönderi sahibi",
+   "description": "Kargo takip numarası kişinin gönderisine aittir"
+  },
+  {
+   "id": "mersis_of",
+   "name": "MERSİS numarası sahibi",
+   "description": "MERSİS numarası şirkete aittir"
+  },
+  {
+   "id": "trade_registry_of",
+   "name": "ticaret sicil numarası sahibi",
+   "description": "Ticaret sicil numarası şirkete aittir"
+  },
+  {
+   "id": "invoice_recipient",
+   "name": "fatura muhatabı",
+   "description": "Fatura belgesi kişi adına düzenlenmiştir"
+  },
+  {
+   "id": "company_tax_of",
+   "name": "şirket vergi numarası sahibi",
+   "description": "Vergi numarası şirkete aittir"
+  },
+  {
+   "id": "tax_office_of",
+   "name": "vergi dairesi mükellefi",
+   "description": "Vergi dairesi, kişinin vergi kaydının bulunduğu yerdir"
+  },
+  {
+   "id": "civil_registry_of",
+   "name": "nüfus kaydı sahibi",
+   "description": "Nüfus kayıt bilgisi kişiye aittir"
+  },
+  {
+   "id": "property_of",
+   "name": "taşınmaz sahibi",
+   "description": "Ada parsel veya bağımsız bölüm numarası kişinin mülküdür"
+  },
+  {
+   "id": "represented_by",
+   "name": "vekili",
+   "description": "Kişi (vekalet veren), adına işlem yapmak üzere bir vekil tayin etmiştir"
+  },
+  {
+   "id": "authorised_signatory_of",
+   "name": "imza yetkilisi olduğu şirket",
+   "description": "Kişi, şirketin imza yetkilisi veya yetkili temsilcisidir"
+  },
+  {
+   "id": "owner_of_company",
+   "name": "sahibi olduğu şirket",
+   "description": "Kişi, şirketin sahibi veya ortağıdır"
+  },
+  {
+   "id": "guarantor_of",
+   "name": "kefil olduğu kişi",
+   "description": "Kişi (kefil), borçlunun borcuna veya sözleşmesine kefil olmuştur"
+  },
+  {
+   "id": "heir_of",
+   "name": "mirasçısı olduğu kişi",
+   "description": "Kişi, murisin mirasçısıdır"
+  },
+  {
+   "id": "tenant_of",
+   "name": "kiracısı olduğu kişi",
+   "description": "Kişi (kiracı), kiraya verenin taşınmazında kiracıdır"
+  },
+  {
+   "id": "witness_of",
+   "name": "tanık olduğu işlem",
+   "description": "Kişi, noter işlemine veya dava dosyasına tanık olmuştur"
+  },
+  {
+   "id": "property_at",
+   "name": "taşınmazın adresi",
+   "description": "Ada/parsel veya bağımsız bölüm künyesiyle belirtilen taşınmaz bu adrestedir"
+  }
+ ],
+ "subsets": {
+  "kvkk19": [
+   "national_id_number",
+   "phone_number",
+   "email_address",
+   "iban",
+   "full_address",
+   "date_of_birth",
+   "place_of_birth",
+   "card_number",
+   "ip_address",
+   "passport_number",
+   "drivers_license_number",
+   "license_plate",
+   "id_document_serial",
+   "gps_coordinates",
+   "customer_number",
+   "url_with_pii",
+   "device_id",
+   "social_media_handle",
+   "audiovisual_record_reference"
+  ],
+  "stack21": [
+   "national_id_number",
+   "phone_number",
+   "email_address",
+   "iban",
+   "full_address",
+   "date_of_birth",
+   "place_of_birth",
+   "card_number",
+   "ip_address",
+   "passport_number",
+   "drivers_license_number",
+   "license_plate",
+   "id_document_serial",
+   "gps_coordinates",
+   "customer_number",
+   "url_with_pii",
+   "device_id",
+   "social_media_handle",
+   "audiovisual_record_reference",
+   "full_name",
+   "company_name"
+  ]
+ }
+}

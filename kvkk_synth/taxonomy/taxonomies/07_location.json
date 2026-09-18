@@ -1,0 +1,41 @@
+{
+  "concept": { "en": "location_data", "tr": "konum_verisi" },
+  "kvkk_category": { "en": "location", "tr": "lokasyon" },
+  "kvkk_sensitivity": "genel nitelikli (Madde 3)",
+  "span_policy": {
+    "scope": "Bu grup gercek zamanli/kayitli konum verisini kapsar. Posta adresi 03_contact grubundadir; cakismada adres baglami contact grubunu, koordinat/takip baglami bu grubu kazanir."
+  },
+  "nodes": [
+    {
+      "id": "gps_coordinates",
+      "labels_en": ["gps_coordinates", "geo_coordinates", "lat_long"],
+      "labels_tr": ["gps_koordinati", "cografi_koordinat", "enlem_boylam"],
+      "description": "Enlem-boylam ciftleri veya tekil koordinat degerleri. Arac takip, mobil uygulama loglari ve fotograf metaverisinde gecer.",
+      "validation": "Ondalikli derece cifti (orn. 41.0082, 28.9784) veya DMS formati.",
+      "examples": [
+        { "text": "Son konum: 41.0082, 28.9784", "span": "41.0082, 28.9784" }
+      ]
+    },
+    {
+      "id": "tracked_location",
+      "labels_en": ["tracked_location", "realtime_location", "location_record"],
+      "labels_tr": ["takip_konumu", "anlik_konum", "konum_kaydi"],
+      "description": "Kisinin belirli bir anda bulundugu yere dair kayit ifadesi: arac takip sistemi, giris-cikis lokasyonu, baz istasyonu kaydi. Serbest metinde yer adi + zaman + kisi baglamiyla gecer.",
+      "examples": [
+        { "text": "Araç 14:32'de Ankara Çankaya'da tespit edildi.", "span": "Ankara Çankaya" }
+      ]
+    },
+    {
+      "id": "workplace_location",
+      "labels_en": ["workplace_location", "work_address_reference"],
+      "labels_tr": ["isyeri_konumu", "calisma_yeri"],
+      "description": "Kisinin calistigi yerin konum/yer adi olarak gecmesi. Isveren adi organization grubuna, konumu bu gruba girer.",
+      "examples": [
+        { "text": "Maslak'taki ofisinde çalışıyor.", "span": "Maslak" }
+      ]
+    }
+  ],
+  "negative_examples": [
+    { "text": "İstanbul Türkiye'nin en kalabalık şehridir.", "note": "genel cografya, kisi konumu degil" }
+  ]
+}

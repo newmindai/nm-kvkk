@@ -1,0 +1,137 @@
+{
+  "concept": {
+    "en": "registry_records",
+    "tr": "kayit_kunyesi"
+  },
+  "kvkk_category": {
+    "en": "identity_registry",
+    "tr": "kimlik_nufus_tapu"
+  },
+  "kvkk_sensitivity": "genel nitelikli (Madde 3)",
+  "span_policy": {
+    "composite": "Nufus kunyesi tek satirda birlesik gecebilir ('12/03745/008'); birlesik yazimda tum ifade tek span olarak civil_registry_volume_number ile etiketlenir, alan-deger formunda bilesenler ayri etiketlenir.",
+    "field_prefix": "Alan adlari (Cilt No:, Ada:) span disindadir."
+  },
+  "nodes": [
+    {
+      "id": "civil_registry_volume_number",
+      "labels_en": [
+        "civil_registry_volume_number",
+        "volume_number"
+      ],
+      "labels_tr": [
+        "cilt_no"
+      ],
+      "description": "Nufus kayit orneginde cilt numarasi; guclu dolayli tanimlayici.",
+      "legal_basis": "5490 Nufus Hizmetleri K.; nufus kayit ornegi",
+      "examples": [
+        {
+          "text": "Cilt No: 12",
+          "span": "12"
+        }
+      ]
+    },
+    {
+      "id": "family_order_number",
+      "labels_en": [
+        "family_order_number",
+        "household_number"
+      ],
+      "labels_tr": [
+        "aile_sira_no",
+        "hane_no"
+      ],
+      "description": "Nufus kaydinda aile sira (hane) numarasi.",
+      "legal_basis": "5490 Nufus Hizmetleri K.",
+      "examples": [
+        {
+          "text": "Aile Sıra No: 03745",
+          "span": "03745"
+        }
+      ]
+    },
+    {
+      "id": "individual_order_number",
+      "labels_en": [
+        "individual_order_number"
+      ],
+      "labels_tr": [
+        "birey_sira_no",
+        "sira_no"
+      ],
+      "description": "Nufus kaydinda birey sira numarasi.",
+      "legal_basis": "5490 Nufus Hizmetleri K.",
+      "examples": [
+        {
+          "text": "Sıra No: 008",
+          "span": "008"
+        }
+      ]
+    },
+    {
+      "id": "registered_place",
+      "labels_en": [
+        "registered_place",
+        "registry_location"
+      ],
+      "labels_tr": [
+        "kayitli_oldugu_yer",
+        "nufusa_kayitli_yer"
+      ],
+      "description": "Kisinin nufusa kayitli oldugu il/ilce/mahalle-koy bilgisi.",
+      "legal_basis": "5490 Nufus Hizmetleri K.",
+      "examples": [
+        {
+          "text": "Nüfusa kayıtlı olduğu yer: Trabzon/Ortahisar",
+          "span": "Trabzon/Ortahisar"
+        }
+      ]
+    },
+    {
+      "id": "land_parcel_number",
+      "labels_en": [
+        "land_parcel_number",
+        "cadastral_reference"
+      ],
+      "labels_tr": [
+        "ada_parsel_no",
+        "tapu_ada_parsel"
+      ],
+      "description": "Tapu ada/parsel/pafta bilgisi; malik uzerinden kisiyi tanimlar.",
+      "legal_basis": "2644 Tapu K.; Tapu ve Kadastro Verilerinin Paylasimi Yonetmeligi m.4/h",
+      "examples": [
+        {
+          "text": "Ada 1234, Parsel 56",
+          "span": "Ada 1234, Parsel 56"
+        }
+      ]
+    },
+    {
+      "id": "independent_section_number",
+      "labels_en": [
+        "independent_section_number"
+      ],
+      "labels_tr": [
+        "bagimsiz_bolum_no"
+      ],
+      "description": "Kat mulkiyetinde bagimsiz bolum/blok numarasi.",
+      "legal_basis": "634 Kat Mulkiyeti K.; tapu kayitlari",
+      "examples": [
+        {
+          "text": "A Blok, Bağımsız Bölüm 12",
+          "span": "A Blok, Bağımsız Bölüm 12"
+        }
+      ]
+    }
+  ],
+  "negative_examples": [
+    {
+      "text": "Kitabın 12. cildi yayımlandı.",
+      "note": "cilt kelimesi nufus kaydi baglami disinda"
+    },
+    {
+      "text": "1234 ada ağaç dikildi.",
+      "note": "sayi+ada kelime tesaduf, tapu baglami yok"
+    }
+  ]
+}

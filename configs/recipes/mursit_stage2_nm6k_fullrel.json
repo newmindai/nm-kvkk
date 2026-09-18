@@ -1,0 +1,31 @@
+{
+  "run_name": "mursit_stage2_nm6k_fullrel",
+  "seed": 42,
+  "model": {
+    "from_pretrained": "results/mursit/mursit_stage1_mixed/checkpoints/final"
+  },
+  "training": {
+    "num_epochs": 10000,
+    "batch_size": 4,
+    "gradient_accumulation_steps": 1,
+    "encoder_lr": 1e-05,
+    "task_lr": 0.0005,
+    "warmup_steps": 20,
+    "scheduler_type": "constant",
+    "fp16": false,
+    "bf16": true,
+    "eval_strategy": "steps",
+    "eval_steps": 2000,
+    "save_total_limit": 0,
+    "save_best": false,
+    "logging_steps": 10,
+    "num_workers": 0,
+    "pin_memory": false,
+    "validate_data": true,
+    "report_to_wandb": false,
+    "max_len": 1024,
+    "allow_invalid_samples": true,
+    "on_capacity_exceeded": "skip_sample"
+  },
+  "_comment": "THE WORKING MURSIT RECIPE (registry: 2s-mursit-fullrel). Stage 2 on nm6k records that carry the FULL relation schema (all 113 types in every record, absent ones as empty negatives, WITH descriptions: scripts/add_full_relation_schema.py) so the training prompt has the shape and length of the evaluation prompt. ModernBERT's recall collapses when the eval prompt is 5x longer than anything seen in training. Query this model with BARE relation names (gold_test_nodesc.json / configs/nm6k_relmap_tr_nodesc.json): nm6k entity-only 97.5, REL 92.8; real docs 68.9 / 36.4. 4x faster than mDeBERTa, zero OOM skips."
+}

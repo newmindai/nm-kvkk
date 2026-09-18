@@ -1,0 +1,15 @@
+You wrote the Turkish document below as synthetic PII training data with inline [value]label tags. An automatic checker found these problems:
+{problems}
+
+Rules that apply:
+- Only these values may appear as tagged personal data of the listed people (exactly as written):
+{entities}
+- Named people (each must keep their role): {persons}
+- You may also tag, with your own realistic values, facts of ONLY these kinds, using exactly these label ids: {kinds}
+- Any other personal data (other names, numbers, codes, addresses, dates of birth, contact details) must be removed or replaced by a listed value or by a role-only mention. Every personal fact that stays in the text must be tagged.
+- A tag is [value]label_id with the ASCII label id; nothing else may be in square brackets; suffixes with an apostrophe stay outside the tag.
+
+Rewrite the document with the smallest change that fixes every listed problem and keeps everything else identical. Output ONLY the corrected document text, ending with a final line containing exactly: ===SON===
+
+DOCUMENT:
+{text}

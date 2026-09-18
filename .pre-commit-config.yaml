@@ -1,0 +1,26 @@
+# Install once: pip install -r requirements-dev.txt && pre-commit install
+# Run on all files: pre-commit run --all-files
+exclude: ^GLiNER2/
+
+repos:
+  - repo: https://github.com/pre-commit/pre-commit-hooks
+    rev: v6.0.0
+    hooks:
+      - id: check-added-large-files
+        args: [--maxkb=1024]
+      - id: check-merge-conflict
+      - id: check-json
+      - id: check-toml
+      - id: check-yaml
+      - id: detect-private-key
+      - id: end-of-file-fixer
+        exclude: \.(jsonl|csv|log)$|^kvkk_synth/examples/
+      - id: trailing-whitespace
+        exclude: \.(jsonl|csv|log|md)$|^kvkk_synth/examples/
+
+  - repo: https://github.com/astral-sh/ruff-pre-commit
+    rev: v0.16.8
+    hooks:
+      - id: ruff-check
+        args: [--fix]
+      - id: ruff-format

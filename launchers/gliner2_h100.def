@@ -1,0 +1,100 @@
+# Singularity/Apptainer definition for GLiNER2.5 training — H100 cluster, driver CUDA 13.2
+#
+# Base image: NVIDIA NGC PyTorch 26.05
+#   - CUDA 13.2.1  -> exactly matches the cluster driver: runs natively,
+#     no cuda-compat / forward-compatibility machinery needed
+#   - PyTorch 2.12.0a0 (NVIDIA build: torch + kernels + CUDA runtime compiled
+#     together; never upgraded here, so nothing can mismatch)
+#   - Python 3.12, Ubuntu 24.04, NCCL/cuDNN/Transformer Engine included
+#   - H100 (sm_90) fully supported
+#
+# Design: the image contains PACKAGES ONLY — no model weights, no datasets,
+# no project code. Models and data live on gpfs and are read at runtime.
+# The GLiNER2 repo itself is NOT installed either — PYTHONPATH picks up your
+# clone (pure Python), so local changes (Mursit encoder etc.) need no rebuild.
+
+Bootstrap: docker
+From: nvcr.io/nvidia/pytorch:26.05-py3
+
+%labels
+    Project GLiNER2.5 Turkish legal NER
+    CUDA 13.2.1
+    BasePyTorch 2.12.0a0 (NGC 26.05)
+    TargetGPU H100 (driver CUDA 13.2)
+
+%post
+    set -e
+    # HF stack, pinned to the image the shipped models were trained with (built 2026-09-03; the complete
+    # package list of that image is launchers/gliner2_h100.freeze.txt). transformers stays on 4.57.6: it is the
+    # last 4.x, the patched GLiNER2 caps at <5, and flash-attention 2 was validated against it.
+    # --upgrade-strategy only-if-needed leaves NGC's torch/numpy builds alone.
+    python -m pip install --no-cache-dir --upgrade-strategy only-if-needed \
+        "transformers==4.57.6" \
+        "huggingface_hub==0.36.2" \
+        "accelerate==1.14.0" \
+        "peft==0.20.0" \
+        "safetensors==0.7.0" \
+        "pydantic==2.13.4" \
+        "PyYAML==6.0.1" \
+        "datasets==4.8.5" \
+        "scikit-learn==1.9.0" \
+        "scipy==1.17.1" \
+        "tqdm==4.67.3" \
+        "requests==2.33.1" \
+        "sentencepiece==0.2.2" \
+        "protobuf==7.34.1" \
+        "pandas==3.0.2" \
+        "pyarrow==24.0.0" \
+        "matplotlib==3.10.9"
+
+    # Build-time sanity: torch must still be the NGC CUDA-13.2 build.
+    python - <<'EOF'
+import torch, transformers
+assert torch.version.cuda.startswith("13.2"), f"torch CUDA is {torch.version.cuda}, expected 13.2"
+print("torch", torch.__version__, "| CUDA", torch.version.cuda, "| transformers", transformers.__version__)
+EOF
+
+    python -m pip freeze > /opt/pip-freeze.txt
+
+%test
+    python -c "import torch; print('torch', torch.__version__, 'cuda', torch.version.cuda)"
+    python -c "import transformers, peft, safetensors, pydantic, yaml, datasets, sentencepiece, google.protobuf; print('HF stack OK')"
+
+%runscript
+    exec "$@"
+
+%help
+    The cluster has NO internet access: the image cannot be built there and
+    models cannot be downloaded there. Build on the Mac, pre-populate the HF
+    cache locally, and rsync both to the cluster.
+
+    Build on an Apple Silicon Mac (Docker Desktop, Rosetta enabled in
+    Settings > General). The --platform flag is MANDATORY: without it
+    Docker pulls arm64 layers and the .sif will not run on x86_64 H100 nodes.
+        docker run --rm --privileged --platform linux/amd64 \
+            -v "$(pwd)/launchers:/work" \
+            kaczmarj/apptainer:latest \
+            build /work/gliner2_h100.sif /work/gliner2_h100.def
+    Needs ~50 GB free in Docker Desktop's VM disk; expect a long build
+    (emulated pip installs) and a 15-25 GB .sif. Verify before rsync:
+        docker run --rm --platform linux/amd64 -v "$(pwd)/launchers:/work" \
+            kaczmarj/apptainer:latest exec /work/gliner2_h100.sif \
+            python -c "import platform; print(platform.machine())"   # must print x86_64
+    Runtime environment (set in the job script, not baked into the image):
+        PROJECT=/path/to/gliner2-kvkk-tr        # your clone on the cluster
+        export PYTHONPATH="$PROJECT/GLiNER2"   # your clone provides `import gliner2`
+        export HF_HUB_OFFLINE=1                # guard against stray hub lookups
+        # No HF cache: models are plain folders under $PROJECT/models/ (-> scratch);
+        # the .sif lives in scratch sif_files/
+
+    GPU smoke test (compute node; /gpfs is visible inside the container —
+    if not, add: --bind /gpfs):
+        module load singularity && singularity exec --nv gliner2_h100.sif \
+            python -c "import torch; print(torch.cuda.is_available(), torch.cuda.get_device_name(0), torch.version.cuda)"
+
+    Job submission: see launchers/ (env.sh.example -> env.sh, then
+    launchers/submit.sh <launcher>.sh).
+
+    REMINDER: the training script must pass torchrun's rank into the config,
+    or DDP never activates:
+        config.local_rank = int(os.environ.get("LOCAL_RANK", -1))

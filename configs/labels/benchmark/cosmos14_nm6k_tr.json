@@ -1,0 +1,128 @@
+[
+ {
+  "id": "full_name",
+  "tr": "ad soyad",
+  "group": "person_name",
+  "group_tr": "kisi_adi",
+  "sensitivity": "genel nitelikli (Madde 3)",
+  "out_of_scope": false,
+  "source": "nm6k-tr"
+ },
+ {
+  "id": "national_id_number",
+  "tr": "kimlik numarası",
+  "group": "identity_number",
+  "group_tr": "kimlik_numarasi",
+  "sensitivity": "genel nitelikli (Madde 3)",
+  "out_of_scope": false,
+  "source": "nm6k-tr"
+ },
+ {
+  "id": "id_document_serial",
+  "tr": "kimlik seri numarası",
+  "group": "identity_number",
+  "group_tr": "kimlik_numarasi",
+  "sensitivity": "genel nitelikli (Madde 3)",
+  "out_of_scope": false,
+  "source": "nm6k-tr"
+ },
+ {
+  "id": "passport_number",
+  "tr": "pasaport numarası",
+  "group": "identity_number",
+  "group_tr": "kimlik_numarasi",
+  "sensitivity": "genel nitelikli (Madde 3)",
+  "out_of_scope": false,
+  "source": "nm6k-tr"
+ },
+ {
+  "id": "drivers_license_number",
+  "tr": "ehliyet numarası",
+  "group": "identity_number",
+  "group_tr": "kimlik_numarasi",
+  "sensitivity": "genel nitelikli (Madde 3)",
+  "out_of_scope": false,
+  "source": "nm6k-tr"
+ },
+ {
+  "id": "phone_number",
+  "tr": "telefon numarası",
+  "group": "contact_info",
+  "group_tr": "iletisim_bilgisi",
+  "sensitivity": "genel nitelikli (Madde 3)",
+  "out_of_scope": false,
+  "source": "nm6k-tr"
+ },
+ {
+  "id": "email_address",
+  "tr": "e-posta adresi",
+  "group": "contact_info",
+  "group_tr": "iletisim_bilgisi",
+  "sensitivity": "genel nitelikli (Madde 3)",
+  "out_of_scope": false,
+  "source": "nm6k-tr"
+ },
+ {
+  "id": "full_address",
+  "tr": "adres",
+  "group": "contact_info",
+  "group_tr": "iletisim_bilgisi",
+  "sensitivity": "genel nitelikli (Madde 3)",
+  "out_of_scope": false,
+  "source": "nm6k-tr"
+ },
+ {
+  "id": "date_of_birth",
+  "tr": "doğum tarihi",
+  "group": "birth_civil_status",
+  "group_tr": "dogum_medeni_durum",
+  "sensitivity": "genel nitelikli (Madde 3)",
+  "out_of_scope": false,
+  "source": "nm6k-tr"
+ },
+ {
+  "id": "iban",
+  "tr": "IBAN",
+  "group": "financial_info",
+  "group_tr": "finansal_bilgi",
+  "sensitivity": "genel nitelikli (Madde 3)",
+  "out_of_scope": false,
+  "source": "nm6k-tr"
+ },
+ {
+  "id": "card_number",
+  "tr": "kredi kartı numarası",
+  "group": "financial_info",
+  "group_tr": "finansal_bilgi",
+  "sensitivity": "genel nitelikli (Madde 3)",
+  "out_of_scope": false,
+  "source": "nm6k-tr"
+ },
+ {
+  "id": "ip_address",
+  "tr": "IP adresi",
+  "group": "digital_identifier",
+  "group_tr": "dijital_kimlik",
+  "sensitivity": "genel nitelikli (Madde 3)",
+  "out_of_scope": false,
+  "source": "nm6k-tr"
+ },
+ {
+  "id": "license_plate",
+  "tr": "araç plakası",
+  "group": "vehicle_identifier",
+  "group_tr": "arac_kimligi",
+  "sensitivity": "genel nitelikli (Madde 3)",
+  "out_of_scope": false,
+  "source": "nm6k-tr"
+ },
+ {
+  "id": "company_name",
+  "tr": "şirket adı",
+  "group": "organization_identifier",
+  "group_tr": "tuzel_kisi_kimligi",
+  "sensitivity": "genel nitelikli (Madde 3)",
+  "out_of_scope": true,
+  "source": "nm6k-tr"
+ }
+]

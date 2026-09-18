@@ -1,0 +1,317 @@
+{
+  "concept": {
+    "en": "legal_customer_records",
+    "tr": "hukuki_musteri_kayitlari"
+  },
+  "kvkk_category": {
+    "en": "legal_transaction_customer_transaction",
+    "tr": "hukuki_islem_musteri_islem"
+  },
+  "kvkk_sensitivity": "genel nitelikli (Madde 3)",
+  "span_policy": {
+    "scope": "VERBIS hukuki islem, musteri islem ve gorsel-isitsel kayit kategorilerinin metinsel tanimlayicilari. Numaralar kisiye bagliyken kisisel veridir; alan adi span disindadir.",
+    "case_format": "Esas/karar numaralarinda yil/sira ve varsa E./K. eki tek spandir ('2024/123 E.')."
+  },
+  "nodes": [
+    {
+      "id": "legal_case_number",
+      "labels_en": [
+        "legal_case_number",
+        "court_file_number",
+        "docket_number"
+      ],
+      "labels_tr": [
+        "esas_no",
+        "karar_no",
+        "dava_dosya_no"
+      ],
+      "description": "Mahkeme dosyasinin esas, karar veya dosya numarasi. Kisiyi dolayli belirleyen en yaygin hukuki tanimlayicidir; mahkeme karari iceren egitim verilerinde oncelikli maskelenir.",
+      "examples": [
+        {
+          "text": "2024/123 E., 2025/456 K. sayılı dosyada",
+          "spans": [
+            {
+              "label": "legal_case_number",
+              "span": "2024/123 E."
+            },
+            {
+              "label": "legal_case_number",
+              "span": "2025/456 K."
+            }
+          ]
+        },
+        {
+          "text": "Dosya no: 2023/789",
+          "span": "2023/789"
+        }
+      ]
+    },
+    {
+      "id": "customer_number",
+      "labels_en": [
+        "customer_number",
+        "client_id"
+      ],
+      "labels_tr": [
+        "musteri_no",
+        "musteri_numarasi",
+        "cari_kod"
+      ],
+      "description": "Kisiye bagli musteri/cari numarasi. Cagri merkezi ve CRM metinlerinin ana tanimlayicisidir.",
+      "examples": [
+        {
+          "text": "Müşteri no: 100234567 için talep açıldı.",
+          "span": "100234567"
+        }
+      ]
+    },
+    {
+      "id": "subscription_number",
+      "labels_en": [
+        "subscription_number",
+        "subscriber_id"
+      ],
+      "labels_tr": [
+        "abone_no",
+        "tesisat_no"
+      ],
+      "description": "Abone veya tesisat numarasi (elektrik, su, dogalgaz, telekom). Adres ve kisiyle eslesir.",
+      "examples": [
+        {
+          "text": "Tesisat no 4005123 borç sorgusu",
+          "span": "4005123"
+        }
+      ]
+    },
+    {
+      "id": "order_reference",
+      "labels_en": [
+        "order_reference",
+        "order_number"
+      ],
+      "labels_tr": [
+        "siparis_no",
+        "talep_no"
+      ],
+      "description": "Kisiye bagli siparis, talep veya basvuru numarasi. Tek basina dusuk riskli; kisi baglaminda musteri islem verisidir. 02 grubundaki negatif ornek yalnizca 'kimlik numarasi degildir' anlaminda okunur.",
+      "examples": [
+        {
+          "text": "Ayşe Yılmaz'ın SP-2024-88123 numaralı siparişi iade edildi.",
+          "span": "SP-2024-88123"
+        }
+      ]
+    },
+    {
+      "id": "audiovisual_record_reference",
+      "labels_en": [
+        "audiovisual_record_reference",
+        "camera_record_reference",
+        "media_file_reference"
+      ],
+      "labels_tr": [
+        "gorsel_isitsel_kayit",
+        "kamera_kaydi_referansi",
+        "medya_dosya_referansi"
+      ],
+      "description": "Fotograf, video veya ses kaydina isaret eden metinsel referans: dosya adi, kayit ID'si, kamera/kayit zamani ifadesi. Metin modeli kaydin kendisini degil referansini yakalar.",
+      "examples": [
+        {
+          "text": "Olay KAM-03 kamerasının 14:32 kaydında görülüyor.",
+          "span": "KAM-03 kamerasının 14:32 kaydı"
+        },
+        {
+          "text": "Ek: ayse_yilmaz_kimlik.jpg",
+          "span": "ayse_yilmaz_kimlik.jpg",
+          "note": "dosya adi ayrica full_name icin ikinci ornek satiriyla etiketlenir"
+        }
+      ]
+    },
+    {
+      "id": "investigation_number",
+      "labels_en": [
+        "investigation_number"
+      ],
+      "labels_tr": [
+        "sorusturma_no"
+      ],
+      "description": "Cumhuriyet Bassavciligi sorusturma numarasi.",
+      "legal_basis": "CMK m.161; Bassavcilik Yazi Isleri Yonetmeligi",
+      "examples": [
+        {
+          "text": "2024/4228 soruşturma sayılı dosya",
+          "span": "2024/4228"
+        }
+      ]
+    },
+    {
+      "id": "uets_address",
+      "labels_en": [
+        "uets_address",
+        "e_notification_address"
+      ],
+      "labels_tr": [
+        "uets_adresi",
+        "e_tebligat_adresi"
+      ],
+      "description": "Ulusal Elektronik Tebligat Sistemi adresi; 15 haneli, 5-5-5 gruplu.",
+      "validation": "\\d{5}-\\d{5}-\\d{5}",
+      "legal_basis": "7201 Tebligat K.; Elektronik Tebligat Yonetmeligi m.11",
+      "examples": [
+        {
+          "text": "UETS: 23456-12345-54321",
+          "span": "23456-12345-54321"
+        }
+      ]
+    },
+    {
+      "id": "notification_barcode",
+      "labels_en": [
+        "notification_barcode",
+        "ptt_tracking_number"
+      ],
+      "labels_tr": [
+        "tebligat_barkod_no",
+        "ptt_takip_no"
+      ],
+      "description": "Tebligat/PTT gonderi barkod-takip numarasi (13 hane).",
+      "validation": "13 hane; harf oneki varyantlari teyit gerektirir",
+      "legal_basis": "7201 Tebligat K.; PTT gonderi takip",
+      "examples": [
+        {
+          "text": "Tebligat barkod no: 1234567890123",
+          "span": "1234567890123"
+        }
+      ]
+    },
+    {
+      "id": "notary_record_number",
+      "labels_en": [
+        "notary_record_number"
+      ],
+      "labels_tr": [
+        "noter_yevmiye_no"
+      ],
+      "description": "Noter islem yevmiye numarasi; vekaletname ve senetlerde gecer.",
+      "legal_basis": "1512 Noterlik K. ve Yonetmeligi",
+      "examples": [
+        {
+          "text": "12.03.2024 tarih ve 04521 yevmiye numaralı vekaletname",
+          "span": "04521"
+        }
+      ]
+    },
+    {
+      "id": "bar_registry_number",
+      "labels_en": [
+        "bar_registry_number"
+      ],
+      "labels_tr": [
+        "baro_sicil_no"
+      ],
+      "description": "Avukatin baro/TBB sicil numarasi.",
+      "legal_basis": "1136 Avukatlik K.",
+      "examples": [
+        {
+          "text": "İstanbul Barosu sicil no: 45678",
+          "span": "45678"
+        }
+      ]
+    },
+    {
+      "id": "expert_registry_number",
+      "labels_en": [
+        "expert_registry_number"
+      ],
+      "labels_tr": [
+        "bilirkisi_sicil_no"
+      ],
+      "description": "Bilirkisi sicil numarasi.",
+      "legal_basis": "6754 Bilirkisilik K.; Bilirkisilik Yonetmeligi (2017)",
+      "examples": [
+        {
+          "text": "Bilirkişi sicil no: 9560",
+          "span": "9560"
+        }
+      ]
+    },
+    {
+      "id": "judge_prosecutor_registry_number",
+      "labels_en": [
+        "judge_prosecutor_registry_number"
+      ],
+      "labels_tr": [
+        "hakim_savci_sicil_no"
+      ],
+      "description": "Hakim veya savci sicil numarasi.",
+      "legal_basis": "HSK personel sistemi",
+      "examples": [
+        {
+          "text": "Hâkim sicil no: 123456",
+          "span": "123456",
+          "note": "hane uzunlugu ikincil kaynak; teyit gerekir"
+        }
+      ]
+    },
+    {
+      "id": "enforcement_file_number",
+      "labels_en": [
+        "enforcement_file_number"
+      ],
+      "labels_tr": [
+        "icra_dosya_no"
+      ],
+      "description": "Icra mudurlugu takip dosya numarasi.",
+      "legal_basis": "2004 Icra Iflas K.",
+      "examples": [
+        {
+          "text": "İstanbul 5. İcra Müd. 2024/15678 E. sayılı takip",
+          "span": "2024/15678 E."
+        }
+      ]
+    },
+    {
+      "id": "loyalty_card_number",
+      "labels_en": [
+        "loyalty_card_number"
+      ],
+      "labels_tr": [
+        "sadakat_kart_no"
+      ],
+      "description": "Sadakat/musteri karti numarasi; alisveris gecmisiyle kisiye baglanir.",
+      "legal_basis": "KVKK Sadakat Programlari Rehber Taslagi (2022, taslak)",
+      "examples": [
+        {
+          "text": "Kart no: 6291234567",
+          "span": "6291234567"
+        }
+      ]
+    },
+    {
+      "id": "cargo_tracking_number",
+      "labels_en": [
+        "cargo_tracking_number"
+      ],
+      "labels_tr": [
+        "kargo_takip_no"
+      ],
+      "description": "Kargo gonderi takip numarasi; siparis ve alici ile eslesir.",
+      "legal_basis": "e-ticaret pratigi; VERBIS musteri islem",
+      "examples": [
+        {
+          "text": "Kargo takip no: 725012345678",
+          "span": "725012345678"
+        }
+      ]
+    }
+  ],
+  "negative_examples": [
+    {
+      "text": "Kanun 2024/123 sayılı yönetmelikle değişti.",
+      "note": "mevzuat numarasi, dava dosyasi degil"
+    },
+    {
+      "text": "Fatura toplamı 4005123 TL değil elbette.",
+      "note": "tutar, tesisat no degil"
+    }
+  ]
+}

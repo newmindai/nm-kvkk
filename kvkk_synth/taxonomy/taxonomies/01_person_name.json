@@ -1,0 +1,105 @@
+{
+  "concept": { "en": "person_name", "tr": "kisi_adi" },
+  "kvkk_category": { "en": "identity", "tr": "kimlik" },
+  "kvkk_sensitivity": "genel nitelikli (Madde 3)",
+  "span_policy": {
+    "titles": "Unvan ve hitap ifadeleri adin parcasidir. 'Dr. Ayse Yilmaz' ifadesinin tam spani 'Dr. Ayse Yilmaz' olur. Bitisik yazimda ('Dr.Ayse') zaten tek token oldugu icin otomatik dahildir. Unvan boslukla ayri yazilmissa ayni araliga ikincil title_honorific etiketi nested olarak verilebilir.",
+    "apostrophe": "Kesme isaretiyle ayrilan ekler span disinda kalir. Bitisik yazimda tum token spane girer.",
+    "tokenizer_note": "Span sinirlari her zaman token sinirlarina hizalanir."
+  },
+  "nodes": [
+    {
+      "id": "full_name",
+      "labels_en": ["full_name", "person_full_name", "person_name", "name"],
+      "labels_tr": ["tam_ad", "ad_soyad", "kisi_adi", "isim_soyisim"],
+      "description": "Varsa unvan, ad, varsa ikinci ad ve soyadin birlikte gectigi tam isim spani. Coarse modun ana etiketidir.",
+      "examples": [
+        { "text": "Toplantıya Dr. Ayşe Nur Yılmaz katıldı.", "span": "Dr. Ayşe Nur Yılmaz" },
+        { "text": "Av.Mehmet Demir'in dosyası", "span": "Av.Mehmet Demir", "note": "bitisik unvan tek token, kesme eki disarida" },
+        { "text": "mehmet demir aradı", "span": "mehmet demir", "note": "kucuk harfli chat/log varyanti" }
+      ]
+    },
+    {
+      "id": "first_name",
+      "labels_en": ["first_name", "given_name", "forename"],
+      "labels_tr": ["ad", "isim", "ilk_ad"],
+      "description": "Kisinin yalnizca ilk adi. Form ve tablo verilerinde alan bazli maskeleme icin kullanilir. Fine mod etiketi.",
+      "examples": [
+        { "text": "Adı: Ayşe, Soyadı: Yılmaz", "span": "Ayşe" }
+      ]
+    },
+    {
+      "id": "middle_name",
+      "labels_en": ["middle_name", "second_given_name"],
+      "labels_tr": ["ikinci_ad", "orta_ad", "gobek_adi"],
+      "description": "Kisinin ikinci adi. Yalnizca fine modda ayri cikartilir; coarse modda full_name icinde kalir.",
+      "examples": [
+        { "text": "Ayşe Nur Yılmaz", "span": "Nur" }
+      ]
+    },
+    {
+      "id": "last_name",
+      "labels_en": ["last_name", "surname", "family_name"],
+      "labels_tr": ["soyad", "soyisim", "soyadi"],
+      "description": "Kisinin soyadi. Tek basina gectigi hitap ve resmi yazisma baglamlarinda da yakalanmalidir.",
+      "examples": [
+        { "text": "Sayın Yılmaz,", "span": "Yılmaz" }
+      ]
+    },
+    {
+      "id": "maiden_name",
+      "labels_en": ["maiden_name", "birth_surname", "premarital_surname"],
+      "labels_tr": ["kizlik_soyadi", "evlilik_oncesi_soyadi"],
+      "description": "Kisinin evlilik oncesi soyadi. Genellikle parantez icinde veya aciklamali gecer.",
+      "examples": [
+        { "text": "Ayşe Yılmaz (Demir)", "span": "Demir" }
+      ]
+    },
+    {
+      "id": "mothers_maiden_name",
+      "labels_en": ["mothers_maiden_name", "mother_maiden_name"],
+      "labels_tr": ["anne_kizlik_soyadi", "annenin_kizlik_soyadi"],
+      "description": "Annenin kizlik soyadi.",
+      "risk_note": "Bankacilikta kimlik dogrulama sirri; finansal veri seviyesinde riskli kabul edilir.",
+      "examples": [
+        { "text": "Anne kızlık soyadınız: Kaya", "span": "Kaya" }
+      ]
+    },
+    {
+      "id": "initials",
+      "labels_en": ["initials", "name_initials", "abbreviated_name"],
+      "labels_tr": ["bas_harfler", "ad_bas_harfleri", "kisaltilmis_ad"],
+      "description": "Adin bas harflerle kisaltilmis hali. Mahkeme kararlarinda yaygindir. Kismi kisaltmalarda tie-break kurali geregi bu etiket full_name karsisinda oncelik kazanir.",
+      "examples": [
+        { "text": "Sanık A.N.Y. hakkında", "span": "A.N.Y." },
+        { "text": "M. Demir imzaladı", "span": "M. Demir" }
+      ]
+    },
+    {
+      "id": "nickname",
+      "labels_en": ["nickname", "alias", "pseudonym"],
+      "labels_tr": ["lakap", "takma_ad", "mahlas", "rumuz"],
+      "description": "Kisiyi tanimlayan gayri resmi ad. Kisiyi belirlenebilir kildigi icin kisisel veridir.",
+      "examples": [
+        { "text": "Mahallede 'Topal Hasan' diye bilinir", "span": "Topal Hasan" }
+      ]
+    },
+    {
+      "id": "title_honorific",
+      "labels_en": ["title_honorific", "title", "honorific"],
+      "labels_tr": ["unvan", "hitap", "meslek_unvani"],
+      "description": "Ikincil, nested etiket. Unvan her zaman full_name spaninin icindedir; bu etiket yalnizca unvan boslukla ayri token oldugunda ek bilgi olarak verilir. Bitisik yazimda kullanilamaz.",
+      "examples": [
+        { "text": "Dr. Ayşe Yılmaz", "spans": [
+          { "label": "full_name", "span": "Dr. Ayşe Yılmaz" },
+          { "label": "title_honorific", "span": "Dr.", "nested_in": "full_name" }
+        ] }
+      ]
+    }
+  ],
+  "negative_examples": [
+    { "text": "Kaya düştü, yol kapandı.", "note": "kaya cins isim, soyad degil" },
+    { "text": "Deniz kenarında yürüdük.", "note": "deniz cins isim" },
+    { "text": "Atatürk Havalimanı'na indik.", "note": "kamusal yer adi, maskelenmez" }
+  ]
+}

@@ -1,0 +1,441 @@
+{
+ "bundles": 5,
+ "profiles": {
+  "sparse": 1,
+  "normal": 2,
+  "dense": 2
+ },
+ "persons": {
+  "persons=1": 3,
+  "persons=3": 2
+ },
+ "multi_person_share_nonzero": 0.4,
+ "secondary_kinds": {
+  "kind=related": 4
+ },
+ "negatives": 4,
+ "multi_person_without_negative": 0,
+ "distinct_nodes_instantiated": 50,
+ "nodes_never_instantiated": [
+  "bank_account_number",
+  "bar_registry_number",
+  "card_cvv",
+  "cargo_tracking_number",
+  "city",
+  "crypto_wallet_address",
+  "device_id",
+  "employee_id",
+  "eprescription_number",
+  "expert_registry_number",
+  "family_order_number",
+  "foreigner_id_number",
+  "iban",
+  "id_document_serial",
+  "independent_section_number",
+  "invoice_document_id",
+  "kep_address",
+  "land_parcel_number",
+  "license_plate",
+  "maiden_name",
+  "marital_status",
+  "medula_tracking_number",
+  "mersis_number",
+  "middle_name",
+  "passport_number",
+  "password",
+  "phone_number",
+  "postal_code",
+  "registered_place",
+  "social_security_number",
+  "street_line",
+  "student_number",
+  "subscription_number",
+  "swift_bic",
+  "title_honorific",
+  "trade_registry_number",
+  "uets_address",
+  "vehicle_registration_number",
+  "vin_chassis_number"
+ ],
+ "distinct_relations": "48/113",
+ "relation_floor": 1,
+ "relations_below_floor": {
+  "sibling_of": 0,
+  "relative_of": 0,
+  "former_surname_of": 0,
+  "marital_status_of": 0,
+  "foreigner_id_of": 0,
+  "id_serial_of": 0,
+  "passport_of": 0,
+  "social_security_of": 0,
+  "iban_of": 0,
+  "bank_of_account": 0,
+  "crypto_wallet_of": 0,
+  "device_used_by": 0,
+  "vehicle_plate_of": 0,
+  "vehicle_vin_of": 0,
+  "vehicle_registration_of": 0,
+  "same_vehicle": 0,
+  "medula_of": 0,
+  "eprescription_of": 0,
+  "employee_id_of": 0,
+  "student_number_of": 0,
+  "emergency_contact_of": 0,
+  "subscription_of": 0,
+  "uets_of": 0,
+  "bar_registry_of": 0,
+  "expert_registry_of": 0,
+  "shipment_of": 0,
+  "mersis_of": 0,
+  "trade_registry_of": 0,
+  "invoice_recipient": 0,
+  "property_of": 0,
+  "represented_by": 0,
+  "authorised_signatory_of": 0,
+  "owner_of_company": 0,
+  "guarantor_of": 0,
+  "heir_of": 0,
+  "tenant_of": 0,
+  "witness_of": 0,
+  "property_at": 0
+ },
+ "writer_owned_relations": [
+  "attire_of",
+  "belief_of",
+  "biometric_of",
+  "conviction_of",
+  "depicted_in",
+  "diagnosis_of",
+  "disability_of",
+  "disciplinary_of",
+  "education_of",
+  "ethnicity_of",
+  "genetic_of",
+  "medication_of",
+  "member_of",
+  "military_status_of",
+  "nickname_of",
+  "political_view_of",
+  "position_of",
+  "risk_report_of",
+  "salary_of",
+  "sexual_life_of",
+  "signature_of",
+  "tax_office_of",
+  "treatment_of",
+  "verdict_in_case",
+  "voice_of",
+  "work_history_of",
+  "workplace_of"
+ ],
+ "relation_counts": {
+  "national_id_of": 7,
+  "date_of_birth_of": 3,
+  "party_in_case": 3,
+  "customer_number_of": 2,
+  "civil_registry_of": 2,
+  "account_of": 2,
+  "part_of_name": 2,
+  "card_component_of": 1,
+  "card_of": 1,
+  "coordinates_of": 1,
+  "mrz_of": 1,
+  "located_at": 1,
+  "credit_score_of": 1,
+  "company_tax_of": 1,
+  "employer_of": 1,
+  "order_of": 1,
+  "tax_id_of": 1,
+  "ip_used_by": 1,
+  "notified_via": 1,
+  "mothers_maiden_name_of": 1,
+  "yupass_of": 1,
+  "advertising_id_of": 1,
+  "cookie_of": 1,
+  "credential_of": 1,
+  "loyalty_card_of": 1,
+  "sim_of": 1,
+  "part_of_address": 1,
+  "residence_of": 1,
+  "email_of": 1,
+  "gender_of": 1,
+  "age_of": 1,
+  "spouse_of": 1,
+  "child_of": 1,
+  "judiciary_registry_of": 1,
+  "notary_act_of": 1,
+  "phone_of": 1,
+  "insurance_policy_of": 1,
+  "initials_of": 1,
+  "drivers_license_of": 1,
+  "mother_of": 1,
+  "father_of": 1,
+  "prescribed_by": 1,
+  "health_file_of": 1,
+  "blood_type_of": 1,
+  "provision_of": 1,
+  "profile_url_of": 1,
+  "place_of_birth_of": 1,
+  "nationality_of": 1
+ },
+ "quota": {
+  "mother_of": {
+   "before": 0,
+   "added": 1
+  },
+  "father_of": {
+   "before": 0,
+   "added": 1
+  },
+  "spouse_of": {
+   "before": 0,
+   "added": 1
+  },
+  "child_of": {
+   "before": 0,
+   "added": 1
+  },
+  "sibling_of": {
+   "before": 0,
+   "added": 0
+  },
+  "relative_of": {
+   "before": 0,
+   "added": 0
+  },
+  "former_surname_of": {
+   "before": 0,
+   "added": 0
+  },
+  "mothers_maiden_name_of": {
+   "before": 0,
+   "added": 1
+  },
+  "place_of_birth_of": {
+   "before": 0,
+   "added": 1
+  },
+  "marital_status_of": {
+   "before": 0,
+   "added": 0
+  },
+  "nationality_of": {
+   "before": 0,
+   "added": 1
+  },
+  "foreigner_id_of": {
+   "before": 0,
+   "added": 0
+  },
+  "id_serial_of": {
+   "before": 0,
+   "added": 0
+  },
+  "passport_of": {
+   "before": 0,
+   "added": 0
+  },
+  "social_security_of": {
+   "before": 0,
+   "added": 0
+  },
+  "yupass_of": {
+   "before": 0,
+   "added": 1
+  },
+  "mrz_of": {
+   "before": 0,
+   "added": 1
+  },
+  "iban_of": {
+   "before": 0,
+   "added": 0
+  },
+  "bank_of_account": {
+   "before": 0,
+   "added": 0
+  },
+  "crypto_wallet_of": {
+   "before": 0,
+   "added": 0
+  },
+  "device_used_by": {
+   "before": 0,
+   "added": 0
+  },
+  "located_at": {
+   "before": 0,
+   "added": 1
+  },
+  "vehicle_plate_of": {
+   "before": 0,
+   "added": 0
+  },
+  "vehicle_vin_of": {
+   "before": 0,
+   "added": 0
+  },
+  "vehicle_registration_of": {
+   "before": 0,
+   "added": 0
+  },
+  "same_vehicle": {
+   "before": 0,
+   "added": 0
+  },
+  "medula_of": {
+   "before": 0,
+   "added": 0
+  },
+  "eprescription_of": {
+   "before": 0,
+   "added": 0
+  },
+  "employee_id_of": {
+   "before": 0,
+   "added": 0
+  },
+  "student_number_of": {
+   "before": 0,
+   "added": 0
+  },
+  "emergency_contact_of": {
+   "before": 0,
+   "added": 0
+  },
+  "subscription_of": {
+   "before": 0,
+   "added": 0
+  },
+  "uets_of": {
+   "before": 0,
+   "added": 0
+  },
+  "bar_registry_of": {
+   "before": 0,
+   "added": 0
+  },
+  "expert_registry_of": {
+   "before": 0,
+   "added": 0
+  },
+  "shipment_of": {
+   "before": 0,
+   "added": 0
+  },
+  "mersis_of": {
+   "before": 0,
+   "added": 0
+  },
+  "trade_registry_of": {
+   "before": 0,
+   "added": 0
+  },
+  "invoice_recipient": {
+   "before": 0,
+   "added": 0
+  },
+  "property_of": {
+   "before": 0,
+   "added": 0
+  },
+  "represented_by": {
+   "before": 0,
+   "added": 0
+  },
+  "authorised_signatory_of": {
+   "before": 0,
+   "added": 0
+  },
+  "owner_of_company": {
+   "before": 0,
+   "added": 0
+  },
+  "guarantor_of": {
+   "before": 0,
+   "added": 0
+  },
+  "heir_of": {
+   "before": 0,
+   "added": 0
+  },
+  "tenant_of": {
+   "before": 0,
+   "added": 0
+  },
+  "witness_of": {
+   "before": 0,
+   "added": 0
+  },
+  "property_at": {
+   "before": 0,
+   "added": 0
+  }
+ },
+ "node_counts": {
+  "full_name": 9,
+  "national_id_number": 7,
+  "first_name": 5,
+  "last_name": 5,
+  "date_of_birth": 3,
+  "customer_number": 2,
+  "card_expiry": 1,
+  "card_number": 1,
+  "gps_coordinates": 1,
+  "passport_mrz": 1,
+  "tracked_location": 1,
+  "credit_score": 1,
+  "company_tax_number": 1,
+  "company_name": 1,
+  "order_reference": 1,
+  "tax_id_number": 1,
+  "individual_order_number": 1,
+  "ip_address": 1,
+  "notification_barcode": 1,
+  "mothers_maiden_name": 1,
+  "yupass_number": 1,
+  "advertising_id": 1,
+  "cookie_id": 1,
+  "session_or_token": 1,
+  "username": 1,
+  "loyalty_card_number": 1,
+  "social_media_handle": 1,
+  "sim_identifier": 1,
+  "district": 1,
+  "full_address": 1,
+  "email_address": 1,
+  "gender": 1,
+  "age": 1,
+  "legal_case_number": 1,
+  "judge_prosecutor_registry_number": 1,
+  "enforcement_file_number": 1,
+  "notary_record_number": 1,
+  "fax_number": 1,
+  "insurance_policy_number": 1,
+  "initials": 1,
+  "drivers_license_number": 1,
+  "civil_registry_volume_number": 1,
+  "investigation_number": 1,
+  "doctor_license_number": 1,
+  "health_report_id": 1,
+  "blood_type": 1,
+  "provision_number": 1,
+  "url_with_pii": 1,
+  "place_of_birth": 1,
+  "nationality": 1
+ },
+ "facts_per_bundle": {
+  "6": 1,
+  "8": 1,
+  "12": 1,
+  "16": 1,
+  "20": 1
+ },
+ "affinity_by_profile": {
+  "sparse": 0.069,
+  "normal": 0.126,
+  "dense": 0.182
+ },
+ "tier_b_kinds_offered": 13,
+ "tier_c_instantiated": 1
+}

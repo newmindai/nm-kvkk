@@ -1,0 +1,231 @@
+{
+  "concept": {
+    "en": "digital_identifier",
+    "tr": "dijital_kimlik"
+  },
+  "kvkk_category": {
+    "en": "transaction_security",
+    "tr": "islem_guvenligi"
+  },
+  "kvkk_sensitivity": "genel nitelikli (Madde 3)",
+  "span_policy": {
+    "case": "Kullanici adi ve handle'larda buyuk/kucuk harf korunur; @ isareti handle spanine dahildir.",
+    "url": "URL icinde gecen PII (query parametresindeki eposta gibi) hem url_with_pii hem ic PII etiketiyle iki ayri ornek satiri olarak etiketlenir (flat politika)."
+  },
+  "nodes": [
+    {
+      "id": "ip_address",
+      "labels_en": [
+        "ip_address",
+        "ipv4_address",
+        "ipv6_address"
+      ],
+      "labels_tr": [
+        "ip_adresi",
+        "ip_no"
+      ],
+      "description": "IPv4 veya IPv6 adresi. VERBIS islem guvenligi kategorisinin temel verisidir.",
+      "validation": "IPv4: 4 oktet; IPv6: hex gruplar.",
+      "examples": [
+        {
+          "text": "Giriş 192.168.1.34 adresinden yapıldı.",
+          "span": "192.168.1.34"
+        }
+      ]
+    },
+    {
+      "id": "username",
+      "labels_en": [
+        "username",
+        "user_id",
+        "login_name"
+      ],
+      "labels_tr": [
+        "kullanici_adi",
+        "kullanici_kodu"
+      ],
+      "description": "Sistem veya uygulama kullanici adi. Kisiyle eslesebilir oldugu icin kisisel veridir.",
+      "examples": [
+        {
+          "text": "Kullanıcı adı ayilmaz90 ile giriş yaptı.",
+          "span": "ayilmaz90"
+        }
+      ]
+    },
+    {
+      "id": "password",
+      "labels_en": [
+        "password",
+        "passcode",
+        "pin_code"
+      ],
+      "labels_tr": [
+        "sifre",
+        "parola",
+        "pin_kodu"
+      ],
+      "description": "Sifre, parola veya PIN.",
+      "risk_note": "En yuksek risk sinifi; tespit edildiginde her zaman tamamen maskelenir, kismi maskeleme yapilmaz.",
+      "examples": [
+        {
+          "text": "Geçici şifreniz: Xk9!m2Pq",
+          "span": "Xk9!m2Pq"
+        },
+        {
+          "text": "pin 4821",
+          "span": "4821"
+        }
+      ]
+    },
+    {
+      "id": "device_id",
+      "labels_en": [
+        "device_id",
+        "imei_number",
+        "mac_address"
+      ],
+      "labels_tr": [
+        "cihaz_kimligi",
+        "imei_no",
+        "mac_adresi"
+      ],
+      "description": "IMEI, MAC adresi, seri no gibi cihaz tanimlayicilari. Cihaz uzerinden kisi takibi mumkun oldugu icin kisisel veridir.",
+      "validation": "IMEI: 15 hane (Luhn); MAC: 6 hex ciftli.",
+      "examples": [
+        {
+          "text": "IMEI: 356938035643809",
+          "span": "356938035643809"
+        },
+        {
+          "text": "MAC 00:1B:44:11:3A:B7 kayıtlı",
+          "span": "00:1B:44:11:3A:B7"
+        }
+      ]
+    },
+    {
+      "id": "social_media_handle",
+      "labels_en": [
+        "social_media_handle",
+        "social_media_username"
+      ],
+      "labels_tr": [
+        "sosyal_medya_hesabi",
+        "sosyal_medya_kullanici_adi"
+      ],
+      "description": "Sosyal medya kullanici adi veya profil tanimlayicisi. @ isareti spane dahildir.",
+      "examples": [
+        {
+          "text": "Instagram'da @ayse_ylmz olarak paylaştı.",
+          "span": "@ayse_ylmz"
+        }
+      ]
+    },
+    {
+      "id": "url_with_pii",
+      "labels_en": [
+        "url_with_pii",
+        "personal_url",
+        "profile_url"
+      ],
+      "labels_tr": [
+        "kisisel_url",
+        "profil_linki"
+      ],
+      "description": "Kisiye isaret eden URL: profil linki veya query parametresinde PII tasiyan adres. Genel site adresleri etiketlenmez.",
+      "examples": [
+        {
+          "text": "Profili: https://linkedin.com/in/ayseyilmaz",
+          "span": "https://linkedin.com/in/ayseyilmaz"
+        }
+      ]
+    },
+    {
+      "id": "session_or_token",
+      "labels_en": [
+        "session_or_token",
+        "auth_token",
+        "api_key"
+      ],
+      "labels_tr": [
+        "oturum_anahtari",
+        "erisim_anahtari",
+        "api_anahtari"
+      ],
+      "description": "Oturum kimligi, erisim token'i veya API anahtari. Dogrudan kisisel veri olmasa da hesaba erisim sagladigi icin sifreyle ayni politikada maskelenir.",
+      "risk_note": "Log temizleme senaryolarinin ana hedeflerindendir.",
+      "examples": [
+        {
+          "text": "Bearer eyJhbGciOiJIUzI1NiJ9.abc123 ile istek",
+          "span": "eyJhbGciOiJIUzI1NiJ9.abc123"
+        }
+      ]
+    },
+    {
+      "id": "advertising_id",
+      "labels_en": [
+        "advertising_id",
+        "idfa_gaid"
+      ],
+      "labels_tr": [
+        "reklam_kimligi",
+        "reklam_id"
+      ],
+      "description": "Mobil reklam kimligi (IDFA/GAID/AAID); davranissal profillemeyle kisiye baglanir.",
+      "legal_basis": "KVKK Cerez Uygulamalari Rehberi (2022)",
+      "examples": [
+        {
+          "text": "GAID: e621e1f8-c36c-495a-93fc-0c247a3e6e5f",
+          "span": "e621e1f8-c36c-495a-93fc-0c247a3e6e5f"
+        }
+      ]
+    },
+    {
+      "id": "cookie_id",
+      "labels_en": [
+        "cookie_id",
+        "cookie_identifier"
+      ],
+      "labels_tr": [
+        "cerez_kimligi",
+        "cerez_id"
+      ],
+      "description": "Tarayici cerez tanimlayicisi; oturum ve profil takibi saglar.",
+      "legal_basis": "KVKK Cerez Uygulamalari Rehberi (2022); 5809 EHK m.51",
+      "examples": [
+        {
+          "text": "_ga=GA1.2.123456789.1680000000 çerezi",
+          "span": "_ga=GA1.2.123456789.1680000000"
+        }
+      ]
+    },
+    {
+      "id": "sim_identifier",
+      "labels_en": [
+        "sim_identifier",
+        "imsi_iccid"
+      ],
+      "labels_tr": [
+        "sim_kimligi",
+        "imsi_iccid"
+      ],
+      "description": "SIM karta ait IMSI/ICCID tanimlayicilari; abone uzerinden kisiye baglanir.",
+      "legal_basis": "5809 EHK m.9 elektronik kimlik bilgisi; BTK Yonetmeligi (2020)",
+      "examples": [
+        {
+          "text": "IMSI: 286011234567890",
+          "span": "286011234567890"
+        }
+      ]
+    }
+  ],
+  "negative_examples": [
+    {
+      "text": "www.example.com sitesini ziyaret edin.",
+      "note": "genel URL, kisisel degil"
+    },
+    {
+      "text": "Sürüm 192.168 yayınlandı.",
+      "note": "surum numarasi, IP degil"
+    }
+  ]
+}

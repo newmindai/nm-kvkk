@@ -1,0 +1,454 @@
+{
+ "mother_of": {
+  "tr": "mother of",
+  "desc_tr": "First person is the mother of the second person"
+ },
+ "father_of": {
+  "tr": "father of",
+  "desc_tr": "First person is the father of the second person"
+ },
+ "spouse_of": {
+  "tr": "spouse of",
+  "desc_tr": "First person is the spouse of the second person"
+ },
+ "child_of": {
+  "tr": "child of",
+  "desc_tr": "First person is the child of the second person"
+ },
+ "sibling_of": {
+  "tr": "sibling of",
+  "desc_tr": "HEAD, TAIL'in kardesidir"
+ },
+ "relative_of": {
+  "tr": "relative of",
+  "desc_tr": "First person is a relative of the second person"
+ },
+ "part_of_name": {
+  "tr": "part of name",
+  "desc_tr": "Name component or honorific is part of the person's full name"
+ },
+ "nickname_of": {
+  "tr": "nickname of",
+  "desc_tr": "HEAD lakap TAIL kisisine aittir"
+ },
+ "initials_of": {
+  "tr": "initials of",
+  "desc_tr": "Name initials refer to the person"
+ },
+ "former_surname_of": {
+  "tr": "former surname of",
+  "desc_tr": "Maiden or former surname belongs to the person"
+ },
+ "mothers_maiden_name_of": {
+  "tr": "mothers maiden name of",
+  "desc_tr": "Mother's maiden name belongs to the person"
+ },
+ "date_of_birth_of": {
+  "tr": "date of birth of",
+  "desc_tr": "Date of birth of the person"
+ },
+ "place_of_birth_of": {
+  "tr": "place of birth of",
+  "desc_tr": "Place of birth of the person"
+ },
+ "age_of": {
+  "tr": "age of",
+  "desc_tr": "Age of the person"
+ },
+ "gender_of": {
+  "tr": "gender of",
+  "desc_tr": "Gender of the person"
+ },
+ "marital_status_of": {
+  "tr": "marital status of",
+  "desc_tr": "Marital status of the person"
+ },
+ "nationality_of": {
+  "tr": "nationality of",
+  "desc_tr": "Nationality of the person"
+ },
+ "blood_type_of": {
+  "tr": "blood type of",
+  "desc_tr": "Blood type of the person"
+ },
+ "national_id_of": {
+  "tr": "national id of",
+  "desc_tr": "National identity number belongs to the person"
+ },
+ "foreigner_id_of": {
+  "tr": "foreigner id of",
+  "desc_tr": "HEAD numara TAIL kisisinin yabanci kimlik numarasidir"
+ },
+ "id_serial_of": {
+  "tr": "id serial of",
+  "desc_tr": "Identity document serial number belongs to the person"
+ },
+ "passport_of": {
+  "tr": "passport of",
+  "desc_tr": "Passport number belongs to the person"
+ },
+ "drivers_license_of": {
+  "tr": "drivers license of",
+  "desc_tr": "Driver's license number belongs to the person"
+ },
+ "tax_id_of": {
+  "tr": "tax id of",
+  "desc_tr": "Tax identification number belongs to the person"
+ },
+ "social_security_of": {
+  "tr": "social security of",
+  "desc_tr": "Social security number belongs to the person"
+ },
+ "yupass_of": {
+  "tr": "yupass of",
+  "desc_tr": "Yupass number belongs to the person"
+ },
+ "mrz_of": {
+  "tr": "mrz of",
+  "desc_tr": "Passport MRZ code belongs to the person"
+ },
+ "phone_of": {
+  "tr": "phone of",
+  "desc_tr": "Phone or fax number belongs to the person"
+ },
+ "email_of": {
+  "tr": "email of",
+  "desc_tr": "E-mail or KEP address belongs to the person"
+ },
+ "residence_of": {
+  "tr": "residence of",
+  "desc_tr": "Address is the residence of the person"
+ },
+ "part_of_address": {
+  "tr": "part of address",
+  "desc_tr": "Street line or city is part of the full address"
+ },
+ "iban_of": {
+  "tr": "iban of",
+  "desc_tr": "IBAN or bank account number belongs to the person"
+ },
+ "card_of": {
+  "tr": "card of",
+  "desc_tr": "Payment card number belongs to the person"
+ },
+ "card_component_of": {
+  "tr": "card component of",
+  "desc_tr": "Card expiry date belongs to the payment card number"
+ },
+ "bank_of_account": {
+  "tr": "bank of account",
+  "desc_tr": "SWIFT or BIC code is the bank of the account number"
+ },
+ "salary_of": {
+  "tr": "salary of",
+  "desc_tr": "Salary information of the person"
+ },
+ "credit_score_of": {
+  "tr": "credit score of",
+  "desc_tr": "Credit score belongs to the person"
+ },
+ "risk_report_of": {
+  "tr": "risk report of",
+  "desc_tr": "Credit risk report information belongs to the person"
+ },
+ "crypto_wallet_of": {
+  "tr": "crypto wallet of",
+  "desc_tr": "Crypto wallet address belongs to the person"
+ },
+ "insurance_policy_of": {
+  "tr": "insurance policy of",
+  "desc_tr": "Insurance policy number belongs to the person"
+ },
+ "account_of": {
+  "tr": "account of",
+  "desc_tr": "Username or account belongs to the person"
+ },
+ "credential_of": {
+  "tr": "credential of",
+  "desc_tr": "Password or session token belongs to the person"
+ },
+ "device_used_by": {
+  "tr": "device used by",
+  "desc_tr": "Device identifier is used by the person"
+ },
+ "ip_used_by": {
+  "tr": "ip used by",
+  "desc_tr": "IP address is used by the person"
+ },
+ "profile_url_of": {
+  "tr": "profile url of",
+  "desc_tr": "Profile URL belongs to the person"
+ },
+ "advertising_id_of": {
+  "tr": "advertising id of",
+  "desc_tr": "Advertising identifier belongs to the person"
+ },
+ "cookie_of": {
+  "tr": "cookie of",
+  "desc_tr": "Cookie identifier tracks the person"
+ },
+ "sim_of": {
+  "tr": "sim of",
+  "desc_tr": "SIM card identifier belongs to the person"
+ },
+ "located_at": {
+  "tr": "located at",
+  "desc_tr": "Tracked location is where the person was located"
+ },
+ "coordinates_of": {
+  "tr": "coordinates of",
+  "desc_tr": "GPS coordinates locate the person"
+ },
+ "workplace_of": {
+  "tr": "workplace of",
+  "desc_tr": "Workplace location where the person works"
+ },
+ "vehicle_plate_of": {
+  "tr": "vehicle plate of",
+  "desc_tr": "Vehicle license plate belongs to the person"
+ },
+ "vehicle_vin_of": {
+  "tr": "vehicle vin of",
+  "desc_tr": "Vehicle chassis (VIN) number belongs to the person"
+ },
+ "vehicle_registration_of": {
+  "tr": "vehicle registration of",
+  "desc_tr": "Vehicle registration document number belongs to the person"
+ },
+ "same_vehicle": {
+  "tr": "same vehicle",
+  "desc_tr": "HEAD ve TAIL ayni araca aittir"
+ },
+ "diagnosis_of": {
+  "tr": "diagnosis of",
+  "desc_tr": "Medical or mental condition diagnosed in the person"
+ },
+ "medication_of": {
+  "tr": "medication of",
+  "desc_tr": "Medication is used by the person"
+ },
+ "treatment_of": {
+  "tr": "treatment of",
+  "desc_tr": "Medical procedure or treatment applied to the person"
+ },
+ "disability_of": {
+  "tr": "disability of",
+  "desc_tr": "HEAD durum TAIL kisisine aittir"
+ },
+ "health_file_of": {
+  "tr": "health file of",
+  "desc_tr": "Health report or file number belongs to the person"
+ },
+ "medula_of": {
+  "tr": "medula of",
+  "desc_tr": "Medula tracking number belongs to the person"
+ },
+ "provision_of": {
+  "tr": "provision of",
+  "desc_tr": "Provision number belongs to the person"
+ },
+ "eprescription_of": {
+  "tr": "eprescription of",
+  "desc_tr": "E-prescription number belongs to the person"
+ },
+ "prescribed_by": {
+  "tr": "prescribed by",
+  "desc_tr": "Doctor license number belongs to the prescribing doctor"
+ },
+ "ethnicity_of": {
+  "tr": "ethnicity of",
+  "desc_tr": "HEAD ifade TAIL kisisinin etnik kokenine atfedilmistir"
+ },
+ "political_view_of": {
+  "tr": "political view of",
+  "desc_tr": "Political opinion of the person"
+ },
+ "belief_of": {
+  "tr": "belief of",
+  "desc_tr": "HEAD inanc ifadesi TAIL kisisine atfedilmistir"
+ },
+ "attire_of": {
+  "tr": "attire of",
+  "desc_tr": "HEAD kilik-kiyafet ifadesi TAIL kisisine aittir"
+ },
+ "member_of": {
+  "tr": "member of",
+  "desc_tr": "Person is a member of the organization"
+ },
+ "sexual_life_of": {
+  "tr": "sexual life of",
+  "desc_tr": "HEAD ifade TAIL kisisine atfedilmistir"
+ },
+ "conviction_of": {
+  "tr": "conviction of",
+  "desc_tr": "HEAD hukum TAIL kisisine aittir"
+ },
+ "biometric_of": {
+  "tr": "biometric of",
+  "desc_tr": "Biometric data reference belongs to the person"
+ },
+ "genetic_of": {
+  "tr": "genetic of",
+  "desc_tr": "Genetic data reference belongs to the person"
+ },
+ "signature_of": {
+  "tr": "signature of",
+  "desc_tr": "Signature or handwriting belongs to the person"
+ },
+ "voice_of": {
+  "tr": "voice of",
+  "desc_tr": "Voice recording belongs to the person"
+ },
+ "employer_of": {
+  "tr": "employer of",
+  "desc_tr": "Company is the employer of the person"
+ },
+ "position_of": {
+  "tr": "position of",
+  "desc_tr": "Job title held by the person"
+ },
+ "employee_id_of": {
+  "tr": "employee id of",
+  "desc_tr": "Employee ID number belongs to the person"
+ },
+ "work_history_of": {
+  "tr": "work history of",
+  "desc_tr": "Work history information belongs to the person"
+ },
+ "disciplinary_of": {
+  "tr": "disciplinary of",
+  "desc_tr": "Performance or disciplinary record belongs to the person"
+ },
+ "education_of": {
+  "tr": "education of",
+  "desc_tr": "Education information of the person"
+ },
+ "military_status_of": {
+  "tr": "military status of",
+  "desc_tr": "HEAD durum TAIL kisisinin askerlik durumudur"
+ },
+ "student_number_of": {
+  "tr": "student number of",
+  "desc_tr": "Student number belongs to the person"
+ },
+ "emergency_contact_of": {
+  "tr": "emergency contact of",
+  "desc_tr": "First person is the emergency contact of the second person"
+ },
+ "party_in_case": {
+  "tr": "party in case",
+  "desc_tr": "Person is a party in the court case"
+ },
+ "verdict_in_case": {
+  "tr": "verdict in case",
+  "desc_tr": "HEAD hukum TAIL dosyasinda verilmistir"
+ },
+ "customer_number_of": {
+  "tr": "customer number of",
+  "desc_tr": "Customer number belongs to the person"
+ },
+ "subscription_of": {
+  "tr": "subscription of",
+  "desc_tr": "Subscription number belongs to the person"
+ },
+ "order_of": {
+  "tr": "order of",
+  "desc_tr": "Order reference belongs to the person"
+ },
+ "depicted_in": {
+  "tr": "depicted in",
+  "desc_tr": "HEAD kayitta TAIL kisisi goruntulenmistir. (attr ters okunur: head=kayit)"
+ },
+ "uets_of": {
+  "tr": "uets of",
+  "desc_tr": "UETS address belongs to the person"
+ },
+ "notified_via": {
+  "tr": "notified via",
+  "desc_tr": "Notification barcode is used to notify the person"
+ },
+ "notary_act_of": {
+  "tr": "notary act of",
+  "desc_tr": "Notary record number belongs to the person"
+ },
+ "bar_registry_of": {
+  "tr": "bar registry of",
+  "desc_tr": "Bar association registry number belongs to the person"
+ },
+ "expert_registry_of": {
+  "tr": "expert registry of",
+  "desc_tr": "Court expert registry number belongs to the person"
+ },
+ "judiciary_registry_of": {
+  "tr": "judiciary registry of",
+  "desc_tr": "Judge or prosecutor registry number belongs to the person"
+ },
+ "loyalty_card_of": {
+  "tr": "loyalty card of",
+  "desc_tr": "Loyalty card number belongs to the person"
+ },
+ "shipment_of": {
+  "tr": "shipment of",
+  "desc_tr": "Cargo tracking number belongs to the person's shipment"
+ },
+ "mersis_of": {
+  "tr": "mersis of",
+  "desc_tr": "MERSIS number belongs to the company"
+ },
+ "trade_registry_of": {
+  "tr": "trade registry of",
+  "desc_tr": "Trade registry number belongs to the company"
+ },
+ "invoice_recipient": {
+  "tr": "invoice recipient",
+  "desc_tr": "Invoice document is addressed to the person"
+ },
+ "company_tax_of": {
+  "tr": "company tax of",
+  "desc_tr": "Tax number belongs to the company"
+ },
+ "tax_office_of": {
+  "tr": "tax office of",
+  "desc_tr": "Tax office where the person is registered"
+ },
+ "civil_registry_of": {
+  "tr": "civil registry of",
+  "desc_tr": "Civil registry record detail belongs to the person"
+ },
+ "property_of": {
+  "tr": "property of",
+  "desc_tr": "Real estate parcel or unit number is owned by the person"
+ },
+ "represented_by": {
+  "tr": "represented by",
+  "desc_tr": "HEAD kisisi (vekalet veren), TAIL kisisine (vekil) vekalet vermistir"
+ },
+ "authorised_signatory_of": {
+  "tr": "authorised signatory of",
+  "desc_tr": "HEAD kisisi TAIL sirketinin imza yetkilisi / yetkili temsilcisidir"
+ },
+ "owner_of_company": {
+  "tr": "owner of company",
+  "desc_tr": "HEAD kisisi TAIL sirketinin sahibi veya ortagidir"
+ },
+ "guarantor_of": {
+  "tr": "guarantor of",
+  "desc_tr": "HEAD kisisi (kefil), TAIL kisisinin borcuna / sozlesmesine kefil olmustur"
+ },
+ "heir_of": {
+  "tr": "heir of",
+  "desc_tr": "HEAD kisisi TAIL kisisinin mirascisidir (veraset ilami, tereke, miras paylasimi)"
+ },
+ "tenant_of": {
+  "tr": "tenant of",
+  "desc_tr": "HEAD kisisi (kiraci), TAIL kisisinin (kiraya veren) kiracisidir"
+ },
+ "witness_of": {
+  "tr": "witness of",
+  "desc_tr": "HEAD kisisi TAIL noter islemine / dava dosyasina tanik olmustur"
+ },
+ "property_at": {
+  "tr": "property at",
+  "desc_tr": "HEAD tasinmaz kunyesi (ada/parsel, bagimsiz bolum) TAIL adresindeki tasinmaza aittir"
+ }
+}

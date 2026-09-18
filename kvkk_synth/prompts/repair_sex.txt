@@ -1,0 +1,7 @@
+You wrote the Turkish document below as synthetic PII training data with inline [value]label tags. One or more relatives of the subject were described with the wrong sex or an ambiguous name. Apply EXACTLY these corrections and change nothing else:
+{fixes}
+
+Rules: rename every occurrence of the old name to the new name (inside tags too: [new name]full_name); use the correct Turkish kinship word and any gendered reference (kızı/oğlu, ablası/abisi, hanım/bey, bayan/bay, o/kendisi are neutral) consistently for that person; keep every other value, tag and sentence identical. Output ONLY the corrected document, ending with a final line containing exactly: ===SON===
+
+DOCUMENT:
+{text}

@@ -1,0 +1,81 @@
+{
+ "seed": 42,
+ "sources": {
+  "e07": "kvkk_synth run e07 (1,000 Nemotron briefs)",
+  "e08": "kvkk_synth run e08 (5,000 fresh Nemotron briefs)"
+ },
+ "record_format": "gliner2 (build_record)",
+ "negatives_per_record": 4,
+ "counts": {
+  "tr": {
+   "train": 5178,
+   "test": 602,
+   "test_hard": 241,
+   "test_easy": 361,
+   "entity_labels": 115,
+   "relation_names": 113,
+   "relation_triples": 15535,
+   "triples_covered": 15530,
+   "relation_instances": 15552,
+   "declared_negatives": 23120
+  },
+  "en": {
+   "train": 5178,
+   "test": 602,
+   "test_hard": 241,
+   "test_easy": 361,
+   "entity_labels": 118,
+   "relation_names": 113,
+   "relation_triples": 15535,
+   "triples_covered": 15530,
+   "relation_instances": 15552,
+   "declared_negatives": 23120
+  }
+ },
+ "warnings": {
+  "tr": {
+   "entity_surface_unmatchable": 6,
+   "triple_unmatchable": 5
+  },
+  "en": {
+   "entity_surface_unmatchable": 6,
+   "triple_unmatchable": 5
+  }
+ },
+ "strata": {
+  "test": {
+   "e08/dense/easy": 90,
+   "e08/dense/hard": 91,
+   "e07/dense/hard": 5,
+   "e07/sparse/easy": 13,
+   "e07/dense/easy": 13,
+   "e07/normal/easy": 24,
+   "e07/normal/hard": 8,
+   "e08/normal/hard": 108,
+   "e08/sparse/easy": 73,
+   "e08/normal/easy": 148,
+   "e08/sparse/hard": 27,
+   "e07/sparse/hard": 2
+  },
+  "train": {
+   "e07/dense/easy": 197,
+   "e07/normal/easy": 373,
+   "e07/sparse/easy": 192,
+   "e07/dense/hard": 18,
+   "e07/normal/hard": 31,
+   "e07/sparse/hard": 9,
+   "e08/normal/hard": 415,
+   "e08/sparse/easy": 882,
+   "e08/dense/easy": 636,
+   "e08/dense/hard": 367,
+   "e08/normal/easy": 1529,
+   "e08/sparse/hard": 103,
+   "e07/zero/easy": 65,
+   "e08/zero/easy": 361
+  }
+ },
+ "hardness": {
+  "train_hard": 943,
+  "test_hard": 241
+ }
+}

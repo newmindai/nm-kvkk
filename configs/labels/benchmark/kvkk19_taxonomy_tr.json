@@ -1,0 +1,173 @@
+[
+ {
+  "id": "national_id_number",
+  "tr": "kimlik numarası",
+  "group": "identity_number",
+  "group_tr": "kimlik_numarasi",
+  "sensitivity": "genel nitelikli (Madde 3)",
+  "out_of_scope": false,
+  "source": "e07"
+ },
+ {
+  "id": "id_document_serial",
+  "tr": "kimlik seri numarası",
+  "group": "identity_number",
+  "group_tr": "kimlik_numarasi",
+  "sensitivity": "genel nitelikli (Madde 3)",
+  "out_of_scope": false,
+  "source": "e07"
+ },
+ {
+  "id": "passport_number",
+  "tr": "pasaport numarası",
+  "group": "identity_number",
+  "group_tr": "kimlik_numarasi",
+  "sensitivity": "genel nitelikli (Madde 3)",
+  "out_of_scope": false,
+  "source": "e07"
+ },
+ {
+  "id": "drivers_license_number",
+  "tr": "ehliyet numarası",
+  "group": "identity_number",
+  "group_tr": "kimlik_numarasi",
+  "sensitivity": "genel nitelikli (Madde 3)",
+  "out_of_scope": false,
+  "source": "e07"
+ },
+ {
+  "id": "phone_number",
+  "tr": "telefon numarası",
+  "group": "contact_info",
+  "group_tr": "iletisim_bilgisi",
+  "sensitivity": "genel nitelikli (Madde 3)",
+  "out_of_scope": false,
+  "source": "e07"
+ },
+ {
+  "id": "email_address",
+  "tr": "e-posta adresi",
+  "group": "contact_info",
+  "group_tr": "iletisim_bilgisi",
+  "sensitivity": "genel nitelikli (Madde 3)",
+  "out_of_scope": false,
+  "source": "e07"
+ },
+ {
+  "id": "full_address",
+  "tr": "adres",
+  "group": "contact_info",
+  "group_tr": "iletisim_bilgisi",
+  "sensitivity": "genel nitelikli (Madde 3)",
+  "out_of_scope": false,
+  "source": "e07"
+ },
+ {
+  "id": "date_of_birth",
+  "tr": "doğum tarihi",
+  "group": "birth_civil_status",
+  "group_tr": "dogum_medeni_durum",
+  "sensitivity": "genel nitelikli (Madde 3)",
+  "out_of_scope": false,
+  "source": "e07"
+ },
+ {
+  "id": "place_of_birth",
+  "tr": "doğum yeri",
+  "group": "birth_civil_status",
+  "group_tr": "dogum_medeni_durum",
+  "sensitivity": "genel nitelikli (Madde 3)",
+  "out_of_scope": false,
+  "source": "e07"
+ },
+ {
+  "id": "iban",
+  "tr": "IBAN",
+  "group": "financial_info",
+  "group_tr": "finansal_bilgi",
+  "sensitivity": "genel nitelikli (Madde 3)",
+  "out_of_scope": false,
+  "source": "e07"
+ },
+ {
+  "id": "card_number",
+  "tr": "kredi kartı numarası",
+  "group": "financial_info",
+  "group_tr": "finansal_bilgi",
+  "sensitivity": "genel nitelikli (Madde 3)",
+  "out_of_scope": false,
+  "source": "e07"
+ },
+ {
+  "id": "ip_address",
+  "tr": "IP adresi",
+  "group": "digital_identifier",
+  "group_tr": "dijital_kimlik",
+  "sensitivity": "genel nitelikli (Madde 3)",
+  "out_of_scope": false,
+  "source": "e07"
+ },
+ {
+  "id": "device_id",
+  "tr": "cihaz kimliği",
+  "group": "digital_identifier",
+  "group_tr": "dijital_kimlik",
+  "sensitivity": "genel nitelikli (Madde 3)",
+  "out_of_scope": false,
+  "source": "e07"
+ },
+ {
+  "id": "social_media_handle",
+  "tr": "sosyal medya hesabı",
+  "group": "digital_identifier",
+  "group_tr": "dijital_kimlik",
+  "sensitivity": "genel nitelikli (Madde 3)",
+  "out_of_scope": false,
+  "source": "e07"
+ },
+ {
+  "id": "url_with_pii",
+  "tr": "web sitesi",
+  "group": "digital_identifier",
+  "group_tr": "dijital_kimlik",
+  "sensitivity": "genel nitelikli (Madde 3)",
+  "out_of_scope": false,
+  "source": "e07"
+ },
+ {
+  "id": "gps_coordinates",
+  "tr": "coğrafi koordinat",
+  "group": "location_data",
+  "group_tr": "konum_verisi",
+  "sensitivity": "genel nitelikli (Madde 3)",
+  "out_of_scope": false,
+  "source": "e07"
+ },
+ {
+  "id": "license_plate",
+  "tr": "araç plakası",
+  "group": "vehicle_identifier",
+  "group_tr": "arac_kimligi",
+  "sensitivity": "genel nitelikli (Madde 3)",
+  "out_of_scope": false,
+  "source": "e07"
+ },
+ {
+  "id": "customer_number",
+  "tr": "müşteri numarası",
+  "group": "legal_customer_records",
+  "group_tr": "hukuki_musteri_kayitlari",
+  "sensitivity": "genel nitelikli (Madde 3)",
+  "out_of_scope": false,
+  "source": "e07"
+ },
+ {
+  "id": "audiovisual_record_reference",
+  "tr": "fotoğraf dosyası",
+  "group": "legal_customer_records",
+  "group_tr": "hukuki_musteri_kayitlari",
+  "sensitivity": "genel nitelikli (Madde 3)",
+  "out_of_scope": false,
+  "source": "e07"
+ }
+]

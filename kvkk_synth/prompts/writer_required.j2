@@ -1,0 +1,21 @@
+Write a Turkish document of the type "{{ genre }}".
+Format: {{ document_format }} — "structured" = a form/record-like layout with field labels and values; "unstructured" = free-flowing prose (letter, e-mail, note, report). Use plain text only: no markdown symbols (no **, #, |, ---).
+
+The document concerns {{ subject }} and MUST convey ALL of the following facts (given here as short hints). Integrate each fact where a real document of this type would naturally carry it — as a field, a sentence, or a clause — in your own words. Never reproduce a hint verbatim, never add parenthetical notes explaining whom a value belongs to, and never explain why a fact is present:
+{{ facts_block }}
+The subject plays only their own role: they are never also the lawyer, doctor, officer, witness or signatory — those parties remain unnamed. If a second person is named in the facts (a parent, spouse, child, relative), that person appears ONLY in that stated family role, never as an official, signatory or witness. Fill non-personal fields of the document type with plausible generic content (document dates, short reference numbers, vehicle make, institution names) instead of leaving them blank — but never add fields for personal data that is not listed (no extra phone numbers, ID numbers, birth dates, gender lines or addresses): omit such fields entirely rather than writing placeholders like 0532 123 45 67 or 12345678901.
+
+ENTITIES. Every value below must appear in the document, written EXACTLY as given (character for character, same spacing and punctuation), and EVERY occurrence of each value must be tagged inline as [value]label with the label shown:
+{{ entity_block }}
+{{ optional_block }}
+Label definitions (boundary rules — follow them exactly, do not guess beyond them):
+{{ desc_block }}
+
+Rules:
+- A tag holds exactly ONE value; the label is written immediately after the closing bracket, e.g. [value]label. Never put two pieces of information in one tag, never nest tags.
+- Tag only the value itself. Turkish suffixes attached with an apostrophe stay OUTSIDE the tag: [Ankara]city'da, not [Ankara'da]city.
+- If a value also occurs inside a longer value (a first name inside a full name, a city inside a full address), do NOT tag it inside the longer value; if you mention it on its own elsewhere, tag it with its own label.
+- Do NOT introduce any other personal data: no other names, ID numbers, phone numbers, addresses, dates of birth, accounts, diagnoses or organizations. Any other person (a doctor, an officer, a signatory) is referred to by ROLE ONLY, never by name. Non-personal content (document dates, institution wording, generic explanations) is free.
+- Square brackets appear ONLY as tag delimiters. Label names must never appear as ordinary words in the text.
+- Output ONLY the document text. No preamble, no explanation, no code fences.
+- End your output with a final line containing exactly: ===SON===

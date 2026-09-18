@@ -1,0 +1,1649 @@
+{
+ "documents_evaluated": 96,
+ "mean_scores": {
+  "fluency": 4.78,
+  "coherence": 4.05,
+  "tag_boundaries": 4.93,
+  "relation_expression": 4.67,
+  "completeness_and_leaks": 4.74
+ },
+ "overall_mean": 4.63,
+ "verdicts": {
+  "keep": 59,
+  "fix": 37
+ },
+ "issue_types": {
+  "coherence": 46,
+  "leak": 17,
+  "relation": 10,
+  "judge_error": 10,
+  "fluency": 9,
+  "other": 3,
+  "boundary": 3,
+  "label": 1,
+  "value_realism": 1
+ },
+ "docs_with_no_issues": 33,
+ "invalid_quotes_dropped": 0,
+ "parser_disagreements": [
+  [
+   1941,
+   "entities_bound contains two identical entries for e4/first_name/'Bilgi', but text_tagged has no standalone [Bilgi]first_name tag anywhere — 'Bilgi' appears only once, inside the full_name span 'Uzm. Bilgi Metin Öztürk'. The binding metadata does not match the visible tags."
+  ],
+  [
+   1953,
+   "text_tagged has 10 bracketed tags; entities_bound has 11 entries. The extra last_name='Mutlu' entry does not correspond to any second bracketed 'Mutlu' tag in the text."
+  ],
+  [
+   3156,
+   "entities_bound records two occurrences of e1/full_name 'Hazım Aydoğdu' but text_tagged contains only one bracket tag; the second mention ('Hazım Aydoğdu’nun kendi beyanına göre') is untagged plain text."
+  ],
+  [
+   4577,
+   "One span has a leading space not present in entities_bound: '[ +90 557 544 37 66]phone_number' should be '[+90 557 544 37 66]phone_number'. All other spans (full_name x6 across 4 people, customer_number, the other phone_number instances) match entities_bound exactly."
+  ],
+  [
+   4775,
+   "entities_bound lists e1 'Efendi Güner' (full_name) as bound, but the string is never wrapped in a tag anywhere in text_tagged — it appears only as plain text at the document's opening. This is a parser/binder disagreement, not just a stylistic issue."
+  ]
+ ],
+ "facts_used_naturally_mean": 2.72,
+ "counts": {
+  "facts_used_naturally": 261,
+  "facts_forced": 29,
+  "persons_natural": 45,
+  "persons_forced": 12,
+  "attribution_errors": 0,
+  "sex_errors": 0,
+  "writer_added_ok": 39,
+  "writer_added_bad": 0,
+  "tierb_misses": 16,
+  "structural_ok": 24,
+  "structural_bad": 0
+ },
+ "value_realism_mean": 4.73,
+ "zero_pii_leaks": 0,
+ "cheap_judge_vs_sonnet_coherence": {
+  "n": 96,
+  "within_1_point": 76,
+  "cheap_mean": 4.4,
+  "sonnet_mean": 4.05
+ },
+ "per_doc": [
+  {
+   "bundle_id": 2,
+   "document_type": "Ad Campaign Review",
+   "parser": "accepted",
+   "verdict": "keep",
+   "scores": {
+    "fluency": 5,
+    "coherence": 3,
+    "tag_boundaries": 5,
+    "relation_expression": 4,
+    "completeness_and_leaks": 5
+   },
+   "cheap_judge": 5,
+   "issues": 1
+  },
+  {
+   "bundle_id": 114,
+   "document_type": "Client Advisory Note",
+   "parser": "accepted",
+   "verdict": "keep",
+   "scores": {
+    "fluency": 5,
+    "coherence": 4,
+    "tag_boundaries": 5,
+    "relation_expression": 4,
+    "completeness_and_leaks": 5
+   },
+   "cheap_judge": 5,
+   "issues": 1
+  },
+  {
+   "bundle_id": 122,
+   "document_type": "Claim Adjustment Notice",
+   "parser": "accepted",
+   "verdict": "keep",
+   "scores": {
+    "fluency": 5,
+    "coherence": 5,
+    "tag_boundaries": 5,
+    "relation_expression": 5,
+    "completeness_and_leaks": 5
+   },
+   "cheap_judge": 5,
+   "issues": 0
+  },
+  {
+   "bundle_id": 195,
+   "document_type": "Policy Renewal Notice",
+   "parser": "accepted",
+   "verdict": "keep",
+   "scores": {
+    "fluency": 5,
+    "coherence": 5,
+    "tag_boundaries": 5,
+    "relation_expression": 5,
+    "completeness_and_leaks": 5
+   },
+   "cheap_judge": 5,
+   "issues": 0
+  },
+  {
+   "bundle_id": 276,
+   "document_type": "Travel Medical Insurance Application",
+   "parser": "accepted",
+   "verdict": "keep",
+   "scores": {
+    "fluency": 5,
+    "coherence": 5,
+    "tag_boundaries": 5,
+    "relation_expression": 5,
+    "completeness_and_leaks": 5
+   },
+   "cheap_judge": 5,
+   "issues": 0
+  },
+  {
+   "bundle_id": 296,
+   "document_type": "Insurance Compliance Report",
+   "parser": "accepted",
+   "verdict": "keep",
+   "scores": {
+    "fluency": 4,
+    "coherence": 5,
+    "tag_boundaries": 5,
+    "relation_expression": 5,
+    "completeness_and_leaks": 5
+   },
+   "cheap_judge": 5,
+   "issues": 1
+  },
+  {
+   "bundle_id": 299,
+   "document_type": "Disability Claim Form",
+   "parser": "accepted",
+   "verdict": "fix",
+   "scores": {
+    "fluency": 5,
+    "coherence": 3,
+    "tag_boundaries": 5,
+    "relation_expression": 4,
+    "completeness_and_leaks": 5
+   },
+   "cheap_judge": 3,
+   "issues": 3
+  },
+  {
+   "bundle_id": 323,
+   "document_type": "disability benefits claim",
+   "parser": "accepted",
+   "verdict": "keep",
+   "scores": {
+    "fluency": 5,
+    "coherence": 5,
+    "tag_boundaries": 5,
+    "relation_expression": 5,
+    "completeness_and_leaks": 5
+   },
+   "cheap_judge": 4,
+   "issues": 0
+  },
+  {
+   "bundle_id": 331,
+   "document_type": "Gender Equality Report",
+   "parser": "accepted",
+   "verdict": "fix",
+   "scores": {
+    "fluency": 3,
+    "coherence": 3,
+    "tag_boundaries": 5,
+    "relation_expression": 5,
+    "completeness_and_leaks": 5
+   },
+   "cheap_judge": 5,
+   "issues": 2
+  },
+  {
+   "bundle_id": 457,
+   "document_type": "Healthcare Proxy Form",
+   "parser": "accepted",
+   "verdict": "fix",
+   "scores": {
+    "fluency": 4,
+    "coherence": 4,
+    "tag_boundaries": 5,
+    "relation_expression": 5,
+    "completeness_and_leaks": 5
+   },
+   "cheap_judge": 5,
+   "issues": 1
+  },
+  {
+   "bundle_id": 549,
+   "document_type": "Ethnicity Form",
+   "parser": "accepted",
+   "verdict": "keep",
+   "scores": {
+    "fluency": 5,
+    "coherence": 4,
+    "tag_boundaries": 5,
+    "relation_expression": 5,
+    "completeness_and_leaks": 5
+   },
+   "cheap_judge": 5,
+   "issues": 0
+  },
+  {
+   "bundle_id": 559,
+   "document_type": "Affidavit of Bankruptcy",
+   "parser": "accepted",
+   "verdict": "fix",
+   "scores": {
+    "fluency": 5,
+    "coherence": 5,
+    "tag_boundaries": 5,
+    "relation_expression": 4,
+    "completeness_and_leaks": 5
+   },
+   "cheap_judge": 4,
+   "issues": 1
+  },
+  {
+   "bundle_id": 586,
+   "document_type": "Webinar Script",
+   "parser": "accepted",
+   "verdict": "keep",
+   "scores": {
+    "fluency": 5,
+    "coherence": 5,
+    "tag_boundaries": 5,
+    "relation_expression": 4,
+    "completeness_and_leaks": 5
+   },
+   "cheap_judge": 5,
+   "issues": 1
+  },
+  {
+   "bundle_id": 889,
+   "document_type": "Transaction History",
+   "parser": "accepted",
+   "verdict": "keep",
+   "scores": {
+    "fluency": 5,
+    "coherence": 4,
+    "tag_boundaries": 5,
+    "relation_expression": 5,
+    "completeness_and_leaks": 5
+   },
+   "cheap_judge": 5,
+   "issues": 1
+  },
+  {
+   "bundle_id": 950,
+   "document_type": "Vital Signs",
+   "parser": "accepted",
+   "verdict": "fix",
+   "scores": {
+    "fluency": 5,
+    "coherence": 4,
+    "tag_boundaries": 5,
+    "relation_expression": 5,
+    "completeness_and_leaks": 4
+   },
+   "cheap_judge": 5,
+   "issues": 3
+  },
+  {
+   "bundle_id": 1009,
+   "document_type": "User Persona",
+   "parser": "accepted",
+   "verdict": "keep",
+   "scores": {
+    "fluency": 5,
+    "coherence": 4,
+    "tag_boundaries": 5,
+    "relation_expression": 5,
+    "completeness_and_leaks": 5
+   },
+   "cheap_judge": 5,
+   "issues": 1
+  },
+  {
+   "bundle_id": 1037,
+   "document_type": "Debit Card Information",
+   "parser": "accepted",
+   "verdict": "fix",
+   "scores": {
+    "fluency": 5,
+    "coherence": 3,
+    "tag_boundaries": 5,
+    "relation_expression": 4,
+    "completeness_and_leaks": 5
+   },
+   "cheap_judge": 5,
+   "issues": 2
+  },
+  {
+   "bundle_id": 1051,
+   "document_type": "Terms and Conditions",
+   "parser": "accepted",
+   "verdict": "fix",
+   "scores": {
+    "fluency": 5,
+    "coherence": 2,
+    "tag_boundaries": 5,
+    "relation_expression": 5,
+    "completeness_and_leaks": 5
+   },
+   "cheap_judge": 3,
+   "issues": 1
+  },
+  {
+   "bundle_id": 1128,
+   "document_type": "Fire Insurance Certificate",
+   "parser": "accepted",
+   "verdict": "keep",
+   "scores": {
+    "fluency": 5,
+    "coherence": 4,
+    "tag_boundaries": 5,
+    "relation_expression": 4,
+    "completeness_and_leaks": 4
+   },
+   "cheap_judge": 5,
+   "issues": 2
+  },
+  {
+   "bundle_id": 1148,
+   "document_type": "Voter Education Materials",
+   "parser": "accepted",
+   "verdict": "keep",
+   "scores": {
+    "fluency": 5,
+    "coherence": 4,
+    "tag_boundaries": 5,
+    "relation_expression": 5,
+    "completeness_and_leaks": 5
+   },
+   "cheap_judge": 3,
+   "issues": 0
+  },
+  {
+   "bundle_id": 1285,
+   "document_type": "Disability Insurance Renewal",
+   "parser": "accepted",
+   "verdict": "keep",
+   "scores": {
+    "fluency": 5,
+    "coherence": 4,
+    "tag_boundaries": 5,
+    "relation_expression": 5,
+    "completeness_and_leaks": 5
+   },
+   "cheap_judge": 4,
+   "issues": 1
+  },
+  {
+   "bundle_id": 1303,
+   "document_type": "Claim Adjustment Notice",
+   "parser": "accepted",
+   "verdict": "fix",
+   "scores": {
+    "fluency": 5,
+    "coherence": 2,
+    "tag_boundaries": 5,
+    "relation_expression": 3,
+    "completeness_and_leaks": 4
+   },
+   "cheap_judge": 3,
+   "issues": 2
+  },
+  {
+   "bundle_id": 1313,
+   "document_type": "Disability Insurance Plan",
+   "parser": "accepted",
+   "verdict": "keep",
+   "scores": {
+    "fluency": 5,
+    "coherence": 5,
+    "tag_boundaries": 5,
+    "relation_expression": 5,
+    "completeness_and_leaks": 5
+   },
+   "cheap_judge": 4,
+   "issues": 0
+  },
+  {
+   "bundle_id": 1326,
+   "document_type": "Dementia Care Plan",
+   "parser": "accepted",
+   "verdict": "fix",
+   "scores": {
+    "fluency": 5,
+    "coherence": 3,
+    "tag_boundaries": 5,
+    "relation_expression": 5,
+    "completeness_and_leaks": 5
+   },
+   "cheap_judge": 5,
+   "issues": 1
+  },
+  {
+   "bundle_id": 1371,
+   "document_type": "Environmental Report",
+   "parser": "accepted",
+   "verdict": "keep",
+   "scores": {
+    "fluency": 5,
+    "coherence": 5,
+    "tag_boundaries": 5,
+    "relation_expression": 5,
+    "completeness_and_leaks": 5
+   },
+   "cheap_judge": 5,
+   "issues": 0
+  },
+  {
+   "bundle_id": 1374,
+   "document_type": "Investment Statement",
+   "parser": "accepted",
+   "verdict": "keep",
+   "scores": {
+    "fluency": 5,
+    "coherence": 4,
+    "tag_boundaries": 5,
+    "relation_expression": 5,
+    "completeness_and_leaks": 5
+   },
+   "cheap_judge": 5,
+   "issues": 1
+  },
+  {
+   "bundle_id": 1379,
+   "document_type": "Family Medical History",
+   "parser": "accepted",
+   "verdict": "fix",
+   "scores": {
+    "fluency": 5,
+    "coherence": 2,
+    "tag_boundaries": 5,
+    "relation_expression": 5,
+    "completeness_and_leaks": 5
+   },
+   "cheap_judge": 4,
+   "issues": 1
+  },
+  {
+   "bundle_id": 1566,
+   "document_type": "Author Biography",
+   "parser": "accepted",
+   "verdict": "keep",
+   "scores": {
+    "fluency": 5,
+    "coherence": 5,
+    "tag_boundaries": 5,
+    "relation_expression": 5,
+    "completeness_and_leaks": 5
+   },
+   "cheap_judge": 4,
+   "issues": 0
+  },
+  {
+   "bundle_id": 1654,
+   "document_type": "Report Card",
+   "parser": "accepted",
+   "verdict": "fix",
+   "scores": {
+    "fluency": 5,
+    "coherence": 2,
+    "tag_boundaries": 5,
+    "relation_expression": 5,
+    "completeness_and_leaks": 2
+   },
+   "cheap_judge": 3,
+   "issues": 4
+  },
+  {
+   "bundle_id": 1694,
+   "document_type": "Credit Card Disclosure",
+   "parser": "accepted",
+   "verdict": "keep",
+   "scores": {
+    "fluency": 5,
+    "coherence": 4,
+    "tag_boundaries": 5,
+    "relation_expression": 5,
+    "completeness_and_leaks": 5
+   },
+   "cheap_judge": 5,
+   "issues": 0
+  },
+  {
+   "bundle_id": 1723,
+   "document_type": "Building Insurance Policy",
+   "parser": "accepted",
+   "verdict": "keep",
+   "scores": {
+    "fluency": 5,
+    "coherence": 4,
+    "tag_boundaries": 5,
+    "relation_expression": 5,
+    "completeness_and_leaks": 5
+   },
+   "cheap_judge": 3,
+   "issues": 1
+  },
+  {
+   "bundle_id": 1805,
+   "document_type": "Reinsurance Agreement",
+   "parser": "accepted",
+   "verdict": "fix",
+   "scores": {
+    "fluency": 5,
+    "coherence": 2,
+    "tag_boundaries": 5,
+    "relation_expression": 5,
+    "completeness_and_leaks": 5
+   },
+   "cheap_judge": 2,
+   "issues": 4
+  },
+  {
+   "bundle_id": 1867,
+   "document_type": "Income Verification",
+   "parser": "accepted",
+   "verdict": "keep",
+   "scores": {
+    "fluency": 5,
+    "coherence": 5,
+    "tag_boundaries": 4,
+    "relation_expression": 5,
+    "completeness_and_leaks": 5
+   },
+   "cheap_judge": 5,
+   "issues": 1
+  },
+  {
+   "bundle_id": 1881,
+   "document_type": "Company Values Statement",
+   "parser": "accepted",
+   "verdict": "fix",
+   "scores": {
+    "fluency": 5,
+    "coherence": 2,
+    "tag_boundaries": 5,
+    "relation_expression": 4,
+    "completeness_and_leaks": 5
+   },
+   "cheap_judge": 3,
+   "issues": 1
+  },
+  {
+   "bundle_id": 1912,
+   "document_type": "emergency room triage sheet",
+   "parser": "accepted",
+   "verdict": "fix",
+   "scores": {
+    "fluency": 5,
+    "coherence": 4,
+    "tag_boundaries": 5,
+    "relation_expression": 4,
+    "completeness_and_leaks": 2
+   },
+   "cheap_judge": 4,
+   "issues": 4
+  },
+  {
+   "bundle_id": 1941,
+   "document_type": "Audio Review Outline",
+   "parser": "accepted",
+   "verdict": "keep",
+   "scores": {
+    "fluency": 5,
+    "coherence": 3,
+    "tag_boundaries": 5,
+    "relation_expression": 5,
+    "completeness_and_leaks": 5
+   },
+   "cheap_judge": 5,
+   "issues": 2
+  },
+  {
+   "bundle_id": 1953,
+   "document_type": "Brand Guidelines",
+   "parser": "accepted",
+   "verdict": "fix",
+   "scores": {
+    "fluency": 5,
+    "coherence": 3,
+    "tag_boundaries": 4,
+    "relation_expression": 5,
+    "completeness_and_leaks": 4
+   },
+   "cheap_judge": 5,
+   "issues": 3
+  },
+  {
+   "bundle_id": 1959,
+   "document_type": "Financial Solutions",
+   "parser": "accepted",
+   "verdict": "fix",
+   "scores": {
+    "fluency": 5,
+    "coherence": 3,
+    "tag_boundaries": 5,
+    "relation_expression": 4,
+    "completeness_and_leaks": 3
+   },
+   "cheap_judge": 2,
+   "issues": 4
+  },
+  {
+   "bundle_id": 1964,
+   "document_type": "Campaign Strategy",
+   "parser": "accepted",
+   "verdict": "fix",
+   "scores": {
+    "fluency": 5,
+    "coherence": 3,
+    "tag_boundaries": 5,
+    "relation_expression": 2,
+    "completeness_and_leaks": 5
+   },
+   "cheap_judge": 5,
+   "issues": 1
+  },
+  {
+   "bundle_id": 2042,
+   "document_type": "Credit Card Authorization",
+   "parser": "accepted",
+   "verdict": "keep",
+   "scores": {
+    "fluency": 5,
+    "coherence": 4,
+    "tag_boundaries": 5,
+    "relation_expression": 5,
+    "completeness_and_leaks": 5
+   },
+   "cheap_judge": 3,
+   "issues": 1
+  },
+  {
+   "bundle_id": 2121,
+   "document_type": "Customer Service Policy",
+   "parser": "accepted",
+   "verdict": "fix",
+   "scores": {
+    "fluency": 5,
+    "coherence": 3,
+    "tag_boundaries": 5,
+    "relation_expression": 5,
+    "completeness_and_leaks": 3
+   },
+   "cheap_judge": 4,
+   "issues": 2
+  },
+  {
+   "bundle_id": 2126,
+   "document_type": "Cultural Exchange Programs",
+   "parser": "accepted",
+   "verdict": "keep",
+   "scores": {
+    "fluency": 5,
+    "coherence": 5,
+    "tag_boundaries": 5,
+    "relation_expression": 5,
+    "completeness_and_leaks": 5
+   },
+   "cheap_judge": 5,
+   "issues": 0
+  },
+  {
+   "bundle_id": 2183,
+   "document_type": "Cargo Manifest",
+   "parser": "accepted",
+   "verdict": "keep",
+   "scores": {
+    "fluency": 5,
+    "coherence": 4,
+    "tag_boundaries": 5,
+    "relation_expression": 4,
+    "completeness_and_leaks": 5
+   },
+   "cheap_judge": 5,
+   "issues": 2
+  },
+  {
+   "bundle_id": 2263,
+   "document_type": "Medical Release Form",
+   "parser": "accepted",
+   "verdict": "keep",
+   "scores": {
+    "fluency": 5,
+    "coherence": 3,
+    "tag_boundaries": 5,
+    "relation_expression": 5,
+    "completeness_and_leaks": 5
+   },
+   "cheap_judge": 5,
+   "issues": 1
+  },
+  {
+   "bundle_id": 2267,
+   "document_type": "Delivery Receipt",
+   "parser": "accepted",
+   "verdict": "keep",
+   "scores": {
+    "fluency": 5,
+    "coherence": 4,
+    "tag_boundaries": 5,
+    "relation_expression": 5,
+    "completeness_and_leaks": 5
+   },
+   "cheap_judge": 5,
+   "issues": 0
+  },
+  {
+   "bundle_id": 2283,
+   "document_type": "Analytics Report",
+   "parser": "accepted",
+   "verdict": "keep",
+   "scores": {
+    "fluency": 5,
+    "coherence": 3,
+    "tag_boundaries": 5,
+    "relation_expression": 4,
+    "completeness_and_leaks": 5
+   },
+   "cheap_judge": 5,
+   "issues": 1
+  },
+  {
+   "bundle_id": 2298,
+   "document_type": "Insurance Application",
+   "parser": "accepted",
+   "verdict": "keep",
+   "scores": {
+    "fluency": 5,
+    "coherence": 4,
+    "tag_boundaries": 5,
+    "relation_expression": 4,
+    "completeness_and_leaks": 5
+   },
+   "cheap_judge": 5,
+   "issues": 0
+  },
+  {
+   "bundle_id": 2307,
+   "document_type": "Wi-Fi Client Report",
+   "parser": "accepted",
+   "verdict": "keep",
+   "scores": {
+    "fluency": 5,
+    "coherence": 5,
+    "tag_boundaries": 5,
+    "relation_expression": 5,
+    "completeness_and_leaks": 5
+   },
+   "cheap_judge": 4,
+   "issues": 0
+  },
+  {
+   "bundle_id": 2319,
+   "document_type": "Claim Submission Form",
+   "parser": "accepted",
+   "verdict": "fix",
+   "scores": {
+    "fluency": 5,
+    "coherence": 4,
+    "tag_boundaries": 5,
+    "relation_expression": 3,
+    "completeness_and_leaks": 5
+   },
+   "cheap_judge": 5,
+   "issues": 1
+  },
+  {
+   "bundle_id": 2368,
+   "document_type": "Beneficiary Claim Form",
+   "parser": "accepted",
+   "verdict": "fix",
+   "scores": {
+    "fluency": 3,
+    "coherence": 5,
+    "tag_boundaries": 5,
+    "relation_expression": 5,
+    "completeness_and_leaks": 5
+   },
+   "cheap_judge": 5,
+   "issues": 2
+  },
+  {
+   "bundle_id": 2476,
+   "document_type": "User Survey",
+   "parser": "accepted",
+   "verdict": "keep",
+   "scores": {
+    "fluency": 5,
+    "coherence": 5,
+    "tag_boundaries": 5,
+    "relation_expression": 5,
+    "completeness_and_leaks": 5
+   },
+   "cheap_judge": 5,
+   "issues": 0
+  },
+  {
+   "bundle_id": 2517,
+   "document_type": "Live Event Plan",
+   "parser": "accepted",
+   "verdict": "keep",
+   "scores": {
+    "fluency": 5,
+    "coherence": 5,
+    "tag_boundaries": 5,
+    "relation_expression": 5,
+    "completeness_and_leaks": 5
+   },
+   "cheap_judge": 5,
+   "issues": 0
+  },
+  {
+   "bundle_id": 2566,
+   "document_type": "Identity Verification",
+   "parser": "accepted",
+   "verdict": "keep",
+   "scores": {
+    "fluency": 5,
+    "coherence": 5,
+    "tag_boundaries": 5,
+    "relation_expression": 5,
+    "completeness_and_leaks": 5
+   },
+   "cheap_judge": 3,
+   "issues": 0
+  },
+  {
+   "bundle_id": 2593,
+   "document_type": "Health Screening Form",
+   "parser": "accepted",
+   "verdict": "keep",
+   "scores": {
+    "fluency": 5,
+    "coherence": 5,
+    "tag_boundaries": 5,
+    "relation_expression": 5,
+    "completeness_and_leaks": 5
+   },
+   "cheap_judge": 5,
+   "issues": 0
+  },
+  {
+   "bundle_id": 2860,
+   "document_type": "Ad Creative Brief",
+   "parser": "accepted",
+   "verdict": "fix",
+   "scores": {
+    "fluency": 3,
+    "coherence": 4,
+    "tag_boundaries": 5,
+    "relation_expression": 3,
+    "completeness_and_leaks": 5
+   },
+   "cheap_judge": 3,
+   "issues": 2
+  },
+  {
+   "bundle_id": 2911,
+   "document_type": "Property Maintenance Request Form",
+   "parser": "accepted",
+   "verdict": "fix",
+   "scores": {
+    "fluency": 5,
+    "coherence": 3,
+    "tag_boundaries": 5,
+    "relation_expression": 5,
+    "completeness_and_leaks": 5
+   },
+   "cheap_judge": 5,
+   "issues": 1
+  },
+  {
+   "bundle_id": 2952,
+   "document_type": "Vehicle Owner Manual",
+   "parser": "accepted",
+   "verdict": "keep",
+   "scores": {
+    "fluency": 5,
+    "coherence": 5,
+    "tag_boundaries": 5,
+    "relation_expression": 5,
+    "completeness_and_leaks": 5
+   },
+   "cheap_judge": 3,
+   "issues": 0
+  },
+  {
+   "bundle_id": 2985,
+   "document_type": "Ad Creative Review",
+   "parser": "accepted",
+   "verdict": "fix",
+   "scores": {
+    "fluency": 5,
+    "coherence": 3,
+    "tag_boundaries": 5,
+    "relation_expression": 4,
+    "completeness_and_leaks": 5
+   },
+   "cheap_judge": 4,
+   "issues": 2
+  },
+  {
+   "bundle_id": 3075,
+   "document_type": "Customer Service Description",
+   "parser": "accepted",
+   "verdict": "keep",
+   "scores": {
+    "fluency": 5,
+    "coherence": 4,
+    "tag_boundaries": 5,
+    "relation_expression": 5,
+    "completeness_and_leaks": 5
+   },
+   "cheap_judge": 4,
+   "issues": 1
+  },
+  {
+   "bundle_id": 3156,
+   "document_type": "Family Medical History",
+   "parser": "accepted",
+   "verdict": "fix",
+   "scores": {
+    "fluency": 5,
+    "coherence": 4,
+    "tag_boundaries": 3,
+    "relation_expression": 5,
+    "completeness_and_leaks": 2
+   },
+   "cheap_judge": 5,
+   "issues": 3
+  },
+  {
+   "bundle_id": 3200,
+   "document_type": "Salary Structure Chart",
+   "parser": "accepted",
+   "verdict": "fix",
+   "scores": {
+    "fluency": 3,
+    "coherence": 5,
+    "tag_boundaries": 4,
+    "relation_expression": 5,
+    "completeness_and_leaks": 5
+   },
+   "cheap_judge": 5,
+   "issues": 1
+  },
+  {
+   "bundle_id": 3324,
+   "document_type": "Customer Success Stories",
+   "parser": "accepted",
+   "verdict": "keep",
+   "scores": {
+    "fluency": 5,
+    "coherence": 5,
+    "tag_boundaries": 5,
+    "relation_expression": 5,
+    "completeness_and_leaks": 5
+   },
+   "cheap_judge": 5,
+   "issues": 0
+  },
+  {
+   "bundle_id": 3418,
+   "document_type": "Trial Transcript",
+   "parser": "accepted",
+   "verdict": "keep",
+   "scores": {
+    "fluency": 4,
+    "coherence": 4,
+    "tag_boundaries": 5,
+    "relation_expression": 4,
+    "completeness_and_leaks": 5
+   },
+   "cheap_judge": 5,
+   "issues": 2
+  },
+  {
+   "bundle_id": 3422,
+   "document_type": "Network Configuration File",
+   "parser": "accepted",
+   "verdict": "keep",
+   "scores": {
+    "fluency": 5,
+    "coherence": 3,
+    "tag_boundaries": 5,
+    "relation_expression": 5,
+    "completeness_and_leaks": 5
+   },
+   "cheap_judge": 3,
+   "issues": 1
+  },
+  {
+   "bundle_id": 3423,
+   "document_type": "Carrier Rate Sheet",
+   "parser": "accepted",
+   "verdict": "fix",
+   "scores": {
+    "fluency": 5,
+    "coherence": 4,
+    "tag_boundaries": 5,
+    "relation_expression": 3,
+    "completeness_and_leaks": 5
+   },
+   "cheap_judge": 5,
+   "issues": 2
+  },
+  {
+   "bundle_id": 3486,
+   "document_type": "Travel Health Insurance Claim",
+   "parser": "accepted",
+   "verdict": "keep",
+   "scores": {
+    "fluency": 5,
+    "coherence": 5,
+    "tag_boundaries": 5,
+    "relation_expression": 5,
+    "completeness_and_leaks": 4
+   },
+   "cheap_judge": 5,
+   "issues": 1
+  },
+  {
+   "bundle_id": 3573,
+   "document_type": "Credit Score",
+   "parser": "accepted",
+   "verdict": "keep",
+   "scores": {
+    "fluency": 4,
+    "coherence": 4,
+    "tag_boundaries": 5,
+    "relation_expression": 4,
+    "completeness_and_leaks": 5
+   },
+   "cheap_judge": 2,
+   "issues": 2
+  },
+  {
+   "bundle_id": 3719,
+   "document_type": "Return Authorization",
+   "parser": "accepted",
+   "verdict": "fix",
+   "scores": {
+    "fluency": 3,
+    "coherence": 3,
+    "tag_boundaries": 5,
+    "relation_expression": 5,
+    "completeness_and_leaks": 5
+   },
+   "cheap_judge": 5,
+   "issues": 2
+  },
+  {
+   "bundle_id": 3753,
+   "document_type": "Course Catalog",
+   "parser": "accepted",
+   "verdict": "fix",
+   "scores": {
+    "fluency": 4,
+    "coherence": 3,
+    "tag_boundaries": 5,
+    "relation_expression": 5,
+    "completeness_and_leaks": 5
+   },
+   "cheap_judge": 3,
+   "issues": 1
+  },
+  {
+   "bundle_id": 3756,
+   "document_type": "Floor Plan",
+   "parser": "accepted",
+   "verdict": "keep",
+   "scores": {
+    "fluency": 5,
+    "coherence": 5,
+    "tag_boundaries": 5,
+    "relation_expression": 5,
+    "completeness_and_leaks": 5
+   },
+   "cheap_judge": 5,
+   "issues": 0
+  },
+  {
+   "bundle_id": 3801,
+   "document_type": "PPC Ad Script",
+   "parser": "accepted",
+   "verdict": "keep",
+   "scores": {
+    "fluency": 5,
+    "coherence": 4,
+    "tag_boundaries": 5,
+    "relation_expression": 5,
+    "completeness_and_leaks": 5
+   },
+   "cheap_judge": 3,
+   "issues": 1
+  },
+  {
+   "bundle_id": 3826,
+   "document_type": "Support Ticket",
+   "parser": "accepted",
+   "verdict": "keep",
+   "scores": {
+    "fluency": 5,
+    "coherence": 5,
+    "tag_boundaries": 5,
+    "relation_expression": 5,
+    "completeness_and_leaks": 5
+   },
+   "cheap_judge": 5,
+   "issues": 0
+  },
+  {
+   "bundle_id": 3860,
+   "document_type": "Disability Questionnaire",
+   "parser": "accepted",
+   "verdict": "keep",
+   "scores": {
+    "fluency": 5,
+    "coherence": 3,
+    "tag_boundaries": 5,
+    "relation_expression": 5,
+    "completeness_and_leaks": 5
+   },
+   "cheap_judge": 4,
+   "issues": 1
+  },
+  {
+   "bundle_id": 3913,
+   "document_type": "Credit Dispute Form",
+   "parser": "accepted",
+   "verdict": "fix",
+   "scores": {
+    "fluency": 5,
+    "coherence": 5,
+    "tag_boundaries": 5,
+    "relation_expression": 4,
+    "completeness_and_leaks": 5
+   },
+   "cheap_judge": 5,
+   "issues": 1
+  },
+  {
+   "bundle_id": 3969,
+   "document_type": "Chronic Disease Management Plan",
+   "parser": "accepted",
+   "verdict": "keep",
+   "scores": {
+    "fluency": 5,
+    "coherence": 4,
+    "tag_boundaries": 5,
+    "relation_expression": 5,
+    "completeness_and_leaks": 5
+   },
+   "cheap_judge": 3,
+   "issues": 1
+  },
+  {
+   "bundle_id": 4119,
+   "document_type": "Social Media Strategy Outline",
+   "parser": "accepted",
+   "verdict": "keep",
+   "scores": {
+    "fluency": 5,
+    "coherence": 5,
+    "tag_boundaries": 5,
+    "relation_expression": 5,
+    "completeness_and_leaks": 5
+   },
+   "cheap_judge": 5,
+   "issues": 0
+  },
+  {
+   "bundle_id": 4162,
+   "document_type": "Insurance Compliance Report",
+   "parser": "accepted",
+   "verdict": "keep",
+   "scores": {
+    "fluency": 5,
+    "coherence": 5,
+    "tag_boundaries": 5,
+    "relation_expression": 5,
+    "completeness_and_leaks": 5
+   },
+   "cheap_judge": 5,
+   "issues": 0
+  },
+  {
+   "bundle_id": 4246,
+   "document_type": "Loan Modification Agreement",
+   "parser": "accepted",
+   "verdict": "fix",
+   "scores": {
+    "fluency": 3,
+    "coherence": 5,
+    "tag_boundaries": 5,
+    "relation_expression": 5,
+    "completeness_and_leaks": 5
+   },
+   "cheap_judge": 5,
+   "issues": 1
+  },
+  {
+   "bundle_id": 4282,
+   "document_type": "Bid Proposal",
+   "parser": "accepted",
+   "verdict": "keep",
+   "scores": {
+    "fluency": 5,
+    "coherence": 5,
+    "tag_boundaries": 5,
+    "relation_expression": 5,
+    "completeness_and_leaks": 5
+   },
+   "cheap_judge": 5,
+   "issues": 0
+  },
+  {
+   "bundle_id": 4327,
+   "document_type": "Voice Quality Report",
+   "parser": "accepted",
+   "verdict": "keep",
+   "scores": {
+    "fluency": 5,
+    "coherence": 5,
+    "tag_boundaries": 5,
+    "relation_expression": 5,
+    "completeness_and_leaks": 5
+   },
+   "cheap_judge": 5,
+   "issues": 0
+  },
+  {
+   "bundle_id": 4344,
+   "document_type": "Service Review",
+   "parser": "accepted",
+   "verdict": "fix",
+   "scores": {
+    "fluency": 5,
+    "coherence": 3,
+    "tag_boundaries": 5,
+    "relation_expression": 5,
+    "completeness_and_leaks": 5
+   },
+   "cheap_judge": 5,
+   "issues": 1
+  },
+  {
+   "bundle_id": 4372,
+   "document_type": "Insurance Policy Comparison",
+   "parser": "accepted",
+   "verdict": "keep",
+   "scores": {
+    "fluency": 5,
+    "coherence": 4,
+    "tag_boundaries": 5,
+    "relation_expression": 5,
+    "completeness_and_leaks": 5
+   },
+   "cheap_judge": 5,
+   "issues": 1
+  },
+  {
+   "bundle_id": 4380,
+   "document_type": "Gender Discrimination Report",
+   "parser": "accepted",
+   "verdict": "keep",
+   "scores": {
+    "fluency": 5,
+    "coherence": 5,
+    "tag_boundaries": 5,
+    "relation_expression": 5,
+    "completeness_and_leaks": 5
+   },
+   "cheap_judge": 5,
+   "issues": 0
+  },
+  {
+   "bundle_id": 4381,
+   "document_type": "Health and Safety Training",
+   "parser": "accepted",
+   "verdict": "keep",
+   "scores": {
+    "fluency": 5,
+    "coherence": 5,
+    "tag_boundaries": 5,
+    "relation_expression": 5,
+    "completeness_and_leaks": 5
+   },
+   "cheap_judge": 3,
+   "issues": 0
+  },
+  {
+   "bundle_id": 4391,
+   "document_type": "Candidate Speech Transcript",
+   "parser": "accepted",
+   "verdict": "keep",
+   "scores": {
+    "fluency": 5,
+    "coherence": 5,
+    "tag_boundaries": 5,
+    "relation_expression": 5,
+    "completeness_and_leaks": 5
+   },
+   "cheap_judge": 5,
+   "issues": 0
+  },
+  {
+   "bundle_id": 4421,
+   "document_type": "Candidate Platform Document",
+   "parser": "accepted",
+   "verdict": "fix",
+   "scores": {
+    "fluency": 5,
+    "coherence": 5,
+    "tag_boundaries": 5,
+    "relation_expression": 5,
+    "completeness_and_leaks": 3
+   },
+   "cheap_judge": 5,
+   "issues": 1
+  },
+  {
+   "bundle_id": 4445,
+   "document_type": "Employee Evaluation Form",
+   "parser": "accepted",
+   "verdict": "keep",
+   "scores": {
+    "fluency": 5,
+    "coherence": 5,
+    "tag_boundaries": 5,
+    "relation_expression": 5,
+    "completeness_and_leaks": 5
+   },
+   "cheap_judge": 5,
+   "issues": 0
+  },
+  {
+   "bundle_id": 4478,
+   "document_type": "Health Screening Form",
+   "parser": "accepted",
+   "verdict": "keep",
+   "scores": {
+    "fluency": 5,
+    "coherence": 5,
+    "tag_boundaries": 5,
+    "relation_expression": 5,
+    "completeness_and_leaks": 5
+   },
+   "cheap_judge": 5,
+   "issues": 0
+  },
+  {
+   "bundle_id": 4511,
+   "document_type": "User Service Receipt",
+   "parser": "accepted",
+   "verdict": "fix",
+   "scores": {
+    "fluency": 5,
+    "coherence": 4,
+    "tag_boundaries": 5,
+    "relation_expression": 3,
+    "completeness_and_leaks": 5
+   },
+   "cheap_judge": 2,
+   "issues": 1
+  },
+  {
+   "bundle_id": 4577,
+   "document_type": "Call Detail Report",
+   "parser": "accepted",
+   "verdict": "fix",
+   "scores": {
+    "fluency": 4,
+    "coherence": 3,
+    "tag_boundaries": 4,
+    "relation_expression": 5,
+    "completeness_and_leaks": 5
+   },
+   "cheap_judge": 5,
+   "issues": 3
+  },
+  {
+   "bundle_id": 4602,
+   "document_type": "Disability Diagnosis Letter",
+   "parser": "accepted",
+   "verdict": "fix",
+   "scores": {
+    "fluency": 5,
+    "coherence": 4,
+    "tag_boundaries": 5,
+    "relation_expression": 5,
+    "completeness_and_leaks": 3
+   },
+   "cheap_judge": 5,
+   "issues": 1
+  },
+  {
+   "bundle_id": 4775,
+   "document_type": "Product User Interface Guide",
+   "parser": "accepted",
+   "verdict": "fix",
+   "scores": {
+    "fluency": 4,
+    "coherence": 3,
+    "tag_boundaries": 4,
+    "relation_expression": 4,
+    "completeness_and_leaks": 2
+   },
+   "cheap_judge": 5,
+   "issues": 2
+  },
+  {
+   "bundle_id": 4826,
+   "document_type": "Personal Solutions",
+   "parser": "accepted",
+   "verdict": "keep",
+   "scores": {
+    "fluency": 5,
+    "coherence": 5,
+    "tag_boundaries": 5,
+    "relation_expression": 5,
+    "completeness_and_leaks": 5
+   },
+   "cheap_judge": 5,
+   "issues": 0
+  },
+  {
+   "bundle_id": 4864,
+   "document_type": "Debit Card Replacement Form",
+   "parser": "accepted",
+   "verdict": "fix",
+   "scores": {
+    "fluency": 3,
+    "coherence": 3,
+    "tag_boundaries": 5,
+    "relation_expression": 5,
+    "completeness_and_leaks": 5
+   },
+   "cheap_judge": 3,
+   "issues": 1
+  },
+  {
+   "bundle_id": 4920,
+   "document_type": "Power Purchase Agreement",
+   "parser": "accepted",
+   "verdict": "keep",
+   "scores": {
+    "fluency": 5,
+    "coherence": 5,
+    "tag_boundaries": 5,
+    "relation_expression": 4,
+    "completeness_and_leaks": 5
+   },
+   "cheap_judge": 5,
+   "issues": 1
+  },
+  {
+   "bundle_id": 4951,
+   "document_type": "Claim Reimbursement Form",
+   "parser": "accepted",
+   "verdict": "keep",
+   "scores": {
+    "fluency": 5,
+    "coherence": 5,
+    "tag_boundaries": 5,
+    "relation_expression": 5,
+    "completeness_and_leaks": 5
+   },
+   "cheap_judge": 5,
+   "issues": 0
+  }
+ ],
+ "global_observations": [
+  "This chunk (bundle_id 2, 114, 122, 195, 276, 296) is unusually clean: zero attribution errors, zero sex errors, zero untagged PII leaks, and entities_bound matched the visible tags exactly in every document (verified by direct occurrence counts, including the heavily repetitive bundle 296 with 23 tag instances).",
+  "Recurring stylistic pattern worth watching: a named data subject is occasionally cast as the 'topic' of a document type that is normally impersonal or organization-level — bundle 2's Ad Campaign Review names Prof. Dr. Işın Akman as 'Rapor konusu' / 'İncelenen kampanya profili', where real ad-campaign reviews report on the campaign, not a named individual.",
+  "Bundle 296 (Insurance Compliance Report) restates the same five identifiers (name, policy no, TCKN, SGK no, YUPASS no) near-verbatim across five sections; genre-plausible for an auditable compliance report but mechanically repetitive as prose.",
+  "Bundle 114 attributes a credit_score to the client using only the document's single-subject header convention (no in-sentence name); acceptable here since there is only one named person in the document, but worth watching in multi-person documents where an unlabeled value's owner could become genuinely ambiguous.",
+  "Where the judge's drop decision could be checked against the text (bundle 2, advertising_id_of), the drop looked correct — the sentence never explicitly ties the ad ID back to the named person, so the judge's caution was warranted. No evidence in this chunk of the judge wrongly dropping an actually-expressed relation.",
+  "TCKN checksums, the one IBAN (mod-97), and the one card number (Luhn) present in this chunk all validate correctly — structured-identifier realism is strong.",
+  "A recurring generator pattern of deferring un-authorized secondary-person detail to 'elsewhere' (e.g. bundle 323's 'Kredi numarası: Kurum kayıtlarında', bundle 457's 'Vekilin iletişim bilgileri: Noterlik kayıtlarında ve yetkilendirme dosyasında mevcuttur', bundle 559's 'Düzenleme tarihi: belirtilmemiştir') generally reads naturally and avoids inventing unauthorized PII — except bundle 457's 'Atanan sağlık vekili: Sağlık vekili', which is circular rather than deferential and should follow the same graceful pattern.",
+  "In this chunk, every relations_unexpressed drop (2 of 2, bundles 299 and 559) looks like a judge error on inspection — both dropped relations are directly evidenced adjacent to the subject's own identity fields in the text. No relations_kept entry in this chunk looked wrongly kept.",
+  "Two documents (299, 549) build a form around named gender/ethnicity/civil-status fields for a single named individual; in 299 this produces a gender/field-label mismatch ('Kızlık Soyadı' for a male subject) worth checking generator-wide, since maiden-name facts appear to be attached without checking the subject's stated gender.",
+  "In this chunk, tag-boundary hygiene was uniformly clean across all 6 documents: every tagged span was exact, apostrophe suffixes were consistently kept outside the tag ('nün, 'in), and no nested/merged/missing-word spans were found - the parser-vs-text agreement was 6/6.",
+  "The cheap judge appears to systematically under-detect the 'prescribed_by' relation when a doctor's license number sits as a plain adjacent form field under the doctor's own name (rather than an explicit prose sentence like 'X reçete yazdı') - seen in 2 of 6 docs (bundle 950, bundle 1037), both wrongly listed in relations_unexpressed despite clear co-location in the text.",
+  "Two documents (bundle 1037, bundle 1051) force a specific named individual's personal/account data into a document genre that is normally generic/impersonal by nature (a billing form gaining an out-of-place 'emergency contact' field; a Terms and Conditions legal boilerplate naming one customer's loyalty card mid-clause) - both are isolated, single-paragraph problems in otherwise clean documents.",
+  "One document (bundle 950) left a structured form field ('Ölçüm tarihi:') blank, a template/truncation artifact distinct from the fact-forcing issue above.",
+  "Several sparse-profile documents (bundle 586: 1 of fact_target=2 relations used; bundle 1051: 1 of fact_target=2) undershoot their fact_target even though more offered facts were available with used=false - not scored as a defect here since the rubric doesn't require hitting the numeric target, but worth tracking if density/fact-target adherence matters downstream.",
+  "Two generation-pipeline inconsistencies found: bundle 1303 tags a named person (Hüsnüye Örge) whose originating fact was marked used=false in facts_offered, yet she still appears in text_tagged/entities_bound with no anchoring record number and no kept relation — an orphaned entity. Bundle 1326 asserts both age=47 and date_of_birth=22.05.1995 for the same person from two facts both marked used=true; these are numerically incompatible. Both suggest the fact-generation/writer stage needs a consistency check before facts reach the writer.",
+  "Secondary/role persons are sometimes injected into a document type without narrative integration: bundle 1303's 'İLGİLİ KİŞİ KAYITLARI' section lists a notarial witness and an unexplained relative in a car-damage insurance Claim Adjustment Notice with zero stated relevance to the claim — the closest analogue to the rubric's own 'forced fact' example.",
+  "Positive pattern worth reinforcing: dense-profile writer-added Tier B facts in the disability/health bundles (1285, 1313, 1326) are well-integrated and domain-accurate — notably bundle 1326 pairs an Alzheimer's diagnosis with donepezil, a real, correct first-line medication for that condition.",
+  "SGK sicil numarası values are consistently rendered as 13-digit numbers across multiple bundles in this chunk (1285: 5945989683777, 1313: 8036176617806) — worth double-checking against real SGK sicil number formatting conventions, since this recurs systematically rather than randomly.",
+  "Bundle 1128 (Fire Insurance Certificate) leaves 'Poliçe No:' blank and uses a generic 'Kredi veren kuruluş' instead of a named mortgagee — minor placeholder-style artifacts in an otherwise fully structured document.",
+  "Relation direction and attribution were consistently correct across all 6 documents (father_of, guarantor_of, employer_of, property_of, company_tax_of, mersis_of, card_component_of all pointed the right way), and one document (1694) correctly handled an explicit relations_negative_used trap (guarantor's email not misattributed to the subject) — the writer/binder pipeline is handling attribution well in this chunk.",
+  "Two of six documents (1379, 1654) show a 'thin/mismatched content' pattern distinct from tagging errors: 1379 is titled 'Family Medical History' but contains zero medical content, and 1654 gives a K-12 report-card subject a professional 'Op. Dr.' title carried over from name-generation without checking document-type/age fit. Both suggest the subject-name/title pool is reused across document types without a plausibility filter for age- or context-sensitive types (report cards, school records, minors' documents).",
+  "1654 also shows a distinct completeness gap: the writer produced substantial free-text personal content (grades, behavior evaluation, attendance) that writer_allowed_kinds (education_info) would support tagging, but tagged none of it — worth checking whether other Report Card / grade-bearing document types in the full run have the same untagged-grades pattern.",
+  "Where writer_added entities appeared (1374's broker company, 1566's 'yazar' job title), both were realistic and correctly tagged; in 1374 the writer's own proposed relation (employer_of via the broker) was correctly left unconfirmed and never surfaced as a false claim in the text.",
+  "Numeric PII realism was strong throughout: TCKN and card-number checksums in 1694 both validate, and registry-style values (parcel notation, trade registry number, MERSIS, VKN) all match expected Turkish formats.",
+  "Three of six documents (1723, 1805, 1941) place a role that has no functional reason to exist in that document type — a personal kefil in a building insurance policy, an individual policyholder as a signatory to a B2B reinsurance treaty (plus his irrelevant bar-registry number), and a TCKN for the 'owner' of an audio file being technically reviewed. In each case the offered fact appears to have been threaded into the document mechanically rather than into a spot where a Turkish reader would expect to find it — the rubric's 'forced fact' failure mode shows up repeatedly whenever the document genre is inherently impersonal (insurance boilerplate, B2B contracts, technical reviews, HR mission statements) and a person-level fact is still required to be present.",
+  "1912 (ER triage sheet) shows a real completeness/leak pattern worth checking pipeline-wide: the writer tagged the diagnosis, procedure and medication fields correctly but left three mentions of the patient's actual presenting symptoms (chest pain, dyspnea, weakness) completely untagged as medical_condition, even though they are the same kind of Madde-6 health data as what was tagged two lines later. This suggests the tagging pass may miss symptom language embedded in free-flowing clinical narrative (as opposed to labeled form fields).",
+  "1941 has an entities_bound metadata anomaly (a duplicated first_name binding for a span, 'Bilgi', that has no corresponding tag anywhere in text_tagged) — worth a pipeline-level check for whether other bundles in this run have similar phantom/duplicate binding entries that don't reflect the actual tagged text.",
+  "1805's Reasürans Sözleşmesi leaves both contracting companies as generic role labels ('Sigorta şirketi', 'Reasürans kuruluşu') rather than invented company names, which reads as an unfilled template — a milder but related pattern to the forced-fact issue above.",
+  "The word 'etiket' (tag/label) leaks into generated prose in unrelated, plausible-sounding contexts in two of six documents (bundle 1953 'biçiminde etiketlenir' for a name-usage rule; bundle 1959 'Müşteri etiketiyle kayıtlı' for a CRM-style customer flag). Neither is a clear-cut violation on its own, but the repetition across documents suggests the writer model may have a mild tendency toward annotation-vocabulary bleed-through worth spot-checking at scale.",
+  "entities_bound/text_tagged count mismatches occur even when parser_decision='accepted' and parser_problems=[] (bundle 1953: 11 entries vs 10 actual tags, with the extra binding apparently corresponding to a real untagged span). The acceptance pipeline is not catching this class of binding/tag-count mismatch.",
+  "In two documents (1959, 2121), the writer produced free-text personal facts of allowed kinds (risk_report-style commentary, a job_title) that were never tagged and never logged in writer_added — a tierb-miss pattern that seems to slip past the current pipeline checks.",
+  "In the one sparse (fact_target=2) document with an address fact (bundle 1964), the writer hit the target by relabeling the subject's actual home address as something else entirely ('proje çalışma bölgesi') rather than honestly stating residence or dropping the fact — this produces a relation that reads as actively mislabeled rather than merely unexpressed.",
+  "Document-type-aware plausibility matters for financial PII: CVV inclusion is expected and coherent on a card-authorization/transaction form (bundle 2042) but implausible on an internal customer risk-assessment report (bundle 1959) — the same entity type needs different coherence judgment depending on document_type.",
+  "Across all 6 documents, tag/entity consistency is perfect: 24 total inline tags, zero span or label mismatches against entities_bound, zero apostrophe-inside-tag violations, and a regex sweep for capitalized name-like sequences and long digit runs outside tags found no untagged leaked PII.",
+  "Relations are consistently expressed through header/field adjacency (e.g. 'Alıcı: X' followed by 'Teslimat adresi: Y', 'Rapor konusu: X' followed by 'İncelenen kanal: Y') rather than explicit prose, and the cheap judge is inconsistent about which of these adjacency-only relations it counts as expressed — see bundle 2183, where order_of was dropped from the same info block that customer_number_of and shipment_of were kept from.",
+  "Two documents (2263, 2283) show the same pattern: a fact/relation is planted via a sentence or header structure that isn't native to that document type (a doubled former-surname identity block in a medical consent form; a person's full honorific name used as 'Rapor konusu' in an analytics report) — worth revisiting writer phrasing guidance for these specific fact/relation types per domain.",
+  "fact_target vs. the number of facts actually marked used diverges in 4 of 6 rows (2263: 3 vs 2; 2283: 2 vs 1; 2298: 2 vs 1; 2307: 2 vs 1); only 2183 (8 vs 8) hits its target exactly. Not necessarily a defect (writer discretion or repair-stage pruning), but worth checking whether this is systemic across the full 5K run.",
+  "Full_name is used exclusively as a coarse tag across this chunk; the fine-grained first_name/last_name/middle_name spans present in entities_offered are never applied in text_tagged. Consistent within the chunk, but worth confirming this is the intended convention for the whole run rather than an accidental narrowing.",
+  "The two 'fix' documents (2319, 2368) fail for different, unrelated reasons: 2319 has a genuinely ambiguous relation attribution (a kept notary_act_of relation with no name nearby in a multi-person document), while 2368 has a mechanical vowel-harmony grammar error repeated twice on the same surname ('Oğuz'in' should be 'Oğuz'un'). Neither is a systemic pattern across the chunk, but both are worth a targeted grep: genitive suffixes on back-rounded-vowel-ending surnames, and kept relations whose tail/head is more than one sentence away from any name.",
+  "The two documents carrying relations_negative_used constraints (2319: subject must not be shown as witness_of the notary act; 2593: the relative's TCKN and the son's phone must not be attributed to the subject) both correctly avoid the banned attribution. 2593 in particular explicitly labels the relative's TCKN as 'Akrabanın T.C. kimlik numarası' and the son's phone as 'Oğluna ulaşılabilecek telefon', which is a good pattern for disambiguating secondary-person values.",
+  "Dense-profile documents (2319, 2566, 2593) pack 8-9 kept relations each into field-label form layouts; where a single subject anchors an entire section (banking KYC, health intake), implicit form-structure attribution reads naturally, but where two named people share a document (2319), field-label style alone is not always enough to disambiguate ownership.",
+  "Sparse-profile documents (2476, 2517) are clean and low-risk but low-yield: 2517 uses 0 of its 2 offered facts and relies entirely on one writer-added job_title; this is consistent with the 'sparse' design intent, not a defect, but worth noting if the run's target fact density is being tracked.",
+  "Two docs in this chunk (bundle 2860, bundle 2985) share the same 'device/advertising_id linked to a named subject' template. One states the link explicitly and the cheap judge wrongly dropped it as unexpressed; the other only implies the link via a document-header field naming the subject and the judge's drop of it looks correct. The judge is inconsistent on the same relation type across near-duplicate templates within this small sample.",
+  "The vowel-harmony/possessive-suffix bug seen in bundle 2860's rendered text ('Uslu'in' instead of 'Uslu'nun') also appears in the facts_offered wording for other bundles in this chunk (e.g. 'Hülya Aça'in', 'Göksal Karslıoğlu'in' in bundle 2952 and 2911's facts_offered strings) - looks like a systematic template bug for vowel-final surnames that occasionally leaks into the rendered document itself.",
+  "bundle_id 3156 shows a genuine mismatch between entities_bound bookkeeping (2 recorded occurrences of the subject's full_name) and the actual bracket tags in text_tagged (only 1) - worth checking whether this parser/binder discrepancy shows up elsewhere in the run, since it directly causes an untagged PII leak in the rendered training text.",
+  "Two docs (bundle 2911, bundle 2985) introduce a secondary named person through a document-type-atypical field (a court-appointed bilirkişi note inside a plumbing maintenance form; an 'İncelenen kişi' header on an ad creative review) rather than integrating the person into content that naturally belongs in that document type - a pattern worth watching for elsewhere in the 'sparse'/'normal' profile Property and Advertising documents.",
+  "Turkish uppercase/dotted-İ corruption: bundle 3200's second full_name mention renders as 'Bİrşen Şengül' (capital dotted İ after B) instead of 'Birşen Şengül'. This looks like an artifact of an automated re-casing or normalization step touching a tagged span. Worth a corpus-wide regex sweep for a capital 'İ' appearing mid-word inside full_name tags.",
+  "A recurring pattern in this chunk: generic, company-wide reference document types (Salary Structure Chart in 3200, Carrier Rate Sheet in 3423, Network Configuration File in 3422) get retrofitted with one named individual's specific record. It mostly works (3200's salary figures are internally consistent with the band table), but 3423's rate sheet carries a personal delivery address under a 'Kayıt konusu' header that a real generic rate card wouldn't have, and 3422 is written as narrative prose rather than actual .conf key=value syntax despite the brief describing bracketed section headers.",
+  "One instance (3423) of relation-label drift where the judge kept 'residence_of' but the text only supports a weaker 'delivery address of this shipment' claim — the writer used 'Teslimat adresi' rather than residence/ikamet language actually present in the underlying fact sentence.",
+  "Health-context documents (3486) narrate symptoms in lay language ('karın ağrısı, bulantı ve sıvı kaybı') immediately before the formal tagged diagnosis; these lay descriptions are themselves untagged health data, redundant with the tagged span but technically a completeness gap.",
+  "Tag boundaries and entity/relation attribution are consistently correct across this chunk: parser_agreement is true for all 6 docs, apostrophe-attached Turkish suffixes are correctly kept outside spans, and professional titles/honorifics (Prof. Dr., Av., Uzm.) are correctly included inside full_name spans per POLICY.md.",
+  "Two documents attach a semantically-loaded entity subtype to a document-genre-mismatched field label: bundle 3573 labels a swift_bic value as 'Havale işlem kodu' (should read SWIFT/BIC kodu), and bundle 3801 labels a kep_address (a formal legal-notification address) as a generic 'Kayıtlı iletişim adresi' inside a PPC ad-campaign record. The entities themselves are correctly tagged; only the surrounding field label is genre-inconsistent.",
+  "A recurring 'forced fact' pattern: a fact true of the person elsewhere in the graph is used even though it conflicts with the role the document casts them in — a student number for a person introduced as teaching staff (bundle 3753), and an employer relation that makes the customer an employee of the very company that authorizes her own return (bundle 3719). Suggests fact selection doesn't always check role compatibility with the document's cast before setting used=true.",
+  "bundle 3719's role-person name 'Kadın Düzgün' looks like a name-generation artifact — 'Kadın' (woman) reads as a leaked sex/placeholder token rather than a real Turkish given name. Worth checking the name generator for similar leaks on other role-person slots (kefil, vekil, tanık, etc.).",
+  "No leaked/untagged PII, no annotation/taxonomy meta-language, no placeholders, markdown artifacts, truncation, or 'eğitim amaçlı'-style disclaimers found in any of the 6 documents.",
+  "Both relations_negative_used checks present in this chunk (bundle 3573 father's phone not attributed to subject; bundle 3719 customer not shown as authorised signatory) passed correctly — no wrong-person attribution found.",
+  "The one relations_unexpressed drop in this chunk (bundle 3801, advertising_id_of) looks like a correct judge call: the ad ID sits under generic campaign targeting fields rather than an explicit personal-attribution sentence, so leaving it unexpressed is right, not a judge error.",
+  "Fact utilization often falls short of fact_target without writer compensation: bundle 3913 used 5/6 offered facts, bundle 4162 used 6/9, and bundle 4246 used 2/3, leaving those documents thinner than the brief intended. Bundle 3969 is the counterexample — the writer compensated with 4 well-integrated writer_added medical facts (2 diagnoses, 2 medications) that fit its document type perfectly and exceeded the fact_target in substance.",
+  "One relation-type/entity-type mismatch was found (bundle 3913): relations_kept applies relation 'iban_of' to an entity labeled 'bank_account_number' instead of the taxonomy-correct 'account_of'. Worth an automated check across the full run comparing an entity's own label against the relation type applied to it, since the taxonomy explicitly separates bank_account_number from iban.",
+  "Both adversarial relations_negative_used traps present in this chunk (bundle 3860's brother's-email-misattributed-to-subject risk, and bundle 4162's two traps — witness's email and doctor's license number each risking misattribution to the subject) were correctly avoided by the writer, with clear contextual attribution to the right person in every case. Strong sign for this batch's attribution discipline.",
+  "All 4 TCKNs checked in this chunk (bundles 3913, 3969, 4162, 4246) pass the official Turkish checksum algorithm, and both Findeks/credit-score values (1766, 1739, 1739 range check) fall inside the valid 1-1900 range. Value realism is strong throughout this chunk.",
+  "Two documents show small template-level polish issues unrelated to PII correctness: an outside professional title folded into a patient-name field in a health document (bundle 3969, 'Av. Arife Suat Özbay') and a duplicated role heading in a contract signature block (bundle 4246, 'Kredi Veren Yetkilisi' x2). Neither creates a labeling error, but both slightly reduce document plausibility.",
+  "This chunk is unusually clean: all 6 docs pass tag/entities_bound consistency checks (equal counts, exact spans, correct apostrophe placement) with no boundary or label errors found.",
+  "Bundle 4381 is a strong positive example of the negative-relation guardrail working: relations_negative_used correctly forbids attributing Gülbeyaz Ülkü's phone number to the subject Aylin Küçük, and the generated text attributes it correctly to Gülbeyaz alone — no attribution error.",
+  "The sparse-profile docs (4282, 4344) both convert a single offered/added fact into a coherent short document; 4282 (job title) reads naturally, while 4344 (bare TCKN in a Service Review) is the one recurring weak point in this chunk — a national ID number presented under a vague field label in a document type that would not normally require it.",
+  "Bundle 4372 shows a secondary named person (a physician, required by the role assignment) appearing with no attached fact or relation beyond her name and title — legitimate as insurance underwriting practice, but thin; worth watching for a broader pattern of counterpart persons named without substantive supporting content across the run.",
+  "No leaked/untagged PII found in any of the 6 docs (checked remaining long digit sequences and free text outside tags); the one leftover number (48.750.000 TL bid price in 4282) is correctly untagged as it is not personal data.",
+  "Tag-boundary quality in this chunk is very high: across 6 documents and ~35 tagged spans, only one defect was found (a leading space inside a phone_number tag in bundle 4577), verified by diffing text_tagged against entities_bound.",
+  "Two Election-domain documents (4391, 4421) both leave a 'target office / candidacy' field ('Hedeflenen Görev: Belediye Başkanlığı' / 'Adaylık görevi: Belediye başkan adayı') untagged. This looks like a deliberate, consistent convention (treated as document metadata rather than a job_title fact) rather than a bug, but it's worth an explicit policy call since job_title's description ('kişinin mesleği veya görev unvanı') could arguably cover it.",
+  "In the same pair of documents, bundle 4421 additionally leaves the candidate's stated party ('Yeni Ufuklar Hareketi') untagged, while political_opinion's own description explicitly names party membership as in-scope — this is a clearer miss than the target-office fields and should be fixed.",
+  "TCKN 11546799372 in bundle 4478 passes the full 2-checksum-digit TCKN algorithm — a good sign of value realism/generation quality for this bundle.",
+  "One likely judge error found (bundle 4511, order_of relation dropped despite matching the same DOC_SUBJECT field-value pattern as two relations that were kept in the same document) — worth spot-checking whether the cheap judge under-keeps relations in single-subject receipt/form documents generally.",
+  "One doc in this chunk (4775) has a real parser/binder disagreement: entities_bound claims a full_name span is bound, but the span is never actually wrapped by a tag in text_tagged — the name sits as plain, leaked text. Worth an automated reconciliation pass (compare entities_bound spans/labels against the actual [span]label occurrences in text_tagged) before these documents ship, since this class of bug is easy to catch mechanically and was otherwise invisible in the structured fields.",
+  "Two dense-profile documents (4864, 4951) use a recurring 'deferred to official records' filler pattern for fields that had no offered fact (e.g. 'Banka kayıtlarında bulunan güncel adres', 'Resmi vefat belgesine göre dosya incelemesinde doğrulanacaktır'). This is a reasonable way to avoid fabricating ungrounded PII, but in 4864 the same template phrase repeats three times almost verbatim within one short form, which reads as robotic rather than natural. Consider varying the phrasing or leaving a blank field (as was correctly done for signature/date lines) when a value isn't offered.",
+  "Positive finding: 4951 correctly resolves two same-label entities (two date_of_birth values, one per person) to the right person in free text, and the negative-relation constraint (relations_negative_used) was respected — this is exactly the kind of attribution test this pipeline needs to keep passing as document density increases.",
+  "In 4602, the tagged disability_status/medical_procedure spans are clean, but an adjacent, more specific diagnosis clause ('kronik ortopedik durum saptanmıştır') was left untagged even though medical_condition was an allowed kind — suggests the tagging pass may focus on writer_added entity values rather than scanning full sentences for additional in-scope health claims."
+ ],
+ "recommendations": [
+  "For document types whose real-world genre is inherently impersonal/aggregate (ad campaign reviews, company policies, compliance reports), consider constraining which offered fact can become the document's headline 'subject' line so a specific named individual is not cast as the topic of a genre that normally reports on a campaign/policy/organization rather than a person.",
+  "For dense-profile documents that repeat the same handful of identifiers across many sections (as in bundle 296), consider varying phrasing/back-reference language in later sections (e.g., 'yukarıdaki kayıt sahibi') instead of restating the full identifier set each time, to reduce mechanical repetition while keeping identifiers traceable.",
+  "Add a generation-time or repair-time check that skips or rewords 'maiden_name' / 'Kızlık Soyadı' style fields when the subject's tagged gender is Erkek, or use a gender-neutral label like 'Önceki Soyadı'.",
+  "Re-examine the cheap judge's precision on relation drops near identity-block-adjacent numbers (case numbers, protocol numbers next to the subject's name) — both drops seen in this chunk look like false negatives.",
+  "For long structured-report document types (e.g. Gender Equality Report) built around a single named case, either cap the number of times the same 2-3 demographic facts are restated verbatim, or require the writer to add at least one or two additional case-specific writer_added facts so the report doesn't read as padding around three data points.",
+  "When a role person (e.g. sağlık vekili) is required by the document type but not authorized as a named_person, prefer a deferential phrase ('ekli yetkilendirme belgesinde belirtilmiştir') over restating the role label as if it were the field's value.",
+  "Have the cheap judge re-check 'prescribed_by' (and similarly self-referential relations) when the two entities are simply adjacent field/value pairs in a structured header, not just when stated as an explicit prose sentence - it is currently missing clearly expressed instances.",
+  "Add a genre-appropriateness constraint to the writer step for document types that are inherently generic/impersonal (Terms and Conditions, policies, disclaimers): avoid injecting one specific named individual's account/card details into that boilerplate unless explicitly framed as an illustrative example.",
+  "Add a post-generation validator that flags structured-form fields left with an empty value (label present, no content) so they can be filled or removed before release.",
+  "Add an automated cross-field consistency check (e.g. age vs. date_of_birth, and any other derivable numeric pairs) before a bundle is accepted, and reject/repair bundles that fail it — bundle 1326 shows this can slip through the repair stage.",
+  "Ensure facts_offered.used accurately reflects what lands in text_tagged/entities_bound; an entity from a used=false fact should never appear tagged in the final text without a resolvable relation (see bundle 1303 / Hüsnüye Örge).",
+  "When a 'role person' (witness, relative, kefil, etc.) is injected into a document type that isn't naturally about that role, require the writer to state their concrete relevance to the subject matter rather than listing a bare name+role under a generic heading.",
+  "Consider a lint rule flagging blank or generic-placeholder field values (e.g. empty 'Poliçe No:', 'Kredi veren kuruluş' with no actual name) in structured document templates.",
+  "Add an age/role plausibility check when reusing a named-subject's title across document types — a subject already carrying a professional post-graduate title (Op. Dr., Av., etc.) should not be placed as the pupil/student in K-12-style documents (report cards, school enrollment, etc.).",
+  "For document types whose description promises specific domain content (e.g., 'Family Medical History' implying actual conditions/treatments), consider a content-coverage check that flags documents where zero writer_allowed_kinds content was added, even if the required facts_offered/entities were technically satisfied.",
+  "For Report Card / grade-bearing document types, consider explicitly prompting the writer to tag grade, behavior, and attendance content under education_info (or a more specific node) rather than leaving it as untagged narrative — this chunk shows it can be written in full detail and still left untagged.",
+  "When a document_type is inherently impersonal/company-level (reinsurance treaties, technical media reviews, generic HR values statements, property insurance boilerplate), consider allowing the writer to decline a forced person-level fact, or steer such facts toward document types where an individual's presence is structurally justified (e.g., a signed employee acknowledgment instead of a company-wide values statement).",
+  "Add a QA check that flags any writer_allowed_kinds term (medical_condition, symptom-adjacent language, etc.) that appears in free narrative text without a corresponding inline tag, to catch cases like 1912's untagged chest-pain/dyspnea mentions.",
+  "Add a QA check that every id in entities_bound has a matching count of literal tag occurrences in text_tagged (same label, same span text) to catch phantom/duplicate metadata entries like 1941's 'Bilgi'.",
+  "When a role person requires a company_name as counterpart (authorised signatory, employer, etc.), consider constraining the company-name generator to a business line consistent with the document type (e.g., an insurance-sector name for a reinsurance treaty party), to avoid mismatches like 1805's construction company standing in as an insurer.",
+  "Add an automated check comparing count/order of bracketed tags in text_tagged against entities_bound per document and flag any mismatch for human review, even when parser_decision='accepted' (would have caught bundle 1953).",
+  "For financial/banking report-style document_types (assessment reports, risk summaries, statements), add a rule against including card_cvv — reserve CVV for point-of-sale/authorization-form document types where its presence is expected.",
+  "When a sparse-profile document must hit a low fact_target, prefer dropping a fact over recontextualizing it under a false label (e.g., a person's residence address presented as something it is not) — the latter produces actively misleading relation-extraction training data, not just an unexpressed relation.",
+  "Add a lightweight post-generation scan for writer_allowed_kinds vocabulary (job_title cues, risk/credit-history phrasing, etc.) that appears in the final draft as free text but was not captured as an entity span, to catch tierb misses before they reach the training set.",
+  "Tighten the cheap judge's rule for header/field-adjacency relations so structurally identical patterns (a value listed under the same named block as the subject) are scored consistently — currently some are kept and some dropped within the same document (bundle 2183).",
+  "Add document-type-specific phrasing guidance for identity-verification facts (mother's maiden name, former surname) and for report-subject headers, so they read as native to the document type instead of a repeated generic template.",
+  "Spot-check the fact_target-vs-used-facts gap across the full e08 run; if it recurs at the rate seen in this 6-doc chunk (4/6), confirm whether writers are systematically under-delivering relative to brief or whether fact_target counts a different quantity than 'facts marked used'.",
+  "Add a lightweight vowel-harmony post-check for genitive/possessive apostrophe suffixes attached to full_name tags (surnames ending in back-rounded u/ü need -un/-ün, not -in/-ın) and rerun it across the corpus; bundle 2368 shows the same mistake made twice within one document, suggesting it may be a systematic generation-model habit rather than a one-off.",
+  "When a document names more than one person and also carries a kept relation between a bare number/ID and one of them, require the writer to keep the possessor's name or an unambiguous field label immediately adjacent to that number rather than relying on section order alone — bundle 2319's Section D (notary yevmiye number with no name in the paragraph) is the clearest example.",
+  "Spot-check other 'dense' bundles for the same ambiguous-ownership pattern seen in 2319, specifically any kept relation whose head or tail entity is not restated by name in the same sentence or an explicitly labeled field ('Akrabanın ...', 'Oğluna ...' as in 2593 is the good pattern to standardize toward).",
+  "Fix the possessive-suffix generation for vowel-ending surnames (…u/…ı/…o endings need the buffered '-nun/-nın/-nun/-nün' form, not a consonant-final '-in/-ın' form) - grep the run for tag-adjacent \"'in \"/\"'ın \" after full_name tags to find other occurrences.",
+  "Re-check the cheap judge's precision specifically for advertising_id_of relations in this Advertising-domain template family; it disagreed with an independent read in opposite directions across two structurally similar bundles (2860 vs 2985).",
+  "For Family Medical History documents (and similar first-person narrative health documents), add a tagging pass over the subject's own free-text medical_condition/medication mentions embedded in prose, not just the header-style facts - bundle 3156 tagged the header PII correctly but left the subject's own diagnoses/medication in the narrative completely untagged.",
+  "Programmatically audit entities_bound vs. actual bracket-tag counts in text_tagged across the full run, not just this chunk - bundle 3156's duplicate/mismatched full_name entry suggests this is a systematic bug class rather than a one-off.",
+  "Add an automated check for dotted-İ / undotted-ı case-conversion artifacts inside tagged spans (e.g. a capital 'İ' immediately following a consonant mid-word) to catch bugs like 'Bİrşen' before these reach training data.",
+  "For 'generic company reference' document types (rate sheets, salary structure charts, config files), either keep them genuinely generic (drop the single-named-subject requirement) or have the writer explicitly frame them as tied to one case/shipment/employee so the personal-record framing reads naturally rather than bolted on.",
+  "Have the judge compare the relation's semantic label against the actual Turkish noun/verb used in the sentence (e.g. 'teslimat adresi' vs 'ikamet adresi') before keeping address-type relations specifically as residence_of.",
+  "Decide a policy on whether lay symptom/complaint narratives that co-occur with a formally tagged diagnosis should also be tagged as medical_condition, for consistency across health-domain documents.",
+  "Regenerate the role-person name in bundle 3719 (replace 'Kadın Düzgün' with a realistic Turkish first+last name) and spot-check other role-person name slots for the same 'Kadın'/'Erkek'-as-name leak.",
+  "Add a role-compatibility filter to fact selection so facts like student_number aren't marked used=true for a person simultaneously cast in an incompatible role in the same document (faculty vs. student in bundle 3753; employee vs. employer's-own-authorizer in bundle 3719).",
+  "When a semantically-loaded entity subtype (swift_bic, kep_address, and similar) is selected, ensure the nearby field label matches its real-world meaning so the surrounding text stays genre-plausible (bundle 3573, bundle 3801).",
+  "Relabel the relation between e5 (bank_account_number, '640451173') and e1 in bundle 3913 from 'iban_of' to 'account_of'.",
+  "Fix the duplicated 'Kredi Veren Yetkilisi' heading in bundle 4246's signature block (section 9).",
+  "Consider padding or regenerating bundle 3860 with an actual disability_status/medical_condition writer_added fact so a document titled 'Disability Questionnaire' contains genuine disability content rather than only identity and family/contact fields.",
+  "Add an automated pre-acceptance check that compares each relation's semantic type against the entity label it's applied to (e.g. iban_of vs. bank_account_number, account_of vs. iban) to catch mismatches like the one in bundle 3913 across the full 5K set.",
+  "For bundle 4344: relabel 'Müşteri kayıt bilgisi' to something explicit like 'TCKN' or drop the national_id_number fact from Service Review-type documents — this document type does not plausibly require a customer's national ID.",
+  "For bundle 4372: when a counterpart person (physician, lawyer, etc.) is named via a role assignment but has no offered/used relation, consider either attaching a concrete fact (a finding, a provizyon number) or omitting the standalone name mention to avoid decorative PII with no informational payload.",
+  "Continue sampling for the 'counterpart named with no attached relation' pattern seen in 4372 across other chunks of this run — if frequent, it may indicate the writer prompt allows naming role persons without requiring them to carry any fact.",
+  "Fix the leading-space tagging bug seen in bundle 4577 ('[ +90...]phone_number') and grep the wider run for '\\[\\s' to catch other instances of whitespace leaking inside a tag.",
+  "Re-audit judge-dropped relations (relations_unexpressed / dropped-by-judge) specifically in single-subject field-value documents (receipts, forms, CDRs) against the DOC_SUBJECT convention in POLICY.md §10.5 — bundle 4511 suggests the cheap judge may be too conservative there.",
+  "Decide and document consistently whether party-affiliation values and 'target office / candidacy' fields in Election-domain documents should be tagged (political_opinion / job_title respectively), then apply it uniformly — currently one sibling document tags the analogous field and the other does not.",
+  "For required secondary personas that don't have a real fact to anchor them (e.g., a 'bystander' colleague with no associated relation), consider either giving them a concrete, load-bearing detail or making their mention optional — the current pattern (bundle 4577's Cihangir Söylemez line) produces a forced, content-free sentence purely to satisfy the persona requirement.",
+  "Add an automated reconciliation check between entities_bound and the actual bracket-tags present in text_tagged (exact span+label match) as a pre-ship gate — it would have caught bundle 4775 deterministically.",
+  "When a candidate fact/entity is not offered or not used, prefer omitting the field entirely or leaving a blank line over a templated deferral sentence, especially where the same deferral phrase would otherwise repeat more than once in a single document.",
+  "For documents with a free-text medical/legal narrative paragraph (diagnosis letters, expert reports), consider a secondary tagging pass that scans surrounding sentences for additional allowed-kind claims (e.g. medical_condition) beyond the specific writer_added values, since diagnostic language often appears just before or after the tagged entity."
+ ]
+}

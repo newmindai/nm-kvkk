@@ -1,0 +1,46 @@
+{
+  "COR": {
+    "name": "şirket",
+    "description": "Şirket, firma veya avukatlık ortaklığı adı; A.Ş., Ltd. Şti., Hukuk Bürosu gibi"
+  },
+  "CRT": {
+    "name": "mahkeme",
+    "description": "Mahkeme, daire veya savcılık adı; örneğin Ankara 2. Asliye Ticaret Mahkemesi"
+  },
+  "DAT": {
+    "name": "tarih",
+    "description": "Tarih, tarih aralığı veya dönem; örneğin 24.07.2014, 15 Mayıs 2023, 2024 yılı"
+  },
+  "GOV": {
+    "name": "kamu kurumu",
+    "description": "Bakanlık, düzenleyici kurum, kurul veya kamu otoritesi; örneğin SGK, KVKK Kurulu"
+  },
+  "LAW": {
+    "name": "mevzuat",
+    "description": "Kanun, yönetmelik, antlaşma veya madde atfı; örneğin 6098 sayılı Türk Borçlar Kanunu, KVKK'nın 5/2-e maddesi"
+  },
+  "LOC": {
+    "name": "yer",
+    "description": "Coğrafi yer: şehir, ülke, ilçe, mahalle veya sokak adı"
+  },
+  "MNY": {
+    "name": "para tutarı",
+    "description": "Para birimiyle birlikte tutar; örneğin 100.000 TL, 10 milyon USD"
+  },
+  "OOR": {
+    "name": "diğer kuruluş",
+    "description": "Şirket veya kamu kurumu olmayan kuruluş: üniversite, baro, federasyon, dernek, komite, standart kuruluşu"
+  },
+  "PER": {
+    "name": "kişi",
+    "description": "Kişi adı ve soyadı, unvanıyla birlikte olabilir; örneğin Av. Ahmet Yılmaz"
+  },
+  "PRO": {
+    "name": "proje",
+    "description": "Proje veya program adı; örneğin Harmanlı Termik Santral Projesi, Cosme Programı"
+  },
+  "PUB": {
+    "name": "yayın",
+    "description": "Yayın, belge, gazete veya resmi gazete adı; örneğin Resmi Gazete"
+  }
+}

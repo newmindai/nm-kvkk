@@ -1,0 +1,72 @@
+# ---- data, weights, runs: never committed (download links in models/README.md) ----
+datasets/**/*.jsonl
+datasets/**/*.parquet
+datasets/**/*.npy
+datasets/**/*.lengths.json
+datasets/**/gold_*.json
+datasets/**/gold_eval.json
+datasets/gt/
+datasets/synth/
+datasets/raw/
+models/*
+!models/README.md
+!models/gliner2.5-*/
+models/gliner2.5-*/*
+!models/gliner2.5-*/README.md
+!models/gliner2.5-*/kvkk_schema.json
+!models/gliner2.5-*/extract_kvkk.py
+results/*
+kvkk_synth/runs/*
+!kvkk_synth/runs/README.md
+kvkk_synth/briefs/raw/
+kvkk_synth/geo/raw/
+kvkk_synth/geo/*.parquet
+launchers/logs/
+launchers/env.sh
+*.sif
+sif_files/
+
+# ---- secrets ----
+.env
+
+# ---- python / tooling ----
+__pycache__/
+*.py[cod]
+*.egg-info/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.ipynb_checkpoints/
+build/
+dist/
+.venv/
+.DS_Store
+.vscode/
+.idea/
+tensorboard/
+
+# ---- not published: documentation set, local data, run output ----
+docs/
+# datasets/: the data itself is never committed; the label vocabularies, mappings, split reports and stats ship
+datasets/**/*.jsonl
+datasets/**/*.jsonl.*
+datasets/**/*.parquet
+datasets/**/gold_*.json
+datasets/**/preflight.json
+datasets/**/.gitattributes
+datasets/gt/
+datasets/synth/
+datasets/toy/
+datasets/kvkk_relations/
+# the pseudonymised real-text sets are private: nothing about them ships, not even stats
+datasets/kvkk/
+datasets/ner/
+datasets/mixed/
+results/
+benchmark/runs/
+
+# ---- internal release tooling, not published ----
+scripts/push_models_hf.py
+
+# ---- name-pool provenance notes, not published ----
+kvkk_synth/pipeline/v2/names/SOURCES.md

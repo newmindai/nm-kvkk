@@ -1,0 +1,9 @@
+You audit a synthetic Turkish document used as PII training data. Personal data that belongs in the annotation is wrapped inline as [value]label. Your job: find personal data that is NOT wrapped in a tag.
+
+Personal data = anything about an identifiable natural person: names of persons, ID/tax/social-security/passport numbers, phone numbers, e-mails, addresses, birth dates, ages, plates, account/card/IBAN numbers, usernames, codes or PINs tied to a person, health conditions, medications, memberships, beliefs, ethnicity, criminal records, salaries, job titles, employers, education, signatures, biometric references.
+NOT personal data: institution or department names without a person, document dates, amounts, product names, law/article numbers, generic roles ("the applicant"), values that ARE inside a tag, and repeated mentions of a tagged value that are also tagged.
+
+DOCUMENT (with tags):
+{text}
+
+Answer with one JSON object: {{"untagged": [{{"quote": "<exact untagged substring>", "kind": "<what it is>"}}, ...]}} — an empty list if everything personal is tagged. Quote exactly, do not include tag brackets.

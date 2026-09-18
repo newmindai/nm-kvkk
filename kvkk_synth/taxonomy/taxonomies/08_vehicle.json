@@ -1,0 +1,43 @@
+{
+  "concept": { "en": "vehicle_identifier", "tr": "arac_kimligi" },
+  "kvkk_category": { "en": "identity", "tr": "kimlik" },
+  "kvkk_sensitivity": "genel nitelikli (Madde 3)",
+  "span_policy": {
+    "plate_format": "Plaka bosluklu veya bitisik yazilabilir ('34 ABC 123' / '34ABC123'); her iki varyant tek spandir."
+  },
+  "nodes": [
+    {
+      "id": "license_plate",
+      "labels_en": ["license_plate", "vehicle_plate", "number_plate"],
+      "labels_tr": ["arac_plakasi", "plaka", "plaka_no"],
+      "description": "Arac plakasi. Kurul kararlarinda arac sahibini belirlenebilir kildigi icin kisisel veri sayilir.",
+      "validation": "TR: 2 haneli il kodu + 1-3 harf + 2-4 hane.",
+      "examples": [
+        { "text": "34 ABC 123 plakalı araç kavşaktan geçti.", "span": "34 ABC 123" },
+        { "text": "34abc123 plakali arac", "span": "34abc123", "note": "bitisik kucuk harf varyanti" }
+      ]
+    },
+    {
+      "id": "vin_chassis_number",
+      "labels_en": ["vin_chassis_number", "vehicle_identification_number", "vin"],
+      "labels_tr": ["sasi_no", "arac_kimlik_no"],
+      "description": "Aracin sasi (VIN) numarasi. Ruhsat ve sigorta belgelerinde gecer; arac uzerinden sahibine ulasilabilir.",
+      "validation": "17 karakter, harf+rakam (I, O, Q kullanilmaz).",
+      "examples": [
+        { "text": "Şasi no: WVWZZZ1JZXW000001", "span": "WVWZZZ1JZXW000001" }
+      ]
+    },
+    {
+      "id": "vehicle_registration_number",
+      "labels_en": ["vehicle_registration_number", "registration_document_no"],
+      "labels_tr": ["ruhsat_no", "tescil_belge_no"],
+      "description": "Arac ruhsat/tescil belge numarasi.",
+      "examples": [
+        { "text": "Ruhsat seri no: AB 123456", "span": "AB 123456" }
+      ]
+    }
+  ],
+  "negative_examples": [
+    { "text": "34 kalem ürün sipariş edildi.", "note": "adet, plaka il kodu degil" }
+  ]
+}

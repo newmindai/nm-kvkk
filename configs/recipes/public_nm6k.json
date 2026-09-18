@@ -1,0 +1,28 @@
+{
+  "run_name": "public_nm6k",
+  "seed": 42,
+  "model": {
+    "from_pretrained": "models/gliner2.5-multi-v1"
+  },
+  "training": {
+    "num_epochs": 10000,
+    "batch_size": 4,
+    "gradient_accumulation_steps": 1,
+    "encoder_lr": 1e-05,
+    "task_lr": 0.0005,
+    "warmup_steps": 20,
+    "scheduler_type": "constant",
+    "fp16": false,
+    "bf16": true,
+    "eval_strategy": "steps",
+    "eval_steps": 500,
+    "save_total_limit": 0,
+    "save_best": false,
+    "logging_steps": 10,
+    "num_workers": 0,
+    "pin_memory": false,
+    "validate_data": true,
+    "report_to_wandb": false
+  },
+  "_comment": "THE PUBLIC RECIPE (recipes/train_public_nm6k.sh): the stage-2 configuration of the released v2 model applied directly to gliner2.5-multi-v1 on the published nm-kvkk-pii-6K set, no private input. 4,000 steps with a checkpoint every 500; score every checkpoint and keep the one that is best on real documents if you have any (in-distribution scores keep rising after real-document scores fall). The released models add a stage on pseudonymised real text before this step, so expect somewhat lower real-document scores."
+}

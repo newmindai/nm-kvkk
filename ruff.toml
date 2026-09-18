@@ -1,0 +1,30 @@
+# Ruff: formatter and linter for the project code.
+# GLiNER2/ is a vendored copy of fastino-ai/GLiNER2 with its own config. It is excluded so that the diff to upstream
+# stays small.
+target-version = "py310"
+line-length = 120
+extend-exclude = ["GLiNER2"]
+
+[lint]
+select = [
+    "E4", "E7", "E9",  # pycodestyle errors that the formatter does not fix
+    "F",               # pyflakes
+    "I",               # import order
+    "UP",              # pyupgrade
+    "B",               # bugbear
+]
+ignore = [
+    "E402",  # scripts put sibling folders on sys.path before their imports
+    "E731",  # small lambdas assigned to names
+    "E741",  # short names such as `l` in data-processing loops
+    "B905",  # zip(strict=...) changes runtime behaviour; add it case by case
+]
+
+[lint.isort]
+known-first-party = ["gliner2", "kvkkbench"]
+
+[lint.per-file-ignores]
+# These closures are defined in a loop and called in the same iteration, so they see the current loop values.
+"kvkk_synth/dataset/build_6k.py" = ["B023"]
+"kvkk_synth/pipeline/judge_negatives.py" = ["B023"]
+"scripts/make_report_tables.py" = ["B023"]

@@ -1,0 +1,40 @@
+{
+  "_doc": "Model registry for scripts/run_benchmark.py. kinds: gliner (a GLiNER2 checkpoint folder under models/; vocab picks the label-name file in configs/labels/benchmark/), hf_token (a Hugging Face BIO token-classification model, mapped to taxonomy ids via kvkkbench.labels.MAPPINGS[mapping]). Adding a model = one entry; a new kind = one adapter in scripts/kvkkbench/ returning [{start, end, label, native_label, confidence}].",
+  "models": [
+    {
+      "name": "rele07tr",
+      "kind": "gliner",
+      "path": "models/gliner2.5-kvkk-tr-v1",
+      "vocab": "taxonomy_tr",
+      "hardware": "Mac M4 MPS"
+    },
+    {
+      "name": "s2short-500",
+      "kind": "gliner",
+      "path": "models/gliner2.5-kvkk-tr-v2",
+      "vocab": "nm6k_tr",
+      "hardware": "Mac M4 MPS"
+    },
+    {
+      "name": "mursit-fullrel",
+      "kind": "gliner",
+      "path": "models/gliner2.5-mursit-kvkk-tr-v1",
+      "vocab": "nm6k_tr",
+      "hardware": "Mac M4 MPS"
+    },
+    {
+      "name": "gliner25-zero-shot",
+      "kind": "gliner",
+      "path": "models/gliner2.5-multi-v1",
+      "vocab": "taxonomy_tr",
+      "hardware": "Mac M4 MPS"
+    },
+    {
+      "name": "cosmos-pii",
+      "kind": "hf_token",
+      "model": "ytu-ce-cosmos/modernbert-tr-pii-ner",
+      "mapping": "cosmos",
+      "hardware": "Mac M4 MPS"
+    }
+  ]
+}

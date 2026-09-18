@@ -1,0 +1,158 @@
+{
+  "concept": {
+    "en": "employment_info",
+    "tr": "ozluk_bilgisi"
+  },
+  "kvkk_category": {
+    "en": "personnel_professional",
+    "tr": "ozluk_mesleki_deneyim"
+  },
+  "kvkk_sensitivity": "genel nitelikli (Madde 3)",
+  "span_policy": {
+    "scope": "Kisiye baglanmis is/ozluk ifadeleri etiketlenir. Maas tutari 05_financial grubundaki salary_info etiketine gider; bu grup tutar disi ozluk bilgisini kapsar."
+  },
+  "nodes": [
+    {
+      "id": "job_title",
+      "labels_en": [
+        "job_title",
+        "occupation",
+        "profession"
+      ],
+      "labels_tr": [
+        "meslek",
+        "gorev_unvani",
+        "gorev"
+      ],
+      "description": "Kisinin meslegi veya gorev unvani. Ad ile bitisik unvanlar (Dr., Av.) 01 grubunda full_name icindedir; bu etiket bagimsiz meslek ifadelerini kapsar.",
+      "examples": [
+        {
+          "text": "Mesleği: Makine Mühendisi",
+          "span": "Makine Mühendisi"
+        }
+      ]
+    },
+    {
+      "id": "employee_id",
+      "labels_en": [
+        "employee_id",
+        "personnel_number",
+        "staff_id"
+      ],
+      "labels_tr": [
+        "sicil_no",
+        "personel_no",
+        "calisan_no"
+      ],
+      "description": "Kurum ici personel/sicil numarasi.",
+      "examples": [
+        {
+          "text": "Sicil no 4521 olan personel",
+          "span": "4521"
+        }
+      ]
+    },
+    {
+      "id": "work_history",
+      "labels_en": [
+        "work_history",
+        "previous_employer_info",
+        "cv_info"
+      ],
+      "labels_tr": [
+        "is_gecmisi",
+        "ozgecmis_bilgisi",
+        "onceki_isyeri"
+      ],
+      "description": "Kisinin gecmis is deneyimi ifadeleri: onceki isyeri + donem + pozisyon birlikteligi. CV ve IK metinlerinde gecer.",
+      "examples": [
+        {
+          "text": "2018-2021 arasında X A.Ş.'de satış müdürü olarak çalıştı.",
+          "span": "2018-2021 arasında X A.Ş.'de satış müdürü"
+        }
+      ]
+    },
+    {
+      "id": "performance_disciplinary",
+      "labels_en": [
+        "performance_disciplinary",
+        "disciplinary_record",
+        "performance_review_info"
+      ],
+      "labels_tr": [
+        "disiplin_kaydi",
+        "performans_degerlendirme",
+        "sorusturma_bilgisi"
+      ],
+      "description": "Disiplin sorusturmasi, ceza veya performans degerlendirme ifadeleri. Ceza MAHKUMIYETI degildir; adli hukumler 10 grubundaki criminal_record etiketine gider.",
+      "examples": [
+        {
+          "text": "Hakkında kınama cezası verilmiştir.",
+          "span": "kınama cezası"
+        }
+      ]
+    },
+    {
+      "id": "education_info",
+      "labels_en": [
+        "education_info",
+        "diploma_info",
+        "school_attended"
+      ],
+      "labels_tr": [
+        "egitim_bilgisi",
+        "diploma_bilgisi",
+        "mezuniyet"
+      ],
+      "description": "Kisiye baglanmis egitim/mezuniyet bilgisi: okul + bolum + yil birlikteligi.",
+      "examples": [
+        {
+          "text": "2015 yılında İTÜ Bilgisayar Mühendisliği'nden mezun oldu.",
+          "span": "2015 yılında İTÜ Bilgisayar Mühendisliği"
+        }
+      ]
+    },
+    {
+      "id": "military_service_status",
+      "labels_en": [
+        "military_service_status"
+      ],
+      "labels_tr": [
+        "askerlik_durumu"
+      ],
+      "description": "Askerlik durumu bilgisi (tecilli, muaf, terhis).",
+      "legal_basis": "4857 Is K. m.75 ozluk dosyasi pratigi",
+      "examples": [
+        {
+          "text": "Askerlik durumu: tecilli",
+          "span": "tecilli"
+        }
+      ]
+    },
+    {
+      "id": "student_number",
+      "labels_en": [
+        "student_number",
+        "school_id"
+      ],
+      "labels_tr": [
+        "ogrenci_no",
+        "okul_no"
+      ],
+      "description": "Ogrenci/okul numarasi; egitim kayitlarinda kisiyi tanimlar.",
+      "legal_basis": "MEB/YOK kayit pratigi; uluslararasi PII listeleri",
+      "examples": [
+        {
+          "text": "Öğrenci no: 2021123456",
+          "span": "2021123456"
+        }
+      ]
+    }
+  ],
+  "negative_examples": [
+    {
+      "text": "Mühendisler için yeni teşvik paketi açıklandı.",
+      "note": "meslek grubu geneli, kisi atfi yok"
+    }
+  ]
+}

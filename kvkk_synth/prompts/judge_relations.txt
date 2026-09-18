@@ -1,0 +1,7 @@
+DOCUMENT (Turkish):
+{text}
+
+CLAIMED FACTS:
+{facts}
+
+For EACH claimed fact, decide whether the document clearly states it or unambiguously implies it (expressed = true), or does not establish it (expressed = false) — e.g. the two values merely co-occur in running text, or the connection is attributed to someone else. RULE for forms and records: a field label followed by the value inside a block that belongs to a named person (e.g. "Sigortalının çocuğu: Ayşe Kaya", "Adı Soyadı: X … Telefon: 05xx" under the same header, "Kullanıcı adı: … / Parola: …" as parallel fields) DOES state the relation — treat field-value co-location under one person's block as expressed. Quote the shortest evidence phrase (empty if false). Answer with one JSON object: {{"checks": [{{"index": <int>, "expressed": <bool>, "evidence": "<quote>"}}, ...]}} in order.

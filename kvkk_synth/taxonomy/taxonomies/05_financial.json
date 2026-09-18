@@ -1,0 +1,249 @@
+{
+  "concept": {
+    "en": "financial_info",
+    "tr": "finansal_bilgi"
+  },
+  "kvkk_category": {
+    "en": "finance",
+    "tr": "finans"
+  },
+  "kvkk_sensitivity": "genel nitelikli (Madde 3)",
+  "span_policy": {
+    "spacing": "IBAN ve kart numaralarinda 4'lu gruplu bosluklu yazim tek spandir.",
+    "field_prefix": "Alan adlari (IBAN:, Kart No:) span disindadir."
+  },
+  "nodes": [
+    {
+      "id": "iban",
+      "labels_en": [
+        "iban",
+        "bank_iban",
+        "iban_number"
+      ],
+      "labels_tr": [
+        "iban",
+        "iban_no",
+        "iban_numarasi"
+      ],
+      "description": "Uluslararasi banka hesap numarasi.",
+      "validation": "TR IBAN: 'TR' + 24 hane, toplam 26 karakter; mod-97 dogrulamasi uygulanir.",
+      "examples": [
+        {
+          "text": "IBAN: TR33 0006 1005 1978 6457 8413 26",
+          "span": "TR33 0006 1005 1978 6457 8413 26"
+        },
+        {
+          "text": "ibanim TR330006100519786457841326",
+          "span": "TR330006100519786457841326",
+          "note": "bosluksuz chat varyanti"
+        }
+      ]
+    },
+    {
+      "id": "card_number",
+      "labels_en": [
+        "card_number",
+        "credit_card_number",
+        "debit_card_number"
+      ],
+      "labels_tr": [
+        "kart_no",
+        "kredi_karti_no",
+        "banka_karti_no"
+      ],
+      "description": "Kredi veya banka karti numarasi.",
+      "validation": "13-19 hane, Luhn dogrulamasi.",
+      "risk_note": "PCI-DSS kapsaminda; her zaman maskelenir.",
+      "examples": [
+        {
+          "text": "Kart no 4111 1111 1111 1111 ile ödendi.",
+          "span": "4111 1111 1111 1111"
+        }
+      ]
+    },
+    {
+      "id": "card_cvv",
+      "labels_en": [
+        "card_cvv",
+        "cvv",
+        "card_security_code"
+      ],
+      "labels_tr": [
+        "kart_cvv",
+        "guvenlik_kodu",
+        "cvv_kodu"
+      ],
+      "description": "Kartin arkasindaki guvenlik kodu.",
+      "validation": "3-4 hane; yalnizca kart baglaminda etiketlenir.",
+      "risk_note": "En yuksek risk sinifi; log ve kayitlarda tutulmasi zaten yasaktir.",
+      "examples": [
+        {
+          "text": "CVV: 123",
+          "span": "123"
+        }
+      ]
+    },
+    {
+      "id": "card_expiry",
+      "labels_en": [
+        "card_expiry",
+        "card_expiration_date"
+      ],
+      "labels_tr": [
+        "kart_son_kullanma",
+        "son_kullanma_tarihi"
+      ],
+      "description": "Kartin son kullanma tarihi. Yalnizca kart baglaminda etiketlenir; genel tarihlerle karistirilmaz.",
+      "validation": "AA/YY veya AA/YYYY.",
+      "examples": [
+        {
+          "text": "SKT 08/27 olan kart",
+          "span": "08/27"
+        }
+      ]
+    },
+    {
+      "id": "bank_account_number",
+      "labels_en": [
+        "bank_account_number",
+        "account_number"
+      ],
+      "labels_tr": [
+        "hesap_no",
+        "banka_hesap_no"
+      ],
+      "description": "IBAN disindaki banka hesap veya musteri numarasi.",
+      "examples": [
+        {
+          "text": "Hesap no: 12345678 şubesi Kadıköy",
+          "span": "12345678"
+        }
+      ]
+    },
+    {
+      "id": "swift_bic",
+      "labels_en": [
+        "swift_bic",
+        "swift_code",
+        "bic_code"
+      ],
+      "labels_tr": [
+        "swift_kodu",
+        "bic_kodu"
+      ],
+      "description": "Bankanin SWIFT/BIC kodu. Tek basina kurumsaldir ancak havale kayitlarinda kisiyle iliskilenir.",
+      "validation": "8 veya 11 karakter, harf+rakam.",
+      "examples": [
+        {
+          "text": "SWIFT: TGBATRIS ile havale",
+          "span": "TGBATRIS"
+        }
+      ]
+    },
+    {
+      "id": "salary_info",
+      "labels_en": [
+        "salary_info",
+        "payroll_amount",
+        "wage"
+      ],
+      "labels_tr": [
+        "maas_bilgisi",
+        "bordro_tutari",
+        "ucret"
+      ],
+      "description": "Kisiye baglanmis maas, bordro veya ucret tutari. Genel fiyat/tutar ifadeleri etiketlenmez; kisi baglami sarttir.",
+      "examples": [
+        {
+          "text": "Ayşe Yılmaz'ın net maaşı 45.000 TL'dir.",
+          "span": "45.000 TL"
+        }
+      ]
+    },
+    {
+      "id": "credit_score",
+      "labels_en": [
+        "credit_score",
+        "findeks_score"
+      ],
+      "labels_tr": [
+        "kredi_notu",
+        "findeks_notu"
+      ],
+      "description": "KKB/Findeks tarafindan 1-1900 araliginda hesaplanan bireysel kredi notu.",
+      "validation": "1-1900 arasi tam sayi, baglam sart",
+      "legal_basis": "5411 Bankacilik K. Risk Merkezi; KKB",
+      "examples": [
+        {
+          "text": "Findeks notu: 1650",
+          "span": "1650"
+        }
+      ]
+    },
+    {
+      "id": "risk_report",
+      "labels_en": [
+        "risk_report",
+        "credit_risk_info"
+      ],
+      "labels_tr": [
+        "risk_raporu",
+        "kredi_risk_bilgisi"
+      ],
+      "description": "Kisiye ait kredi/risk raporu ifadeleri (gecikme, takip, limit bilgisi).",
+      "legal_basis": "TBB Risk Merkezi; VERBIS finans/risk",
+      "examples": [
+        {
+          "text": "Risk raporunda 2 gecikmiş ödeme görünüyor.",
+          "span": "2 gecikmiş ödeme"
+        }
+      ]
+    },
+    {
+      "id": "crypto_wallet_address",
+      "labels_en": [
+        "crypto_wallet_address"
+      ],
+      "labels_tr": [
+        "kripto_cuzdan_adresi"
+      ],
+      "description": "Kisiyle iliskilendirilebilir kripto varlik cuzdan adresi.",
+      "legal_basis": "MASAK kripto varlik yukumlulukleri; endustri pratigi",
+      "examples": [
+        {
+          "text": "Ödeme 1BvBMSEYstWetqTFn5Au4m4GFg7xJaNVN2 adresine yapıldı.",
+          "span": "1BvBMSEYstWetqTFn5Au4m4GFg7xJaNVN2"
+        }
+      ]
+    },
+    {
+      "id": "insurance_policy_number",
+      "labels_en": [
+        "insurance_policy_number"
+      ],
+      "labels_tr": [
+        "police_no",
+        "sigorta_police_no"
+      ],
+      "description": "Sigorta police numarasi. Saglik policesi baglaminda Madde 6 riskine yaklasir.",
+      "legal_basis": "Sigortacilik mevzuati; ozluk dosyasi pratigi",
+      "conditional_sensitivity": "Saglik sigortasi baglaminda ozel nitelikli veriye baglanir",
+      "examples": [
+        {
+          "text": "Poliçe no: 4587-221033",
+          "span": "4587-221033"
+        }
+      ]
+    }
+  ],
+  "negative_examples": [
+    {
+      "text": "Ürünün fiyatı 45.000 TL.",
+      "note": "fiyat, maas degil; kisi baglami yok"
+    },
+    {
+      "text": "Sözleşme 08/27 tarihinde bitiyor.",
+      "note": "genel tarih, kart SKT degil"
+    }
+  ]
+}

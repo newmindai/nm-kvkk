@@ -1,0 +1,70 @@
+{
+  "concept": { "en": "birth_civil_status", "tr": "dogum_medeni_durum" },
+  "kvkk_category": { "en": "identity", "tr": "kimlik" },
+  "kvkk_sensitivity": "genel nitelikli (Madde 3)",
+  "span_policy": {
+    "date_formats": "Tarih formatlarinin tamami tek span: '01.01.1990', '1 Ocak 1990', '1990 dogumlu' ifadesinde yalnizca '1990'.",
+    "relative_dates": "Yas ifadesi ('34 yasinda') dogum tarihi degildir; ayri age etiketiyle isaretlenir."
+  },
+  "nodes": [
+    {
+      "id": "date_of_birth",
+      "labels_en": ["date_of_birth", "birth_date", "dob"],
+      "labels_tr": ["dogum_tarihi"],
+      "description": "Kisinin dogum tarihi. Kimlik dogrulamada kullanildigi icin oncelikli maskelenir. Baglami olmayan genel tarihler etiketlenmez.",
+      "examples": [
+        { "text": "Doğum tarihi: 01.01.1990", "span": "01.01.1990" },
+        { "text": "1 Ocak 1990 doğumlu hasta", "span": "1 Ocak 1990" }
+      ]
+    },
+    {
+      "id": "place_of_birth",
+      "labels_en": ["place_of_birth", "birth_place"],
+      "labels_tr": ["dogum_yeri"],
+      "description": "Kisinin dogum yeri. Kimlik belgelerinde ve resmi formlarda gecer.",
+      "examples": [
+        { "text": "Doğum yeri: Sivas", "span": "Sivas" }
+      ]
+    },
+    {
+      "id": "age",
+      "labels_en": ["age", "person_age"],
+      "labels_tr": ["yas", "kisi_yasi"],
+      "description": "Kisinin yasi. Tek basina dusuk riskli, diger verilerle birlesince belirleyicidir; politikaya gore opsiyonel maskelenir.",
+      "examples": [
+        { "text": "34 yaşında erkek hasta", "span": "34" }
+      ]
+    },
+    {
+      "id": "gender",
+      "labels_en": ["gender", "sex"],
+      "labels_tr": ["cinsiyet"],
+      "description": "Kisinin cinsiyeti. Genel nitelikli veridir; cinsel hayat bilgisiyle KARISTIRILMAZ, o Madde 6 kapsaminda ayri gruptadir.",
+      "examples": [
+        { "text": "Cinsiyet: Kadın", "span": "Kadın" }
+      ]
+    },
+    {
+      "id": "marital_status",
+      "labels_en": ["marital_status"],
+      "labels_tr": ["medeni_hal", "medeni_durum"],
+      "description": "Evli, bekar, bosanmis, dul gibi medeni hal bilgisi.",
+      "examples": [
+        { "text": "Medeni hali: Evli", "span": "Evli" }
+      ]
+    },
+    {
+      "id": "nationality",
+      "labels_en": ["nationality", "citizenship"],
+      "labels_tr": ["uyruk", "vatandaslik"],
+      "description": "Kisinin uyruk/vatandaslik bilgisi. Etnik koken DEGILDIR; etnik koken Madde 6 kapsaminda ozel nitelikli gruptadir. Suphede uyruk resmi belge baglaminda, etnik koken kimlik/aidiyet baglaminda okunur.",
+      "examples": [
+        { "text": "Uyruğu: T.C.", "span": "T.C." }
+      ]
+    }
+  ],
+  "negative_examples": [
+    { "text": "Toplantı 01.01.2025 tarihinde yapıldı.", "note": "genel tarih, dogum tarihi degil" },
+    { "text": "Şirket 34 yıldır faaliyette.", "note": "sure, yas degil" }
+  ]
+}

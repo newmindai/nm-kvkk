@@ -1,0 +1,38 @@
+{
+  "run_name": "mursit_stage1_mixed",
+  "seed": 42,
+  "model": {
+    "model_name": "models/Mursit-Base-4k",
+    "boundary_head_from": "models/gliner2.5-multi-v1",
+    "token_pooling": "mean",
+    "tokenization": "native",
+    "add_bos": true,
+    "attn_implementation": "sdpa",
+    "max_len": 1024
+  },
+  "warm_start_head": "models/gliner2.5-multi-v1",
+  "training": {
+    "num_epochs": 10000,
+    "batch_size": 4,
+    "gradient_accumulation_steps": 1,
+    "encoder_lr": 1e-05,
+    "task_lr": 0.0005,
+    "warmup_steps": 20,
+    "scheduler_type": "constant",
+    "fp16": false,
+    "bf16": true,
+    "eval_strategy": "steps",
+    "eval_steps": 2000,
+    "save_total_limit": 0,
+    "save_best": false,
+    "logging_steps": 10,
+    "num_workers": 0,
+    "pin_memory": false,
+    "validate_data": true,
+    "report_to_wandb": false,
+    "max_len": 1024,
+    "allow_invalid_samples": true,
+    "on_capacity_exceeded": "skip_sample"
+  },
+  "_comment": "Mursit (Turkish ModernBERT) stage 1: models/Mursit-Base-4k (context extension, built by scripts/download_models.py --mursit-4k) with native tokenization + BOS + mean pooling; boundary head config AND weights warm-started from gliner2.5-multi-v1 (136/136 tensors). Real KVKK+NER text, 13,000 steps, relations enabled. Needs max_len 1024 words + allow_invalid_samples/skip_sample for the long tail."
+}

@@ -1,0 +1,28 @@
+{
+  "run_name": "curriculum_stage1_mixed",
+  "seed": 42,
+  "model": {
+    "from_pretrained": "models/gliner2.5-multi-v1"
+  },
+  "training": {
+    "num_epochs": 10000,
+    "batch_size": 4,
+    "gradient_accumulation_steps": 1,
+    "encoder_lr": 1e-05,
+    "task_lr": 0.0005,
+    "warmup_steps": 20,
+    "scheduler_type": "constant",
+    "fp16": false,
+    "bf16": true,
+    "eval_strategy": "steps",
+    "eval_steps": 2000,
+    "save_total_limit": 0,
+    "save_best": false,
+    "logging_steps": 10,
+    "num_workers": 0,
+    "pin_memory": false,
+    "validate_data": true,
+    "report_to_wandb": false
+  },
+  "_comment": "STAGE 1 of the two-stage curriculum: pristine gliner2.5-multi-v1 on REAL Turkish legal text (datasets/mixed/train_100000.jsonl = 50k KVKK + 50k NER rows, 30 labels, entities only), 13,000 steps (~0.52 epoch). Relations stay ENABLED in the head config: the data carries no relation supervision, so the pretrained relation head passes through untouched (enable_relations:false would freeze it dead). Stage 1 alone is unusable (57.9 entity / 0 relations on real docs); it is the grounding step for stage 2."
+}

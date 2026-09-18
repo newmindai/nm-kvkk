@@ -1,0 +1,212 @@
+{
+  "concept": {
+    "en": "identity_number",
+    "tr": "kimlik_numarasi"
+  },
+  "kvkk_category": {
+    "en": "identity",
+    "tr": "kimlik"
+  },
+  "kvkk_sensitivity": "genel nitelikli (Madde 3)",
+  "span_policy": {
+    "field_prefix": "Alan adi span disindadir: 'TCKN: 12345678901' icin span yalnizca sayidir.",
+    "spacing": "Numara icindeki bosluk/tire varyantlari tek span sayilir ('123 456 789 01').",
+    "disambiguation": "11 haneli sayi TCKN mi telefon mu: baglam kelimeleri (tc, kimlik, vatandaslik vs tel, gsm, ara) ve checksum ile ayrilir. Uretimde checksum dogrulamasi zorunludur."
+  },
+  "nodes": [
+    {
+      "id": "national_id_number",
+      "labels_en": [
+        "national_id_number",
+        "turkish_national_id",
+        "citizen_id_number",
+        "tckn"
+      ],
+      "labels_tr": [
+        "tc_kimlik_no",
+        "tckn",
+        "vatandaslik_numarasi",
+        "kimlik_numarasi"
+      ],
+      "description": "T.C. kimlik numarasi. Kisinin en guclu tekil tanimlayicisidir.",
+      "validation": "11 hane, ilk hane 0 olamaz, resmi checksum algoritmasi uygulanir.",
+      "risk_note": "Tek basina kisiyi kesin belirler; her zaman maskelenir.",
+      "examples": [
+        {
+          "text": "TCKN: 10000000146",
+          "span": "10000000146"
+        },
+        {
+          "text": "tc'm 100 000 001 46 yaziyor",
+          "span": "100 000 001 46",
+          "note": "bosluklu chat varyanti"
+        }
+      ]
+    },
+    {
+      "id": "foreigner_id_number",
+      "labels_en": [
+        "foreigner_id_number",
+        "foreign_national_id"
+      ],
+      "labels_tr": [
+        "yabanci_kimlik_no",
+        "ykn"
+      ],
+      "description": "Turkiye'de ikamet eden yabancilara verilen kimlik numarasi.",
+      "validation": "11 hane, 99 ile baslar.",
+      "examples": [
+        {
+          "text": "Yabancı kimlik no: 99123456789",
+          "span": "99123456789"
+        }
+      ]
+    },
+    {
+      "id": "id_document_serial",
+      "labels_en": [
+        "id_document_serial",
+        "id_card_serial_number",
+        "identity_document_number"
+      ],
+      "labels_tr": [
+        "kimlik_seri_no",
+        "nufus_cuzdani_seri_no",
+        "kimlik_belge_no"
+      ],
+      "description": "Nufus cuzdani veya yeni kimlik kartinin seri numarasi. TCKN'den farklidir; belgeye aittir.",
+      "validation": "Yeni kart: 1 harf + 2 hane + 1 harf + 5 hane (orn. A12B34567). Eski cuzdan: seri (harf+2 hane) + 6 haneli no.",
+      "examples": [
+        {
+          "text": "Kimlik kartı seri no A12B34567",
+          "span": "A12B34567"
+        }
+      ]
+    },
+    {
+      "id": "passport_number",
+      "labels_en": [
+        "passport_number",
+        "passport_no"
+      ],
+      "labels_tr": [
+        "pasaport_no",
+        "pasaport_numarasi"
+      ],
+      "description": "Pasaport numarasi.",
+      "validation": "TR pasaportlarinda 1 seri harfi + 8 hane (orn. U12345678).",
+      "examples": [
+        {
+          "text": "Pasaport no U12345678 ile giriş yaptı.",
+          "span": "U12345678"
+        }
+      ]
+    },
+    {
+      "id": "drivers_license_number",
+      "labels_en": [
+        "drivers_license_number",
+        "driving_licence_no"
+      ],
+      "labels_tr": [
+        "surucu_belgesi_no",
+        "ehliyet_no"
+      ],
+      "description": "Surucu belgesi numarasi.",
+      "examples": [
+        {
+          "text": "Ehliyet no: 123456 kayıtlara işlendi.",
+          "span": "123456"
+        }
+      ]
+    },
+    {
+      "id": "tax_id_number",
+      "labels_en": [
+        "tax_id_number",
+        "tax_identification_number",
+        "vkn"
+      ],
+      "labels_tr": [
+        "vergi_kimlik_no",
+        "vkn",
+        "vergi_no"
+      ],
+      "description": "Vergi kimlik numarasi. Gercek kisiye aitse kisisel veridir; sirkete aitse out-of-scope organizasyon grubuna girer. Baglamdan ayirt edilemiyorsa kisisel varsayilir.",
+      "validation": "10 hane.",
+      "examples": [
+        {
+          "text": "Mükellefin VKN'si 1234567890",
+          "span": "1234567890"
+        }
+      ]
+    },
+    {
+      "id": "social_security_number",
+      "labels_en": [
+        "social_security_number",
+        "sgk_registration_number"
+      ],
+      "labels_tr": [
+        "sgk_sicil_no",
+        "sgk_no",
+        "sosyal_guvenlik_no"
+      ],
+      "description": "SGK sicil numarasi. Ozluk dosyalari ve bordrolarda gecer.",
+      "examples": [
+        {
+          "text": "SGK sicil numarası 1234567890123 olan çalışan",
+          "span": "1234567890123"
+        }
+      ]
+    },
+    {
+      "id": "yupass_number",
+      "labels_en": [
+        "yupass_number",
+        "foreign_insurance_provision_number"
+      ],
+      "labels_tr": [
+        "yupass_no",
+        "yupass_numarasi"
+      ],
+      "description": "Yurtdisi sigortalilarin MEDULA provizyonunda TCKN yerine kullanilan YUPASS numarasi.",
+      "legal_basis": "SGK MEDULA kilavuzu / SGK protokolleri",
+      "examples": [
+        {
+          "text": "YUPASS: 987654321",
+          "span": "987654321"
+        }
+      ]
+    },
+    {
+      "id": "passport_mrz",
+      "labels_en": [
+        "passport_mrz",
+        "machine_readable_zone"
+      ],
+      "labels_tr": [
+        "pasaport_mrz",
+        "mrz_satiri"
+      ],
+      "description": "Pasaportun makinece okunabilir bolgesi (MRZ); ad, dogum tarihi ve belge numarasini kodlar.",
+      "legal_basis": "ICAO 9303; uluslararasi pratik (Presidio/DLP)",
+      "examples": [
+        {
+          "text": "P<TURYILMAZ<<AYSE<<<<<<<<<<<<<<<<<<<<<<<<<<<",
+          "span": "P<TURYILMAZ<<AYSE<<<<<<<<<<<<<<<<<<<<<<<<<<<"
+        }
+      ]
+    }
+  ],
+  "negative_examples": [
+    {
+      "text": "Sipariş no: 20240001123",
+      "note": "siparis numarasi kimlik numarasi degildir"
+    },
+    {
+      "text": "Toplam 12345678901 TL zarar",
+      "note": "tutar, TCKN degil; checksum ve baglam ayirir"
+    }
+  ]
+}

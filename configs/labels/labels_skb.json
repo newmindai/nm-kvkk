@@ -1,0 +1,46 @@
+{
+  "EFF": {
+    "name": "yürürlük tarihi",
+    "description": "Sözleşmenin yürürlüğe girdiği veya başladığı tarih"
+  },
+  "END": {
+    "name": "sözleşme süresi",
+    "description": "Sözleşmenin süresi veya sona erme koşulu; örneğin 36 ay, 1 yıl, belirsiz"
+  },
+  "E_S": {
+    "name": "imzayla yürürlük ifadesi",
+    "description": "Sözleşmenin imza tarihinde yürürlüğe girdiğini belirten ifade; örneğin imza tarihinde, imzalandığı gün"
+  },
+  "GLA": {
+    "name": "uygulanacak hukuk",
+    "description": "Sözleşmeye uygulanacak hukuk; örneğin Türk Hukuku"
+  },
+  "GUA": {
+    "name": "teminat tutarı",
+    "description": "Teminat veya depozito tutarı"
+  },
+  "JUR": {
+    "name": "yetkili mahkeme",
+    "description": "Uyuşmazlık halinde yetkili mahkeme veya tahkim yeri; örneğin Ankara Mahkemeleri"
+  },
+  "PRT": {
+    "name": "sözleşme tarafı",
+    "description": "Sözleşmenin tarafı: şirket, kişi veya rol adı; örneğin Satıcı, Alıcı"
+  },
+  "SIG": {
+    "name": "imza tarihi",
+    "description": "Sözleşmenin imzalandığı tarih"
+  },
+  "TIT": {
+    "name": "sözleşme başlığı",
+    "description": "Sözleşmenin adı veya başlığı; örneğin Hizmet Alım Sözleşmesi"
+  },
+  "TOP": {
+    "name": "sözleşme konusu",
+    "description": "Sözleşmenin konusu veya kapsamı"
+  },
+  "VAL": {
+    "name": "sözleşme bedeli",
+    "description": "Sözleşme bedeli veya fiyatı"
+  }
+}

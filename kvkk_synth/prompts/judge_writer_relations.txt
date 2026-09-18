@@ -1,0 +1,9 @@
+DOCUMENT (Turkish):
+{text}
+
+The document is about {subject}. For EACH claim below, decide whether the document clearly states or unambiguously implies that the value belongs to / is about {subject} (attributed = true), or whether it is about someone else, a generic statement, or not attributed (attributed = false). Quote the shortest evidence phrase (empty if false).
+
+CLAIMS:
+{claims}
+
+Answer with one JSON object: {{"checks": [{{"index": <int>, "attributed": <bool>, "evidence": "<quote>"}}, ...]}} — one per claim, in order.

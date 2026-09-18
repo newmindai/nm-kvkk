@@ -1,0 +1,28 @@
+{
+  "run_name": "curriculum_stage2_nm6k_full",
+  "seed": 42,
+  "model": {
+    "from_pretrained": "results/curriculum/curriculum_stage1_mixed/checkpoints/final"
+  },
+  "training": {
+    "num_epochs": 10000,
+    "batch_size": 4,
+    "gradient_accumulation_steps": 1,
+    "encoder_lr": 1e-05,
+    "task_lr": 0.0005,
+    "warmup_steps": 20,
+    "scheduler_type": "constant",
+    "fp16": false,
+    "bf16": true,
+    "eval_strategy": "steps",
+    "eval_steps": 2000,
+    "save_total_limit": 0,
+    "save_best": false,
+    "logging_steps": 10,
+    "num_workers": 0,
+    "pin_memory": false,
+    "validate_data": true,
+    "report_to_wandb": false
+  },
+  "_comment": "Stage 2 at full length (13,000 steps): best IN-DISTRIBUTION relation model (nm6k 80.7 with descriptions, 85.9 bare names) but no transfer to real documents (65.8 / 33.9). Use curriculum_stage2_nm6k_short for deployment candidates. Base = stage 1's final checkpoint (override with --from-pretrained)."
+}

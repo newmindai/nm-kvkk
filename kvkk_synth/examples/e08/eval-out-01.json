@@ -1,0 +1,201 @@
+{
+  "docs": [
+    {
+      "bundle_id": 2,
+      "scores": {
+        "fluency": 5,
+        "coherence": 3,
+        "tag_boundaries": 5,
+        "relation_expression": 4,
+        "completeness_and_leaks": 5
+      },
+      "verdict": "keep",
+      "issues": [
+        {
+          "type": "coherence",
+          "quote": "Rapor konusu: [Prof. Dr. Işın Akman]full_name",
+          "note": "An 'Ad Campaign Review' normally reports on the campaign, not an individual; framing a named person as the report's 'konu' (and later 'İncelenen kampanya profili: [Prof. Dr. Işın Akman]') is an atypical person-as-campaign-subject framing for this document type. Minor — the rest of the document reads naturally as a case-study/attribution note."
+        }
+      ],
+      "parser_agreement": {
+        "agree": true,
+        "note": "entities_bound (full_name x2, advertising_id x1) matches exactly what is tagged in text_tagged; spans and labels correct."
+      },
+      "facts_used_naturally": 1,
+      "facts_forced": 0,
+      "persons_natural": 0,
+      "persons_forced": 0,
+      "attribution_errors": [],
+      "sex_errors": [],
+      "writer_added_ok": [],
+      "writer_added_bad": [],
+      "tierb_misses": [],
+      "structural_ok": 0,
+      "structural_bad": 0,
+      "value_realism": 4
+    },
+    {
+      "bundle_id": 114,
+      "scores": {
+        "fluency": 5,
+        "coherence": 4,
+        "tag_boundaries": 5,
+        "relation_expression": 4,
+        "completeness_and_leaks": 5
+      },
+      "verdict": "keep",
+      "issues": [
+        {
+          "type": "relation",
+          "quote": "Kayıtlardaki kredi göstergesi [255]credit_score seviyesindedir.",
+          "note": "credit_score_of is kept for this sentence, but the sentence itself never names İbrahim Eğin — attribution relies entirely on the single-client letter format (he is named once at the top as 'Müşteri'). Acceptable convention for a one-subject advisory note, but weaker than an explicit in-sentence link."
+        }
+      ],
+      "parser_agreement": {
+        "agree": true,
+        "note": "entities_bound (full_name, customer_number, credit_score) matches text tags exactly."
+      },
+      "facts_used_naturally": 2,
+      "facts_forced": 0,
+      "persons_natural": 0,
+      "persons_forced": 0,
+      "attribution_errors": [],
+      "sex_errors": [],
+      "writer_added_ok": [],
+      "writer_added_bad": [],
+      "tierb_misses": [],
+      "structural_ok": 0,
+      "structural_bad": 0,
+      "value_realism": 4
+    },
+    {
+      "bundle_id": 122,
+      "scores": {
+        "fluency": 5,
+        "coherence": 5,
+        "tag_boundaries": 5,
+        "relation_expression": 5,
+        "completeness_and_leaks": 5
+      },
+      "verdict": "keep",
+      "issues": [],
+      "parser_agreement": {
+        "agree": true,
+        "note": "entities_bound (full_name x2, national_id_number, insurance_policy_number, license_plate, vin_chassis_number) matches text tags exactly."
+      },
+      "facts_used_naturally": 5,
+      "facts_forced": 0,
+      "persons_natural": 0,
+      "persons_forced": 0,
+      "attribution_errors": [],
+      "sex_errors": [],
+      "writer_added_ok": [],
+      "writer_added_bad": [],
+      "tierb_misses": [],
+      "structural_ok": 1,
+      "structural_bad": 0,
+      "value_realism": 5
+    },
+    {
+      "bundle_id": 195,
+      "scores": {
+        "fluency": 5,
+        "coherence": 5,
+        "tag_boundaries": 5,
+        "relation_expression": 5,
+        "completeness_and_leaks": 5
+      },
+      "verdict": "keep",
+      "issues": [],
+      "parser_agreement": {
+        "agree": true,
+        "note": "entities_bound (full_name, national_id_number, insurance_policy_number, age) matches text tags exactly."
+      },
+      "facts_used_naturally": 3,
+      "facts_forced": 0,
+      "persons_natural": 0,
+      "persons_forced": 0,
+      "attribution_errors": [],
+      "sex_errors": [],
+      "writer_added_ok": [],
+      "writer_added_bad": [],
+      "tierb_misses": [],
+      "structural_ok": 0,
+      "structural_bad": 0,
+      "value_realism": 5
+    },
+    {
+      "bundle_id": 276,
+      "scores": {
+        "fluency": 5,
+        "coherence": 5,
+        "tag_boundaries": 5,
+        "relation_expression": 5,
+        "completeness_and_leaks": 5
+      },
+      "verdict": "keep",
+      "issues": [],
+      "parser_agreement": {
+        "agree": true,
+        "note": "entities_bound (full_name, national_id_number, date_of_birth, place_of_birth, blood_type, passport_number, insurance_policy_number) matches text tags exactly."
+      },
+      "facts_used_naturally": 6,
+      "facts_forced": 0,
+      "persons_natural": 0,
+      "persons_forced": 0,
+      "attribution_errors": [],
+      "sex_errors": [],
+      "writer_added_ok": [],
+      "writer_added_bad": [],
+      "tierb_misses": [],
+      "structural_ok": 0,
+      "structural_bad": 0,
+      "value_realism": 5
+    },
+    {
+      "bundle_id": 296,
+      "scores": {
+        "fluency": 4,
+        "coherence": 5,
+        "tag_boundaries": 5,
+        "relation_expression": 5,
+        "completeness_and_leaks": 5
+      },
+      "verdict": "keep",
+      "issues": [
+        {
+          "type": "fluency",
+          "quote": "[Dr. Gülten Müzeyyen Karaduman]full_name için incelenen [9110-836236]insurance_policy_number numaralı poliçe kayıtları, [21003586094]national_id_number T.C. kimlik numarası, [5911408052211]social_security_number SGK sicil numarası, [104322092]yupass_number YUPASS numarası ve [2022/135106]health_report_id sağlık protokolü ile uyumlu bulunmuştur.",
+          "note": "The same five identifiers (name, policy no, TCKN, SGK no, YUPASS no) are restated near-verbatim in the identity block, executive summary, audit findings, and this conclusion — genre-plausible for a traceable compliance report, but reads as mechanical repetition rather than varied prose."
+        }
+      ],
+      "parser_agreement": {
+        "agree": true,
+        "note": "entities_bound (23 entries incl. repeats) matches text tag occurrence counts exactly: full_name x7, insurance_policy_number x4, national_id_number x3, social_security_number x3, yupass_number x3, health_report_id x3 (verified by direct count)."
+      },
+      "facts_used_naturally": 5,
+      "facts_forced": 0,
+      "persons_natural": 0,
+      "persons_forced": 0,
+      "attribution_errors": [],
+      "sex_errors": [],
+      "writer_added_ok": [],
+      "writer_added_bad": [],
+      "tierb_misses": [],
+      "structural_ok": 0,
+      "structural_bad": 0,
+      "value_realism": 4
+    }
+  ],
+  "global_observations": [
+    "This chunk (bundle_id 2, 114, 122, 195, 276, 296) is unusually clean: zero attribution errors, zero sex errors, zero untagged PII leaks, and entities_bound matched the visible tags exactly in every document (verified by direct occurrence counts, including the heavily repetitive bundle 296 with 23 tag instances).",
+    "Recurring stylistic pattern worth watching: a named data subject is occasionally cast as the 'topic' of a document type that is normally impersonal or organization-level — bundle 2's Ad Campaign Review names Prof. Dr. Işın Akman as 'Rapor konusu' / 'İncelenen kampanya profili', where real ad-campaign reviews report on the campaign, not a named individual.",
+    "Bundle 296 (Insurance Compliance Report) restates the same five identifiers (name, policy no, TCKN, SGK no, YUPASS no) near-verbatim across five sections; genre-plausible for an auditable compliance report but mechanically repetitive as prose.",
+    "Bundle 114 attributes a credit_score to the client using only the document's single-subject header convention (no in-sentence name); acceptable here since there is only one named person in the document, but worth watching in multi-person documents where an unlabeled value's owner could become genuinely ambiguous.",
+    "Where the judge's drop decision could be checked against the text (bundle 2, advertising_id_of), the drop looked correct — the sentence never explicitly ties the ad ID back to the named person, so the judge's caution was warranted. No evidence in this chunk of the judge wrongly dropping an actually-expressed relation."
+  ],
+  "recommendations": [
+    "For document types whose real-world genre is inherently impersonal/aggregate (ad campaign reviews, company policies, compliance reports), consider constraining which offered fact can become the document's headline 'subject' line so a specific named individual is not cast as the topic of a genre that normally reports on a campaign/policy/organization rather than a person.",
+    "For dense-profile documents that repeat the same handful of identifiers across many sections (as in bundle 296), consider varying phrasing/back-reference language in later sections (e.g., 'yukarıdaki kayıt sahibi') instead of restating the full identifier set each time, to reduce mechanical repetition while keeping identifiers traceable."
+  ]
+}

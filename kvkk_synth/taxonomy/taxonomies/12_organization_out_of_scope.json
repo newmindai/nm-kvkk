@@ -1,0 +1,136 @@
+{
+  "concept": {
+    "en": "organization_identifier",
+    "tr": "tuzel_kisi_kimligi"
+  },
+  "kvkk_category": {
+    "en": "legal_entity",
+    "tr": "tuzel_kisi"
+  },
+  "kvkk_sensitivity": "genel nitelikli (Madde 3)",
+  "out_of_kvkk_scope": true,
+  "span_policy": {
+    "note": "KVKK yalnizca gercek kisileri korur; bu grup hukuken KVKK disi ama ticari gizlilik ve belge anonimlestirme icin pratikte gereklidir. Sahis sirketi adlari kisi adi icerdiginde 01_person_name ile cift etiketleme yapilir (iki ayri ornek satiri)."
+  },
+  "nodes": [
+    {
+      "id": "company_name",
+      "labels_en": [
+        "company_name",
+        "organization_name",
+        "legal_entity_name"
+      ],
+      "labels_tr": [
+        "sirket_adi",
+        "kurum_adi",
+        "tuzel_kisi_adi"
+      ],
+      "description": "Sirket, kurum veya kurulus adi. Ltd., A.S. gibi ekler spane dahildir.",
+      "examples": [
+        {
+          "text": "Yılmaz İnşaat San. ve Tic. Ltd. Şti. ile sözleşme",
+          "span": "Yılmaz İnşaat San. ve Tic. Ltd. Şti."
+        }
+      ]
+    },
+    {
+      "id": "mersis_number",
+      "labels_en": [
+        "mersis_number",
+        "central_registry_number"
+      ],
+      "labels_tr": [
+        "mersis_no",
+        "mersis_numarasi"
+      ],
+      "description": "MERSIS (Merkezi Sicil Kayit Sistemi) numarasi.",
+      "validation": "16 hane.",
+      "examples": [
+        {
+          "text": "MERSİS: 0123456789012345",
+          "span": "0123456789012345"
+        }
+      ]
+    },
+    {
+      "id": "trade_registry_number",
+      "labels_en": [
+        "trade_registry_number",
+        "commercial_registry_no"
+      ],
+      "labels_tr": [
+        "ticaret_sicil_no"
+      ],
+      "description": "Ticaret sicil numarasi.",
+      "examples": [
+        {
+          "text": "Ticaret sicil no: 123456-5",
+          "span": "123456-5"
+        }
+      ]
+    },
+    {
+      "id": "invoice_document_id",
+      "labels_en": [
+        "invoice_document_id",
+        "ettn",
+        "einvoice_id"
+      ],
+      "labels_tr": [
+        "ettn_no",
+        "efatura_no",
+        "fatura_belge_no"
+      ],
+      "description": "ETTN/e-fatura evrensel tekil tanimlayicisi. Belge kimligidir; fatura kisiye kesilmisse dolayli kisisel veri baglami olusur.",
+      "validation": "UUID formati.",
+      "examples": [
+        {
+          "text": "ETTN: 550e8400-e29b-41d4-a716-446655440000",
+          "span": "550e8400-e29b-41d4-a716-446655440000"
+        }
+      ]
+    },
+    {
+      "id": "company_tax_number",
+      "labels_en": [
+        "company_tax_number"
+      ],
+      "labels_tr": [
+        "sirket_vergi_no",
+        "tuzel_vkn"
+      ],
+      "description": "Tuzel kisiye ait vergi kimlik numarasi. Gercek kisi VKN'si 02 grubundadir.",
+      "validation": "10 hane",
+      "legal_basis": "VUK; ticaret sicili",
+      "examples": [
+        {
+          "text": "Şirket VKN: 1234567890",
+          "span": "1234567890"
+        }
+      ]
+    },
+    {
+      "id": "tax_office_name",
+      "labels_en": [
+        "tax_office_name"
+      ],
+      "labels_tr": [
+        "vergi_dairesi"
+      ],
+      "description": "Vergi dairesi adi; VKN ile birlikte mukellefi tanimlar.",
+      "legal_basis": "VUK; fatura zorunlu alanlari",
+      "examples": [
+        {
+          "text": "Kadıköy Vergi Dairesi mükellefi",
+          "span": "Kadıköy Vergi Dairesi"
+        }
+      ]
+    }
+  ],
+  "negative_examples": [
+    {
+      "text": "Şirketler vergiye tabidir.",
+      "note": "genel ifade, belirli tuzel kisi yok"
+    }
+  ]
+}

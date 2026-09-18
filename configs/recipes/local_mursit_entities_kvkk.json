@@ -1,0 +1,48 @@
+{
+  "run_name": "local_mursit_entities_kvkk",
+  "seed": 42,
+  "model": {
+    "model_name": "models/Mursit-Base",
+    "boundary_head_from": "models/gliner2.5-multi-v1",
+    "boundary_head_overrides": {
+      "enable_records": false,
+      "enable_relations": false
+    },
+    "token_pooling": "mean",
+    "tokenization": "native",
+    "add_bos": true,
+    "attn_implementation": "sdpa",
+    "max_len": 256
+  },
+  "training": {
+    "max_steps": 3000,
+    "batch_size": 4,
+    "gradient_accumulation_steps": 8,
+    "eval_batch_size": 16,
+    "encoder_lr": 2e-05,
+    "task_lr": 0.0005,
+    "warmup_ratio": 0.1,
+    "scheduler_type": "linear",
+    "fp16": false,
+    "bf16": false,
+    "eval_strategy": "steps",
+    "eval_steps": 1000,
+    "save_total_limit": 2,
+    "save_best": true,
+    "metric_for_best": "exact_f1_micro",
+    "greater_is_better": true,
+    "logging_steps": 50,
+    "max_len": 256,
+    "on_capacity_exceeded": "skip_sample",
+    "num_workers": 0,
+    "pin_memory": false,
+    "validate_data": true,
+    "report_to_wandb": false,
+    "allow_invalid_samples": true
+  },
+  "eval": {
+    "batch_size": 16,
+    "threshold": 0.5
+  },
+  "_comment": "LOCAL (Apple Silicon / 24 GB) Mursit entity pilot, the first run of the project (registry: run A). fp32 (bf16 is refused off CUDA), batch 4 x accumulation 8, max_len 256 words, 3,000 steps ~ 3 h on an M4; peak ~16 GB. KVKK 2k-subset F1 0.927."
+}

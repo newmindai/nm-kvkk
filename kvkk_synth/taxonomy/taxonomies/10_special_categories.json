@@ -1,0 +1,283 @@
+{
+  "concept": {
+    "en": "special_category_data",
+    "tr": "ozel_nitelikli_veri"
+  },
+  "kvkk_category": {
+    "en": "special_categories_article_6",
+    "tr": "ozel_nitelikli_madde_6"
+  },
+  "kvkk_sensitivity": "ozel nitelikli (Madde 6)",
+  "span_policy": {
+    "scope": "Yalnizca kisiye ATFEDILMIS ifadeler etiketlenir. Genel/akademik anlatim ('Alevilik bir inanctir') etiketlenmez.",
+    "attribution": "Atif zinciri cumle icinde acik olmali: kisi + aidiyet/durum ifadesi. Suphede etiketle (recall oncelikli grup).",
+    "note": "Saglik ayri dosyadadir (09_health). Bu dosya Madde 6'nin kalan tum maddelerini birebir kapsar."
+  },
+  "nodes": [
+    {
+      "id": "ethnicity",
+      "labels_en": [
+        "ethnicity",
+        "ethnic_origin",
+        "race"
+      ],
+      "labels_tr": [
+        "etnik_koken",
+        "irk"
+      ],
+      "description": "Kisiye atfedilmis irk veya etnik koken ifadesi. Uyruk (nationality) DEGILDIR; uyruk 04 grubundadir.",
+      "examples": [
+        {
+          "text": "Kürt kökenli olduğunu belirtti.",
+          "span": "Kürt kökenli"
+        }
+      ]
+    },
+    {
+      "id": "political_opinion",
+      "labels_en": [
+        "political_opinion",
+        "political_view",
+        "party_affiliation"
+      ],
+      "labels_tr": [
+        "siyasi_dusunce",
+        "siyasi_gorus",
+        "parti_uyeligi"
+      ],
+      "description": "Kisiye atfedilmis siyasi gorus, parti uyeligi veya destegi.",
+      "examples": [
+        {
+          "text": "X partisi üyesi olduğu tespit edildi.",
+          "span": "X partisi üyesi"
+        }
+      ]
+    },
+    {
+      "id": "religious_belief",
+      "labels_en": [
+        "religious_belief",
+        "religion",
+        "sect"
+      ],
+      "labels_tr": [
+        "dini_inanc",
+        "din",
+        "mezhep"
+      ],
+      "description": "Kisiye atfedilmis din, mezhep veya diger inanc ifadesi.",
+      "examples": [
+        {
+          "text": "Alevi inancına mensup çalışan",
+          "span": "Alevi inancına mensup"
+        }
+      ]
+    },
+    {
+      "id": "philosophical_belief",
+      "labels_en": [
+        "philosophical_belief",
+        "worldview"
+      ],
+      "labels_tr": [
+        "felsefi_inanc",
+        "dunya_gorusu"
+      ],
+      "description": "Kisiye atfedilmis felsefi inanc veya dunya gorusu (ateist, deist gibi ifadeler dahil).",
+      "examples": [
+        {
+          "text": "Kendisini ateist olarak tanımlıyor.",
+          "span": "ateist"
+        }
+      ]
+    },
+    {
+      "id": "attire_info",
+      "labels_en": [
+        "attire_info",
+        "dress_code_info",
+        "clothing_belief_marker"
+      ],
+      "labels_tr": [
+        "kilik_kiyafet",
+        "kiyafet_bilgisi"
+      ],
+      "description": "Madde 6'da sayilan kilik-kiyafet verisi: inanc veya aidiyete isaret eden giyim ifadeleri. Genel giyim tarifi ('mavi ceketli') etiketlenmez.",
+      "examples": [
+        {
+          "text": "Başörtülü olduğu için başvurusu reddedilmiş.",
+          "span": "Başörtülü"
+        }
+      ]
+    },
+    {
+      "id": "union_membership",
+      "labels_en": [
+        "union_membership",
+        "trade_union_membership"
+      ],
+      "labels_tr": [
+        "sendika_uyeligi"
+      ],
+      "description": "Sendika uyeligi bilgisi. Is hukuku metinlerinde ve IK dosyalarinda kritik.",
+      "examples": [
+        {
+          "text": "Türk-İş üyesi işçiler",
+          "span": "Türk-İş üyesi"
+        }
+      ]
+    },
+    {
+      "id": "association_foundation_membership",
+      "labels_en": [
+        "association_foundation_membership",
+        "association_membership",
+        "foundation_membership"
+      ],
+      "labels_tr": [
+        "dernek_vakif_uyeligi",
+        "dernek_uyeligi",
+        "vakif_uyeligi"
+      ],
+      "description": "Dernek veya vakif uyeligi bilgisi.",
+      "examples": [
+        {
+          "text": "X Derneği üyesi olduğu kayıtlıdır.",
+          "span": "X Derneği üyesi"
+        }
+      ]
+    },
+    {
+      "id": "sexual_life_info",
+      "labels_en": [
+        "sexual_life_info",
+        "sexual_orientation"
+      ],
+      "labels_tr": [
+        "cinsel_hayat_bilgisi",
+        "cinsel_yonelim"
+      ],
+      "description": "Cinsel hayata veya yonelime iliskin kisiye atfedilmis bilgi. Cinsiyet (gender) DEGILDIR; cinsiyet 04 grubundadir.",
+      "examples": [
+        {
+          "text": "Cinsel yönelimi nedeniyle ayrımcılığa uğradığını beyan etti.",
+          "span": "Cinsel yönelimi"
+        }
+      ]
+    },
+    {
+      "id": "criminal_record",
+      "labels_en": [
+        "criminal_record",
+        "criminal_conviction",
+        "security_measure"
+      ],
+      "labels_tr": [
+        "ceza_mahkumiyeti",
+        "sabika_kaydi",
+        "guvenlik_tedbiri"
+      ],
+      "description": "Ceza mahkumiyeti ve guvenlik tedbirlerine iliskin veri: sabika kaydi, hukum, denetimli serbestlik. Mahkeme kararlari ve IK dosyalarinda en kritik bosluklardan biridir.",
+      "examples": [
+        {
+          "text": "Hakkında 2 yıl hapis cezası bulunmaktadır.",
+          "span": "2 yıl hapis cezası"
+        },
+        {
+          "text": "Sabıka kaydında dolandırıcılık hükmü mevcut.",
+          "span": "dolandırıcılık hükmü"
+        }
+      ]
+    },
+    {
+      "id": "biometric_data_reference",
+      "labels_en": [
+        "biometric_data_reference",
+        "biometric_identifier"
+      ],
+      "labels_tr": [
+        "biyometrik_veri",
+        "biyometrik_tanimlayici"
+      ],
+      "description": "Metinde gecen biyometrik veri referanslari: parmak izi, yuz tanima, retina, ses izi kayitlarina iliskin ifadeler. Metin modeli biyometrik verinin kendisini degil, referansini yakalar.",
+      "examples": [
+        {
+          "text": "Giriş parmak izi ile doğrulandı, şablon ID: FP-99812",
+          "span": "FP-99812"
+        }
+      ]
+    },
+    {
+      "id": "genetic_data_reference",
+      "labels_en": [
+        "genetic_data_reference",
+        "dna_info"
+      ],
+      "labels_tr": [
+        "genetik_veri",
+        "dna_bilgisi"
+      ],
+      "description": "Genetik test sonucu, DNA profili veya kalitsal durum referanslari.",
+      "examples": [
+        {
+          "text": "BRCA1 mutasyonu taşıdığı raporlandı.",
+          "span": "BRCA1 mutasyonu"
+        }
+      ]
+    },
+    {
+      "id": "signature_handwriting",
+      "labels_en": [
+        "signature_handwriting",
+        "wet_signature_reference"
+      ],
+      "labels_tr": [
+        "imza_referansi",
+        "el_yazisi_imza"
+      ],
+      "description": "Islak imza veya el yazisina iliskin metinsel referans. Biyometrik analiz amaciyla islenirse davranissal biyometri sayilir.",
+      "legal_basis": "KVKK Biyometrik Veri Rehberi (16.09.2021)",
+      "conditional_sensitivity": "Imza goruntusu kimlik dogrulama/biyometrik analiz amaciyla islenirse Madde 6, aksi halde Madde 3",
+      "examples": [
+        {
+          "text": "Belge, Ayşe Yılmaz'ın ıslak imzasını taşımaktadır.",
+          "span": "ıslak imzasını"
+        }
+      ]
+    },
+    {
+      "id": "voice_record",
+      "labels_en": [
+        "voice_record",
+        "audio_recording_reference"
+      ],
+      "labels_tr": [
+        "ses_kaydi",
+        "cagri_kaydi"
+      ],
+      "description": "Ses kaydina iliskin referans (cagri kaydi, ses mesaji). Ses biyometrisi amaciyla islenirse Madde 6.",
+      "legal_basis": "KVKK Biyometrik Veri Rehberi; VERBIS gorsel-isitsel kayitlar",
+      "conditional_sensitivity": "Konusmaci tanima/biyometri amaciyla Madde 6, aksi halde Madde 3",
+      "examples": [
+        {
+          "text": "Çağrı kaydı 00:03:12'de müşteri onay verdi.",
+          "span": "Çağrı kaydı 00:03:12"
+        }
+      ]
+    }
+  ],
+  "negative_examples": [
+    {
+      "text": "Alevilik, Anadolu'da yaygın bir inançtır.",
+      "note": "genel anlatim, kisiye atif yok"
+    },
+    {
+      "text": "Sendikalar toplu sözleşme yapar.",
+      "note": "genel bilgi, uyelik atfi yok"
+    },
+    {
+      "text": "Mavi ceketli bir adam gördüm.",
+      "note": "genel giyim tarifi, inanc gostergesi degil"
+    }
+  ]
+}

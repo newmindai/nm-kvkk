@@ -1,0 +1,30 @@
+# Training + evaluation environment, pinned to the conda env the shipped models were evaluated with
+# (Python 3.11.16; `conda env create -f environment.yml`). The H100 training container pins its own set in
+# launchers/gliner2_h100.def; the full package list of the image the models were trained with is
+# launchers/gliner2_h100.freeze.txt.
+# The GLiNER2 library is vendored in GLiNER2/ and is used through PYTHONPATH (recipes/common.sh sets it) or
+# `pip install -e GLiNER2` — do NOT install gliner2 from PyPI next to it: the shipped models depend on the
+# nm-turkish patches (GLiNER2/CHANGES.md).
+torch==2.13.0
+transformers==4.57.6      # the container trains with the same version; 5.x is untested with the shipped checkpoints
+tokenizers==0.22.2
+safetensors==0.8.0
+peft==0.20.0
+accelerate==1.14.0
+huggingface_hub==0.36.2
+pydantic==2.13.5
+numpy==2.4.6
+tqdm==4.70.0
+requests==2.34.2
+PyYAML==6.0.3
+# mDeBERTa tokenizer (gliner2.5-multi-v1) — undeclared by the library's own extras
+sentencepiece==0.2.2
+protobuf==7.36.0
+# data pipeline (parquet in, JSONL out)
+pandas==3.0.5
+pyarrow==25.0.1
+# charts, tests
+matplotlib==3.11.1
+pytest==9.1.1
+# optional: TensorBoard scalars (scripts/train.py --tensorboard)
+tensorboard==2.21.0

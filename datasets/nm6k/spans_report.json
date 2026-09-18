@@ -1,0 +1,109 @@
+{
+ "built_from": {
+  "e07": "kvkk_synth run e07 (1,000 Nemotron briefs)",
+  "e08": "kvkk_synth run e08 (5,000 fresh Nemotron briefs)"
+ },
+ "split_taken_from": "tr/ (this dataset)",
+ "record_format": {
+  "spans": "char offsets + entity ids + relation graph (canonical)",
+  "bio": "GLiNER2 whitespace word splitter, flat BIO, token offsets kept"
+ },
+ "label_space": {
+  "entities": 118,
+  "relations": 113,
+  "note": "labels are taxonomy ids; labels.json maps them to Turkish / English names"
+ },
+ "counts": {
+  "train": {
+   "records": 5178,
+   "entities": 25052,
+   "relations": 13461,
+   "relations_negative": 629
+  },
+  "test": {
+   "records": 602,
+   "entities": 3709,
+   "relations": 2074,
+   "relations_negative": 167
+  },
+  "test_hard": {
+   "records": 241,
+   "entities": 1788,
+   "relations": 1006,
+   "relations_negative": 167
+  },
+  "test_easy": {
+   "records": 361,
+   "entities": 1921,
+   "relations": 1068,
+   "relations_negative": 0
+  }
+ },
+ "verification": {
+  "offset_mismatches": 0,
+  "bio_spans_recovered_exactly": 28753,
+  "bio_spans_total": 28761,
+  "bio_records_with_overlap_dropped": 1,
+  "bio_records_with_unaligned_span": 6,
+  "unique_records_verified": 5780
+ },
+ "problems": {
+  "offset_mismatch": [],
+  "bio_overlap_dropped": [
+   {
+    "id": "nmkvkk-00569",
+    "n": 2,
+    "source_id": "e07-653"
+   }
+  ],
+  "bio_unaligned": [
+   {
+    "id": "nmkvkk-03001",
+    "n": 1,
+    "source_id": "e08-2306"
+   },
+   {
+    "id": "nmkvkk-03743",
+    "n": 1,
+    "source_id": "e08-3133"
+   },
+   {
+    "id": "nmkvkk-03938",
+    "n": 1,
+    "source_id": "e08-3350"
+   },
+   {
+    "id": "nmkvkk-04732",
+    "n": 1,
+    "source_id": "e08-4231"
+   },
+   {
+    "id": "nmkvkk-04885",
+    "n": 1,
+    "source_id": "e08-4405"
+   },
+   {
+    "id": "nmkvkk-00525",
+    "n": 1,
+    "source_id": "e07-605"
+   }
+  ]
+ },
+ "documents_not_in_either_release": [
+  "e08-neg-187",
+  "e08-neg-1900",
+  "e08-neg-2081",
+  "e08-neg-2130",
+  "e08-neg-226",
+  "e08-neg-2308",
+  "e08-neg-2493",
+  "e08-neg-3031",
+  "e08-neg-3157",
+  "e08-neg-3547",
+  "e08-neg-3909",
+  "e08-neg-4005",
+  "e08-neg-4874",
+  "e08-neg-915",
+  "e08-neg-999"
+ ]
+}

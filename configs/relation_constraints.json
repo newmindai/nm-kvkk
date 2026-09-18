@@ -1,0 +1,610 @@
+{
+ "konum verisi sahibi": [
+  [
+   "coğrafi koordinat",
+   "ad soyad"
+  ]
+ ],
+ "fatura muhatabı": [
+  [
+   "fatura numarası",
+   "ad soyad"
+  ]
+ ],
+ "abonelik sahibi": [
+  [
+   "abonelik numarası",
+   "ad soyad"
+  ]
+ ],
+ "ikamet adresi sahibi": [
+  [
+   "adres",
+   "ad soyad"
+  ],
+  [
+   "sokak adresi",
+   "ad soyad"
+  ]
+ ],
+ "gönderi sahibi": [
+  [
+   "kargo takip numarası",
+   "ad soyad"
+  ]
+ ],
+ "kullanıcı hesabı sahibi": [
+  [
+   "kullanıcı adı",
+   "ad soyad"
+  ],
+  [
+   "sosyal medya hesabı",
+   "ad soyad"
+  ]
+ ],
+ "müşteri numarası sahibi": [
+  [
+   "müşteri numarası",
+   "ad soyad"
+  ]
+ ],
+ "e-posta adresi sahibi": [
+  [
+   "e-posta adresi",
+   "ad soyad"
+  ]
+ ],
+ "telefon numarası sahibi": [
+  [
+   "telefon numarası",
+   "ad soyad"
+  ]
+ ],
+ "kimlik numarası sahibi": [
+  [
+   "kimlik numarası",
+   "ad soyad"
+  ]
+ ],
+ "taşınmaz sahibi": [
+  [
+   "ada parsel numarası",
+   "ad soyad"
+  ],
+  [
+   "bağımsız bölüm numarası",
+   "ad soyad"
+  ]
+ ],
+ "sadakat kartı sahibi": [
+  [
+   "sadakat kartı numarası",
+   "ad soyad"
+  ]
+ ],
+ "ticaret sicil numarası sahibi": [
+  [
+   "ticaret sicil numarası",
+   "şirket adı"
+  ]
+ ],
+ "parçası olduğu kart": [
+  [
+   "kart son kullanma tarihi",
+   "kredi kartı numarası"
+  ]
+ ],
+ "cihaz kullanıcısı": [
+  [
+   "cihaz kimliği",
+   "ad soyad"
+  ]
+ ],
+ "pasaport sahibi": [
+  [
+   "pasaport numarası",
+   "ad soyad"
+  ]
+ ],
+ "üyesi olduğu kuruluş": [
+  [
+   "ad soyad",
+   "dernek veya vakıf üyeliği"
+  ],
+  [
+   "ad soyad",
+   "şirket adı"
+  ]
+ ],
+ "iş unvanı sahibi": [
+  [
+   "iş unvanı",
+   "ad soyad"
+  ]
+ ],
+ "vergi kimlik numarası sahibi": [
+  [
+   "vergi kimlik numarası",
+   "ad soyad"
+  ]
+ ],
+ "araç plakası sahibi": [
+  [
+   "araç plakası",
+   "ad soyad"
+  ]
+ ],
+ "şasi numarası sahibi": [
+  [
+   "şasi numarası",
+   "ad soyad"
+  ]
+ ],
+ "sigorta poliçesi sahibi": [
+  [
+   "sigorta poliçe numarası",
+   "ad soyad"
+  ]
+ ],
+ "IP adresi kullanıcısı": [
+  [
+   "IP adresi",
+   "ad soyad"
+  ]
+ ],
+ "sağlık dosyası sahibi": [
+  [
+   "sağlık raporu numarası",
+   "ad soyad"
+  ]
+ ],
+ "tarafı olduğu dosya": [
+  [
+   "ad soyad",
+   "dava dosya numarası"
+  ],
+  [
+   "ad soyad",
+   "icra dosya numarası"
+  ],
+  [
+   "ad soyad",
+   "soruşturma numarası"
+  ]
+ ],
+ "şirket vergi numarası sahibi": [
+  [
+   "şirket vergi numarası",
+   "şirket adı"
+  ]
+ ],
+ "araç tescil belgesi sahibi": [
+  [
+   "araç tescil numarası",
+   "ad soyad"
+  ]
+ ],
+ "doğum yeri sahibi": [
+  [
+   "doğum yeri",
+   "ad soyad"
+  ]
+ ],
+ "doğum tarihi sahibi": [
+  [
+   "doğum tarihi",
+   "ad soyad"
+  ]
+ ],
+ "anne kızlık soyadı sahibi": [
+  [
+   "anne kızlık soyadı",
+   "ad soyad"
+  ]
+ ],
+ "kimlik seri numarası sahibi": [
+  [
+   "kimlik seri numarası",
+   "ad soyad"
+  ]
+ ],
+ "önceki soyadı sahibi": [
+  [
+   "kızlık soyadı",
+   "ad soyad"
+  ]
+ ],
+ "nüfus kaydı sahibi": [
+  [
+   "aile sıra numarası",
+   "ad soyad"
+  ],
+  [
+   "birey sıra numarası",
+   "ad soyad"
+  ],
+  [
+   "nüfus cilt numarası",
+   "ad soyad"
+  ],
+  [
+   "nüfusa kayıtlı yer",
+   "ad soyad"
+  ]
+ ],
+ "MERSİS numarası sahibi": [
+  [
+   "MERSİS numarası",
+   "şirket adı"
+  ]
+ ],
+ "işvereni olduğu kişi": [
+  [
+   "şirket adı",
+   "ad soyad"
+  ]
+ ],
+ "çocuğu olduğu kişi": [
+  [
+   "ad soyad",
+   "ad soyad"
+  ]
+ ],
+ "kan grubu sahibi": [
+  [
+   "kan grubu",
+   "ad soyad"
+  ]
+ ],
+ "tedavi uygulanan kişi": [
+  [
+   "tıbbi işlem",
+   "ad soyad"
+  ]
+ ],
+ "babası olduğu kişi": [
+  [
+   "ad soyad",
+   "ad soyad"
+  ]
+ ],
+ "biyometrik veri sahibi": [
+  [
+   "biyometrik veri",
+   "ad soyad"
+  ]
+ ],
+ "tanı konulan kişi": [
+  [
+   "hastalık",
+   "ad soyad"
+  ]
+ ],
+ "genetik veri sahibi": [
+  [
+   "genetik veri",
+   "ad soyad"
+  ]
+ ],
+ "cinsiyet bilgisi sahibi": [
+  [
+   "cinsiyet",
+   "ad soyad"
+  ]
+ ],
+ "profil bağlantısı sahibi": [
+  [
+   "web sitesi",
+   "ad soyad"
+  ]
+ ],
+ "reklam kimliği sahibi": [
+  [
+   "reklam kimliği",
+   "ad soyad"
+  ]
+ ],
+ "medeni durum bilgisi sahibi": [
+  [
+   "medeni durum",
+   "ad soyad"
+  ]
+ ],
+ "konumda bulunan kişi": [
+  [
+   "takip edilen konum",
+   "ad soyad"
+  ]
+ ],
+ "çerezle izlenen kişi": [
+  [
+   "çerez kimliği",
+   "ad soyad"
+  ]
+ ],
+ "öğrenci numarası sahibi": [
+  [
+   "öğrenci numarası",
+   "ad soyad"
+  ]
+ ],
+ "yaş bilgisi sahibi": [
+  [
+   "yaş",
+   "ad soyad"
+  ]
+ ],
+ "giriş bilgisi sahibi": [
+  [
+   "oturum anahtarı",
+   "ad soyad"
+  ],
+  [
+   "parola",
+   "ad soyad"
+  ]
+ ],
+ "kripto cüzdanı sahibi": [
+  [
+   "kripto cüzdan adresi",
+   "ad soyad"
+  ]
+ ],
+ "noter kaydı sahibi": [
+  [
+   "noter yevmiye numarası",
+   "ad soyad"
+  ]
+ ],
+ "baro sicil numarası sahibi": [
+  [
+   "baro sicil numarası",
+   "ad soyad"
+  ]
+ ],
+ "SIM kartı sahibi": [
+  [
+   "SIM kart kimliği",
+   "ad soyad"
+  ]
+ ],
+ "personel numarası sahibi": [
+  [
+   "personel numarası",
+   "ad soyad"
+  ]
+ ],
+ "sipariş sahibi": [
+  [
+   "referans kodu",
+   "ad soyad"
+  ]
+ ],
+ "imza sahibi": [
+  [
+   "imza veya el yazısı",
+   "ad soyad"
+  ]
+ ],
+ "Medula takip numarası sahibi": [
+  [
+   "Medula takip numarası",
+   "ad soyad"
+  ]
+ ],
+ "acil durum irtibatı olduğu kişi": [
+  [
+   "ad soyad",
+   "ad soyad"
+  ]
+ ],
+ "parçası olduğu ad soyad": [
+  [
+   "ad",
+   "ad soyad"
+  ],
+  [
+   "hitap unvanı",
+   "ad soyad"
+  ],
+  [
+   "ikinci ad",
+   "ad soyad"
+  ],
+  [
+   "soyad",
+   "ad soyad"
+  ]
+ ],
+ "kredi notu sahibi": [
+  [
+   "kredi notu",
+   "ad soyad"
+  ]
+ ],
+ "sosyal güvenlik numarası sahibi": [
+  [
+   "sosyal güvenlik numarası",
+   "ad soyad"
+  ]
+ ],
+ "uyruk bilgisi sahibi": [
+  [
+   "uyruk",
+   "ad soyad"
+  ]
+ ],
+ "parçası olduğu adres": [
+  [
+   "ilçe",
+   "adres"
+  ],
+  [
+   "posta kodu",
+   "adres"
+  ],
+  [
+   "şehir",
+   "adres"
+  ]
+ ],
+ "ehliyet sahibi": [
+  [
+   "ehliyet numarası",
+   "ad soyad"
+  ]
+ ],
+ "banka hesabı sahibi": [
+  [
+   "IBAN",
+   "ad soyad"
+  ],
+  [
+   "banka hesap numarası",
+   "ad soyad"
+  ]
+ ],
+ "kart sahibi": [
+  [
+   "kredi kartı numarası",
+   "ad soyad"
+  ]
+ ],
+ "bankası olduğu hesap": [
+  [
+   "SWIFT kodu",
+   "IBAN"
+  ],
+  [
+   "SWIFT kodu",
+   "banka hesap numarası"
+  ]
+ ],
+ "işyerinde çalışan kişi": [
+  [
+   "işyeri konumu",
+   "ad soyad"
+  ]
+ ],
+ "eğitim bilgisi sahibi": [
+  [
+   "eğitim bilgisi",
+   "ad soyad"
+  ]
+ ],
+ "iş geçmişi sahibi": [
+  [
+   "iş geçmişi",
+   "ad soyad"
+  ]
+ ],
+ "isim baş harfleri sahibi": [
+  [
+   "isim baş harfleri",
+   "ad soyad"
+  ]
+ ],
+ "e-reçete sahibi": [
+  [
+   "e-reçete numarası",
+   "ad soyad"
+  ]
+ ],
+ "Yupass numarası sahibi": [
+  [
+   "Yupass numarası",
+   "ad soyad"
+  ]
+ ],
+ "ilacı kullanan kişi": [
+  [
+   "ilaç",
+   "ad soyad"
+  ]
+ ],
+ "annesi olduğu kişi": [
+  [
+   "ad soyad",
+   "ad soyad"
+  ]
+ ],
+ "provizyon numarası sahibi": [
+  [
+   "provizyon numarası",
+   "ad soyad"
+  ]
+ ],
+ "UETS adresi sahibi": [
+  [
+   "UETS adresi",
+   "ad soyad"
+  ]
+ ],
+ "bilirkişi sicil numarası sahibi": [
+  [
+   "bilirkişi sicil numarası",
+   "ad soyad"
+  ]
+ ],
+ "siyasi görüş sahibi": [
+  [
+   "siyasi görüş",
+   "ad soyad"
+  ]
+ ],
+ "reçeteyi yazan doktor": [
+  [
+   "doktor diploma numarası",
+   "ad soyad"
+  ]
+ ],
+ "hakim savcı sicil numarası sahibi": [
+  [
+   "hakim savcı sicil numarası",
+   "ad soyad"
+  ]
+ ],
+ "maaş bilgisi sahibi": [
+  [
+   "maaş bilgisi",
+   "ad soyad"
+  ]
+ ],
+ "risk raporu sahibi": [
+  [
+   "risk raporu bilgisi",
+   "ad soyad"
+  ]
+ ],
+ "eşi olduğu kişi": [
+  [
+   "ad soyad",
+   "ad soyad"
+  ]
+ ],
+ "tebligat muhatabı": [
+  [
+   "tebligat barkodu",
+   "ad soyad"
+  ]
+ ],
+ "ses kaydı sahibi": [
+  [
+   "ses kaydı",
+   "ad soyad"
+  ]
+ ],
+ "vergi dairesi mükellefi": [
+  [
+   "vergi dairesi adı",
+   "ad soyad"
+  ]
+ ],
+ "pasaport MRZ kodu sahibi": [
+  [
+   "pasaport MRZ kodu",
+   "ad soyad"
+  ]
+ ]
+}

@@ -1,0 +1,78 @@
+{
+  "ADD": {
+    "name": "adres",
+    "description": "Posta adresi veya adres parçası: mahalle, sokak, cadde, kapı numarası, ilçe"
+  },
+  "BRT": {
+    "name": "doğum tarihi",
+    "description": "Bir kişinin doğum tarihi"
+  },
+  "CCN": {
+    "name": "kredi kartı numarası",
+    "description": "16 haneli kredi kartı veya banka kartı numarası"
+  },
+  "COO": {
+    "name": "coğrafi koordinat",
+    "description": "Enlem ve boylam koordinatları; örneğin 41.0082, 28.9784"
+  },
+  "CRN": {
+    "name": "araç plakası",
+    "description": "Araç tescil plakası; örneğin 34 ABC 123"
+  },
+  "CUS": {
+    "name": "müşteri numarası",
+    "description": "Müşteri, abone veya hesap numarası"
+  },
+  "DLN": {
+    "name": "sürücü belgesi numarası",
+    "description": "Ehliyet (sürücü belgesi) numarası"
+  },
+  "EMA": {
+    "name": "e-posta adresi",
+    "description": "E-posta adresi; örneğin info@ornek.com"
+  },
+  "HAS": {
+    "name": "referans kodu",
+    "description": "Hash veya referans kodu; örneğin # Mrkp 0001 #"
+  },
+  "IBN": {
+    "name": "IBAN",
+    "description": "IBAN banka hesap numarası; TR ile başlar"
+  },
+  "IDN": {
+    "name": "kimlik numarası",
+    "description": "T.C. kimlik numarası veya vergi kimlik numarası; 10 veya 11 haneli"
+  },
+  "IPA": {
+    "name": "IP adresi",
+    "description": "IP adresi; örneğin 192.168.1.1"
+  },
+  "MAC": {
+    "name": "MAC adresi",
+    "description": "Ağ cihazı MAC adresi; örneğin 00:50:56:C0:00:01"
+  },
+  "PAS": {
+    "name": "pasaport numarası",
+    "description": "Pasaport numarası; örneğin U 12345678"
+  },
+  "PBT": {
+    "name": "doğum yeri",
+    "description": "Bir kişinin doğum yeri; şehir veya ilçe"
+  },
+  "PHO": {
+    "name": "fotoğraf dosyası",
+    "description": "Fotoğraf veya ek dosya adı; örneğin kimlik fotokopisi, profil_fotografim.jpg; telefon numarası değil"
+  },
+  "PNO": {
+    "name": "telefon numarası",
+    "description": "Telefon veya cep telefonu numarası; örneğin +90 549 747 14 81, 0212 444 55 66"
+  },
+  "SER": {
+    "name": "seri numarası",
+    "description": "Cihaz veya belge seri numarası"
+  },
+  "WES": {
+    "name": "web sitesi",
+    "description": "Web sitesi adresi veya URL; örneğin https://www.ornek.com.tr"
+  }
+}

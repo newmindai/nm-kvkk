@@ -1,0 +1,2196 @@
+{
+  "concept": {
+    "en": "pii_relations",
+    "tr": "pii_iliskileri"
+  },
+  "layer": "relation",
+  "version": "2.1",
+  "description": "Tum entity node'larini kapsayan, ornekleme (sampling) icin tasarlanmis iliski katmani. Bes yapisal aile: (1) kisi-kisi (akrabalik), (2) nitelik-kisi (attribute-of-person: sahiplik ve atif), (3) bilesen-butun (kompozisyon: ad/adres/kart parcalari), (4) arac-arac (ayni enstruman gruplama: plaka-sasi, cvv-kart, swift-iban), (5) kisi-kayit (dava, abonelik, fatura, gorsel kayit). Etiketler alt cizgi bosluga cevrildiginde 'HEAD, TAIL'in ___' kalibinda dogal okunur.",
+  "sampling_guide": {
+    "procedure": [
+      "1. Bir iliski sec (gruplara agirlik verilebilir; Madde 6 gruplari icin oversampling onerilir).",
+      "2. head_types ve tail_types icinden birer entity node sec.",
+      "3. Her node icin yuzey degeri uret: node'un examples listesinden varyasyon veya validation kuralina uyan sentetik uretec (faker/regex).",
+      "4. templates_tr icinden sablon sec, {head}/{tail} yuvalarini doldur; sablonlar tohumdur, LLM parafrazi ile cesitlendirilmelidir.",
+      "5. Kaydi record_schema formatinda yaz; ayni kisiye birden fazla iliski baglayarak cok-iliskili belgeler uret (hub sampling).",
+      "6. Tail metinde gecmiyorsa DOC_SUBJECT konvansiyonu uygulanir.",
+      "7. Negatif ornekleme: iliskisiz es-gecis cumleleri (iki entity ayni cumlede ama bagsiz) mutlaka uretilmelidir."
+    ],
+    "record_schema": {
+      "text": "string",
+      "entities": [
+        {
+          "id": "e1",
+          "label": "node_id",
+          "span": "string",
+          "start": 0,
+          "end": 0
+        }
+      ],
+      "relations": [
+        {
+          "head": "e1",
+          "relation": "relation_id",
+          "tail": "e2"
+        }
+      ]
+    },
+    "coverage_rule": "Her entity node'u en az bir iliskinin head_types veya tail_types listesinde gecmek zorundadir; dogrulama scripti bunu kontrol eder."
+  },
+  "conventions": {
+    "direction": "Her iliski yonludur; okuma kalibi description'da.",
+    "document_subject": "Alan-deger formlarinda tail belgenin oznesine, cozulmezse DOC_SUBJECT dugumune baglanir.",
+    "person_anchor": "tail_types'ta full_name gecen iliskilerde sampler, gayri resmi metin uretirken first_name veya nickname'i de tail olarak kullanabilir (coreference ayni kisi dugumune gider).",
+    "masking_note": "Maskeleme yalnizca entity katmanini okur."
+  },
+  "relation_groups": [
+    {
+      "group": "kinship",
+      "group_tr": "akrabalik",
+      "relations": [
+        {
+          "id": "mother_of",
+          "labels_en": [
+            "mother_of"
+          ],
+          "labels_tr": [
+            "annesi"
+          ],
+          "head_types": [
+            "full_name",
+            "first_name"
+          ],
+          "tail_types": [
+            "full_name",
+            "first_name"
+          ],
+          "description": "HEAD, TAIL'in annesidir.",
+          "templates_tr": [
+            "{tail}'in annesi {head} refakat etti.",
+            "Anne adı: {head}"
+          ]
+        },
+        {
+          "id": "father_of",
+          "labels_en": [
+            "father_of"
+          ],
+          "labels_tr": [
+            "babasi"
+          ],
+          "head_types": [
+            "full_name",
+            "first_name"
+          ],
+          "tail_types": [
+            "full_name",
+            "first_name"
+          ],
+          "description": "HEAD, TAIL'in babasidir.",
+          "templates_tr": [
+            "Baba adı {head} olan {tail}",
+            "{tail}'in babası {head} imzaladı."
+          ]
+        },
+        {
+          "id": "spouse_of",
+          "labels_en": [
+            "spouse_of"
+          ],
+          "labels_tr": [
+            "esi"
+          ],
+          "head_types": [
+            "full_name"
+          ],
+          "tail_types": [
+            "full_name"
+          ],
+          "description": "HEAD, TAIL'in esidir; simetrik, tek yon yazilir.",
+          "templates_tr": [
+            "{tail}'in eşi {head} de duruşmaya katıldı."
+          ]
+        },
+        {
+          "id": "child_of",
+          "labels_en": [
+            "child_of"
+          ],
+          "labels_tr": [
+            "cocugu"
+          ],
+          "head_types": [
+            "full_name",
+            "first_name"
+          ],
+          "tail_types": [
+            "full_name",
+            "first_name"
+          ],
+          "description": "HEAD, TAIL'in cocugudur (oglu/kizi ifadeleri).",
+          "templates_tr": [
+            "{tail}'in oğlu {head} okula kaydedildi."
+          ]
+        },
+        {
+          "id": "sibling_of",
+          "labels_en": [
+            "sibling_of"
+          ],
+          "labels_tr": [
+            "kardesi"
+          ],
+          "head_types": [
+            "full_name"
+          ],
+          "tail_types": [
+            "full_name"
+          ],
+          "description": "HEAD, TAIL'in kardesidir; simetrik.",
+          "templates_tr": [
+            "{tail}'in kardeşi {head} tanık olarak dinlendi."
+          ]
+        },
+        {
+          "id": "relative_of",
+          "labels_en": [
+            "relative_of"
+          ],
+          "labels_tr": [
+            "akrabasi"
+          ],
+          "head_types": [
+            "full_name"
+          ],
+          "tail_types": [
+            "full_name"
+          ],
+          "description": "Turu belirsiz akrabalik; spesifik tur varsa kullanilmaz.",
+          "templates_tr": [
+            "Yakını {head}, {tail}'e refakat etti."
+          ]
+        }
+      ]
+    },
+    {
+      "group": "name_variants",
+      "group_tr": "ad_varyantlari",
+      "relations": [
+        {
+          "id": "part_of_name",
+          "labels_en": [
+            "part_of_name"
+          ],
+          "labels_tr": [
+            "adinin_parcasi"
+          ],
+          "head_types": [
+            "first_name",
+            "middle_name",
+            "last_name",
+            "title_honorific"
+          ],
+          "tail_types": [
+            "full_name"
+          ],
+          "description": "HEAD bileseni TAIL tam adinin parcasidir; fine-coarse baglantisini kurar.",
+          "templates_tr": [
+            "Adı: {head}"
+          ]
+        },
+        {
+          "id": "nickname_of",
+          "labels_en": [
+            "nickname_of",
+            "known_as"
+          ],
+          "labels_tr": [
+            "lakabi"
+          ],
+          "head_types": [
+            "nickname"
+          ],
+          "tail_types": [
+            "full_name"
+          ],
+          "description": "HEAD lakap TAIL kisisine aittir.",
+          "templates_tr": [
+            "Mahallede {head} diye bilinen {tail}"
+          ]
+        },
+        {
+          "id": "initials_of",
+          "labels_en": [
+            "initials_of",
+            "abbreviation_of"
+          ],
+          "labels_tr": [
+            "kisaltmasi"
+          ],
+          "head_types": [
+            "initials"
+          ],
+          "tail_types": [
+            "full_name"
+          ],
+          "description": "HEAD kisaltma TAIL kisisinin adini temsil eder; anonim kararlarda coreference kurar.",
+          "templates_tr": [
+            "Sanık {head} ({tail})"
+          ]
+        },
+        {
+          "id": "former_surname_of",
+          "labels_en": [
+            "former_surname_of",
+            "maiden_name_of"
+          ],
+          "labels_tr": [
+            "kizlik_soyadi"
+          ],
+          "head_types": [
+            "maiden_name"
+          ],
+          "tail_types": [
+            "full_name"
+          ],
+          "description": "HEAD, TAIL kisisinin evlilik oncesi soyadidir.",
+          "templates_tr": [
+            "{tail} (kızlık soyadı {head})"
+          ]
+        },
+        {
+          "id": "mothers_maiden_name_of",
+          "labels_en": [
+            "mothers_maiden_name_of"
+          ],
+          "labels_tr": [
+            "anne_kizlik_soyadi"
+          ],
+          "head_types": [
+            "mothers_maiden_name"
+          ],
+          "tail_types": [
+            "full_name"
+          ],
+          "description": "HEAD, TAIL kisisinin annesinin kizlik soyadidir; dogrulama sirri.",
+          "templates_tr": [
+            "{tail} için anne kızlık soyadı: {head}"
+          ]
+        }
+      ]
+    },
+    {
+      "group": "civil_attributes",
+      "group_tr": "medeni_nitelikler",
+      "relations": [
+        {
+          "id": "date_of_birth_of",
+          "labels_en": [
+            "date_of_birth_of"
+          ],
+          "labels_tr": [
+            "dogum_tarihi"
+          ],
+          "head_types": [
+            "date_of_birth"
+          ],
+          "tail_types": [
+            "full_name"
+          ],
+          "description": "HEAD tarih TAIL kisisinin dogum tarihidir.",
+          "templates_tr": [
+            "{head} doğumlu {tail}",
+            "{tail} — Doğum tarihi: {head}"
+          ]
+        },
+        {
+          "id": "place_of_birth_of",
+          "labels_en": [
+            "place_of_birth_of"
+          ],
+          "labels_tr": [
+            "dogum_yeri"
+          ],
+          "head_types": [
+            "place_of_birth"
+          ],
+          "tail_types": [
+            "full_name"
+          ],
+          "description": "HEAD yer TAIL kisisinin dogum yeridir.",
+          "templates_tr": [
+            "{tail}, {head} doğumludur."
+          ]
+        },
+        {
+          "id": "age_of",
+          "labels_en": [
+            "age_of"
+          ],
+          "labels_tr": [
+            "yasi"
+          ],
+          "head_types": [
+            "age"
+          ],
+          "tail_types": [
+            "full_name"
+          ],
+          "description": "HEAD deger TAIL kisisinin yasidir.",
+          "templates_tr": [
+            "{head} yaşındaki {tail}"
+          ]
+        },
+        {
+          "id": "gender_of",
+          "labels_en": [
+            "gender_of"
+          ],
+          "labels_tr": [
+            "cinsiyeti"
+          ],
+          "head_types": [
+            "gender"
+          ],
+          "tail_types": [
+            "full_name"
+          ],
+          "description": "HEAD deger TAIL kisisinin cinsiyetidir.",
+          "templates_tr": [
+            "{tail} — Cinsiyet: {head}"
+          ]
+        },
+        {
+          "id": "marital_status_of",
+          "labels_en": [
+            "marital_status_of"
+          ],
+          "labels_tr": [
+            "medeni_hali"
+          ],
+          "head_types": [
+            "marital_status"
+          ],
+          "tail_types": [
+            "full_name"
+          ],
+          "description": "HEAD deger TAIL kisisinin medeni halidir.",
+          "templates_tr": [
+            "{tail}'in medeni hali: {head}"
+          ]
+        },
+        {
+          "id": "nationality_of",
+          "labels_en": [
+            "nationality_of"
+          ],
+          "labels_tr": [
+            "uyrugu"
+          ],
+          "head_types": [
+            "nationality"
+          ],
+          "tail_types": [
+            "full_name"
+          ],
+          "description": "HEAD deger TAIL kisisinin uyrugudur.",
+          "templates_tr": [
+            "{head} uyruklu {tail}"
+          ]
+        },
+        {
+          "id": "blood_type_of",
+          "labels_en": [
+            "blood_type_of"
+          ],
+          "labels_tr": [
+            "kan_grubu"
+          ],
+          "head_types": [
+            "blood_type"
+          ],
+          "tail_types": [
+            "full_name"
+          ],
+          "description": "HEAD deger TAIL kisisinin kan grubudur.",
+          "templates_tr": [
+            "{tail}'in kan grubu {head}"
+          ]
+        }
+      ]
+    },
+    {
+      "group": "identity_documents",
+      "group_tr": "kimlik_belgeleri",
+      "relations": [
+        {
+          "id": "national_id_of",
+          "labels_en": [
+            "national_id_of"
+          ],
+          "labels_tr": [
+            "tc_kimlik_numarasi"
+          ],
+          "head_types": [
+            "national_id_number"
+          ],
+          "tail_types": [
+            "full_name"
+          ],
+          "description": "HEAD numara TAIL kisisinin TCKN'sidir.",
+          "templates_tr": [
+            "{head} TCKN'li {tail}",
+            "{tail} (TCKN: {head})"
+          ]
+        },
+        {
+          "id": "foreigner_id_of",
+          "labels_en": [
+            "foreigner_id_of"
+          ],
+          "labels_tr": [
+            "yabanci_kimlik_numarasi"
+          ],
+          "head_types": [
+            "foreigner_id_number"
+          ],
+          "tail_types": [
+            "full_name"
+          ],
+          "description": "HEAD numara TAIL kisisinin yabanci kimlik numarasidir.",
+          "templates_tr": [
+            "{tail}, {head} yabancı kimlik numarasıyla kayıtlı."
+          ]
+        },
+        {
+          "id": "id_serial_of",
+          "labels_en": [
+            "id_document_serial_of"
+          ],
+          "labels_tr": [
+            "kimlik_seri_numarasi"
+          ],
+          "head_types": [
+            "id_document_serial"
+          ],
+          "tail_types": [
+            "full_name"
+          ],
+          "description": "HEAD seri no TAIL kisisinin kimlik belgesine aittir.",
+          "templates_tr": [
+            "{tail}'in kimlik kartı seri no: {head}"
+          ]
+        },
+        {
+          "id": "passport_of",
+          "labels_en": [
+            "passport_number_of"
+          ],
+          "labels_tr": [
+            "pasaport_numarasi"
+          ],
+          "head_types": [
+            "passport_number"
+          ],
+          "tail_types": [
+            "full_name"
+          ],
+          "description": "HEAD numara TAIL kisisinin pasaportuna aittir.",
+          "templates_tr": [
+            "{tail}, {head} numaralı pasaportla giriş yaptı."
+          ]
+        },
+        {
+          "id": "drivers_license_of",
+          "labels_en": [
+            "drivers_license_of"
+          ],
+          "labels_tr": [
+            "ehliyet_numarasi"
+          ],
+          "head_types": [
+            "drivers_license_number"
+          ],
+          "tail_types": [
+            "full_name"
+          ],
+          "description": "HEAD numara TAIL kisisinin surucu belgesine aittir.",
+          "templates_tr": [
+            "{tail}'in ehliyet numarası {head}"
+          ]
+        },
+        {
+          "id": "tax_id_of",
+          "labels_en": [
+            "tax_id_of"
+          ],
+          "labels_tr": [
+            "vergi_numarasi"
+          ],
+          "head_types": [
+            "tax_id_number"
+          ],
+          "tail_types": [
+            "full_name"
+          ],
+          "description": "HEAD numara TAIL gercek kisisinin vergi kimlik numarasidir.",
+          "templates_tr": [
+            "Mükellef {tail} (VKN: {head})"
+          ]
+        },
+        {
+          "id": "social_security_of",
+          "labels_en": [
+            "social_security_number_of"
+          ],
+          "labels_tr": [
+            "sgk_numarasi"
+          ],
+          "head_types": [
+            "social_security_number"
+          ],
+          "tail_types": [
+            "full_name"
+          ],
+          "description": "HEAD numara TAIL kisisinin SGK sicilidir.",
+          "templates_tr": [
+            "{tail}, {head} SGK sicil numarasıyla bildirildi."
+          ]
+        },
+        {
+          "id": "yupass_of",
+          "labels_en": [
+            "yupass_number_of"
+          ],
+          "labels_tr": [
+            "yupass_numarasi"
+          ],
+          "head_types": [
+            "yupass_number"
+          ],
+          "tail_types": [
+            "full_name"
+          ],
+          "description": "HEAD YUPASS numarasi TAIL kisisine aittir.",
+          "templates_tr": [
+            "{tail} için YUPASS: {head}"
+          ]
+        },
+        {
+          "id": "mrz_of",
+          "labels_en": [
+            "passport_mrz_of"
+          ],
+          "labels_tr": [
+            "mrz_satiri"
+          ],
+          "head_types": [
+            "passport_mrz"
+          ],
+          "tail_types": [
+            "full_name"
+          ],
+          "description": "HEAD MRZ satiri TAIL kisisinin pasaportuna aittir.",
+          "templates_tr": [
+            "{tail}'in pasaport MRZ: {head}"
+          ]
+        }
+      ]
+    },
+    {
+      "group": "contact",
+      "group_tr": "iletisim",
+      "relations": [
+        {
+          "id": "phone_of",
+          "labels_en": [
+            "phone_number_of"
+          ],
+          "labels_tr": [
+            "telefon_numarasi"
+          ],
+          "head_types": [
+            "phone_number",
+            "fax_number"
+          ],
+          "tail_types": [
+            "full_name"
+          ],
+          "description": "HEAD numara TAIL kisisine aittir (faks dahil).",
+          "templates_tr": [
+            "{tail}'e {head} numarasından ulaşılabilir.",
+            "Tel: {head} — {tail}"
+          ]
+        },
+        {
+          "id": "email_of",
+          "labels_en": [
+            "email_of"
+          ],
+          "labels_tr": [
+            "eposta_adresi"
+          ],
+          "head_types": [
+            "email_address",
+            "kep_address"
+          ],
+          "tail_types": [
+            "full_name"
+          ],
+          "description": "HEAD adres TAIL kisisine aittir (KEP dahil).",
+          "templates_tr": [
+            "{tail}'in e-postası: {head}"
+          ]
+        },
+        {
+          "id": "residence_of",
+          "labels_en": [
+            "residence_of",
+            "home_address_of"
+          ],
+          "labels_tr": [
+            "ikamet_adresi"
+          ],
+          "head_types": [
+            "full_address",
+            "street_line"
+          ],
+          "tail_types": [
+            "full_name"
+          ],
+          "description": "HEAD adres TAIL kisisinin ikametidir.",
+          "templates_tr": [
+            "{tail}, {head} adresinde ikamet etmektedir."
+          ]
+        },
+        {
+          "id": "part_of_address",
+          "labels_en": [
+            "part_of_address"
+          ],
+          "labels_tr": [
+            "adresin_parcasi"
+          ],
+          "head_types": [
+            "street_line",
+            "district",
+            "city",
+            "postal_code"
+          ],
+          "tail_types": [
+            "full_address"
+          ],
+          "description": "HEAD bileseni TAIL tam adresinin parcasidir; fine-coarse baglantisi.",
+          "templates_tr": [
+            "Adres: {tail}"
+          ]
+        }
+      ]
+    },
+    {
+      "group": "financial",
+      "group_tr": "finans",
+      "relations": [
+        {
+          "id": "iban_of",
+          "labels_en": [
+            "iban_of"
+          ],
+          "labels_tr": [
+            "iban_numarasi"
+          ],
+          "head_types": [
+            "iban",
+            "bank_account_number"
+          ],
+          "tail_types": [
+            "full_name"
+          ],
+          "description": "HEAD hesap TAIL kisisine aittir.",
+          "templates_tr": [
+            "Ödeme {tail}'in {head} hesabına yapıldı."
+          ]
+        },
+        {
+          "id": "card_of",
+          "labels_en": [
+            "card_of"
+          ],
+          "labels_tr": [
+            "kart_numarasi"
+          ],
+          "head_types": [
+            "card_number"
+          ],
+          "tail_types": [
+            "full_name"
+          ],
+          "description": "HEAD kart TAIL kisisine aittir.",
+          "templates_tr": [
+            "{tail}'in {head} numaralı kartı"
+          ]
+        },
+        {
+          "id": "card_component_of",
+          "labels_en": [
+            "card_component_of"
+          ],
+          "labels_tr": [
+            "kartin_bileseni"
+          ],
+          "head_types": [
+            "card_cvv",
+            "card_expiry"
+          ],
+          "tail_types": [
+            "card_number"
+          ],
+          "description": "HEAD deger (CVV/SKT) TAIL kartina aittir; ayni odeme aracini gruplar.",
+          "templates_tr": [
+            "Kart {tail}, SKT {head}"
+          ]
+        },
+        {
+          "id": "bank_of_account",
+          "labels_en": [
+            "bank_of_account"
+          ],
+          "labels_tr": [
+            "hesabin_bankasi"
+          ],
+          "head_types": [
+            "swift_bic"
+          ],
+          "tail_types": [
+            "iban",
+            "bank_account_number"
+          ],
+          "description": "HEAD SWIFT/BIC kodu TAIL hesabinin bankasini belirtir.",
+          "templates_tr": [
+            "{tail} hesabına {head} SWIFT koduyla havale"
+          ]
+        },
+        {
+          "id": "salary_of",
+          "labels_en": [
+            "salary_of"
+          ],
+          "labels_tr": [
+            "maasi"
+          ],
+          "head_types": [
+            "salary_info"
+          ],
+          "tail_types": [
+            "full_name"
+          ],
+          "description": "HEAD tutar TAIL kisisinin maasidir.",
+          "templates_tr": [
+            "{tail}'in net maaşı {head}"
+          ]
+        },
+        {
+          "id": "credit_score_of",
+          "labels_en": [
+            "credit_score_of"
+          ],
+          "labels_tr": [
+            "kredi_notu"
+          ],
+          "head_types": [
+            "credit_score"
+          ],
+          "tail_types": [
+            "full_name"
+          ],
+          "description": "HEAD puan TAIL kisisinin kredi/Findeks notudur.",
+          "templates_tr": [
+            "{tail}'in Findeks notu {head} olarak hesaplandı."
+          ]
+        },
+        {
+          "id": "risk_report_of",
+          "labels_en": [
+            "risk_report_of"
+          ],
+          "labels_tr": [
+            "risk_raporu"
+          ],
+          "head_types": [
+            "risk_report"
+          ],
+          "tail_types": [
+            "full_name"
+          ],
+          "description": "HEAD risk bilgisi TAIL kisisine aittir.",
+          "templates_tr": [
+            "{tail}'in risk raporunda {head} görünüyor."
+          ]
+        },
+        {
+          "id": "crypto_wallet_of",
+          "labels_en": [
+            "crypto_wallet_of"
+          ],
+          "labels_tr": [
+            "kripto_cuzdani"
+          ],
+          "head_types": [
+            "crypto_wallet_address"
+          ],
+          "tail_types": [
+            "full_name"
+          ],
+          "description": "HEAD cuzdan adresi TAIL kisisine aittir.",
+          "templates_tr": [
+            "{tail}'in cüzdanı: {head}"
+          ]
+        },
+        {
+          "id": "insurance_policy_of",
+          "labels_en": [
+            "insurance_policy_of"
+          ],
+          "labels_tr": [
+            "sigorta_policesi"
+          ],
+          "head_types": [
+            "insurance_policy_number"
+          ],
+          "tail_types": [
+            "full_name"
+          ],
+          "description": "HEAD police TAIL kisisine aittir.",
+          "templates_tr": [
+            "{tail} adına {head} numaralı poliçe düzenlendi."
+          ]
+        }
+      ]
+    },
+    {
+      "group": "digital",
+      "group_tr": "dijital",
+      "relations": [
+        {
+          "id": "account_of",
+          "labels_en": [
+            "account_of",
+            "username_of"
+          ],
+          "labels_tr": [
+            "kullanici_hesabi"
+          ],
+          "head_types": [
+            "username",
+            "social_media_handle"
+          ],
+          "tail_types": [
+            "full_name"
+          ],
+          "description": "HEAD hesap TAIL kisisine aittir.",
+          "templates_tr": [
+            "{head} hesabı {tail}'e ait."
+          ]
+        },
+        {
+          "id": "credential_of",
+          "labels_en": [
+            "credential_of",
+            "password_of"
+          ],
+          "labels_tr": [
+            "sifresi"
+          ],
+          "head_types": [
+            "password",
+            "session_or_token"
+          ],
+          "tail_types": [
+            "username",
+            "social_media_handle",
+            "full_name"
+          ],
+          "description": "HEAD sifre/anahtar TAIL hesabina veya kisisine aittir.",
+          "templates_tr": [
+            "{tail} hesabının geçici şifresi: {head}"
+          ]
+        },
+        {
+          "id": "device_used_by",
+          "labels_en": [
+            "device_used_by"
+          ],
+          "labels_tr": [
+            "kullandigi_cihaz"
+          ],
+          "head_types": [
+            "device_id"
+          ],
+          "tail_types": [
+            "full_name"
+          ],
+          "description": "HEAD cihaz kimligi TAIL kisisinin cihazina aittir.",
+          "templates_tr": [
+            "{tail}'in cihazı (IMEI: {head})"
+          ]
+        },
+        {
+          "id": "ip_used_by",
+          "labels_en": [
+            "ip_used_by",
+            "connected_from"
+          ],
+          "labels_tr": [
+            "baglandigi_ip"
+          ],
+          "head_types": [
+            "ip_address"
+          ],
+          "tail_types": [
+            "username",
+            "full_name"
+          ],
+          "description": "HEAD IP adresinden TAIL hesabi/kisisi baglanmistir.",
+          "templates_tr": [
+            "{tail}, {head} adresinden giriş yaptı."
+          ]
+        },
+        {
+          "id": "profile_url_of",
+          "labels_en": [
+            "profile_url_of"
+          ],
+          "labels_tr": [
+            "profil_adresi"
+          ],
+          "head_types": [
+            "url_with_pii"
+          ],
+          "tail_types": [
+            "full_name"
+          ],
+          "description": "HEAD URL TAIL kisisinin profilidir.",
+          "templates_tr": [
+            "{tail}'in profili: {head}"
+          ]
+        },
+        {
+          "id": "advertising_id_of",
+          "labels_en": [
+            "advertising_id_of"
+          ],
+          "labels_tr": [
+            "reklam_kimligi"
+          ],
+          "head_types": [
+            "advertising_id"
+          ],
+          "tail_types": [
+            "full_name"
+          ],
+          "description": "HEAD reklam kimligi TAIL kisisinin cihazina/profilina aittir.",
+          "templates_tr": [
+            "{tail}'in cihazı {head} reklam kimliğiyle eşleşti."
+          ]
+        },
+        {
+          "id": "cookie_of",
+          "labels_en": [
+            "cookie_of"
+          ],
+          "labels_tr": [
+            "cerez_kimligi"
+          ],
+          "head_types": [
+            "cookie_id"
+          ],
+          "tail_types": [
+            "username",
+            "full_name"
+          ],
+          "description": "HEAD cerez TAIL hesabina/kisisine aittir.",
+          "templates_tr": [
+            "{tail} oturumu {head} çereziyle izlendi."
+          ]
+        },
+        {
+          "id": "sim_of",
+          "labels_en": [
+            "sim_identifier_of"
+          ],
+          "labels_tr": [
+            "sim_karti"
+          ],
+          "head_types": [
+            "sim_identifier"
+          ],
+          "tail_types": [
+            "full_name"
+          ],
+          "description": "HEAD SIM tanimlayicisi TAIL abonesine aittir.",
+          "templates_tr": [
+            "{tail} hattının IMSI değeri {head}"
+          ]
+        }
+      ]
+    },
+    {
+      "group": "location",
+      "group_tr": "konum",
+      "relations": [
+        {
+          "id": "located_at",
+          "labels_en": [
+            "located_at",
+            "last_seen_at"
+          ],
+          "labels_tr": [
+            "bulundugu_yer"
+          ],
+          "head_types": [
+            "tracked_location"
+          ],
+          "tail_types": [
+            "full_name"
+          ],
+          "description": "HEAD konum kaydinda TAIL kisisi tespit edilmistir.",
+          "templates_tr": [
+            "{tail}, {head} konumunda tespit edildi."
+          ]
+        },
+        {
+          "id": "coordinates_of",
+          "labels_en": [
+            "coordinates_of"
+          ],
+          "labels_tr": [
+            "koordinati"
+          ],
+          "head_types": [
+            "gps_coordinates"
+          ],
+          "tail_types": [
+            "tracked_location",
+            "full_address",
+            "full_name"
+          ],
+          "description": "HEAD koordinat TAIL konumunu/kisisini isaretler.",
+          "templates_tr": [
+            "Son konum: {head} ({tail})"
+          ]
+        },
+        {
+          "id": "workplace_of",
+          "labels_en": [
+            "workplace_location_of"
+          ],
+          "labels_tr": [
+            "calistigi_yer"
+          ],
+          "head_types": [
+            "workplace_location"
+          ],
+          "tail_types": [
+            "full_name"
+          ],
+          "description": "HEAD yer TAIL kisisinin calistigi lokasyondur.",
+          "templates_tr": [
+            "{tail}, {head}'taki ofisinde çalışıyor."
+          ]
+        }
+      ]
+    },
+    {
+      "group": "vehicle",
+      "group_tr": "arac",
+      "relations": [
+        {
+          "id": "vehicle_plate_of",
+          "labels_en": [
+            "vehicle_plate_of"
+          ],
+          "labels_tr": [
+            "aracinin_plakasi"
+          ],
+          "head_types": [
+            "license_plate"
+          ],
+          "tail_types": [
+            "full_name"
+          ],
+          "description": "HEAD plaka TAIL kisisinin aracina aittir.",
+          "templates_tr": [
+            "{head} plakalı araç {tail} adına kayıtlı."
+          ]
+        },
+        {
+          "id": "vehicle_vin_of",
+          "labels_en": [
+            "vehicle_vin_of"
+          ],
+          "labels_tr": [
+            "aracinin_sasi_numarasi"
+          ],
+          "head_types": [
+            "vin_chassis_number"
+          ],
+          "tail_types": [
+            "full_name"
+          ],
+          "description": "HEAD sasi no TAIL kisisinin aracina aittir.",
+          "templates_tr": [
+            "{tail}'in aracının şasi no: {head}"
+          ]
+        },
+        {
+          "id": "vehicle_registration_of",
+          "labels_en": [
+            "vehicle_registration_of"
+          ],
+          "labels_tr": [
+            "aracinin_ruhsati"
+          ],
+          "head_types": [
+            "vehicle_registration_number"
+          ],
+          "tail_types": [
+            "full_name"
+          ],
+          "description": "HEAD ruhsat no TAIL kisisinin aracina aittir.",
+          "templates_tr": [
+            "{tail} adına {head} ruhsat numaralı araç"
+          ]
+        },
+        {
+          "id": "same_vehicle",
+          "labels_en": [
+            "same_vehicle"
+          ],
+          "labels_tr": [
+            "ayni_arac"
+          ],
+          "head_types": [
+            "license_plate"
+          ],
+          "tail_types": [
+            "vin_chassis_number",
+            "vehicle_registration_number"
+          ],
+          "description": "HEAD ve TAIL ayni araca aittir; arac duzeyinde gruplama saglar.",
+          "templates_tr": [
+            "{head} plakalı, {tail} şasi numaralı araç"
+          ]
+        }
+      ]
+    },
+    {
+      "group": "health",
+      "group_tr": "saglik",
+      "relations": [
+        {
+          "id": "diagnosis_of",
+          "labels_en": [
+            "diagnosis_of",
+            "diagnosed_with"
+          ],
+          "labels_tr": [
+            "tanisi"
+          ],
+          "head_types": [
+            "medical_condition",
+            "mental_health_info"
+          ],
+          "tail_types": [
+            "full_name"
+          ],
+          "description": "HEAD tani TAIL kisisine konmustur; Madde 6 atif cozumu.",
+          "templates_tr": [
+            "{tail}'e {head} tanısı kondu."
+          ]
+        },
+        {
+          "id": "medication_of",
+          "labels_en": [
+            "medication_of"
+          ],
+          "labels_tr": [
+            "kullandigi_ilac"
+          ],
+          "head_types": [
+            "medication"
+          ],
+          "tail_types": [
+            "full_name"
+          ],
+          "description": "HEAD ilaci TAIL kisisi kullanmaktadir.",
+          "templates_tr": [
+            "{tail} günde iki kez {head} kullanıyor."
+          ]
+        },
+        {
+          "id": "treatment_of",
+          "labels_en": [
+            "treatment_of"
+          ],
+          "labels_tr": [
+            "gordugu_tedavi"
+          ],
+          "head_types": [
+            "medical_procedure"
+          ],
+          "tail_types": [
+            "full_name"
+          ],
+          "description": "HEAD islem TAIL kisisine uygulanmistir.",
+          "templates_tr": [
+            "{tail} geçen ay {head} oldu."
+          ]
+        },
+        {
+          "id": "disability_of",
+          "labels_en": [
+            "disability_status_of"
+          ],
+          "labels_tr": [
+            "engellilik_durumu"
+          ],
+          "head_types": [
+            "disability_status"
+          ],
+          "tail_types": [
+            "full_name"
+          ],
+          "description": "HEAD durum TAIL kisisine aittir.",
+          "templates_tr": [
+            "{tail}'in {head} raporu bulunmaktadır."
+          ]
+        },
+        {
+          "id": "health_file_of",
+          "labels_en": [
+            "health_file_of"
+          ],
+          "labels_tr": [
+            "hasta_dosyasi"
+          ],
+          "head_types": [
+            "health_report_id"
+          ],
+          "tail_types": [
+            "full_name"
+          ],
+          "description": "HEAD dosya/protokol no TAIL kisisinin saglik kaydidir.",
+          "templates_tr": [
+            "{tail} — Protokol no: {head}"
+          ]
+        },
+        {
+          "id": "medula_of",
+          "labels_en": [
+            "medula_tracking_of"
+          ],
+          "labels_tr": [
+            "medula_takip_numarasi"
+          ],
+          "head_types": [
+            "medula_tracking_number"
+          ],
+          "tail_types": [
+            "full_name"
+          ],
+          "description": "HEAD takip no TAIL hastasina aittir.",
+          "templates_tr": [
+            "{tail} için MEDULA takip no {head} üretildi."
+          ]
+        },
+        {
+          "id": "provision_of",
+          "labels_en": [
+            "provision_number_of"
+          ],
+          "labels_tr": [
+            "provizyon_numarasi"
+          ],
+          "head_types": [
+            "provision_number"
+          ],
+          "tail_types": [
+            "full_name"
+          ],
+          "description": "HEAD provizyon TAIL hastasina aittir.",
+          "templates_tr": [
+            "{tail} adına provizyon no {head} alındı."
+          ]
+        },
+        {
+          "id": "eprescription_of",
+          "labels_en": [
+            "eprescription_of"
+          ],
+          "labels_tr": [
+            "erecete_numarasi"
+          ],
+          "head_types": [
+            "eprescription_number"
+          ],
+          "tail_types": [
+            "full_name"
+          ],
+          "description": "HEAD e-recete TAIL hastasina yazilmistir.",
+          "templates_tr": [
+            "{tail}'in e-reçete numarası: {head}"
+          ]
+        },
+        {
+          "id": "prescribed_by",
+          "labels_en": [
+            "prescribed_by",
+            "doctor_license_of"
+          ],
+          "labels_tr": [
+            "receteyi_yazan_hekim"
+          ],
+          "head_types": [
+            "doctor_license_number"
+          ],
+          "tail_types": [
+            "full_name"
+          ],
+          "description": "HEAD tescil numarali hekim TAIL kisidir (hekimin kendi verisi).",
+          "templates_tr": [
+            "Reçeteyi {tail} (tescil no {head}) yazdı."
+          ]
+        }
+      ]
+    },
+    {
+      "group": "special_attribution",
+      "group_tr": "ozel_nitelikli_atif",
+      "relations": [
+        {
+          "id": "ethnicity_of",
+          "labels_en": [
+            "ethnicity_of"
+          ],
+          "labels_tr": [
+            "etnik_kokeni"
+          ],
+          "head_types": [
+            "ethnicity"
+          ],
+          "tail_types": [
+            "full_name"
+          ],
+          "description": "HEAD ifade TAIL kisisinin etnik kokenine atfedilmistir.",
+          "templates_tr": [
+            "{head} olduğunu belirten {tail}"
+          ]
+        },
+        {
+          "id": "political_view_of",
+          "labels_en": [
+            "political_view_of"
+          ],
+          "labels_tr": [
+            "siyasi_gorusu"
+          ],
+          "head_types": [
+            "political_opinion"
+          ],
+          "tail_types": [
+            "full_name"
+          ],
+          "description": "HEAD ifade TAIL kisisinin siyasi gorusudur.",
+          "templates_tr": [
+            "{tail}'in {head} olduğu tespit edildi."
+          ]
+        },
+        {
+          "id": "belief_of",
+          "labels_en": [
+            "belief_of"
+          ],
+          "labels_tr": [
+            "inanci"
+          ],
+          "head_types": [
+            "religious_belief",
+            "philosophical_belief"
+          ],
+          "tail_types": [
+            "full_name"
+          ],
+          "description": "HEAD inanc ifadesi TAIL kisisine atfedilmistir.",
+          "templates_tr": [
+            "{tail}, {head} olduğunu beyan etti."
+          ]
+        },
+        {
+          "id": "attire_of",
+          "labels_en": [
+            "attire_info_of"
+          ],
+          "labels_tr": [
+            "kiyafet_bilgisi"
+          ],
+          "head_types": [
+            "attire_info"
+          ],
+          "tail_types": [
+            "full_name"
+          ],
+          "description": "HEAD kilik-kiyafet ifadesi TAIL kisisine aittir.",
+          "templates_tr": [
+            "{head} olduğu için {tail}'in başvurusu reddedildi."
+          ]
+        },
+        {
+          "id": "member_of",
+          "labels_en": [
+            "member_of"
+          ],
+          "labels_tr": [
+            "uyesi"
+          ],
+          "head_types": [
+            "full_name"
+          ],
+          "tail_types": [
+            "union_membership",
+            "association_foundation_membership",
+            "political_opinion",
+            "company_name"
+          ],
+          "description": "HEAD kisisi TAIL olusuma uyedir; Madde 6 uyelik atfi.",
+          "templates_tr": [
+            "{head}, {tail}dir."
+          ]
+        },
+        {
+          "id": "sexual_life_of",
+          "labels_en": [
+            "sexual_life_info_of"
+          ],
+          "labels_tr": [
+            "cinsel_hayat_bilgisi"
+          ],
+          "head_types": [
+            "sexual_life_info"
+          ],
+          "tail_types": [
+            "full_name"
+          ],
+          "description": "HEAD ifade TAIL kisisine atfedilmistir.",
+          "templates_tr": [
+            "{tail}, {head} nedeniyle ayrımcılığa uğradığını beyan etti."
+          ]
+        },
+        {
+          "id": "conviction_of",
+          "labels_en": [
+            "conviction_of"
+          ],
+          "labels_tr": [
+            "mahkumiyeti"
+          ],
+          "head_types": [
+            "criminal_record"
+          ],
+          "tail_types": [
+            "full_name"
+          ],
+          "description": "HEAD hukum TAIL kisisine aittir.",
+          "templates_tr": [
+            "{tail} hakkında {head} verildi."
+          ]
+        },
+        {
+          "id": "biometric_of",
+          "labels_en": [
+            "biometric_data_of"
+          ],
+          "labels_tr": [
+            "biyometrik_verisi"
+          ],
+          "head_types": [
+            "biometric_data_reference"
+          ],
+          "tail_types": [
+            "full_name"
+          ],
+          "description": "HEAD biyometrik referans TAIL kisisine aittir.",
+          "templates_tr": [
+            "{tail}'in girişi {head} ile doğrulandı."
+          ]
+        },
+        {
+          "id": "genetic_of",
+          "labels_en": [
+            "genetic_data_of"
+          ],
+          "labels_tr": [
+            "genetik_verisi"
+          ],
+          "head_types": [
+            "genetic_data_reference"
+          ],
+          "tail_types": [
+            "full_name"
+          ],
+          "description": "HEAD genetik referans TAIL kisisine aittir.",
+          "templates_tr": [
+            "{tail}'in {head} taşıdığı raporlandı."
+          ]
+        },
+        {
+          "id": "signature_of",
+          "labels_en": [
+            "signature_of"
+          ],
+          "labels_tr": [
+            "imzasi"
+          ],
+          "head_types": [
+            "signature_handwriting"
+          ],
+          "tail_types": [
+            "full_name"
+          ],
+          "description": "HEAD imza referansi TAIL kisisine aittir.",
+          "templates_tr": [
+            "Belge {tail}'in {head} taşımaktadır."
+          ]
+        },
+        {
+          "id": "voice_of",
+          "labels_en": [
+            "voice_record_of"
+          ],
+          "labels_tr": [
+            "ses_kaydi"
+          ],
+          "head_types": [
+            "voice_record"
+          ],
+          "tail_types": [
+            "full_name"
+          ],
+          "description": "HEAD ses kaydi TAIL kisisine aittir.",
+          "templates_tr": [
+            "{head} içinde {tail} konuşmaktadır."
+          ]
+        }
+      ]
+    },
+    {
+      "group": "employment",
+      "group_tr": "istihdam",
+      "relations": [
+        {
+          "id": "employer_of",
+          "labels_en": [
+            "employer_of",
+            "works_at"
+          ],
+          "labels_tr": [
+            "calistigi_kurum"
+          ],
+          "head_types": [
+            "company_name"
+          ],
+          "tail_types": [
+            "full_name"
+          ],
+          "description": "HEAD kurum TAIL kisisinin isverenidir.",
+          "templates_tr": [
+            "{tail}, {head}'de çalışmaktadır."
+          ]
+        },
+        {
+          "id": "position_of",
+          "labels_en": [
+            "position_of",
+            "holds_position"
+          ],
+          "labels_tr": [
+            "gorevi"
+          ],
+          "head_types": [
+            "job_title"
+          ],
+          "tail_types": [
+            "full_name"
+          ],
+          "description": "HEAD unvan TAIL kisisine aittir.",
+          "templates_tr": [
+            "{head} {tail} toplantıya katıldı."
+          ]
+        },
+        {
+          "id": "employee_id_of",
+          "labels_en": [
+            "employee_id_of"
+          ],
+          "labels_tr": [
+            "sicil_numarasi"
+          ],
+          "head_types": [
+            "employee_id"
+          ],
+          "tail_types": [
+            "full_name"
+          ],
+          "description": "HEAD sicil no TAIL kisisine aittir.",
+          "templates_tr": [
+            "Sicil no {head} olan {tail}"
+          ]
+        },
+        {
+          "id": "work_history_of",
+          "labels_en": [
+            "work_history_of"
+          ],
+          "labels_tr": [
+            "is_gecmisi"
+          ],
+          "head_types": [
+            "work_history"
+          ],
+          "tail_types": [
+            "full_name"
+          ],
+          "description": "HEAD deneyim TAIL kisisine aittir.",
+          "templates_tr": [
+            "{tail}, {head} olarak çalıştı."
+          ]
+        },
+        {
+          "id": "disciplinary_of",
+          "labels_en": [
+            "disciplinary_record_of"
+          ],
+          "labels_tr": [
+            "disiplin_kaydi"
+          ],
+          "head_types": [
+            "performance_disciplinary"
+          ],
+          "tail_types": [
+            "full_name"
+          ],
+          "description": "HEAD kayit TAIL kisisine aittir; adli hukum degildir.",
+          "templates_tr": [
+            "{tail} hakkında {head} verilmiştir."
+          ]
+        },
+        {
+          "id": "education_of",
+          "labels_en": [
+            "education_of"
+          ],
+          "labels_tr": [
+            "egitim_bilgisi"
+          ],
+          "head_types": [
+            "education_info"
+          ],
+          "tail_types": [
+            "full_name"
+          ],
+          "description": "HEAD egitim kaydi TAIL kisisine aittir.",
+          "templates_tr": [
+            "{tail}, {head} mezunudur."
+          ]
+        },
+        {
+          "id": "military_status_of",
+          "labels_en": [
+            "military_status_of"
+          ],
+          "labels_tr": [
+            "askerlik_durumu"
+          ],
+          "head_types": [
+            "military_service_status"
+          ],
+          "tail_types": [
+            "full_name"
+          ],
+          "description": "HEAD durum TAIL kisisinin askerlik durumudur.",
+          "templates_tr": [
+            "{tail}'in askerlik durumu: {head}"
+          ]
+        },
+        {
+          "id": "student_number_of",
+          "labels_en": [
+            "student_number_of"
+          ],
+          "labels_tr": [
+            "ogrenci_numarasi"
+          ],
+          "head_types": [
+            "student_number"
+          ],
+          "tail_types": [
+            "full_name"
+          ],
+          "description": "HEAD numara TAIL ogrencisine aittir.",
+          "templates_tr": [
+            "{tail} (öğrenci no: {head})"
+          ]
+        },
+        {
+          "id": "emergency_contact_of",
+          "labels_en": [
+            "emergency_contact_of"
+          ],
+          "labels_tr": [
+            "acil_durumda_ulasilacak_kisi"
+          ],
+          "head_types": [
+            "full_name"
+          ],
+          "tail_types": [
+            "full_name"
+          ],
+          "description": "HEAD kisisi, TAIL calisaninin acil durumda ulasilacak yakinidir; ucuncu kisi verisidir.",
+          "templates_tr": [
+            "{tail}'in acil durum kişisi: {head}"
+          ]
+        }
+      ]
+    },
+    {
+      "group": "legal_customer",
+      "group_tr": "hukuki_musteri",
+      "relations": [
+        {
+          "id": "party_in_case",
+          "labels_en": [
+            "party_in_case"
+          ],
+          "labels_tr": [
+            "taraf_oldugu_dava"
+          ],
+          "head_types": [
+            "full_name"
+          ],
+          "tail_types": [
+            "legal_case_number",
+            "investigation_number",
+            "enforcement_file_number"
+          ],
+          "description": "HEAD kisisi TAIL dosyasinin tarafidir; rol (davaci/sanik) attribute olarak eklenebilir.",
+          "templates_tr": [
+            "{head}, {tail} sayılı dosyada davacıdır."
+          ]
+        },
+        {
+          "id": "verdict_in_case",
+          "labels_en": [
+            "verdict_in_case"
+          ],
+          "labels_tr": [
+            "dosyadaki_hukum"
+          ],
+          "head_types": [
+            "criminal_record"
+          ],
+          "tail_types": [
+            "legal_case_number"
+          ],
+          "description": "HEAD hukum TAIL dosyasinda verilmistir; mahkumiyeti dava kaydina baglar.",
+          "templates_tr": [
+            "{tail} sayılı dosyada {head} hükmedildi."
+          ]
+        },
+        {
+          "id": "customer_number_of",
+          "labels_en": [
+            "customer_number_of"
+          ],
+          "labels_tr": [
+            "musteri_numarasi"
+          ],
+          "head_types": [
+            "customer_number"
+          ],
+          "tail_types": [
+            "full_name"
+          ],
+          "description": "HEAD numara TAIL kisisinin musteri kaydidir.",
+          "templates_tr": [
+            "{tail} (müşteri no: {head})"
+          ]
+        },
+        {
+          "id": "subscription_of",
+          "labels_en": [
+            "subscription_of"
+          ],
+          "labels_tr": [
+            "abone_numarasi"
+          ],
+          "head_types": [
+            "subscription_number"
+          ],
+          "tail_types": [
+            "full_name",
+            "full_address"
+          ],
+          "description": "HEAD abone no TAIL kisisine veya adresine baglidir.",
+          "templates_tr": [
+            "{tail} adına {head} numaralı abonelik"
+          ]
+        },
+        {
+          "id": "order_of",
+          "labels_en": [
+            "order_of"
+          ],
+          "labels_tr": [
+            "siparisi"
+          ],
+          "head_types": [
+            "order_reference"
+          ],
+          "tail_types": [
+            "full_name"
+          ],
+          "description": "HEAD siparis TAIL kisisine aittir.",
+          "templates_tr": [
+            "{tail}'in {head} numaralı siparişi iade edildi."
+          ]
+        },
+        {
+          "id": "depicted_in",
+          "labels_en": [
+            "depicted_in",
+            "appears_in_recording"
+          ],
+          "labels_tr": [
+            "goruntulendigi_kayit"
+          ],
+          "head_types": [
+            "audiovisual_record_reference"
+          ],
+          "tail_types": [
+            "full_name"
+          ],
+          "description": "HEAD kayitta TAIL kisisi goruntulenmistir. (attr ters okunur: head=kayit)",
+          "templates_tr": [
+            "{tail}, {head} kaydında görülüyor."
+          ]
+        },
+        {
+          "id": "uets_of",
+          "labels_en": [
+            "uets_address_of"
+          ],
+          "labels_tr": [
+            "uets_adresi"
+          ],
+          "head_types": [
+            "uets_address"
+          ],
+          "tail_types": [
+            "full_name"
+          ],
+          "description": "HEAD UETS adresi TAIL kisisine/tarafina aittir.",
+          "templates_tr": [
+            "{tail}'in e-tebligat adresi: {head}"
+          ]
+        },
+        {
+          "id": "notified_via",
+          "labels_en": [
+            "notification_barcode_of"
+          ],
+          "labels_tr": [
+            "tebligat_barkodu"
+          ],
+          "head_types": [
+            "notification_barcode"
+          ],
+          "tail_types": [
+            "full_name"
+          ],
+          "description": "HEAD barkodlu tebligat TAIL muhatabina gonderilmistir.",
+          "templates_tr": [
+            "{tail}'e {head} barkod numaralı tebligat çıkarıldı."
+          ]
+        },
+        {
+          "id": "notary_act_of",
+          "labels_en": [
+            "notary_record_of"
+          ],
+          "labels_tr": [
+            "noter_islemi"
+          ],
+          "head_types": [
+            "notary_record_number"
+          ],
+          "tail_types": [
+            "full_name"
+          ],
+          "description": "HEAD yevmiye numarali noter islemi TAIL kisisine aittir.",
+          "templates_tr": [
+            "{tail} adına {head} yevmiye numaralı vekaletname"
+          ]
+        },
+        {
+          "id": "bar_registry_of",
+          "labels_en": [
+            "bar_registry_of"
+          ],
+          "labels_tr": [
+            "baro_sicili"
+          ],
+          "head_types": [
+            "bar_registry_number"
+          ],
+          "tail_types": [
+            "full_name"
+          ],
+          "description": "HEAD sicil no TAIL avukatina aittir.",
+          "templates_tr": [
+            "Av. {tail} (sicil no {head})"
+          ]
+        },
+        {
+          "id": "expert_registry_of",
+          "labels_en": [
+            "expert_registry_of"
+          ],
+          "labels_tr": [
+            "bilirkisi_sicili"
+          ],
+          "head_types": [
+            "expert_registry_number"
+          ],
+          "tail_types": [
+            "full_name"
+          ],
+          "description": "HEAD sicil no TAIL bilirkisisine aittir.",
+          "templates_tr": [
+            "Bilirkişi {tail} (sicil no {head})"
+          ]
+        },
+        {
+          "id": "judiciary_registry_of",
+          "labels_en": [
+            "judiciary_registry_of"
+          ],
+          "labels_tr": [
+            "hakim_savci_sicili"
+          ],
+          "head_types": [
+            "judge_prosecutor_registry_number"
+          ],
+          "tail_types": [
+            "full_name"
+          ],
+          "description": "HEAD sicil no TAIL hakim/savcisina aittir.",
+          "templates_tr": [
+            "Hâkim {tail} (sicil no {head})"
+          ]
+        },
+        {
+          "id": "loyalty_card_of",
+          "labels_en": [
+            "loyalty_card_of"
+          ],
+          "labels_tr": [
+            "sadakat_karti"
+          ],
+          "head_types": [
+            "loyalty_card_number"
+          ],
+          "tail_types": [
+            "full_name"
+          ],
+          "description": "HEAD kart TAIL musterisine aittir.",
+          "templates_tr": [
+            "{tail}'in sadakat kartı: {head}"
+          ]
+        },
+        {
+          "id": "shipment_of",
+          "labels_en": [
+            "cargo_tracking_of"
+          ],
+          "labels_tr": [
+            "kargo_takibi"
+          ],
+          "head_types": [
+            "cargo_tracking_number"
+          ],
+          "tail_types": [
+            "order_reference",
+            "full_name"
+          ],
+          "description": "HEAD takip numarasi TAIL siparisine/alicisina aittir.",
+          "templates_tr": [
+            "{tail} için kargo takip no: {head}"
+          ]
+        }
+      ]
+    },
+    {
+      "group": "organization",
+      "group_tr": "tuzel_kisi",
+      "relations": [
+        {
+          "id": "mersis_of",
+          "labels_en": [
+            "mersis_number_of"
+          ],
+          "labels_tr": [
+            "mersis_numarasi"
+          ],
+          "head_types": [
+            "mersis_number"
+          ],
+          "tail_types": [
+            "company_name"
+          ],
+          "description": "HEAD MERSIS no TAIL sirketine aittir.",
+          "templates_tr": [
+            "{tail} (MERSİS: {head})"
+          ]
+        },
+        {
+          "id": "trade_registry_of",
+          "labels_en": [
+            "trade_registry_of"
+          ],
+          "labels_tr": [
+            "ticaret_sicil_numarasi"
+          ],
+          "head_types": [
+            "trade_registry_number"
+          ],
+          "tail_types": [
+            "company_name"
+          ],
+          "description": "HEAD sicil no TAIL sirketine aittir.",
+          "templates_tr": [
+            "{tail}, {head} ticaret sicil numarasıyla kayıtlı."
+          ]
+        },
+        {
+          "id": "invoice_recipient",
+          "labels_en": [
+            "invoice_recipient",
+            "invoice_issued_to"
+          ],
+          "labels_tr": [
+            "faturanin_muhatabi"
+          ],
+          "head_types": [
+            "invoice_document_id"
+          ],
+          "tail_types": [
+            "full_name",
+            "company_name"
+          ],
+          "description": "HEAD fatura/ETTN TAIL muhatabina kesilmistir; belge kimligini kisiye baglar.",
+          "templates_tr": [
+            "{tail} adına kesilen fatura (ETTN: {head})"
+          ]
+        },
+        {
+          "id": "company_tax_of",
+          "labels_en": [
+            "company_tax_number_of"
+          ],
+          "labels_tr": [
+            "sirketin_vergi_numarasi"
+          ],
+          "head_types": [
+            "company_tax_number"
+          ],
+          "tail_types": [
+            "company_name"
+          ],
+          "description": "HEAD VKN TAIL sirketine aittir.",
+          "templates_tr": [
+            "{tail} (VKN: {head})"
+          ]
+        },
+        {
+          "id": "tax_office_of",
+          "labels_en": [
+            "tax_office_of"
+          ],
+          "labels_tr": [
+            "vergi_dairesi"
+          ],
+          "head_types": [
+            "tax_office_name"
+          ],
+          "tail_types": [
+            "full_name",
+            "company_name"
+          ],
+          "description": "HEAD vergi dairesi TAIL mukellefinin bagli oldugu dairedir.",
+          "templates_tr": [
+            "{tail}, {head} mükellefidir."
+          ]
+        }
+      ]
+    },
+    {
+      "group": "registry",
+      "group_tr": "kayit_kunyesi",
+      "relations": [
+        {
+          "id": "civil_registry_of",
+          "labels_en": [
+            "civil_registry_of"
+          ],
+          "labels_tr": [
+            "nufus_kaydi"
+          ],
+          "head_types": [
+            "civil_registry_volume_number",
+            "family_order_number",
+            "individual_order_number",
+            "registered_place"
+          ],
+          "tail_types": [
+            "full_name"
+          ],
+          "description": "HEAD nufus kunyesi bileseni TAIL kisisinin kaydina aittir.",
+          "templates_tr": [
+            "{tail} — Cilt No: {head}",
+            "{tail}'in nüfusa kayıtlı olduğu yer: {head}"
+          ]
+        },
+        {
+          "id": "property_of",
+          "labels_en": [
+            "property_of",
+            "real_estate_of"
+          ],
+          "labels_tr": [
+            "tasinmazi"
+          ],
+          "head_types": [
+            "land_parcel_number",
+            "independent_section_number"
+          ],
+          "tail_types": [
+            "full_name"
+          ],
+          "description": "HEAD tasinmaz kunyesi TAIL malikine aittir.",
+          "templates_tr": [
+            "{head} sayılı taşınmaz {tail} adına kayıtlıdır."
+          ]
+        }
+      ]
+    }
+  ]
+}

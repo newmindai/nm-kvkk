@@ -1,0 +1,235 @@
+{
+  "concept": {
+    "en": "health_data",
+    "tr": "saglik_verisi"
+  },
+  "kvkk_category": {
+    "en": "health",
+    "tr": "saglik"
+  },
+  "kvkk_sensitivity": "ozel nitelikli (Madde 6)",
+  "span_policy": {
+    "scope": "Kisiye baglanmis saglik ifadeleri etiketlenir. Genel tibbi bilgi ('grip virusle bulasir') etiketlenmez; kisi baglami sarttir.",
+    "span_extent": "Tani/ilac/islem adinin kendisi spandir; fiil ve baglaclari kapsamaz ('seker hastasi oldugu' icin span 'seker hastasi')."
+  },
+  "nodes": [
+    {
+      "id": "medical_condition",
+      "labels_en": [
+        "medical_condition",
+        "diagnosis",
+        "disease"
+      ],
+      "labels_tr": [
+        "hastalik",
+        "tani",
+        "saglik_durumu"
+      ],
+      "description": "Kisiye atfedilmis hastalik, tani veya saglik durumu ifadesi.",
+      "examples": [
+        {
+          "text": "Hastaya tip 2 diyabet tanısı kondu.",
+          "span": "tip 2 diyabet"
+        },
+        {
+          "text": "babam kalp yetmezliği yaşıyor",
+          "span": "kalp yetmezliği"
+        }
+      ]
+    },
+    {
+      "id": "medication",
+      "labels_en": [
+        "medication",
+        "drug_name",
+        "prescription"
+      ],
+      "labels_tr": [
+        "ilac",
+        "ilac_adi",
+        "recete"
+      ],
+      "description": "Kisinin kullandigi ilac veya recete bilgisi. Ilac adi tek basina genel bilgidir; kisiyle iliskilendiginde saglik verisi olur.",
+      "examples": [
+        {
+          "text": "Günde iki kez Metformin kullanıyor.",
+          "span": "Metformin"
+        }
+      ]
+    },
+    {
+      "id": "medical_procedure",
+      "labels_en": [
+        "medical_procedure",
+        "treatment",
+        "surgery"
+      ],
+      "labels_tr": [
+        "tibbi_islem",
+        "tedavi",
+        "ameliyat"
+      ],
+      "description": "Kisiye uygulanan tedavi, ameliyat veya tibbi islem.",
+      "examples": [
+        {
+          "text": "Geçen ay bypass ameliyatı oldu.",
+          "span": "bypass ameliyatı"
+        }
+      ]
+    },
+    {
+      "id": "disability_status",
+      "labels_en": [
+        "disability_status",
+        "disability_info"
+      ],
+      "labels_tr": [
+        "engellilik_durumu",
+        "engel_bilgisi"
+      ],
+      "description": "Engellilik durumu ve orani. Ozluk dosyalarinda ve raporlarda gecer.",
+      "examples": [
+        {
+          "text": "%40 engelli raporu bulunmaktadır.",
+          "span": "%40 engelli"
+        }
+      ]
+    },
+    {
+      "id": "blood_type",
+      "labels_en": [
+        "blood_type",
+        "blood_group"
+      ],
+      "labels_tr": [
+        "kan_grubu"
+      ],
+      "description": "Kan grubu bilgisi. Ehliyet ve kimlik belgelerinde gecer.",
+      "examples": [
+        {
+          "text": "Kan grubu: A Rh+",
+          "span": "A Rh+"
+        }
+      ]
+    },
+    {
+      "id": "mental_health_info",
+      "labels_en": [
+        "mental_health_info",
+        "psychological_condition"
+      ],
+      "labels_tr": [
+        "ruh_sagligi_bilgisi",
+        "psikolojik_durum"
+      ],
+      "description": "Kisiye atfedilmis ruh sagligi durumu, tani veya tedavi ifadesi. Ayri node tutulur cunku damgalama riski en yuksek saglik alt sinifidir.",
+      "examples": [
+        {
+          "text": "Depresyon tedavisi görmektedir.",
+          "span": "Depresyon tedavisi"
+        }
+      ]
+    },
+    {
+      "id": "health_report_id",
+      "labels_en": [
+        "health_report_id",
+        "patient_file_number",
+        "protocol_number"
+      ],
+      "labels_tr": [
+        "rapor_no",
+        "hasta_dosya_no",
+        "protokol_no"
+      ],
+      "description": "Hasta dosya, protokol veya rapor numarasi. Saglik kaydina baglanan tekil tanimlayicidir.",
+      "examples": [
+        {
+          "text": "Protokol no: 2024/12345",
+          "span": "2024/12345"
+        }
+      ]
+    },
+    {
+      "id": "medula_tracking_number",
+      "labels_en": [
+        "medula_tracking_number"
+      ],
+      "labels_tr": [
+        "medula_takip_no"
+      ],
+      "description": "SGK MEDULA sisteminde hasta basvurusuna uretilen takip numarasi.",
+      "legal_basis": "SGK MEDULA Web Servisleri Kilavuzu",
+      "examples": [
+        {
+          "text": "MEDULA takip no: 3P1234567",
+          "span": "3P1234567"
+        }
+      ]
+    },
+    {
+      "id": "provision_number",
+      "labels_en": [
+        "provision_number"
+      ],
+      "labels_tr": [
+        "provizyon_no"
+      ],
+      "description": "Saglik hizmeti provizyon numarasi.",
+      "legal_basis": "SUT; SGK MEDULA",
+      "examples": [
+        {
+          "text": "Provizyon no: 78912345",
+          "span": "78912345"
+        }
+      ]
+    },
+    {
+      "id": "eprescription_number",
+      "labels_en": [
+        "eprescription_number"
+      ],
+      "labels_tr": [
+        "erecete_no",
+        "e_recete_no"
+      ],
+      "description": "E-recete numarasi; TCKN ile birlikte eczane sorgusunda kullanilir.",
+      "legal_basis": "SGK e-recete protokolu",
+      "examples": [
+        {
+          "text": "e-Reçete no: 1A2B3C",
+          "span": "1A2B3C"
+        }
+      ]
+    },
+    {
+      "id": "doctor_license_number",
+      "labels_en": [
+        "doctor_license_number",
+        "diploma_registration_number"
+      ],
+      "labels_tr": [
+        "diploma_tescil_no",
+        "doktor_tescil_no"
+      ],
+      "description": "Hekimin diploma tescil numarasi; recete uzerinde zorunludur. Hekime ait Madde 3 verisidir ancak saglik belgesi baglaminda gecer.",
+      "legal_basis": "SUT recete zorunlu alanlari",
+      "examples": [
+        {
+          "text": "Dr. diploma tescil no: 123456",
+          "span": "123456"
+        }
+      ]
+    }
+  ],
+  "negative_examples": [
+    {
+      "text": "Diyabet, insülin direnciyle ilişkili bir hastalıktır.",
+      "note": "genel tibbi bilgi, kisi baglami yok"
+    },
+    {
+      "text": "Metformin eczanelerde satılır.",
+      "note": "genel ilac bilgisi"
+    }
+  ]
+}

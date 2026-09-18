@@ -1,0 +1,26 @@
+# kvkk_synth/environment.yml — one environment for every step (embeddings, sampler, writer, parser, judges, dataset).
+# Pins are the versions the e08 build ran with (conda env `onto`, 2026-09).
+#   conda env create -f environment.yml && conda activate kvkk-synth
+name: kvkk-synth
+channels:
+  - conda-forge
+dependencies:
+  - python=3.11
+  - pip
+  - pip:
+      - pandas==3.0.5
+      - pyarrow==25.0.1
+      - numpy==2.4.6
+      - requests==2.34.2
+      - jinja2==3.1.6
+      - pydantic==2.13.4
+      - pyyaml==6.0.3
+      - sentence-transformers==6.0.1
+      - torch==2.13.0
+      - transformers==5.16.1
+      - tokenizers==0.23.2
+      - safetensors==0.8.0
+      - huggingface_hub==1.30.0
+      - scikit-learn==1.9.0
+      - scipy==1.17.1
+      - pytest==9.1.1

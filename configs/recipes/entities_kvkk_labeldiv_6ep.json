@@ -1,0 +1,38 @@
+{
+  "_comment": "THE KVKK ENTITY CHAMPION RECIPE (registry: kvkk50k-labeldiv_gliner25-orig_ddp4_6ep). Full-checkpoint fine-tune of fastino/gliner2.5-multi-v1 on 50k stratified KVKK rows whose label NAMES are diversified (86 aliases, canonical kept at p=0.5; eval stays canonical). 6 epochs = 9,378 steps at EFFECTIVE batch 32: batch_size 8 per process x 4 DDP ranks. On 1 GPU pass --set gradient_accumulation_steps=4 (recipes/train_entities_kvkk.sh does this when NPROC=1). bf16 on the patched library (H100). Result: wording benchmark 0.932 canonical / 0.930 unseen-alias; base of every relations model.",
+  "run_name": "entities_kvkk_labeldiv_6ep",
+  "seed": 42,
+  "model": {
+    "from_pretrained": "models/gliner2.5-multi-v1"
+  },
+  "training": {
+    "max_steps": 9378,
+    "batch_size": 8,
+    "gradient_accumulation_steps": 1,
+    "eval_batch_size": 32,
+    "encoder_lr": 2e-05,
+    "task_lr": 0.0005,
+    "warmup_ratio": 0.1,
+    "scheduler_type": "linear",
+    "fp16": false,
+    "bf16": true,
+    "eval_strategy": "steps",
+    "eval_steps": 1000,
+    "save_total_limit": 2,
+    "save_best": true,
+    "metric_for_best": "exact_f1_micro",
+    "greater_is_better": true,
+    "logging_steps": 50,
+    "max_len": 1024,
+    "on_capacity_exceeded": "skip_sample",
+    "num_workers": 4,
+    "pin_memory": true,
+    "validate_data": true,
+    "report_to_wandb": false,
+    "allow_invalid_samples": true
+  },
+  "eval": {
+    "batch_size": 32,
+    "threshold": 0.5
+  }
+}

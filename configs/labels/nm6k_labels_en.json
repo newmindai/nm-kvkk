@@ -1,0 +1,1064 @@
+[
+ {
+  "id": "full_name",
+  "tr": "full name",
+  "group": "person_name",
+  "group_tr": "kisi_adi",
+  "sensitivity": "genel nitelikli (Madde 3)",
+  "out_of_scope": false,
+  "source": "nm6k-en"
+ },
+ {
+  "id": "first_name",
+  "tr": "first name",
+  "group": "person_name",
+  "group_tr": "kisi_adi",
+  "sensitivity": "genel nitelikli (Madde 3)",
+  "out_of_scope": false,
+  "source": "nm6k-en"
+ },
+ {
+  "id": "middle_name",
+  "tr": "middle name",
+  "group": "person_name",
+  "group_tr": "kisi_adi",
+  "sensitivity": "genel nitelikli (Madde 3)",
+  "out_of_scope": false,
+  "source": "nm6k-en"
+ },
+ {
+  "id": "last_name",
+  "tr": "last name",
+  "group": "person_name",
+  "group_tr": "kisi_adi",
+  "sensitivity": "genel nitelikli (Madde 3)",
+  "out_of_scope": false,
+  "source": "nm6k-en"
+ },
+ {
+  "id": "maiden_name",
+  "tr": "maiden name",
+  "group": "person_name",
+  "group_tr": "kisi_adi",
+  "sensitivity": "genel nitelikli (Madde 3)",
+  "out_of_scope": false,
+  "source": "nm6k-en"
+ },
+ {
+  "id": "mothers_maiden_name",
+  "tr": "mothers maiden name",
+  "group": "person_name",
+  "group_tr": "kisi_adi",
+  "sensitivity": "genel nitelikli (Madde 3)",
+  "out_of_scope": false,
+  "source": "nm6k-en"
+ },
+ {
+  "id": "initials",
+  "tr": "initials",
+  "group": "person_name",
+  "group_tr": "kisi_adi",
+  "sensitivity": "genel nitelikli (Madde 3)",
+  "out_of_scope": false,
+  "source": "nm6k-en"
+ },
+ {
+  "id": "nickname",
+  "tr": "nickname",
+  "group": "person_name",
+  "group_tr": "kisi_adi",
+  "sensitivity": "genel nitelikli (Madde 3)",
+  "out_of_scope": false,
+  "source": "nm6k-en"
+ },
+ {
+  "id": "title_honorific",
+  "tr": "title honorific",
+  "group": "person_name",
+  "group_tr": "kisi_adi",
+  "sensitivity": "genel nitelikli (Madde 3)",
+  "out_of_scope": false,
+  "source": "nm6k-en"
+ },
+ {
+  "id": "national_id_number",
+  "tr": "national id number",
+  "group": "identity_number",
+  "group_tr": "kimlik_numarasi",
+  "sensitivity": "genel nitelikli (Madde 3)",
+  "out_of_scope": false,
+  "source": "nm6k-en"
+ },
+ {
+  "id": "foreigner_id_number",
+  "tr": "foreigner id number",
+  "group": "identity_number",
+  "group_tr": "kimlik_numarasi",
+  "sensitivity": "genel nitelikli (Madde 3)",
+  "out_of_scope": false,
+  "source": "nm6k-en"
+ },
+ {
+  "id": "id_document_serial",
+  "tr": "id document serial",
+  "group": "identity_number",
+  "group_tr": "kimlik_numarasi",
+  "sensitivity": "genel nitelikli (Madde 3)",
+  "out_of_scope": false,
+  "source": "nm6k-en"
+ },
+ {
+  "id": "passport_number",
+  "tr": "passport number",
+  "group": "identity_number",
+  "group_tr": "kimlik_numarasi",
+  "sensitivity": "genel nitelikli (Madde 3)",
+  "out_of_scope": false,
+  "source": "nm6k-en"
+ },
+ {
+  "id": "drivers_license_number",
+  "tr": "drivers license number",
+  "group": "identity_number",
+  "group_tr": "kimlik_numarasi",
+  "sensitivity": "genel nitelikli (Madde 3)",
+  "out_of_scope": false,
+  "source": "nm6k-en"
+ },
+ {
+  "id": "tax_id_number",
+  "tr": "tax id number",
+  "group": "identity_number",
+  "group_tr": "kimlik_numarasi",
+  "sensitivity": "genel nitelikli (Madde 3)",
+  "out_of_scope": false,
+  "source": "nm6k-en"
+ },
+ {
+  "id": "social_security_number",
+  "tr": "social security number",
+  "group": "identity_number",
+  "group_tr": "kimlik_numarasi",
+  "sensitivity": "genel nitelikli (Madde 3)",
+  "out_of_scope": false,
+  "source": "nm6k-en"
+ },
+ {
+  "id": "yupass_number",
+  "tr": "yupass number",
+  "group": "identity_number",
+  "group_tr": "kimlik_numarasi",
+  "sensitivity": "genel nitelikli (Madde 3)",
+  "out_of_scope": false,
+  "source": "nm6k-en"
+ },
+ {
+  "id": "passport_mrz",
+  "tr": "passport mrz",
+  "group": "identity_number",
+  "group_tr": "kimlik_numarasi",
+  "sensitivity": "genel nitelikli (Madde 3)",
+  "out_of_scope": false,
+  "source": "nm6k-en"
+ },
+ {
+  "id": "phone_number",
+  "tr": "phone number",
+  "group": "contact_info",
+  "group_tr": "iletisim_bilgisi",
+  "sensitivity": "genel nitelikli (Madde 3)",
+  "out_of_scope": false,
+  "source": "nm6k-en"
+ },
+ {
+  "id": "email_address",
+  "tr": "email address",
+  "group": "contact_info",
+  "group_tr": "iletisim_bilgisi",
+  "sensitivity": "genel nitelikli (Madde 3)",
+  "out_of_scope": false,
+  "source": "nm6k-en"
+ },
+ {
+  "id": "kep_address",
+  "tr": "kep address",
+  "group": "contact_info",
+  "group_tr": "iletisim_bilgisi",
+  "sensitivity": "genel nitelikli (Madde 3)",
+  "out_of_scope": false,
+  "source": "nm6k-en"
+ },
+ {
+  "id": "full_address",
+  "tr": "full address",
+  "group": "contact_info",
+  "group_tr": "iletisim_bilgisi",
+  "sensitivity": "genel nitelikli (Madde 3)",
+  "out_of_scope": false,
+  "source": "nm6k-en"
+ },
+ {
+  "id": "street_line",
+  "tr": "street line",
+  "group": "contact_info",
+  "group_tr": "iletisim_bilgisi",
+  "sensitivity": "genel nitelikli (Madde 3)",
+  "out_of_scope": false,
+  "source": "nm6k-en"
+ },
+ {
+  "id": "district",
+  "tr": "district",
+  "group": "contact_info",
+  "group_tr": "iletisim_bilgisi",
+  "sensitivity": "genel nitelikli (Madde 3)",
+  "out_of_scope": false,
+  "source": "nm6k-en"
+ },
+ {
+  "id": "city",
+  "tr": "city",
+  "group": "contact_info",
+  "group_tr": "iletisim_bilgisi",
+  "sensitivity": "genel nitelikli (Madde 3)",
+  "out_of_scope": false,
+  "source": "nm6k-en"
+ },
+ {
+  "id": "postal_code",
+  "tr": "postal code",
+  "group": "contact_info",
+  "group_tr": "iletisim_bilgisi",
+  "sensitivity": "genel nitelikli (Madde 3)",
+  "out_of_scope": false,
+  "source": "nm6k-en"
+ },
+ {
+  "id": "fax_number",
+  "tr": "fax number",
+  "group": "contact_info",
+  "group_tr": "iletisim_bilgisi",
+  "sensitivity": "genel nitelikli (Madde 3)",
+  "out_of_scope": false,
+  "source": "nm6k-en"
+ },
+ {
+  "id": "date_of_birth",
+  "tr": "date of birth",
+  "group": "birth_civil_status",
+  "group_tr": "dogum_medeni_durum",
+  "sensitivity": "genel nitelikli (Madde 3)",
+  "out_of_scope": false,
+  "source": "nm6k-en"
+ },
+ {
+  "id": "place_of_birth",
+  "tr": "place of birth",
+  "group": "birth_civil_status",
+  "group_tr": "dogum_medeni_durum",
+  "sensitivity": "genel nitelikli (Madde 3)",
+  "out_of_scope": false,
+  "source": "nm6k-en"
+ },
+ {
+  "id": "age",
+  "tr": "age",
+  "group": "birth_civil_status",
+  "group_tr": "dogum_medeni_durum",
+  "sensitivity": "genel nitelikli (Madde 3)",
+  "out_of_scope": false,
+  "source": "nm6k-en"
+ },
+ {
+  "id": "gender",
+  "tr": "gender",
+  "group": "birth_civil_status",
+  "group_tr": "dogum_medeni_durum",
+  "sensitivity": "genel nitelikli (Madde 3)",
+  "out_of_scope": false,
+  "source": "nm6k-en"
+ },
+ {
+  "id": "marital_status",
+  "tr": "marital status",
+  "group": "birth_civil_status",
+  "group_tr": "dogum_medeni_durum",
+  "sensitivity": "genel nitelikli (Madde 3)",
+  "out_of_scope": false,
+  "source": "nm6k-en"
+ },
+ {
+  "id": "nationality",
+  "tr": "nationality",
+  "group": "birth_civil_status",
+  "group_tr": "dogum_medeni_durum",
+  "sensitivity": "genel nitelikli (Madde 3)",
+  "out_of_scope": false,
+  "source": "nm6k-en"
+ },
+ {
+  "id": "iban",
+  "tr": "iban",
+  "group": "financial_info",
+  "group_tr": "finansal_bilgi",
+  "sensitivity": "genel nitelikli (Madde 3)",
+  "out_of_scope": false,
+  "source": "nm6k-en"
+ },
+ {
+  "id": "card_number",
+  "tr": "card number",
+  "group": "financial_info",
+  "group_tr": "finansal_bilgi",
+  "sensitivity": "genel nitelikli (Madde 3)",
+  "out_of_scope": false,
+  "source": "nm6k-en"
+ },
+ {
+  "id": "card_cvv",
+  "tr": "card cvv",
+  "group": "financial_info",
+  "group_tr": "finansal_bilgi",
+  "sensitivity": "genel nitelikli (Madde 3)",
+  "out_of_scope": false,
+  "source": "nm6k-en"
+ },
+ {
+  "id": "card_expiry",
+  "tr": "card expiry",
+  "group": "financial_info",
+  "group_tr": "finansal_bilgi",
+  "sensitivity": "genel nitelikli (Madde 3)",
+  "out_of_scope": false,
+  "source": "nm6k-en"
+ },
+ {
+  "id": "bank_account_number",
+  "tr": "bank account number",
+  "group": "financial_info",
+  "group_tr": "finansal_bilgi",
+  "sensitivity": "genel nitelikli (Madde 3)",
+  "out_of_scope": false,
+  "source": "nm6k-en"
+ },
+ {
+  "id": "swift_bic",
+  "tr": "swift bic",
+  "group": "financial_info",
+  "group_tr": "finansal_bilgi",
+  "sensitivity": "genel nitelikli (Madde 3)",
+  "out_of_scope": false,
+  "source": "nm6k-en"
+ },
+ {
+  "id": "salary_info",
+  "tr": "salary info",
+  "group": "financial_info",
+  "group_tr": "finansal_bilgi",
+  "sensitivity": "genel nitelikli (Madde 3)",
+  "out_of_scope": false,
+  "source": "nm6k-en"
+ },
+ {
+  "id": "credit_score",
+  "tr": "credit score",
+  "group": "financial_info",
+  "group_tr": "finansal_bilgi",
+  "sensitivity": "genel nitelikli (Madde 3)",
+  "out_of_scope": false,
+  "source": "nm6k-en"
+ },
+ {
+  "id": "risk_report",
+  "tr": "risk report",
+  "group": "financial_info",
+  "group_tr": "finansal_bilgi",
+  "sensitivity": "genel nitelikli (Madde 3)",
+  "out_of_scope": false,
+  "source": "nm6k-en"
+ },
+ {
+  "id": "crypto_wallet_address",
+  "tr": "crypto wallet address",
+  "group": "financial_info",
+  "group_tr": "finansal_bilgi",
+  "sensitivity": "genel nitelikli (Madde 3)",
+  "out_of_scope": false,
+  "source": "nm6k-en"
+ },
+ {
+  "id": "insurance_policy_number",
+  "tr": "insurance policy number",
+  "group": "financial_info",
+  "group_tr": "finansal_bilgi",
+  "sensitivity": "genel nitelikli (Madde 3)",
+  "out_of_scope": false,
+  "source": "nm6k-en"
+ },
+ {
+  "id": "ip_address",
+  "tr": "ip address",
+  "group": "digital_identifier",
+  "group_tr": "dijital_kimlik",
+  "sensitivity": "genel nitelikli (Madde 3)",
+  "out_of_scope": false,
+  "source": "nm6k-en"
+ },
+ {
+  "id": "username",
+  "tr": "username",
+  "group": "digital_identifier",
+  "group_tr": "dijital_kimlik",
+  "sensitivity": "genel nitelikli (Madde 3)",
+  "out_of_scope": false,
+  "source": "nm6k-en"
+ },
+ {
+  "id": "password",
+  "tr": "password",
+  "group": "digital_identifier",
+  "group_tr": "dijital_kimlik",
+  "sensitivity": "genel nitelikli (Madde 3)",
+  "out_of_scope": false,
+  "source": "nm6k-en"
+ },
+ {
+  "id": "device_id",
+  "tr": "device id",
+  "group": "digital_identifier",
+  "group_tr": "dijital_kimlik",
+  "sensitivity": "genel nitelikli (Madde 3)",
+  "out_of_scope": false,
+  "source": "nm6k-en"
+ },
+ {
+  "id": "social_media_handle",
+  "tr": "social media handle",
+  "group": "digital_identifier",
+  "group_tr": "dijital_kimlik",
+  "sensitivity": "genel nitelikli (Madde 3)",
+  "out_of_scope": false,
+  "source": "nm6k-en"
+ },
+ {
+  "id": "url_with_pii",
+  "tr": "url with pii",
+  "group": "digital_identifier",
+  "group_tr": "dijital_kimlik",
+  "sensitivity": "genel nitelikli (Madde 3)",
+  "out_of_scope": false,
+  "source": "nm6k-en"
+ },
+ {
+  "id": "session_or_token",
+  "tr": "session or token",
+  "group": "digital_identifier",
+  "group_tr": "dijital_kimlik",
+  "sensitivity": "genel nitelikli (Madde 3)",
+  "out_of_scope": false,
+  "source": "nm6k-en"
+ },
+ {
+  "id": "advertising_id",
+  "tr": "advertising id",
+  "group": "digital_identifier",
+  "group_tr": "dijital_kimlik",
+  "sensitivity": "genel nitelikli (Madde 3)",
+  "out_of_scope": false,
+  "source": "nm6k-en"
+ },
+ {
+  "id": "cookie_id",
+  "tr": "cookie id",
+  "group": "digital_identifier",
+  "group_tr": "dijital_kimlik",
+  "sensitivity": "genel nitelikli (Madde 3)",
+  "out_of_scope": false,
+  "source": "nm6k-en"
+ },
+ {
+  "id": "sim_identifier",
+  "tr": "sim identifier",
+  "group": "digital_identifier",
+  "group_tr": "dijital_kimlik",
+  "sensitivity": "genel nitelikli (Madde 3)",
+  "out_of_scope": false,
+  "source": "nm6k-en"
+ },
+ {
+  "id": "gps_coordinates",
+  "tr": "gps coordinates",
+  "group": "location_data",
+  "group_tr": "konum_verisi",
+  "sensitivity": "genel nitelikli (Madde 3)",
+  "out_of_scope": false,
+  "source": "nm6k-en"
+ },
+ {
+  "id": "tracked_location",
+  "tr": "tracked location",
+  "group": "location_data",
+  "group_tr": "konum_verisi",
+  "sensitivity": "genel nitelikli (Madde 3)",
+  "out_of_scope": false,
+  "source": "nm6k-en"
+ },
+ {
+  "id": "workplace_location",
+  "tr": "workplace location",
+  "group": "location_data",
+  "group_tr": "konum_verisi",
+  "sensitivity": "genel nitelikli (Madde 3)",
+  "out_of_scope": false,
+  "source": "nm6k-en"
+ },
+ {
+  "id": "license_plate",
+  "tr": "license plate",
+  "group": "vehicle_identifier",
+  "group_tr": "arac_kimligi",
+  "sensitivity": "genel nitelikli (Madde 3)",
+  "out_of_scope": false,
+  "source": "nm6k-en"
+ },
+ {
+  "id": "vin_chassis_number",
+  "tr": "vin chassis number",
+  "group": "vehicle_identifier",
+  "group_tr": "arac_kimligi",
+  "sensitivity": "genel nitelikli (Madde 3)",
+  "out_of_scope": false,
+  "source": "nm6k-en"
+ },
+ {
+  "id": "vehicle_registration_number",
+  "tr": "vehicle registration number",
+  "group": "vehicle_identifier",
+  "group_tr": "arac_kimligi",
+  "sensitivity": "genel nitelikli (Madde 3)",
+  "out_of_scope": false,
+  "source": "nm6k-en"
+ },
+ {
+  "id": "medical_condition",
+  "tr": "medical condition",
+  "group": "health_data",
+  "group_tr": "saglik_verisi",
+  "sensitivity": "ozel nitelikli (Madde 6)",
+  "out_of_scope": false,
+  "source": "nm6k-en"
+ },
+ {
+  "id": "medication",
+  "tr": "medication",
+  "group": "health_data",
+  "group_tr": "saglik_verisi",
+  "sensitivity": "ozel nitelikli (Madde 6)",
+  "out_of_scope": false,
+  "source": "nm6k-en"
+ },
+ {
+  "id": "medical_procedure",
+  "tr": "medical procedure",
+  "group": "health_data",
+  "group_tr": "saglik_verisi",
+  "sensitivity": "ozel nitelikli (Madde 6)",
+  "out_of_scope": false,
+  "source": "nm6k-en"
+ },
+ {
+  "id": "disability_status",
+  "tr": "disability status",
+  "group": "health_data",
+  "group_tr": "saglik_verisi",
+  "sensitivity": "ozel nitelikli (Madde 6)",
+  "out_of_scope": false,
+  "source": "nm6k-en"
+ },
+ {
+  "id": "blood_type",
+  "tr": "blood type",
+  "group": "health_data",
+  "group_tr": "saglik_verisi",
+  "sensitivity": "ozel nitelikli (Madde 6)",
+  "out_of_scope": false,
+  "source": "nm6k-en"
+ },
+ {
+  "id": "mental_health_info",
+  "tr": "mental health info",
+  "group": "health_data",
+  "group_tr": "saglik_verisi",
+  "sensitivity": "ozel nitelikli (Madde 6)",
+  "out_of_scope": false,
+  "source": "nm6k-en"
+ },
+ {
+  "id": "health_report_id",
+  "tr": "health report id",
+  "group": "health_data",
+  "group_tr": "saglik_verisi",
+  "sensitivity": "ozel nitelikli (Madde 6)",
+  "out_of_scope": false,
+  "source": "nm6k-en"
+ },
+ {
+  "id": "medula_tracking_number",
+  "tr": "medula tracking number",
+  "group": "health_data",
+  "group_tr": "saglik_verisi",
+  "sensitivity": "ozel nitelikli (Madde 6)",
+  "out_of_scope": false,
+  "source": "nm6k-en"
+ },
+ {
+  "id": "provision_number",
+  "tr": "provision number",
+  "group": "health_data",
+  "group_tr": "saglik_verisi",
+  "sensitivity": "ozel nitelikli (Madde 6)",
+  "out_of_scope": false,
+  "source": "nm6k-en"
+ },
+ {
+  "id": "eprescription_number",
+  "tr": "eprescription number",
+  "group": "health_data",
+  "group_tr": "saglik_verisi",
+  "sensitivity": "ozel nitelikli (Madde 6)",
+  "out_of_scope": false,
+  "source": "nm6k-en"
+ },
+ {
+  "id": "doctor_license_number",
+  "tr": "doctor license number",
+  "group": "health_data",
+  "group_tr": "saglik_verisi",
+  "sensitivity": "ozel nitelikli (Madde 6)",
+  "out_of_scope": false,
+  "source": "nm6k-en"
+ },
+ {
+  "id": "ethnicity",
+  "tr": "ethnicity",
+  "group": "special_category_data",
+  "group_tr": "ozel_nitelikli_veri",
+  "sensitivity": "ozel nitelikli (Madde 6)",
+  "out_of_scope": false,
+  "source": "nm6k-en"
+ },
+ {
+  "id": "political_opinion",
+  "tr": "political opinion",
+  "group": "special_category_data",
+  "group_tr": "ozel_nitelikli_veri",
+  "sensitivity": "ozel nitelikli (Madde 6)",
+  "out_of_scope": false,
+  "source": "nm6k-en"
+ },
+ {
+  "id": "religious_belief",
+  "tr": "religious belief",
+  "group": "special_category_data",
+  "group_tr": "ozel_nitelikli_veri",
+  "sensitivity": "ozel nitelikli (Madde 6)",
+  "out_of_scope": false,
+  "source": "nm6k-en"
+ },
+ {
+  "id": "philosophical_belief",
+  "tr": "philosophical belief",
+  "group": "special_category_data",
+  "group_tr": "ozel_nitelikli_veri",
+  "sensitivity": "ozel nitelikli (Madde 6)",
+  "out_of_scope": false,
+  "source": "nm6k-en"
+ },
+ {
+  "id": "attire_info",
+  "tr": "attire info",
+  "group": "special_category_data",
+  "group_tr": "ozel_nitelikli_veri",
+  "sensitivity": "ozel nitelikli (Madde 6)",
+  "out_of_scope": false,
+  "source": "nm6k-en"
+ },
+ {
+  "id": "union_membership",
+  "tr": "union membership",
+  "group": "special_category_data",
+  "group_tr": "ozel_nitelikli_veri",
+  "sensitivity": "ozel nitelikli (Madde 6)",
+  "out_of_scope": false,
+  "source": "nm6k-en"
+ },
+ {
+  "id": "association_foundation_membership",
+  "tr": "association foundation membership",
+  "group": "special_category_data",
+  "group_tr": "ozel_nitelikli_veri",
+  "sensitivity": "ozel nitelikli (Madde 6)",
+  "out_of_scope": false,
+  "source": "nm6k-en"
+ },
+ {
+  "id": "sexual_life_info",
+  "tr": "sexual life info",
+  "group": "special_category_data",
+  "group_tr": "ozel_nitelikli_veri",
+  "sensitivity": "ozel nitelikli (Madde 6)",
+  "out_of_scope": false,
+  "source": "nm6k-en"
+ },
+ {
+  "id": "criminal_record",
+  "tr": "criminal record",
+  "group": "special_category_data",
+  "group_tr": "ozel_nitelikli_veri",
+  "sensitivity": "ozel nitelikli (Madde 6)",
+  "out_of_scope": false,
+  "source": "nm6k-en"
+ },
+ {
+  "id": "biometric_data_reference",
+  "tr": "biometric data reference",
+  "group": "special_category_data",
+  "group_tr": "ozel_nitelikli_veri",
+  "sensitivity": "ozel nitelikli (Madde 6)",
+  "out_of_scope": false,
+  "source": "nm6k-en"
+ },
+ {
+  "id": "genetic_data_reference",
+  "tr": "genetic data reference",
+  "group": "special_category_data",
+  "group_tr": "ozel_nitelikli_veri",
+  "sensitivity": "ozel nitelikli (Madde 6)",
+  "out_of_scope": false,
+  "source": "nm6k-en"
+ },
+ {
+  "id": "signature_handwriting",
+  "tr": "signature handwriting",
+  "group": "special_category_data",
+  "group_tr": "ozel_nitelikli_veri",
+  "sensitivity": "ozel nitelikli (Madde 6)",
+  "out_of_scope": false,
+  "source": "nm6k-en"
+ },
+ {
+  "id": "voice_record",
+  "tr": "voice record",
+  "group": "special_category_data",
+  "group_tr": "ozel_nitelikli_veri",
+  "sensitivity": "ozel nitelikli (Madde 6)",
+  "out_of_scope": false,
+  "source": "nm6k-en"
+ },
+ {
+  "id": "job_title",
+  "tr": "job title",
+  "group": "employment_info",
+  "group_tr": "ozluk_bilgisi",
+  "sensitivity": "genel nitelikli (Madde 3)",
+  "out_of_scope": false,
+  "source": "nm6k-en"
+ },
+ {
+  "id": "employee_id",
+  "tr": "employee id",
+  "group": "employment_info",
+  "group_tr": "ozluk_bilgisi",
+  "sensitivity": "genel nitelikli (Madde 3)",
+  "out_of_scope": false,
+  "source": "nm6k-en"
+ },
+ {
+  "id": "work_history",
+  "tr": "work history",
+  "group": "employment_info",
+  "group_tr": "ozluk_bilgisi",
+  "sensitivity": "genel nitelikli (Madde 3)",
+  "out_of_scope": false,
+  "source": "nm6k-en"
+ },
+ {
+  "id": "performance_disciplinary",
+  "tr": "performance disciplinary",
+  "group": "employment_info",
+  "group_tr": "ozluk_bilgisi",
+  "sensitivity": "genel nitelikli (Madde 3)",
+  "out_of_scope": false,
+  "source": "nm6k-en"
+ },
+ {
+  "id": "education_info",
+  "tr": "education info",
+  "group": "employment_info",
+  "group_tr": "ozluk_bilgisi",
+  "sensitivity": "genel nitelikli (Madde 3)",
+  "out_of_scope": false,
+  "source": "nm6k-en"
+ },
+ {
+  "id": "military_service_status",
+  "tr": "military service status",
+  "group": "employment_info",
+  "group_tr": "ozluk_bilgisi",
+  "sensitivity": "genel nitelikli (Madde 3)",
+  "out_of_scope": false,
+  "source": "nm6k-en"
+ },
+ {
+  "id": "student_number",
+  "tr": "student number",
+  "group": "employment_info",
+  "group_tr": "ozluk_bilgisi",
+  "sensitivity": "genel nitelikli (Madde 3)",
+  "out_of_scope": false,
+  "source": "nm6k-en"
+ },
+ {
+  "id": "company_name",
+  "tr": "company name",
+  "group": "organization_identifier",
+  "group_tr": "tuzel_kisi_kimligi",
+  "sensitivity": "genel nitelikli (Madde 3)",
+  "out_of_scope": true,
+  "source": "nm6k-en"
+ },
+ {
+  "id": "mersis_number",
+  "tr": "mersis number",
+  "group": "organization_identifier",
+  "group_tr": "tuzel_kisi_kimligi",
+  "sensitivity": "genel nitelikli (Madde 3)",
+  "out_of_scope": true,
+  "source": "nm6k-en"
+ },
+ {
+  "id": "trade_registry_number",
+  "tr": "trade registry number",
+  "group": "organization_identifier",
+  "group_tr": "tuzel_kisi_kimligi",
+  "sensitivity": "genel nitelikli (Madde 3)",
+  "out_of_scope": true,
+  "source": "nm6k-en"
+ },
+ {
+  "id": "invoice_document_id",
+  "tr": "invoice document id",
+  "group": "organization_identifier",
+  "group_tr": "tuzel_kisi_kimligi",
+  "sensitivity": "genel nitelikli (Madde 3)",
+  "out_of_scope": true,
+  "source": "nm6k-en"
+ },
+ {
+  "id": "company_tax_number",
+  "tr": "company tax number",
+  "group": "organization_identifier",
+  "group_tr": "tuzel_kisi_kimligi",
+  "sensitivity": "genel nitelikli (Madde 3)",
+  "out_of_scope": true,
+  "source": "nm6k-en"
+ },
+ {
+  "id": "tax_office_name",
+  "tr": "tax office name",
+  "group": "organization_identifier",
+  "group_tr": "tuzel_kisi_kimligi",
+  "sensitivity": "genel nitelikli (Madde 3)",
+  "out_of_scope": true,
+  "source": "nm6k-en"
+ },
+ {
+  "id": "legal_case_number",
+  "tr": "legal case number",
+  "group": "legal_customer_records",
+  "group_tr": "hukuki_musteri_kayitlari",
+  "sensitivity": "genel nitelikli (Madde 3)",
+  "out_of_scope": false,
+  "source": "nm6k-en"
+ },
+ {
+  "id": "customer_number",
+  "tr": "customer number",
+  "group": "legal_customer_records",
+  "group_tr": "hukuki_musteri_kayitlari",
+  "sensitivity": "genel nitelikli (Madde 3)",
+  "out_of_scope": false,
+  "source": "nm6k-en"
+ },
+ {
+  "id": "subscription_number",
+  "tr": "subscription number",
+  "group": "legal_customer_records",
+  "group_tr": "hukuki_musteri_kayitlari",
+  "sensitivity": "genel nitelikli (Madde 3)",
+  "out_of_scope": false,
+  "source": "nm6k-en"
+ },
+ {
+  "id": "order_reference",
+  "tr": "order reference",
+  "group": "legal_customer_records",
+  "group_tr": "hukuki_musteri_kayitlari",
+  "sensitivity": "genel nitelikli (Madde 3)",
+  "out_of_scope": false,
+  "source": "nm6k-en"
+ },
+ {
+  "id": "audiovisual_record_reference",
+  "tr": "audiovisual record reference",
+  "group": "legal_customer_records",
+  "group_tr": "hukuki_musteri_kayitlari",
+  "sensitivity": "genel nitelikli (Madde 3)",
+  "out_of_scope": false,
+  "source": "nm6k-en"
+ },
+ {
+  "id": "investigation_number",
+  "tr": "investigation number",
+  "group": "legal_customer_records",
+  "group_tr": "hukuki_musteri_kayitlari",
+  "sensitivity": "genel nitelikli (Madde 3)",
+  "out_of_scope": false,
+  "source": "nm6k-en"
+ },
+ {
+  "id": "uets_address",
+  "tr": "uets address",
+  "group": "legal_customer_records",
+  "group_tr": "hukuki_musteri_kayitlari",
+  "sensitivity": "genel nitelikli (Madde 3)",
+  "out_of_scope": false,
+  "source": "nm6k-en"
+ },
+ {
+  "id": "notification_barcode",
+  "tr": "notification barcode",
+  "group": "legal_customer_records",
+  "group_tr": "hukuki_musteri_kayitlari",
+  "sensitivity": "genel nitelikli (Madde 3)",
+  "out_of_scope": false,
+  "source": "nm6k-en"
+ },
+ {
+  "id": "notary_record_number",
+  "tr": "notary record number",
+  "group": "legal_customer_records",
+  "group_tr": "hukuki_musteri_kayitlari",
+  "sensitivity": "genel nitelikli (Madde 3)",
+  "out_of_scope": false,
+  "source": "nm6k-en"
+ },
+ {
+  "id": "bar_registry_number",
+  "tr": "bar registry number",
+  "group": "legal_customer_records",
+  "group_tr": "hukuki_musteri_kayitlari",
+  "sensitivity": "genel nitelikli (Madde 3)",
+  "out_of_scope": false,
+  "source": "nm6k-en"
+ },
+ {
+  "id": "expert_registry_number",
+  "tr": "expert registry number",
+  "group": "legal_customer_records",
+  "group_tr": "hukuki_musteri_kayitlari",
+  "sensitivity": "genel nitelikli (Madde 3)",
+  "out_of_scope": false,
+  "source": "nm6k-en"
+ },
+ {
+  "id": "judge_prosecutor_registry_number",
+  "tr": "judge prosecutor registry number",
+  "group": "legal_customer_records",
+  "group_tr": "hukuki_musteri_kayitlari",
+  "sensitivity": "genel nitelikli (Madde 3)",
+  "out_of_scope": false,
+  "source": "nm6k-en"
+ },
+ {
+  "id": "enforcement_file_number",
+  "tr": "enforcement file number",
+  "group": "legal_customer_records",
+  "group_tr": "hukuki_musteri_kayitlari",
+  "sensitivity": "genel nitelikli (Madde 3)",
+  "out_of_scope": false,
+  "source": "nm6k-en"
+ },
+ {
+  "id": "loyalty_card_number",
+  "tr": "loyalty card number",
+  "group": "legal_customer_records",
+  "group_tr": "hukuki_musteri_kayitlari",
+  "sensitivity": "genel nitelikli (Madde 3)",
+  "out_of_scope": false,
+  "source": "nm6k-en"
+ },
+ {
+  "id": "cargo_tracking_number",
+  "tr": "cargo tracking number",
+  "group": "legal_customer_records",
+  "group_tr": "hukuki_musteri_kayitlari",
+  "sensitivity": "genel nitelikli (Madde 3)",
+  "out_of_scope": false,
+  "source": "nm6k-en"
+ },
+ {
+  "id": "civil_registry_volume_number",
+  "tr": "civil registry volume number",
+  "group": "registry_records",
+  "group_tr": "kayit_kunyesi",
+  "sensitivity": "genel nitelikli (Madde 3)",
+  "out_of_scope": false,
+  "source": "nm6k-en"
+ },
+ {
+  "id": "family_order_number",
+  "tr": "family order number",
+  "group": "registry_records",
+  "group_tr": "kayit_kunyesi",
+  "sensitivity": "genel nitelikli (Madde 3)",
+  "out_of_scope": false,
+  "source": "nm6k-en"
+ },
+ {
+  "id": "individual_order_number",
+  "tr": "individual order number",
+  "group": "registry_records",
+  "group_tr": "kayit_kunyesi",
+  "sensitivity": "genel nitelikli (Madde 3)",
+  "out_of_scope": false,
+  "source": "nm6k-en"
+ },
+ {
+  "id": "registered_place",
+  "tr": "registered place",
+  "group": "registry_records",
+  "group_tr": "kayit_kunyesi",
+  "sensitivity": "genel nitelikli (Madde 3)",
+  "out_of_scope": false,
+  "source": "nm6k-en"
+ },
+ {
+  "id": "land_parcel_number",
+  "tr": "land parcel number",
+  "group": "registry_records",
+  "group_tr": "kayit_kunyesi",
+  "sensitivity": "genel nitelikli (Madde 3)",
+  "out_of_scope": false,
+  "source": "nm6k-en"
+ },
+ {
+  "id": "independent_section_number",
+  "tr": "independent section number",
+  "group": "registry_records",
+  "group_tr": "kayit_kunyesi",
+  "sensitivity": "genel nitelikli (Madde 3)",
+  "out_of_scope": false,
+  "source": "nm6k-en"
+ }
+]

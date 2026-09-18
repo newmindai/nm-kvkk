@@ -1,0 +1,473 @@
+{
+ "block": 2000,
+ "records": 1783,
+ "nonzero_bundles": 1840,
+ "acceptance_first_pass": 0.886,
+ "relation_types_offered": 86,
+ "relation_types_expressed": 86,
+ "broken_pool": {},
+ "broken_persons": {},
+ "pool": {
+  "party_in_case": {
+   "offered": 312,
+   "expressed": 21,
+   "rate": 0.067
+  },
+  "trade_registry_of": {
+   "offered": 152,
+   "expressed": 39,
+   "rate": 0.257
+  },
+  "employer_of": {
+   "offered": 355,
+   "expressed": 103,
+   "rate": 0.29
+  },
+  "same_vehicle": {
+   "offered": 124,
+   "expressed": 44,
+   "rate": 0.355
+  },
+  "tax_id_of": {
+   "offered": 154,
+   "expressed": 27,
+   "rate": 0.175
+  },
+  "vehicle_registration_of": {
+   "offered": 140,
+   "expressed": 50,
+   "rate": 0.357
+  },
+  "national_id_of": {
+   "offered": 1524,
+   "expressed": 546,
+   "rate": 0.358
+  },
+  "drivers_license_of": {
+   "offered": 149,
+   "expressed": 27,
+   "rate": 0.181
+  },
+  "vehicle_plate_of": {
+   "offered": 155,
+   "expressed": 71,
+   "rate": 0.458
+  },
+  "bar_registry_of": {
+   "offered": 123,
+   "expressed": 17,
+   "rate": 0.138
+  },
+  "account_of": {
+   "offered": 289,
+   "expressed": 180,
+   "rate": 0.623
+  },
+  "profile_url_of": {
+   "offered": 154,
+   "expressed": 56,
+   "rate": 0.364
+  },
+  "advertising_id_of": {
+   "offered": 156,
+   "expressed": 27,
+   "rate": 0.173
+  },
+  "credential_of": {
+   "offered": 237,
+   "expressed": 22,
+   "rate": 0.093
+  },
+  "part_of_name": {
+   "offered": 383,
+   "expressed": 79,
+   "rate": 0.206
+  },
+  "judiciary_registry_of": {
+   "offered": 116,
+   "expressed": 8,
+   "rate": 0.069
+  },
+  "civil_registry_of": {
+   "offered": 337,
+   "expressed": 28,
+   "rate": 0.083
+  },
+  "initials_of": {
+   "offered": 145,
+   "expressed": 6,
+   "rate": 0.041
+  },
+  "employee_id_of": {
+   "offered": 213,
+   "expressed": 113,
+   "rate": 0.531
+  },
+  "nationality_of": {
+   "offered": 151,
+   "expressed": 69,
+   "rate": 0.457
+  },
+  "marital_status_of": {
+   "offered": 152,
+   "expressed": 48,
+   "rate": 0.316
+  },
+  "email_of": {
+   "offered": 358,
+   "expressed": 163,
+   "rate": 0.455
+  },
+  "sim_of": {
+   "offered": 158,
+   "expressed": 19,
+   "rate": 0.12
+  },
+  "iban_of": {
+   "offered": 247,
+   "expressed": 81,
+   "rate": 0.328
+  },
+  "customer_number_of": {
+   "offered": 178,
+   "expressed": 114,
+   "rate": 0.64
+  },
+  "crypto_wallet_of": {
+   "offered": 166,
+   "expressed": 5,
+   "rate": 0.03
+  },
+  "subscription_of": {
+   "offered": 159,
+   "expressed": 39,
+   "rate": 0.245
+  },
+  "bank_of_account": {
+   "offered": 206,
+   "expressed": 56,
+   "rate": 0.272
+  },
+  "id_serial_of": {
+   "offered": 155,
+   "expressed": 46,
+   "rate": 0.297
+  },
+  "property_of": {
+   "offered": 279,
+   "expressed": 87,
+   "rate": 0.312
+  },
+  "card_component_of": {
+   "offered": 296,
+   "expressed": 57,
+   "rate": 0.193
+  },
+  "invoice_recipient": {
+   "offered": 156,
+   "expressed": 43,
+   "rate": 0.276
+  },
+  "card_of": {
+   "offered": 350,
+   "expressed": 70,
+   "rate": 0.2
+  },
+  "loyalty_card_of": {
+   "offered": 160,
+   "expressed": 26,
+   "rate": 0.163
+  },
+  "credit_score_of": {
+   "offered": 172,
+   "expressed": 77,
+   "rate": 0.448
+  },
+  "place_of_birth_of": {
+   "offered": 151,
+   "expressed": 69,
+   "rate": 0.457
+  },
+  "medula_of": {
+   "offered": 155,
+   "expressed": 57,
+   "rate": 0.368
+  },
+  "yupass_of": {
+   "offered": 153,
+   "expressed": 19,
+   "rate": 0.124
+  },
+  "health_file_of": {
+   "offered": 157,
+   "expressed": 76,
+   "rate": 0.484
+  },
+  "insurance_policy_of": {
+   "offered": 171,
+   "expressed": 101,
+   "rate": 0.591
+  },
+  "social_security_of": {
+   "offered": 155,
+   "expressed": 39,
+   "rate": 0.252
+  },
+  "eprescription_of": {
+   "offered": 153,
+   "expressed": 37,
+   "rate": 0.242
+  },
+  "notary_act_of": {
+   "offered": 156,
+   "expressed": 23,
+   "rate": 0.147
+  },
+  "provision_of": {
+   "offered": 152,
+   "expressed": 49,
+   "rate": 0.322
+  },
+  "foreigner_id_of": {
+   "offered": 110,
+   "expressed": 28,
+   "rate": 0.255
+  },
+  "prescribed_by": {
+   "offered": 183,
+   "expressed": 54,
+   "rate": 0.295
+  },
+  "uets_of": {
+   "offered": 151,
+   "expressed": 11,
+   "rate": 0.073
+  },
+  "residence_of": {
+   "offered": 403,
+   "expressed": 88,
+   "rate": 0.218
+  },
+  "phone_of": {
+   "offered": 392,
+   "expressed": 140,
+   "rate": 0.357
+  },
+  "property_at": {
+   "offered": 141,
+   "expressed": 45,
+   "rate": 0.319
+  },
+  "part_of_address": {
+   "offered": 318,
+   "expressed": 12,
+   "rate": 0.038
+  },
+  "order_of": {
+   "offered": 152,
+   "expressed": 22,
+   "rate": 0.145
+  },
+  "cookie_of": {
+   "offered": 158,
+   "expressed": 24,
+   "rate": 0.152
+  },
+  "notified_via": {
+   "offered": 156,
+   "expressed": 9,
+   "rate": 0.058
+  },
+  "date_of_birth_of": {
+   "offered": 171,
+   "expressed": 105,
+   "rate": 0.614
+  },
+  "mrz_of": {
+   "offered": 152,
+   "expressed": 11,
+   "rate": 0.072
+  },
+  "passport_of": {
+   "offered": 158,
+   "expressed": 56,
+   "rate": 0.354
+  },
+  "gender_of": {
+   "offered": 151,
+   "expressed": 94,
+   "rate": 0.623
+  },
+  "ip_used_by": {
+   "offered": 159,
+   "expressed": 62,
+   "rate": 0.39
+  },
+  "student_number_of": {
+   "offered": 71,
+   "expressed": 34,
+   "rate": 0.479
+  },
+  "device_used_by": {
+   "offered": 169,
+   "expressed": 55,
+   "rate": 0.325
+  },
+  "coordinates_of": {
+   "offered": 157,
+   "expressed": 25,
+   "rate": 0.159
+  },
+  "located_at": {
+   "offered": 155,
+   "expressed": 38,
+   "rate": 0.245
+  },
+  "former_surname_of": {
+   "offered": 124,
+   "expressed": 19,
+   "rate": 0.153
+  },
+  "mothers_maiden_name_of": {
+   "offered": 96,
+   "expressed": 8,
+   "rate": 0.083
+  },
+  "vehicle_vin_of": {
+   "offered": 155,
+   "expressed": 80,
+   "rate": 0.516
+  },
+  "shipment_of": {
+   "offered": 154,
+   "expressed": 33,
+   "rate": 0.214
+  },
+  "blood_type_of": {
+   "offered": 152,
+   "expressed": 90,
+   "rate": 0.592
+  },
+  "age_of": {
+   "offered": 154,
+   "expressed": 83,
+   "rate": 0.539
+  },
+  "company_tax_of": {
+   "offered": 154,
+   "expressed": 47,
+   "rate": 0.305
+  },
+  "expert_registry_of": {
+   "offered": 91,
+   "expressed": 16,
+   "rate": 0.176
+  },
+  "mersis_of": {
+   "offered": 128,
+   "expressed": 33,
+   "rate": 0.258
+  }
+ },
+ "persons": {
+  "guarantor_of": {
+   "offered": 39,
+   "doc_not_accepted": 2,
+   "named": 37,
+   "expressed": 37,
+   "rate_when_named": 1.0
+  },
+  "authorised_signatory_of": {
+   "offered": 31,
+   "named": 28,
+   "expressed": 28,
+   "doc_not_accepted": 3,
+   "rate_when_named": 1.0
+  },
+  "relative_of": {
+   "offered": 15,
+   "named": 12,
+   "expressed": 12,
+   "doc_not_accepted": 3,
+   "rate_when_named": 1.0
+  },
+  "child_of": {
+   "offered": 16,
+   "named": 13,
+   "expressed": 13,
+   "doc_not_accepted": 3,
+   "rate_when_named": 1.0
+  },
+  "sibling_of": {
+   "offered": 19,
+   "named": 13,
+   "expressed": 12,
+   "doc_not_accepted": 6,
+   "judge_dropped": 1,
+   "rate_when_named": 0.923
+  },
+  "father_of": {
+   "offered": 15,
+   "doc_not_accepted": 1,
+   "named": 14,
+   "expressed": 14,
+   "rate_when_named": 1.0
+  },
+  "tenant_of": {
+   "offered": 26,
+   "named": 22,
+   "expressed": 21,
+   "judge_dropped": 1,
+   "doc_not_accepted": 4,
+   "rate_when_named": 0.955
+  },
+  "emergency_contact_of": {
+   "offered": 43,
+   "named": 40,
+   "expressed": 40,
+   "doc_not_accepted": 3,
+   "rate_when_named": 1.0
+  },
+  "spouse_of": {
+   "offered": 33,
+   "named": 27,
+   "expressed": 27,
+   "doc_not_accepted": 6,
+   "rate_when_named": 1.0
+  },
+  "owner_of_company": {
+   "offered": 21,
+   "named": 21,
+   "expressed": 21,
+   "rate_when_named": 1.0
+  },
+  "witness_of": {
+   "offered": 22,
+   "named": 20,
+   "expressed": 10,
+   "relation_absent": 10,
+   "doc_not_accepted": 2,
+   "rate_when_named": 0.5
+  },
+  "heir_of": {
+   "offered": 17,
+   "named": 17,
+   "expressed": 17,
+   "rate_when_named": 1.0
+  },
+  "represented_by": {
+   "offered": 15,
+   "named": 14,
+   "expressed": 13,
+   "judge_dropped": 1,
+   "doc_not_accepted": 1,
+   "rate_when_named": 0.929
+  },
+  "mother_of": {
+   "offered": 13,
+   "named": 13,
+   "expressed": 13,
+   "rate_when_named": 1.0
+  }
+ }
+}

@@ -1,0 +1,454 @@
+{
+ "mother_of": {
+  "tr": "annesi olduğu kişi",
+  "desc_tr": "İlk kişi, ikinci kişinin annesidir"
+ },
+ "father_of": {
+  "tr": "babası olduğu kişi",
+  "desc_tr": "İlk kişi, ikinci kişinin babasıdır"
+ },
+ "spouse_of": {
+  "tr": "eşi olduğu kişi",
+  "desc_tr": "İlk kişi, ikinci kişinin eşidir"
+ },
+ "child_of": {
+  "tr": "çocuğu olduğu kişi",
+  "desc_tr": "İlk kişi, ikinci kişinin çocuğudur"
+ },
+ "sibling_of": {
+  "tr": "kardeşi olduğu kişi",
+  "desc_tr": "Kişi, diğer kişinin kardeşidir"
+ },
+ "relative_of": {
+  "tr": "akrabası olduğu kişi",
+  "desc_tr": "İlk kişi, ikinci kişinin akrabasıdır"
+ },
+ "part_of_name": {
+  "tr": "parçası olduğu ad soyad",
+  "desc_tr": "İsim bileşeni veya hitap unvanı, kişinin tam adının parçasıdır"
+ },
+ "nickname_of": {
+  "tr": "lakap sahibi",
+  "desc_tr": "Lakap kişiye aittir"
+ },
+ "initials_of": {
+  "tr": "isim baş harfleri sahibi",
+  "desc_tr": "İsim baş harfleri kişiyi ifade eder"
+ },
+ "former_surname_of": {
+  "tr": "önceki soyadı sahibi",
+  "desc_tr": "Kızlık soyadı veya önceki soyadı kişiye aittir"
+ },
+ "mothers_maiden_name_of": {
+  "tr": "anne kızlık soyadı sahibi",
+  "desc_tr": "Anne kızlık soyadı kişiye aittir"
+ },
+ "date_of_birth_of": {
+  "tr": "doğum tarihi sahibi",
+  "desc_tr": "Doğum tarihi kişiye aittir"
+ },
+ "place_of_birth_of": {
+  "tr": "doğum yeri sahibi",
+  "desc_tr": "Doğum yeri bilgisi kişiye aittir"
+ },
+ "age_of": {
+  "tr": "yaş bilgisi sahibi",
+  "desc_tr": "Yaş bilgisi kişiye aittir"
+ },
+ "gender_of": {
+  "tr": "cinsiyet bilgisi sahibi",
+  "desc_tr": "Cinsiyet bilgisi kişiye aittir"
+ },
+ "marital_status_of": {
+  "tr": "medeni durum bilgisi sahibi",
+  "desc_tr": "Medeni durum bilgisi kişiye aittir"
+ },
+ "nationality_of": {
+  "tr": "uyruk bilgisi sahibi",
+  "desc_tr": "Uyruk bilgisi kişiye aittir"
+ },
+ "blood_type_of": {
+  "tr": "kan grubu sahibi",
+  "desc_tr": "Kan grubu kişiye aittir"
+ },
+ "national_id_of": {
+  "tr": "kimlik numarası sahibi",
+  "desc_tr": "Kimlik numarası kişiye aittir"
+ },
+ "foreigner_id_of": {
+  "tr": "yabancı kimlik numarası sahibi",
+  "desc_tr": "Yabancı kimlik numarası kişiye aittir"
+ },
+ "id_serial_of": {
+  "tr": "kimlik seri numarası sahibi",
+  "desc_tr": "Kimlik belgesi seri numarası kişiye aittir"
+ },
+ "passport_of": {
+  "tr": "pasaport sahibi",
+  "desc_tr": "Pasaport numarası kişiye aittir"
+ },
+ "drivers_license_of": {
+  "tr": "ehliyet sahibi",
+  "desc_tr": "Ehliyet numarası kişiye aittir"
+ },
+ "tax_id_of": {
+  "tr": "vergi kimlik numarası sahibi",
+  "desc_tr": "Vergi kimlik numarası kişiye aittir"
+ },
+ "social_security_of": {
+  "tr": "sosyal güvenlik numarası sahibi",
+  "desc_tr": "Sosyal güvenlik numarası kişiye aittir"
+ },
+ "yupass_of": {
+  "tr": "Yupass numarası sahibi",
+  "desc_tr": "Yupass numarası kişiye aittir"
+ },
+ "mrz_of": {
+  "tr": "pasaport MRZ kodu sahibi",
+  "desc_tr": "Pasaport MRZ kodu kişiye aittir"
+ },
+ "phone_of": {
+  "tr": "telefon numarası sahibi",
+  "desc_tr": "Telefon veya faks numarası kişiye aittir"
+ },
+ "email_of": {
+  "tr": "e-posta adresi sahibi",
+  "desc_tr": "E-posta veya KEP adresi kişiye aittir"
+ },
+ "residence_of": {
+  "tr": "ikamet adresi sahibi",
+  "desc_tr": "Adres, kişinin ikamet ettiği yerdir"
+ },
+ "part_of_address": {
+  "tr": "parçası olduğu adres",
+  "desc_tr": "Sokak satırı, posta kodu, ilçe veya şehir tam adresin parçasıdır"
+ },
+ "iban_of": {
+  "tr": "banka hesabı sahibi",
+  "desc_tr": "IBAN veya banka hesap numarası kişiye aittir"
+ },
+ "card_of": {
+  "tr": "kart sahibi",
+  "desc_tr": "Ödeme kartı numarası kişiye aittir"
+ },
+ "card_component_of": {
+  "tr": "parçası olduğu kart",
+  "desc_tr": "Kart son kullanma tarihi, ödeme kartı numarasına aittir"
+ },
+ "bank_of_account": {
+  "tr": "bankası olduğu hesap",
+  "desc_tr": "SWIFT veya BIC kodu, hesap numarasının bankasını belirtir"
+ },
+ "salary_of": {
+  "tr": "maaş bilgisi sahibi",
+  "desc_tr": "Maaş bilgisi kişiye aittir"
+ },
+ "credit_score_of": {
+  "tr": "kredi notu sahibi",
+  "desc_tr": "Kredi notu kişiye aittir"
+ },
+ "risk_report_of": {
+  "tr": "risk raporu sahibi",
+  "desc_tr": "Kredi risk raporu bilgisi kişiye aittir"
+ },
+ "crypto_wallet_of": {
+  "tr": "kripto cüzdanı sahibi",
+  "desc_tr": "Kripto cüzdan adresi kişiye aittir"
+ },
+ "insurance_policy_of": {
+  "tr": "sigorta poliçesi sahibi",
+  "desc_tr": "Sigorta poliçe numarası kişiye aittir"
+ },
+ "account_of": {
+  "tr": "kullanıcı hesabı sahibi",
+  "desc_tr": "Kullanıcı adı veya sosyal medya hesabı kişiye aittir"
+ },
+ "credential_of": {
+  "tr": "giriş bilgisi sahibi",
+  "desc_tr": "Parola veya oturum anahtarı kişiye aittir"
+ },
+ "device_used_by": {
+  "tr": "cihaz kullanıcısı",
+  "desc_tr": "Cihaz kimliği kişi tarafından kullanılır"
+ },
+ "ip_used_by": {
+  "tr": "IP adresi kullanıcısı",
+  "desc_tr": "IP adresi kişi tarafından kullanılır"
+ },
+ "profile_url_of": {
+  "tr": "profil bağlantısı sahibi",
+  "desc_tr": "Profil bağlantısı kişiye aittir"
+ },
+ "advertising_id_of": {
+  "tr": "reklam kimliği sahibi",
+  "desc_tr": "Reklam tanımlayıcısı kişiye aittir"
+ },
+ "cookie_of": {
+  "tr": "çerezle izlenen kişi",
+  "desc_tr": "Çerez kimliği kişiyi izler"
+ },
+ "sim_of": {
+  "tr": "SIM kartı sahibi",
+  "desc_tr": "SIM kart kimliği kişiye aittir"
+ },
+ "located_at": {
+  "tr": "konumda bulunan kişi",
+  "desc_tr": "Takip edilen konum, kişinin bulunduğu yerdir"
+ },
+ "coordinates_of": {
+  "tr": "konum verisi sahibi",
+  "desc_tr": "GPS koordinatları kişinin konumunu gösterir"
+ },
+ "workplace_of": {
+  "tr": "işyerinde çalışan kişi",
+  "desc_tr": "İşyeri konumu, kişinin çalıştığı yerdir"
+ },
+ "vehicle_plate_of": {
+  "tr": "araç plakası sahibi",
+  "desc_tr": "Araç plakası kişiye aittir"
+ },
+ "vehicle_vin_of": {
+  "tr": "şasi numarası sahibi",
+  "desc_tr": "Araç şasi (VIN) numarası kişiye aittir"
+ },
+ "vehicle_registration_of": {
+  "tr": "araç tescil belgesi sahibi",
+  "desc_tr": "Araç tescil belge numarası kişiye aittir"
+ },
+ "same_vehicle": {
+  "tr": "aynı aracın kaydı",
+  "desc_tr": "Plaka ile şasi veya ruhsat numarası aynı araca aittir"
+ },
+ "diagnosis_of": {
+  "tr": "tanı konulan kişi",
+  "desc_tr": "Tıbbi veya ruhsal hastalık tanısı kişiye konulmuştur"
+ },
+ "medication_of": {
+  "tr": "ilacı kullanan kişi",
+  "desc_tr": "İlaç kişi tarafından kullanılır"
+ },
+ "treatment_of": {
+  "tr": "tedavi uygulanan kişi",
+  "desc_tr": "Tıbbi işlem veya tedavi kişiye uygulanmıştır"
+ },
+ "disability_of": {
+  "tr": "engellilik durumu sahibi",
+  "desc_tr": "Engellilik durumu kişiye aittir"
+ },
+ "health_file_of": {
+  "tr": "sağlık dosyası sahibi",
+  "desc_tr": "Sağlık raporu veya dosya numarası kişiye aittir"
+ },
+ "medula_of": {
+  "tr": "Medula takip numarası sahibi",
+  "desc_tr": "Medula takip numarası kişiye aittir"
+ },
+ "provision_of": {
+  "tr": "provizyon numarası sahibi",
+  "desc_tr": "Provizyon numarası kişiye aittir"
+ },
+ "eprescription_of": {
+  "tr": "e-reçete sahibi",
+  "desc_tr": "E-reçete numarası kişiye aittir"
+ },
+ "prescribed_by": {
+  "tr": "reçeteyi yazan doktor",
+  "desc_tr": "Doktor diploma numarası, reçeteyi yazan doktora aittir"
+ },
+ "ethnicity_of": {
+  "tr": "etnik köken bilgisi sahibi",
+  "desc_tr": "Etnik köken bilgisi kişiye aittir"
+ },
+ "political_view_of": {
+  "tr": "siyasi görüş sahibi",
+  "desc_tr": "Siyasi görüş kişiye aittir"
+ },
+ "belief_of": {
+  "tr": "inanç bilgisi sahibi",
+  "desc_tr": "Dini veya felsefi inanç bilgisi kişiye aittir"
+ },
+ "attire_of": {
+  "tr": "kılık kıyafet bilgisi sahibi",
+  "desc_tr": "Kılık kıyafet bilgisi kişiye aittir"
+ },
+ "member_of": {
+  "tr": "üyesi olduğu kuruluş",
+  "desc_tr": "Kişi, kuruluşun üyesidir"
+ },
+ "sexual_life_of": {
+  "tr": "cinsel hayat bilgisi sahibi",
+  "desc_tr": "Cinsel hayata ilişkin bilgi kişiye aittir"
+ },
+ "conviction_of": {
+  "tr": "adli sicil kaydı sahibi",
+  "desc_tr": "Ceza mahkumiyeti veya güvenlik tedbiri kaydı kişiye aittir"
+ },
+ "biometric_of": {
+  "tr": "biyometrik veri sahibi",
+  "desc_tr": "Biyometrik veri kişiye aittir"
+ },
+ "genetic_of": {
+  "tr": "genetik veri sahibi",
+  "desc_tr": "Genetik veri kişiye aittir"
+ },
+ "signature_of": {
+  "tr": "imza sahibi",
+  "desc_tr": "İmza veya el yazısı kişiye aittir"
+ },
+ "voice_of": {
+  "tr": "ses kaydı sahibi",
+  "desc_tr": "Ses kaydı kişiye aittir"
+ },
+ "employer_of": {
+  "tr": "işvereni olduğu kişi",
+  "desc_tr": "Şirket, kişinin işverenidir"
+ },
+ "position_of": {
+  "tr": "iş unvanı sahibi",
+  "desc_tr": "İş unvanı kişiye aittir"
+ },
+ "employee_id_of": {
+  "tr": "personel numarası sahibi",
+  "desc_tr": "Personel numarası kişiye aittir"
+ },
+ "work_history_of": {
+  "tr": "iş geçmişi sahibi",
+  "desc_tr": "İş geçmişi bilgisi kişiye aittir"
+ },
+ "disciplinary_of": {
+  "tr": "disiplin kaydı sahibi",
+  "desc_tr": "Performans veya disiplin kaydı kişiye aittir"
+ },
+ "education_of": {
+  "tr": "eğitim bilgisi sahibi",
+  "desc_tr": "Eğitim bilgisi kişiye aittir"
+ },
+ "military_status_of": {
+  "tr": "askerlik durumu sahibi",
+  "desc_tr": "Askerlik durumu kişiye aittir"
+ },
+ "student_number_of": {
+  "tr": "öğrenci numarası sahibi",
+  "desc_tr": "Öğrenci numarası kişiye aittir"
+ },
+ "emergency_contact_of": {
+  "tr": "acil durum irtibatı olduğu kişi",
+  "desc_tr": "İlk kişi, ikinci kişinin acil durumda ulaşılacak kişisidir"
+ },
+ "party_in_case": {
+  "tr": "tarafı olduğu dosya",
+  "desc_tr": "Kişi, dava, icra veya soruşturma dosyasının tarafıdır"
+ },
+ "verdict_in_case": {
+  "tr": "hükmün verildiği dava",
+  "desc_tr": "Ceza mahkumiyeti bu dava dosyasında verilmiştir"
+ },
+ "customer_number_of": {
+  "tr": "müşteri numarası sahibi",
+  "desc_tr": "Müşteri numarası kişiye aittir"
+ },
+ "subscription_of": {
+  "tr": "abonelik sahibi",
+  "desc_tr": "Abonelik numarası kişiye aittir"
+ },
+ "order_of": {
+  "tr": "sipariş sahibi",
+  "desc_tr": "Sipariş referansı kişiye aittir"
+ },
+ "depicted_in": {
+  "tr": "görüntüsü kaydedilen kişi",
+  "desc_tr": "Görsel veya işitsel kayıtta kişinin görüntüsü veya sesi yer alır"
+ },
+ "uets_of": {
+  "tr": "UETS adresi sahibi",
+  "desc_tr": "UETS adresi kişiye aittir"
+ },
+ "notified_via": {
+  "tr": "tebligat muhatabı",
+  "desc_tr": "Tebligat barkodu kişiye tebligat yapılmasında kullanılır"
+ },
+ "notary_act_of": {
+  "tr": "noter kaydı sahibi",
+  "desc_tr": "Noter yevmiye numarası kişiye aittir"
+ },
+ "bar_registry_of": {
+  "tr": "baro sicil numarası sahibi",
+  "desc_tr": "Baro sicil numarası kişiye aittir"
+ },
+ "expert_registry_of": {
+  "tr": "bilirkişi sicil numarası sahibi",
+  "desc_tr": "Bilirkişi sicil numarası kişiye aittir"
+ },
+ "judiciary_registry_of": {
+  "tr": "hakim savcı sicil numarası sahibi",
+  "desc_tr": "Hakim veya savcı sicil numarası kişiye aittir"
+ },
+ "loyalty_card_of": {
+  "tr": "sadakat kartı sahibi",
+  "desc_tr": "Sadakat kartı numarası kişiye aittir"
+ },
+ "shipment_of": {
+  "tr": "gönderi sahibi",
+  "desc_tr": "Kargo takip numarası kişinin gönderisine aittir"
+ },
+ "mersis_of": {
+  "tr": "MERSİS numarası sahibi",
+  "desc_tr": "MERSİS numarası şirkete aittir"
+ },
+ "trade_registry_of": {
+  "tr": "ticaret sicil numarası sahibi",
+  "desc_tr": "Ticaret sicil numarası şirkete aittir"
+ },
+ "invoice_recipient": {
+  "tr": "fatura muhatabı",
+  "desc_tr": "Fatura belgesi kişi adına düzenlenmiştir"
+ },
+ "company_tax_of": {
+  "tr": "şirket vergi numarası sahibi",
+  "desc_tr": "Vergi numarası şirkete aittir"
+ },
+ "tax_office_of": {
+  "tr": "vergi dairesi mükellefi",
+  "desc_tr": "Vergi dairesi, kişinin vergi kaydının bulunduğu yerdir"
+ },
+ "civil_registry_of": {
+  "tr": "nüfus kaydı sahibi",
+  "desc_tr": "Nüfus kayıt bilgisi kişiye aittir"
+ },
+ "property_of": {
+  "tr": "taşınmaz sahibi",
+  "desc_tr": "Ada parsel veya bağımsız bölüm numarası kişinin mülküdür"
+ },
+ "represented_by": {
+  "tr": "vekili",
+  "desc_tr": "Kişi (vekalet veren), adına işlem yapmak üzere bir vekil tayin etmiştir"
+ },
+ "authorised_signatory_of": {
+  "tr": "imza yetkilisi olduğu şirket",
+  "desc_tr": "Kişi, şirketin imza yetkilisi veya yetkili temsilcisidir"
+ },
+ "owner_of_company": {
+  "tr": "sahibi olduğu şirket",
+  "desc_tr": "Kişi, şirketin sahibi veya ortağıdır"
+ },
+ "guarantor_of": {
+  "tr": "kefil olduğu kişi",
+  "desc_tr": "Kişi (kefil), borçlunun borcuna veya sözleşmesine kefil olmuştur"
+ },
+ "heir_of": {
+  "tr": "mirasçısı olduğu kişi",
+  "desc_tr": "Kişi, murisin mirasçısıdır"
+ },
+ "tenant_of": {
+  "tr": "kiracısı olduğu kişi",
+  "desc_tr": "Kişi (kiracı), kiraya verenin taşınmazında kiracıdır"
+ },
+ "witness_of": {
+  "tr": "tanık olduğu işlem",
+  "desc_tr": "Kişi, noter işlemine veya dava dosyasına tanık olmuştur"
+ },
+ "property_at": {
+  "tr": "taşınmazın adresi",
+  "desc_tr": "Ada/parsel veya bağımsız bölüm künyesiyle belirtilen taşınmaz bu adrestedir"
+ }
+}

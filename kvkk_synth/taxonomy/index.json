@@ -1,0 +1,2083 @@
+{
+  "version": "2.2",
+  "policy": "POLICY.md",
+  "review": "ADVERSARIAL_REVIEW.md",
+  "readme": "README.md",
+  "heuristics": "HEURISTICS.md",
+  "concepts": [
+    {
+      "file": "taxonomies/01_person_name.json",
+      "concept": {
+        "en": "person_name",
+        "tr": "kisi_adi"
+      },
+      "kvkk_sensitivity": "genel nitelikli (Madde 3)",
+      "out_of_kvkk_scope": false,
+      "node_count": 9,
+      "nodes": [
+        {
+          "id": "full_name",
+          "primary_label_en": "full_name",
+          "primary_label_tr": "tam_ad"
+        },
+        {
+          "id": "first_name",
+          "primary_label_en": "first_name",
+          "primary_label_tr": "ad"
+        },
+        {
+          "id": "middle_name",
+          "primary_label_en": "middle_name",
+          "primary_label_tr": "ikinci_ad"
+        },
+        {
+          "id": "last_name",
+          "primary_label_en": "last_name",
+          "primary_label_tr": "soyad"
+        },
+        {
+          "id": "maiden_name",
+          "primary_label_en": "maiden_name",
+          "primary_label_tr": "kizlik_soyadi"
+        },
+        {
+          "id": "mothers_maiden_name",
+          "primary_label_en": "mothers_maiden_name",
+          "primary_label_tr": "anne_kizlik_soyadi"
+        },
+        {
+          "id": "initials",
+          "primary_label_en": "initials",
+          "primary_label_tr": "bas_harfler"
+        },
+        {
+          "id": "nickname",
+          "primary_label_en": "nickname",
+          "primary_label_tr": "lakap"
+        },
+        {
+          "id": "title_honorific",
+          "primary_label_en": "title_honorific",
+          "primary_label_tr": "unvan"
+        }
+      ]
+    },
+    {
+      "file": "taxonomies/02_identity_numbers.json",
+      "concept": {
+        "en": "identity_number",
+        "tr": "kimlik_numarasi"
+      },
+      "kvkk_sensitivity": "genel nitelikli (Madde 3)",
+      "out_of_kvkk_scope": false,
+      "node_count": 9,
+      "nodes": [
+        {
+          "id": "national_id_number",
+          "primary_label_en": "national_id_number",
+          "primary_label_tr": "tc_kimlik_no"
+        },
+        {
+          "id": "foreigner_id_number",
+          "primary_label_en": "foreigner_id_number",
+          "primary_label_tr": "yabanci_kimlik_no"
+        },
+        {
+          "id": "id_document_serial",
+          "primary_label_en": "id_document_serial",
+          "primary_label_tr": "kimlik_seri_no"
+        },
+        {
+          "id": "passport_number",
+          "primary_label_en": "passport_number",
+          "primary_label_tr": "pasaport_no"
+        },
+        {
+          "id": "drivers_license_number",
+          "primary_label_en": "drivers_license_number",
+          "primary_label_tr": "surucu_belgesi_no"
+        },
+        {
+          "id": "tax_id_number",
+          "primary_label_en": "tax_id_number",
+          "primary_label_tr": "vergi_kimlik_no"
+        },
+        {
+          "id": "social_security_number",
+          "primary_label_en": "social_security_number",
+          "primary_label_tr": "sgk_sicil_no"
+        },
+        {
+          "id": "yupass_number",
+          "primary_label_en": "yupass_number",
+          "primary_label_tr": "yupass_no"
+        },
+        {
+          "id": "passport_mrz",
+          "primary_label_en": "passport_mrz",
+          "primary_label_tr": "pasaport_mrz"
+        }
+      ]
+    },
+    {
+      "file": "taxonomies/03_contact.json",
+      "concept": {
+        "en": "contact_info",
+        "tr": "iletisim_bilgisi"
+      },
+      "kvkk_sensitivity": "genel nitelikli (Madde 3)",
+      "out_of_kvkk_scope": false,
+      "node_count": 9,
+      "nodes": [
+        {
+          "id": "phone_number",
+          "primary_label_en": "phone_number",
+          "primary_label_tr": "telefon_no"
+        },
+        {
+          "id": "email_address",
+          "primary_label_en": "email_address",
+          "primary_label_tr": "eposta_adresi"
+        },
+        {
+          "id": "kep_address",
+          "primary_label_en": "kep_address",
+          "primary_label_tr": "kep_adresi"
+        },
+        {
+          "id": "full_address",
+          "primary_label_en": "full_address",
+          "primary_label_tr": "acik_adres"
+        },
+        {
+          "id": "street_line",
+          "primary_label_en": "street_line",
+          "primary_label_tr": "sokak_satiri"
+        },
+        {
+          "id": "district",
+          "primary_label_en": "district",
+          "primary_label_tr": "ilce"
+        },
+        {
+          "id": "city",
+          "primary_label_en": "city",
+          "primary_label_tr": "il"
+        },
+        {
+          "id": "postal_code",
+          "primary_label_en": "postal_code",
+          "primary_label_tr": "posta_kodu"
+        },
+        {
+          "id": "fax_number",
+          "primary_label_en": "fax_number",
+          "primary_label_tr": "faks_no"
+        }
+      ]
+    },
+    {
+      "file": "taxonomies/04_birth_civil_status.json",
+      "concept": {
+        "en": "birth_civil_status",
+        "tr": "dogum_medeni_durum"
+      },
+      "kvkk_sensitivity": "genel nitelikli (Madde 3)",
+      "out_of_kvkk_scope": false,
+      "node_count": 6,
+      "nodes": [
+        {
+          "id": "date_of_birth",
+          "primary_label_en": "date_of_birth",
+          "primary_label_tr": "dogum_tarihi"
+        },
+        {
+          "id": "place_of_birth",
+          "primary_label_en": "place_of_birth",
+          "primary_label_tr": "dogum_yeri"
+        },
+        {
+          "id": "age",
+          "primary_label_en": "age",
+          "primary_label_tr": "yas"
+        },
+        {
+          "id": "gender",
+          "primary_label_en": "gender",
+          "primary_label_tr": "cinsiyet"
+        },
+        {
+          "id": "marital_status",
+          "primary_label_en": "marital_status",
+          "primary_label_tr": "medeni_hal"
+        },
+        {
+          "id": "nationality",
+          "primary_label_en": "nationality",
+          "primary_label_tr": "uyruk"
+        }
+      ]
+    },
+    {
+      "file": "taxonomies/05_financial.json",
+      "concept": {
+        "en": "financial_info",
+        "tr": "finansal_bilgi"
+      },
+      "kvkk_sensitivity": "genel nitelikli (Madde 3)",
+      "out_of_kvkk_scope": false,
+      "node_count": 11,
+      "nodes": [
+        {
+          "id": "iban",
+          "primary_label_en": "iban",
+          "primary_label_tr": "iban"
+        },
+        {
+          "id": "card_number",
+          "primary_label_en": "card_number",
+          "primary_label_tr": "kart_no"
+        },
+        {
+          "id": "card_cvv",
+          "primary_label_en": "card_cvv",
+          "primary_label_tr": "kart_cvv"
+        },
+        {
+          "id": "card_expiry",
+          "primary_label_en": "card_expiry",
+          "primary_label_tr": "kart_son_kullanma"
+        },
+        {
+          "id": "bank_account_number",
+          "primary_label_en": "bank_account_number",
+          "primary_label_tr": "hesap_no"
+        },
+        {
+          "id": "swift_bic",
+          "primary_label_en": "swift_bic",
+          "primary_label_tr": "swift_kodu"
+        },
+        {
+          "id": "salary_info",
+          "primary_label_en": "salary_info",
+          "primary_label_tr": "maas_bilgisi"
+        },
+        {
+          "id": "credit_score",
+          "primary_label_en": "credit_score",
+          "primary_label_tr": "kredi_notu"
+        },
+        {
+          "id": "risk_report",
+          "primary_label_en": "risk_report",
+          "primary_label_tr": "risk_raporu"
+        },
+        {
+          "id": "crypto_wallet_address",
+          "primary_label_en": "crypto_wallet_address",
+          "primary_label_tr": "kripto_cuzdan_adresi"
+        },
+        {
+          "id": "insurance_policy_number",
+          "primary_label_en": "insurance_policy_number",
+          "primary_label_tr": "police_no"
+        }
+      ]
+    },
+    {
+      "file": "taxonomies/06_digital_identifiers.json",
+      "concept": {
+        "en": "digital_identifier",
+        "tr": "dijital_kimlik"
+      },
+      "kvkk_sensitivity": "genel nitelikli (Madde 3)",
+      "out_of_kvkk_scope": false,
+      "node_count": 10,
+      "nodes": [
+        {
+          "id": "ip_address",
+          "primary_label_en": "ip_address",
+          "primary_label_tr": "ip_adresi"
+        },
+        {
+          "id": "username",
+          "primary_label_en": "username",
+          "primary_label_tr": "kullanici_adi"
+        },
+        {
+          "id": "password",
+          "primary_label_en": "password",
+          "primary_label_tr": "sifre"
+        },
+        {
+          "id": "device_id",
+          "primary_label_en": "device_id",
+          "primary_label_tr": "cihaz_kimligi"
+        },
+        {
+          "id": "social_media_handle",
+          "primary_label_en": "social_media_handle",
+          "primary_label_tr": "sosyal_medya_hesabi"
+        },
+        {
+          "id": "url_with_pii",
+          "primary_label_en": "url_with_pii",
+          "primary_label_tr": "kisisel_url"
+        },
+        {
+          "id": "session_or_token",
+          "primary_label_en": "session_or_token",
+          "primary_label_tr": "oturum_anahtari"
+        },
+        {
+          "id": "advertising_id",
+          "primary_label_en": "advertising_id",
+          "primary_label_tr": "reklam_kimligi"
+        },
+        {
+          "id": "cookie_id",
+          "primary_label_en": "cookie_id",
+          "primary_label_tr": "cerez_kimligi"
+        },
+        {
+          "id": "sim_identifier",
+          "primary_label_en": "sim_identifier",
+          "primary_label_tr": "sim_kimligi"
+        }
+      ]
+    },
+    {
+      "file": "taxonomies/07_location.json",
+      "concept": {
+        "en": "location_data",
+        "tr": "konum_verisi"
+      },
+      "kvkk_sensitivity": "genel nitelikli (Madde 3)",
+      "out_of_kvkk_scope": false,
+      "node_count": 3,
+      "nodes": [
+        {
+          "id": "gps_coordinates",
+          "primary_label_en": "gps_coordinates",
+          "primary_label_tr": "gps_koordinati"
+        },
+        {
+          "id": "tracked_location",
+          "primary_label_en": "tracked_location",
+          "primary_label_tr": "takip_konumu"
+        },
+        {
+          "id": "workplace_location",
+          "primary_label_en": "workplace_location",
+          "primary_label_tr": "isyeri_konumu"
+        }
+      ]
+    },
+    {
+      "file": "taxonomies/08_vehicle.json",
+      "concept": {
+        "en": "vehicle_identifier",
+        "tr": "arac_kimligi"
+      },
+      "kvkk_sensitivity": "genel nitelikli (Madde 3)",
+      "out_of_kvkk_scope": false,
+      "node_count": 3,
+      "nodes": [
+        {
+          "id": "license_plate",
+          "primary_label_en": "license_plate",
+          "primary_label_tr": "arac_plakasi"
+        },
+        {
+          "id": "vin_chassis_number",
+          "primary_label_en": "vin_chassis_number",
+          "primary_label_tr": "sasi_no"
+        },
+        {
+          "id": "vehicle_registration_number",
+          "primary_label_en": "vehicle_registration_number",
+          "primary_label_tr": "ruhsat_no"
+        }
+      ]
+    },
+    {
+      "file": "taxonomies/09_health.json",
+      "concept": {
+        "en": "health_data",
+        "tr": "saglik_verisi"
+      },
+      "kvkk_sensitivity": "ozel nitelikli (Madde 6)",
+      "out_of_kvkk_scope": false,
+      "node_count": 11,
+      "nodes": [
+        {
+          "id": "medical_condition",
+          "primary_label_en": "medical_condition",
+          "primary_label_tr": "hastalik"
+        },
+        {
+          "id": "medication",
+          "primary_label_en": "medication",
+          "primary_label_tr": "ilac"
+        },
+        {
+          "id": "medical_procedure",
+          "primary_label_en": "medical_procedure",
+          "primary_label_tr": "tibbi_islem"
+        },
+        {
+          "id": "disability_status",
+          "primary_label_en": "disability_status",
+          "primary_label_tr": "engellilik_durumu"
+        },
+        {
+          "id": "blood_type",
+          "primary_label_en": "blood_type",
+          "primary_label_tr": "kan_grubu"
+        },
+        {
+          "id": "mental_health_info",
+          "primary_label_en": "mental_health_info",
+          "primary_label_tr": "ruh_sagligi_bilgisi"
+        },
+        {
+          "id": "health_report_id",
+          "primary_label_en": "health_report_id",
+          "primary_label_tr": "rapor_no"
+        },
+        {
+          "id": "medula_tracking_number",
+          "primary_label_en": "medula_tracking_number",
+          "primary_label_tr": "medula_takip_no"
+        },
+        {
+          "id": "provision_number",
+          "primary_label_en": "provision_number",
+          "primary_label_tr": "provizyon_no"
+        },
+        {
+          "id": "eprescription_number",
+          "primary_label_en": "eprescription_number",
+          "primary_label_tr": "erecete_no"
+        },
+        {
+          "id": "doctor_license_number",
+          "primary_label_en": "doctor_license_number",
+          "primary_label_tr": "diploma_tescil_no"
+        }
+      ]
+    },
+    {
+      "file": "taxonomies/10_special_categories.json",
+      "concept": {
+        "en": "special_category_data",
+        "tr": "ozel_nitelikli_veri"
+      },
+      "kvkk_sensitivity": "ozel nitelikli (Madde 6)",
+      "out_of_kvkk_scope": false,
+      "node_count": 13,
+      "nodes": [
+        {
+          "id": "ethnicity",
+          "primary_label_en": "ethnicity",
+          "primary_label_tr": "etnik_koken"
+        },
+        {
+          "id": "political_opinion",
+          "primary_label_en": "political_opinion",
+          "primary_label_tr": "siyasi_dusunce"
+        },
+        {
+          "id": "religious_belief",
+          "primary_label_en": "religious_belief",
+          "primary_label_tr": "dini_inanc"
+        },
+        {
+          "id": "philosophical_belief",
+          "primary_label_en": "philosophical_belief",
+          "primary_label_tr": "felsefi_inanc"
+        },
+        {
+          "id": "attire_info",
+          "primary_label_en": "attire_info",
+          "primary_label_tr": "kilik_kiyafet"
+        },
+        {
+          "id": "union_membership",
+          "primary_label_en": "union_membership",
+          "primary_label_tr": "sendika_uyeligi"
+        },
+        {
+          "id": "association_foundation_membership",
+          "primary_label_en": "association_foundation_membership",
+          "primary_label_tr": "dernek_vakif_uyeligi"
+        },
+        {
+          "id": "sexual_life_info",
+          "primary_label_en": "sexual_life_info",
+          "primary_label_tr": "cinsel_hayat_bilgisi"
+        },
+        {
+          "id": "criminal_record",
+          "primary_label_en": "criminal_record",
+          "primary_label_tr": "ceza_mahkumiyeti"
+        },
+        {
+          "id": "biometric_data_reference",
+          "primary_label_en": "biometric_data_reference",
+          "primary_label_tr": "biyometrik_veri"
+        },
+        {
+          "id": "genetic_data_reference",
+          "primary_label_en": "genetic_data_reference",
+          "primary_label_tr": "genetik_veri"
+        },
+        {
+          "id": "signature_handwriting",
+          "primary_label_en": "signature_handwriting",
+          "primary_label_tr": "imza_referansi"
+        },
+        {
+          "id": "voice_record",
+          "primary_label_en": "voice_record",
+          "primary_label_tr": "ses_kaydi"
+        }
+      ]
+    },
+    {
+      "file": "taxonomies/11_employment.json",
+      "concept": {
+        "en": "employment_info",
+        "tr": "ozluk_bilgisi"
+      },
+      "kvkk_sensitivity": "genel nitelikli (Madde 3)",
+      "out_of_kvkk_scope": false,
+      "node_count": 7,
+      "nodes": [
+        {
+          "id": "job_title",
+          "primary_label_en": "job_title",
+          "primary_label_tr": "meslek"
+        },
+        {
+          "id": "employee_id",
+          "primary_label_en": "employee_id",
+          "primary_label_tr": "sicil_no"
+        },
+        {
+          "id": "work_history",
+          "primary_label_en": "work_history",
+          "primary_label_tr": "is_gecmisi"
+        },
+        {
+          "id": "performance_disciplinary",
+          "primary_label_en": "performance_disciplinary",
+          "primary_label_tr": "disiplin_kaydi"
+        },
+        {
+          "id": "education_info",
+          "primary_label_en": "education_info",
+          "primary_label_tr": "egitim_bilgisi"
+        },
+        {
+          "id": "military_service_status",
+          "primary_label_en": "military_service_status",
+          "primary_label_tr": "askerlik_durumu"
+        },
+        {
+          "id": "student_number",
+          "primary_label_en": "student_number",
+          "primary_label_tr": "ogrenci_no"
+        }
+      ]
+    },
+    {
+      "file": "taxonomies/12_organization_out_of_scope.json",
+      "concept": {
+        "en": "organization_identifier",
+        "tr": "tuzel_kisi_kimligi"
+      },
+      "kvkk_sensitivity": "genel nitelikli (Madde 3)",
+      "out_of_kvkk_scope": true,
+      "node_count": 6,
+      "nodes": [
+        {
+          "id": "company_name",
+          "primary_label_en": "company_name",
+          "primary_label_tr": "sirket_adi"
+        },
+        {
+          "id": "mersis_number",
+          "primary_label_en": "mersis_number",
+          "primary_label_tr": "mersis_no"
+        },
+        {
+          "id": "trade_registry_number",
+          "primary_label_en": "trade_registry_number",
+          "primary_label_tr": "ticaret_sicil_no"
+        },
+        {
+          "id": "invoice_document_id",
+          "primary_label_en": "invoice_document_id",
+          "primary_label_tr": "ettn_no"
+        },
+        {
+          "id": "company_tax_number",
+          "primary_label_en": "company_tax_number",
+          "primary_label_tr": "sirket_vergi_no"
+        },
+        {
+          "id": "tax_office_name",
+          "primary_label_en": "tax_office_name",
+          "primary_label_tr": "vergi_dairesi"
+        }
+      ]
+    },
+    {
+      "file": "taxonomies/13_legal_customer_records.json",
+      "concept": {
+        "en": "legal_customer_records",
+        "tr": "hukuki_musteri_kayitlari"
+      },
+      "kvkk_sensitivity": "genel nitelikli (Madde 3)",
+      "out_of_kvkk_scope": false,
+      "node_count": 15,
+      "nodes": [
+        {
+          "id": "legal_case_number",
+          "primary_label_en": "legal_case_number",
+          "primary_label_tr": "esas_no"
+        },
+        {
+          "id": "customer_number",
+          "primary_label_en": "customer_number",
+          "primary_label_tr": "musteri_no"
+        },
+        {
+          "id": "subscription_number",
+          "primary_label_en": "subscription_number",
+          "primary_label_tr": "abone_no"
+        },
+        {
+          "id": "order_reference",
+          "primary_label_en": "order_reference",
+          "primary_label_tr": "siparis_no"
+        },
+        {
+          "id": "audiovisual_record_reference",
+          "primary_label_en": "audiovisual_record_reference",
+          "primary_label_tr": "gorsel_isitsel_kayit"
+        },
+        {
+          "id": "investigation_number",
+          "primary_label_en": "investigation_number",
+          "primary_label_tr": "sorusturma_no"
+        },
+        {
+          "id": "uets_address",
+          "primary_label_en": "uets_address",
+          "primary_label_tr": "uets_adresi"
+        },
+        {
+          "id": "notification_barcode",
+          "primary_label_en": "notification_barcode",
+          "primary_label_tr": "tebligat_barkod_no"
+        },
+        {
+          "id": "notary_record_number",
+          "primary_label_en": "notary_record_number",
+          "primary_label_tr": "noter_yevmiye_no"
+        },
+        {
+          "id": "bar_registry_number",
+          "primary_label_en": "bar_registry_number",
+          "primary_label_tr": "baro_sicil_no"
+        },
+        {
+          "id": "expert_registry_number",
+          "primary_label_en": "expert_registry_number",
+          "primary_label_tr": "bilirkisi_sicil_no"
+        },
+        {
+          "id": "judge_prosecutor_registry_number",
+          "primary_label_en": "judge_prosecutor_registry_number",
+          "primary_label_tr": "hakim_savci_sicil_no"
+        },
+        {
+          "id": "enforcement_file_number",
+          "primary_label_en": "enforcement_file_number",
+          "primary_label_tr": "icra_dosya_no"
+        },
+        {
+          "id": "loyalty_card_number",
+          "primary_label_en": "loyalty_card_number",
+          "primary_label_tr": "sadakat_kart_no"
+        },
+        {
+          "id": "cargo_tracking_number",
+          "primary_label_en": "cargo_tracking_number",
+          "primary_label_tr": "kargo_takip_no"
+        }
+      ]
+    },
+    {
+      "file": "taxonomies/15_registry_records.json",
+      "concept": {
+        "en": "registry_records",
+        "tr": "kayit_kunyesi"
+      },
+      "kvkk_sensitivity": "genel nitelikli (Madde 3)",
+      "out_of_kvkk_scope": false,
+      "node_count": 6,
+      "nodes": [
+        {
+          "id": "civil_registry_volume_number",
+          "primary_label_en": "civil_registry_volume_number",
+          "primary_label_tr": "cilt_no"
+        },
+        {
+          "id": "family_order_number",
+          "primary_label_en": "family_order_number",
+          "primary_label_tr": "aile_sira_no"
+        },
+        {
+          "id": "individual_order_number",
+          "primary_label_en": "individual_order_number",
+          "primary_label_tr": "birey_sira_no"
+        },
+        {
+          "id": "registered_place",
+          "primary_label_en": "registered_place",
+          "primary_label_tr": "kayitli_oldugu_yer"
+        },
+        {
+          "id": "land_parcel_number",
+          "primary_label_en": "land_parcel_number",
+          "primary_label_tr": "ada_parsel_no"
+        },
+        {
+          "id": "independent_section_number",
+          "primary_label_en": "independent_section_number",
+          "primary_label_tr": "bagimsiz_bolum_no"
+        }
+      ]
+    }
+  ],
+  "relations": [
+    {
+      "id": "mother_of",
+      "group": "kinship",
+      "primary_label_en": "mother_of",
+      "primary_label_tr": "annesi",
+      "head_types": [
+        "full_name",
+        "first_name"
+      ],
+      "tail_types": [
+        "full_name",
+        "first_name"
+      ]
+    },
+    {
+      "id": "father_of",
+      "group": "kinship",
+      "primary_label_en": "father_of",
+      "primary_label_tr": "babasi",
+      "head_types": [
+        "full_name",
+        "first_name"
+      ],
+      "tail_types": [
+        "full_name",
+        "first_name"
+      ]
+    },
+    {
+      "id": "spouse_of",
+      "group": "kinship",
+      "primary_label_en": "spouse_of",
+      "primary_label_tr": "esi",
+      "head_types": [
+        "full_name"
+      ],
+      "tail_types": [
+        "full_name"
+      ]
+    },
+    {
+      "id": "child_of",
+      "group": "kinship",
+      "primary_label_en": "child_of",
+      "primary_label_tr": "cocugu",
+      "head_types": [
+        "full_name",
+        "first_name"
+      ],
+      "tail_types": [
+        "full_name",
+        "first_name"
+      ]
+    },
+    {
+      "id": "sibling_of",
+      "group": "kinship",
+      "primary_label_en": "sibling_of",
+      "primary_label_tr": "kardesi",
+      "head_types": [
+        "full_name"
+      ],
+      "tail_types": [
+        "full_name"
+      ]
+    },
+    {
+      "id": "relative_of",
+      "group": "kinship",
+      "primary_label_en": "relative_of",
+      "primary_label_tr": "akrabasi",
+      "head_types": [
+        "full_name"
+      ],
+      "tail_types": [
+        "full_name"
+      ]
+    },
+    {
+      "id": "part_of_name",
+      "group": "name_variants",
+      "primary_label_en": "part_of_name",
+      "primary_label_tr": "adinin_parcasi",
+      "head_types": [
+        "first_name",
+        "middle_name",
+        "last_name",
+        "title_honorific"
+      ],
+      "tail_types": [
+        "full_name"
+      ]
+    },
+    {
+      "id": "nickname_of",
+      "group": "name_variants",
+      "primary_label_en": "nickname_of",
+      "primary_label_tr": "lakabi",
+      "head_types": [
+        "nickname"
+      ],
+      "tail_types": [
+        "full_name"
+      ]
+    },
+    {
+      "id": "initials_of",
+      "group": "name_variants",
+      "primary_label_en": "initials_of",
+      "primary_label_tr": "kisaltmasi",
+      "head_types": [
+        "initials"
+      ],
+      "tail_types": [
+        "full_name"
+      ]
+    },
+    {
+      "id": "former_surname_of",
+      "group": "name_variants",
+      "primary_label_en": "former_surname_of",
+      "primary_label_tr": "kizlik_soyadi",
+      "head_types": [
+        "maiden_name"
+      ],
+      "tail_types": [
+        "full_name"
+      ]
+    },
+    {
+      "id": "mothers_maiden_name_of",
+      "group": "name_variants",
+      "primary_label_en": "mothers_maiden_name_of",
+      "primary_label_tr": "anne_kizlik_soyadi",
+      "head_types": [
+        "mothers_maiden_name"
+      ],
+      "tail_types": [
+        "full_name"
+      ]
+    },
+    {
+      "id": "date_of_birth_of",
+      "group": "civil_attributes",
+      "primary_label_en": "date_of_birth_of",
+      "primary_label_tr": "dogum_tarihi",
+      "head_types": [
+        "date_of_birth"
+      ],
+      "tail_types": [
+        "full_name"
+      ]
+    },
+    {
+      "id": "place_of_birth_of",
+      "group": "civil_attributes",
+      "primary_label_en": "place_of_birth_of",
+      "primary_label_tr": "dogum_yeri",
+      "head_types": [
+        "place_of_birth"
+      ],
+      "tail_types": [
+        "full_name"
+      ]
+    },
+    {
+      "id": "age_of",
+      "group": "civil_attributes",
+      "primary_label_en": "age_of",
+      "primary_label_tr": "yasi",
+      "head_types": [
+        "age"
+      ],
+      "tail_types": [
+        "full_name"
+      ]
+    },
+    {
+      "id": "gender_of",
+      "group": "civil_attributes",
+      "primary_label_en": "gender_of",
+      "primary_label_tr": "cinsiyeti",
+      "head_types": [
+        "gender"
+      ],
+      "tail_types": [
+        "full_name"
+      ]
+    },
+    {
+      "id": "marital_status_of",
+      "group": "civil_attributes",
+      "primary_label_en": "marital_status_of",
+      "primary_label_tr": "medeni_hali",
+      "head_types": [
+        "marital_status"
+      ],
+      "tail_types": [
+        "full_name"
+      ]
+    },
+    {
+      "id": "nationality_of",
+      "group": "civil_attributes",
+      "primary_label_en": "nationality_of",
+      "primary_label_tr": "uyrugu",
+      "head_types": [
+        "nationality"
+      ],
+      "tail_types": [
+        "full_name"
+      ]
+    },
+    {
+      "id": "blood_type_of",
+      "group": "civil_attributes",
+      "primary_label_en": "blood_type_of",
+      "primary_label_tr": "kan_grubu",
+      "head_types": [
+        "blood_type"
+      ],
+      "tail_types": [
+        "full_name"
+      ]
+    },
+    {
+      "id": "national_id_of",
+      "group": "identity_documents",
+      "primary_label_en": "national_id_of",
+      "primary_label_tr": "tc_kimlik_numarasi",
+      "head_types": [
+        "national_id_number"
+      ],
+      "tail_types": [
+        "full_name"
+      ]
+    },
+    {
+      "id": "foreigner_id_of",
+      "group": "identity_documents",
+      "primary_label_en": "foreigner_id_of",
+      "primary_label_tr": "yabanci_kimlik_numarasi",
+      "head_types": [
+        "foreigner_id_number"
+      ],
+      "tail_types": [
+        "full_name"
+      ]
+    },
+    {
+      "id": "id_serial_of",
+      "group": "identity_documents",
+      "primary_label_en": "id_document_serial_of",
+      "primary_label_tr": "kimlik_seri_numarasi",
+      "head_types": [
+        "id_document_serial"
+      ],
+      "tail_types": [
+        "full_name"
+      ]
+    },
+    {
+      "id": "passport_of",
+      "group": "identity_documents",
+      "primary_label_en": "passport_number_of",
+      "primary_label_tr": "pasaport_numarasi",
+      "head_types": [
+        "passport_number"
+      ],
+      "tail_types": [
+        "full_name"
+      ]
+    },
+    {
+      "id": "drivers_license_of",
+      "group": "identity_documents",
+      "primary_label_en": "drivers_license_of",
+      "primary_label_tr": "ehliyet_numarasi",
+      "head_types": [
+        "drivers_license_number"
+      ],
+      "tail_types": [
+        "full_name"
+      ]
+    },
+    {
+      "id": "tax_id_of",
+      "group": "identity_documents",
+      "primary_label_en": "tax_id_of",
+      "primary_label_tr": "vergi_numarasi",
+      "head_types": [
+        "tax_id_number"
+      ],
+      "tail_types": [
+        "full_name"
+      ]
+    },
+    {
+      "id": "social_security_of",
+      "group": "identity_documents",
+      "primary_label_en": "social_security_number_of",
+      "primary_label_tr": "sgk_numarasi",
+      "head_types": [
+        "social_security_number"
+      ],
+      "tail_types": [
+        "full_name"
+      ]
+    },
+    {
+      "id": "yupass_of",
+      "group": "identity_documents",
+      "primary_label_en": "yupass_number_of",
+      "primary_label_tr": "yupass_numarasi",
+      "head_types": [
+        "yupass_number"
+      ],
+      "tail_types": [
+        "full_name"
+      ]
+    },
+    {
+      "id": "mrz_of",
+      "group": "identity_documents",
+      "primary_label_en": "passport_mrz_of",
+      "primary_label_tr": "mrz_satiri",
+      "head_types": [
+        "passport_mrz"
+      ],
+      "tail_types": [
+        "full_name"
+      ]
+    },
+    {
+      "id": "phone_of",
+      "group": "contact",
+      "primary_label_en": "phone_number_of",
+      "primary_label_tr": "telefon_numarasi",
+      "head_types": [
+        "phone_number",
+        "fax_number"
+      ],
+      "tail_types": [
+        "full_name"
+      ]
+    },
+    {
+      "id": "email_of",
+      "group": "contact",
+      "primary_label_en": "email_of",
+      "primary_label_tr": "eposta_adresi",
+      "head_types": [
+        "email_address",
+        "kep_address"
+      ],
+      "tail_types": [
+        "full_name"
+      ]
+    },
+    {
+      "id": "residence_of",
+      "group": "contact",
+      "primary_label_en": "residence_of",
+      "primary_label_tr": "ikamet_adresi",
+      "head_types": [
+        "full_address",
+        "street_line"
+      ],
+      "tail_types": [
+        "full_name"
+      ]
+    },
+    {
+      "id": "part_of_address",
+      "group": "contact",
+      "primary_label_en": "part_of_address",
+      "primary_label_tr": "adresin_parcasi",
+      "head_types": [
+        "street_line",
+        "district",
+        "city",
+        "postal_code"
+      ],
+      "tail_types": [
+        "full_address"
+      ]
+    },
+    {
+      "id": "iban_of",
+      "group": "financial",
+      "primary_label_en": "iban_of",
+      "primary_label_tr": "iban_numarasi",
+      "head_types": [
+        "iban",
+        "bank_account_number"
+      ],
+      "tail_types": [
+        "full_name"
+      ]
+    },
+    {
+      "id": "card_of",
+      "group": "financial",
+      "primary_label_en": "card_of",
+      "primary_label_tr": "kart_numarasi",
+      "head_types": [
+        "card_number"
+      ],
+      "tail_types": [
+        "full_name"
+      ]
+    },
+    {
+      "id": "card_component_of",
+      "group": "financial",
+      "primary_label_en": "card_component_of",
+      "primary_label_tr": "kartin_bileseni",
+      "head_types": [
+        "card_cvv",
+        "card_expiry"
+      ],
+      "tail_types": [
+        "card_number"
+      ]
+    },
+    {
+      "id": "bank_of_account",
+      "group": "financial",
+      "primary_label_en": "bank_of_account",
+      "primary_label_tr": "hesabin_bankasi",
+      "head_types": [
+        "swift_bic"
+      ],
+      "tail_types": [
+        "iban",
+        "bank_account_number"
+      ]
+    },
+    {
+      "id": "salary_of",
+      "group": "financial",
+      "primary_label_en": "salary_of",
+      "primary_label_tr": "maasi",
+      "head_types": [
+        "salary_info"
+      ],
+      "tail_types": [
+        "full_name"
+      ]
+    },
+    {
+      "id": "credit_score_of",
+      "group": "financial",
+      "primary_label_en": "credit_score_of",
+      "primary_label_tr": "kredi_notu",
+      "head_types": [
+        "credit_score"
+      ],
+      "tail_types": [
+        "full_name"
+      ]
+    },
+    {
+      "id": "risk_report_of",
+      "group": "financial",
+      "primary_label_en": "risk_report_of",
+      "primary_label_tr": "risk_raporu",
+      "head_types": [
+        "risk_report"
+      ],
+      "tail_types": [
+        "full_name"
+      ]
+    },
+    {
+      "id": "crypto_wallet_of",
+      "group": "financial",
+      "primary_label_en": "crypto_wallet_of",
+      "primary_label_tr": "kripto_cuzdani",
+      "head_types": [
+        "crypto_wallet_address"
+      ],
+      "tail_types": [
+        "full_name"
+      ]
+    },
+    {
+      "id": "insurance_policy_of",
+      "group": "financial",
+      "primary_label_en": "insurance_policy_of",
+      "primary_label_tr": "sigorta_policesi",
+      "head_types": [
+        "insurance_policy_number"
+      ],
+      "tail_types": [
+        "full_name"
+      ]
+    },
+    {
+      "id": "account_of",
+      "group": "digital",
+      "primary_label_en": "account_of",
+      "primary_label_tr": "kullanici_hesabi",
+      "head_types": [
+        "username",
+        "social_media_handle"
+      ],
+      "tail_types": [
+        "full_name"
+      ]
+    },
+    {
+      "id": "credential_of",
+      "group": "digital",
+      "primary_label_en": "credential_of",
+      "primary_label_tr": "sifresi",
+      "head_types": [
+        "password",
+        "session_or_token"
+      ],
+      "tail_types": [
+        "username",
+        "social_media_handle",
+        "full_name"
+      ]
+    },
+    {
+      "id": "device_used_by",
+      "group": "digital",
+      "primary_label_en": "device_used_by",
+      "primary_label_tr": "kullandigi_cihaz",
+      "head_types": [
+        "device_id"
+      ],
+      "tail_types": [
+        "full_name"
+      ]
+    },
+    {
+      "id": "ip_used_by",
+      "group": "digital",
+      "primary_label_en": "ip_used_by",
+      "primary_label_tr": "baglandigi_ip",
+      "head_types": [
+        "ip_address"
+      ],
+      "tail_types": [
+        "username",
+        "full_name"
+      ]
+    },
+    {
+      "id": "profile_url_of",
+      "group": "digital",
+      "primary_label_en": "profile_url_of",
+      "primary_label_tr": "profil_adresi",
+      "head_types": [
+        "url_with_pii"
+      ],
+      "tail_types": [
+        "full_name"
+      ]
+    },
+    {
+      "id": "advertising_id_of",
+      "group": "digital",
+      "primary_label_en": "advertising_id_of",
+      "primary_label_tr": "reklam_kimligi",
+      "head_types": [
+        "advertising_id"
+      ],
+      "tail_types": [
+        "full_name"
+      ]
+    },
+    {
+      "id": "cookie_of",
+      "group": "digital",
+      "primary_label_en": "cookie_of",
+      "primary_label_tr": "cerez_kimligi",
+      "head_types": [
+        "cookie_id"
+      ],
+      "tail_types": [
+        "username",
+        "full_name"
+      ]
+    },
+    {
+      "id": "sim_of",
+      "group": "digital",
+      "primary_label_en": "sim_identifier_of",
+      "primary_label_tr": "sim_karti",
+      "head_types": [
+        "sim_identifier"
+      ],
+      "tail_types": [
+        "full_name"
+      ]
+    },
+    {
+      "id": "located_at",
+      "group": "location",
+      "primary_label_en": "located_at",
+      "primary_label_tr": "bulundugu_yer",
+      "head_types": [
+        "tracked_location"
+      ],
+      "tail_types": [
+        "full_name"
+      ]
+    },
+    {
+      "id": "coordinates_of",
+      "group": "location",
+      "primary_label_en": "coordinates_of",
+      "primary_label_tr": "koordinati",
+      "head_types": [
+        "gps_coordinates"
+      ],
+      "tail_types": [
+        "tracked_location",
+        "full_address",
+        "full_name"
+      ]
+    },
+    {
+      "id": "workplace_of",
+      "group": "location",
+      "primary_label_en": "workplace_location_of",
+      "primary_label_tr": "calistigi_yer",
+      "head_types": [
+        "workplace_location"
+      ],
+      "tail_types": [
+        "full_name"
+      ]
+    },
+    {
+      "id": "vehicle_plate_of",
+      "group": "vehicle",
+      "primary_label_en": "vehicle_plate_of",
+      "primary_label_tr": "aracinin_plakasi",
+      "head_types": [
+        "license_plate"
+      ],
+      "tail_types": [
+        "full_name"
+      ]
+    },
+    {
+      "id": "vehicle_vin_of",
+      "group": "vehicle",
+      "primary_label_en": "vehicle_vin_of",
+      "primary_label_tr": "aracinin_sasi_numarasi",
+      "head_types": [
+        "vin_chassis_number"
+      ],
+      "tail_types": [
+        "full_name"
+      ]
+    },
+    {
+      "id": "vehicle_registration_of",
+      "group": "vehicle",
+      "primary_label_en": "vehicle_registration_of",
+      "primary_label_tr": "aracinin_ruhsati",
+      "head_types": [
+        "vehicle_registration_number"
+      ],
+      "tail_types": [
+        "full_name"
+      ]
+    },
+    {
+      "id": "same_vehicle",
+      "group": "vehicle",
+      "primary_label_en": "same_vehicle",
+      "primary_label_tr": "ayni_arac",
+      "head_types": [
+        "license_plate"
+      ],
+      "tail_types": [
+        "vin_chassis_number",
+        "vehicle_registration_number"
+      ]
+    },
+    {
+      "id": "diagnosis_of",
+      "group": "health",
+      "primary_label_en": "diagnosis_of",
+      "primary_label_tr": "tanisi",
+      "head_types": [
+        "medical_condition",
+        "mental_health_info"
+      ],
+      "tail_types": [
+        "full_name"
+      ]
+    },
+    {
+      "id": "medication_of",
+      "group": "health",
+      "primary_label_en": "medication_of",
+      "primary_label_tr": "kullandigi_ilac",
+      "head_types": [
+        "medication"
+      ],
+      "tail_types": [
+        "full_name"
+      ]
+    },
+    {
+      "id": "treatment_of",
+      "group": "health",
+      "primary_label_en": "treatment_of",
+      "primary_label_tr": "gordugu_tedavi",
+      "head_types": [
+        "medical_procedure"
+      ],
+      "tail_types": [
+        "full_name"
+      ]
+    },
+    {
+      "id": "disability_of",
+      "group": "health",
+      "primary_label_en": "disability_status_of",
+      "primary_label_tr": "engellilik_durumu",
+      "head_types": [
+        "disability_status"
+      ],
+      "tail_types": [
+        "full_name"
+      ]
+    },
+    {
+      "id": "health_file_of",
+      "group": "health",
+      "primary_label_en": "health_file_of",
+      "primary_label_tr": "hasta_dosyasi",
+      "head_types": [
+        "health_report_id"
+      ],
+      "tail_types": [
+        "full_name"
+      ]
+    },
+    {
+      "id": "medula_of",
+      "group": "health",
+      "primary_label_en": "medula_tracking_of",
+      "primary_label_tr": "medula_takip_numarasi",
+      "head_types": [
+        "medula_tracking_number"
+      ],
+      "tail_types": [
+        "full_name"
+      ]
+    },
+    {
+      "id": "provision_of",
+      "group": "health",
+      "primary_label_en": "provision_number_of",
+      "primary_label_tr": "provizyon_numarasi",
+      "head_types": [
+        "provision_number"
+      ],
+      "tail_types": [
+        "full_name"
+      ]
+    },
+    {
+      "id": "eprescription_of",
+      "group": "health",
+      "primary_label_en": "eprescription_of",
+      "primary_label_tr": "erecete_numarasi",
+      "head_types": [
+        "eprescription_number"
+      ],
+      "tail_types": [
+        "full_name"
+      ]
+    },
+    {
+      "id": "prescribed_by",
+      "group": "health",
+      "primary_label_en": "prescribed_by",
+      "primary_label_tr": "receteyi_yazan_hekim",
+      "head_types": [
+        "doctor_license_number"
+      ],
+      "tail_types": [
+        "full_name"
+      ]
+    },
+    {
+      "id": "ethnicity_of",
+      "group": "special_attribution",
+      "primary_label_en": "ethnicity_of",
+      "primary_label_tr": "etnik_kokeni",
+      "head_types": [
+        "ethnicity"
+      ],
+      "tail_types": [
+        "full_name"
+      ]
+    },
+    {
+      "id": "political_view_of",
+      "group": "special_attribution",
+      "primary_label_en": "political_view_of",
+      "primary_label_tr": "siyasi_gorusu",
+      "head_types": [
+        "political_opinion"
+      ],
+      "tail_types": [
+        "full_name"
+      ]
+    },
+    {
+      "id": "belief_of",
+      "group": "special_attribution",
+      "primary_label_en": "belief_of",
+      "primary_label_tr": "inanci",
+      "head_types": [
+        "religious_belief",
+        "philosophical_belief"
+      ],
+      "tail_types": [
+        "full_name"
+      ]
+    },
+    {
+      "id": "attire_of",
+      "group": "special_attribution",
+      "primary_label_en": "attire_info_of",
+      "primary_label_tr": "kiyafet_bilgisi",
+      "head_types": [
+        "attire_info"
+      ],
+      "tail_types": [
+        "full_name"
+      ]
+    },
+    {
+      "id": "member_of",
+      "group": "special_attribution",
+      "primary_label_en": "member_of",
+      "primary_label_tr": "uyesi",
+      "head_types": [
+        "full_name"
+      ],
+      "tail_types": [
+        "union_membership",
+        "association_foundation_membership",
+        "political_opinion",
+        "company_name"
+      ]
+    },
+    {
+      "id": "sexual_life_of",
+      "group": "special_attribution",
+      "primary_label_en": "sexual_life_info_of",
+      "primary_label_tr": "cinsel_hayat_bilgisi",
+      "head_types": [
+        "sexual_life_info"
+      ],
+      "tail_types": [
+        "full_name"
+      ]
+    },
+    {
+      "id": "conviction_of",
+      "group": "special_attribution",
+      "primary_label_en": "conviction_of",
+      "primary_label_tr": "mahkumiyeti",
+      "head_types": [
+        "criminal_record"
+      ],
+      "tail_types": [
+        "full_name"
+      ]
+    },
+    {
+      "id": "biometric_of",
+      "group": "special_attribution",
+      "primary_label_en": "biometric_data_of",
+      "primary_label_tr": "biyometrik_verisi",
+      "head_types": [
+        "biometric_data_reference"
+      ],
+      "tail_types": [
+        "full_name"
+      ]
+    },
+    {
+      "id": "genetic_of",
+      "group": "special_attribution",
+      "primary_label_en": "genetic_data_of",
+      "primary_label_tr": "genetik_verisi",
+      "head_types": [
+        "genetic_data_reference"
+      ],
+      "tail_types": [
+        "full_name"
+      ]
+    },
+    {
+      "id": "signature_of",
+      "group": "special_attribution",
+      "primary_label_en": "signature_of",
+      "primary_label_tr": "imzasi",
+      "head_types": [
+        "signature_handwriting"
+      ],
+      "tail_types": [
+        "full_name"
+      ]
+    },
+    {
+      "id": "voice_of",
+      "group": "special_attribution",
+      "primary_label_en": "voice_record_of",
+      "primary_label_tr": "ses_kaydi",
+      "head_types": [
+        "voice_record"
+      ],
+      "tail_types": [
+        "full_name"
+      ]
+    },
+    {
+      "id": "employer_of",
+      "group": "employment",
+      "primary_label_en": "employer_of",
+      "primary_label_tr": "calistigi_kurum",
+      "head_types": [
+        "company_name"
+      ],
+      "tail_types": [
+        "full_name"
+      ]
+    },
+    {
+      "id": "position_of",
+      "group": "employment",
+      "primary_label_en": "position_of",
+      "primary_label_tr": "gorevi",
+      "head_types": [
+        "job_title"
+      ],
+      "tail_types": [
+        "full_name"
+      ]
+    },
+    {
+      "id": "employee_id_of",
+      "group": "employment",
+      "primary_label_en": "employee_id_of",
+      "primary_label_tr": "sicil_numarasi",
+      "head_types": [
+        "employee_id"
+      ],
+      "tail_types": [
+        "full_name"
+      ]
+    },
+    {
+      "id": "work_history_of",
+      "group": "employment",
+      "primary_label_en": "work_history_of",
+      "primary_label_tr": "is_gecmisi",
+      "head_types": [
+        "work_history"
+      ],
+      "tail_types": [
+        "full_name"
+      ]
+    },
+    {
+      "id": "disciplinary_of",
+      "group": "employment",
+      "primary_label_en": "disciplinary_record_of",
+      "primary_label_tr": "disiplin_kaydi",
+      "head_types": [
+        "performance_disciplinary"
+      ],
+      "tail_types": [
+        "full_name"
+      ]
+    },
+    {
+      "id": "education_of",
+      "group": "employment",
+      "primary_label_en": "education_of",
+      "primary_label_tr": "egitim_bilgisi",
+      "head_types": [
+        "education_info"
+      ],
+      "tail_types": [
+        "full_name"
+      ]
+    },
+    {
+      "id": "military_status_of",
+      "group": "employment",
+      "primary_label_en": "military_status_of",
+      "primary_label_tr": "askerlik_durumu",
+      "head_types": [
+        "military_service_status"
+      ],
+      "tail_types": [
+        "full_name"
+      ]
+    },
+    {
+      "id": "student_number_of",
+      "group": "employment",
+      "primary_label_en": "student_number_of",
+      "primary_label_tr": "ogrenci_numarasi",
+      "head_types": [
+        "student_number"
+      ],
+      "tail_types": [
+        "full_name"
+      ]
+    },
+    {
+      "id": "emergency_contact_of",
+      "group": "employment",
+      "primary_label_en": "emergency_contact_of",
+      "primary_label_tr": "acil_durumda_ulasilacak_kisi",
+      "head_types": [
+        "full_name"
+      ],
+      "tail_types": [
+        "full_name"
+      ]
+    },
+    {
+      "id": "party_in_case",
+      "group": "legal_customer",
+      "primary_label_en": "party_in_case",
+      "primary_label_tr": "taraf_oldugu_dava",
+      "head_types": [
+        "full_name"
+      ],
+      "tail_types": [
+        "legal_case_number",
+        "investigation_number",
+        "enforcement_file_number"
+      ]
+    },
+    {
+      "id": "verdict_in_case",
+      "group": "legal_customer",
+      "primary_label_en": "verdict_in_case",
+      "primary_label_tr": "dosyadaki_hukum",
+      "head_types": [
+        "criminal_record"
+      ],
+      "tail_types": [
+        "legal_case_number"
+      ]
+    },
+    {
+      "id": "customer_number_of",
+      "group": "legal_customer",
+      "primary_label_en": "customer_number_of",
+      "primary_label_tr": "musteri_numarasi",
+      "head_types": [
+        "customer_number"
+      ],
+      "tail_types": [
+        "full_name"
+      ]
+    },
+    {
+      "id": "subscription_of",
+      "group": "legal_customer",
+      "primary_label_en": "subscription_of",
+      "primary_label_tr": "abone_numarasi",
+      "head_types": [
+        "subscription_number"
+      ],
+      "tail_types": [
+        "full_name",
+        "full_address"
+      ]
+    },
+    {
+      "id": "order_of",
+      "group": "legal_customer",
+      "primary_label_en": "order_of",
+      "primary_label_tr": "siparisi",
+      "head_types": [
+        "order_reference"
+      ],
+      "tail_types": [
+        "full_name"
+      ]
+    },
+    {
+      "id": "depicted_in",
+      "group": "legal_customer",
+      "primary_label_en": "depicted_in",
+      "primary_label_tr": "goruntulendigi_kayit",
+      "head_types": [
+        "audiovisual_record_reference"
+      ],
+      "tail_types": [
+        "full_name"
+      ]
+    },
+    {
+      "id": "uets_of",
+      "group": "legal_customer",
+      "primary_label_en": "uets_address_of",
+      "primary_label_tr": "uets_adresi",
+      "head_types": [
+        "uets_address"
+      ],
+      "tail_types": [
+        "full_name"
+      ]
+    },
+    {
+      "id": "notified_via",
+      "group": "legal_customer",
+      "primary_label_en": "notification_barcode_of",
+      "primary_label_tr": "tebligat_barkodu",
+      "head_types": [
+        "notification_barcode"
+      ],
+      "tail_types": [
+        "full_name"
+      ]
+    },
+    {
+      "id": "notary_act_of",
+      "group": "legal_customer",
+      "primary_label_en": "notary_record_of",
+      "primary_label_tr": "noter_islemi",
+      "head_types": [
+        "notary_record_number"
+      ],
+      "tail_types": [
+        "full_name"
+      ]
+    },
+    {
+      "id": "bar_registry_of",
+      "group": "legal_customer",
+      "primary_label_en": "bar_registry_of",
+      "primary_label_tr": "baro_sicili",
+      "head_types": [
+        "bar_registry_number"
+      ],
+      "tail_types": [
+        "full_name"
+      ]
+    },
+    {
+      "id": "expert_registry_of",
+      "group": "legal_customer",
+      "primary_label_en": "expert_registry_of",
+      "primary_label_tr": "bilirkisi_sicili",
+      "head_types": [
+        "expert_registry_number"
+      ],
+      "tail_types": [
+        "full_name"
+      ]
+    },
+    {
+      "id": "judiciary_registry_of",
+      "group": "legal_customer",
+      "primary_label_en": "judiciary_registry_of",
+      "primary_label_tr": "hakim_savci_sicili",
+      "head_types": [
+        "judge_prosecutor_registry_number"
+      ],
+      "tail_types": [
+        "full_name"
+      ]
+    },
+    {
+      "id": "loyalty_card_of",
+      "group": "legal_customer",
+      "primary_label_en": "loyalty_card_of",
+      "primary_label_tr": "sadakat_karti",
+      "head_types": [
+        "loyalty_card_number"
+      ],
+      "tail_types": [
+        "full_name"
+      ]
+    },
+    {
+      "id": "shipment_of",
+      "group": "legal_customer",
+      "primary_label_en": "cargo_tracking_of",
+      "primary_label_tr": "kargo_takibi",
+      "head_types": [
+        "cargo_tracking_number"
+      ],
+      "tail_types": [
+        "order_reference",
+        "full_name"
+      ]
+    },
+    {
+      "id": "mersis_of",
+      "group": "organization",
+      "primary_label_en": "mersis_number_of",
+      "primary_label_tr": "mersis_numarasi",
+      "head_types": [
+        "mersis_number"
+      ],
+      "tail_types": [
+        "company_name"
+      ]
+    },
+    {
+      "id": "trade_registry_of",
+      "group": "organization",
+      "primary_label_en": "trade_registry_of",
+      "primary_label_tr": "ticaret_sicil_numarasi",
+      "head_types": [
+        "trade_registry_number"
+      ],
+      "tail_types": [
+        "company_name"
+      ]
+    },
+    {
+      "id": "invoice_recipient",
+      "group": "organization",
+      "primary_label_en": "invoice_recipient",
+      "primary_label_tr": "faturanin_muhatabi",
+      "head_types": [
+        "invoice_document_id"
+      ],
+      "tail_types": [
+        "full_name",
+        "company_name"
+      ]
+    },
+    {
+      "id": "company_tax_of",
+      "group": "organization",
+      "primary_label_en": "company_tax_number_of",
+      "primary_label_tr": "sirketin_vergi_numarasi",
+      "head_types": [
+        "company_tax_number"
+      ],
+      "tail_types": [
+        "company_name"
+      ]
+    },
+    {
+      "id": "tax_office_of",
+      "group": "organization",
+      "primary_label_en": "tax_office_of",
+      "primary_label_tr": "vergi_dairesi",
+      "head_types": [
+        "tax_office_name"
+      ],
+      "tail_types": [
+        "full_name",
+        "company_name"
+      ]
+    },
+    {
+      "id": "civil_registry_of",
+      "group": "registry",
+      "primary_label_en": "civil_registry_of",
+      "primary_label_tr": "nufus_kaydi",
+      "head_types": [
+        "civil_registry_volume_number",
+        "family_order_number",
+        "individual_order_number",
+        "registered_place"
+      ],
+      "tail_types": [
+        "full_name"
+      ]
+    },
+    {
+      "id": "property_of",
+      "group": "registry",
+      "primary_label_en": "property_of",
+      "primary_label_tr": "tasinmazi",
+      "head_types": [
+        "land_parcel_number",
+        "independent_section_number"
+      ],
+      "tail_types": [
+        "full_name"
+      ]
+    }
+  ],
+  "total_nodes": 118,
+  "total_relations": 105,
+  "docs": {
+    "readme_en": "README.md",
+    "readme_tr": "README.tr.md",
+    "policy_tr": "POLICY.md",
+    "policy_en": "POLICY.en.md",
+    "review_tr": "ADVERSARIAL_REVIEW.md",
+    "review_en": "ADVERSARIAL_REVIEW.en.md",
+    "heuristics_tr": "HEURISTICS.md",
+    "heuristics_en": "HEURISTICS.en.md"
+  }
+}

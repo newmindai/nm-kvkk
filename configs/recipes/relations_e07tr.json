@@ -1,0 +1,27 @@
+{
+  "run_name": "relations_e07tr",
+  "seed": 42,
+  "model": {
+    "from_pretrained": "models/kvkk-champion"
+  },
+  "training": {
+    "num_epochs": 10000,
+    "batch_size": 4,
+    "gradient_accumulation_steps": 1,
+    "encoder_lr": 1e-05,
+    "task_lr": 0.0005,
+    "warmup_steps": 20,
+    "scheduler_type": "constant",
+    "fp16": false,
+    "bf16": true,
+    "eval_strategy": "no",
+    "save_total_limit": 1,
+    "save_best": false,
+    "logging_steps": 10,
+    "num_workers": 0,
+    "pin_memory": false,
+    "validate_data": true,
+    "report_to_wandb": false
+  },
+  "_comment": "THE PRODUCTION RELATIONS RECIPE (registry: rele07tr). Base = the KVKK entity champion (relations re-enabled by training; never train with enable_relations:false), data = e07tr: 850 records with TURKISH relation names (English originals kept as aliases at p=0.4). 2,000 steps, batch 4, 1 GPU (DDP is unsafe for relations training: the OOM-skip path is not collective), encoder 1e-5 / task 5e-4, constant after 20 warm-up steps, bf16. Result: e07 test entities 96.2 / relations 69.3 (strict, thr 0.5); real documents (vekaletname_v1) 75.8 / 38.5. Override the base with --from-pretrained."
+}

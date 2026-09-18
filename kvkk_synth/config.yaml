@@ -1,0 +1,23 @@
+# kvkk_synth/config.yaml — the knobs a run can change without editing code. new_run.sh snapshots this file into
+# the run folder; pipeline/config.py reads the run folder's copy first. Sampler constants (density shares,
+# thresholds, quotas) live in pipeline/sampler8.py and are listed in README.md under "Knobs".
+writer:
+  model: openai/gpt-5.6-luna          # OpenRouter model id
+  provider: [openai/flex]             # provider pin, allow_fallbacks=false
+  reasoning_effort: medium
+  temperature: 0.85
+  top_p: 0.95
+  max_tokens: 12288
+  workers: 16
+  repair_reasoning_effort: low
+judge:
+  model: deepseek/deepseek-v4-flash   # relation, writer-relation, negatives, untagged scan, coherence
+  workers: 8
+embeddings:
+  model: intfloat/multilingual-e5-large-instruct   # local only, never an API embedder
+sampler:
+  seed: 8
+run:
+  block: 2000                          # documents generated before the audit gate
+  review_n: 96                         # stratified review sample size
+  review_chunk: 6                      # documents per reviewer

@@ -1,0 +1,21 @@
+{
+ "IDN": "national_id_number",
+ "PNO": "phone_number",
+ "EMA": "email_address",
+ "IBN": "iban",
+ "ADD": "full_address",
+ "BRT": "date_of_birth",
+ "PBT": "place_of_birth",
+ "CCN": "card_number",
+ "IPA": "ip_address",
+ "PAS": "passport_number",
+ "DLN": "drivers_license_number",
+ "CRN": "license_plate",
+ "SER": "id_document_serial",
+ "COO": "gps_coordinates",
+ "CUS": "customer_number",
+ "WES": "url_with_pii",
+ "MAC": "device_id",
+ "HAS": "social_media_handle",
+ "PHO": "audiovisual_record_reference"
+}

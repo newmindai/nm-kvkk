@@ -1,0 +1,27 @@
+{
+  "run_name": "local_smoke",
+  "seed": 42,
+  "model": {
+    "from_pretrained": "models/gliner2.5-multi-v1"
+  },
+  "training": {
+    "max_steps": 20,
+    "batch_size": 2,
+    "gradient_accumulation_steps": 1,
+    "encoder_lr": 1e-05,
+    "task_lr": 0.0005,
+    "warmup_steps": 2,
+    "scheduler_type": "constant",
+    "fp16": false,
+    "bf16": true,
+    "eval_strategy": "no",
+    "save_total_limit": 1,
+    "save_best": false,
+    "logging_steps": 5,
+    "num_workers": 0,
+    "pin_memory": false,
+    "validate_data": true,
+    "report_to_wandb": false
+  },
+  "_comment": "Installation smoke test: 20 steps of entities + relations training from gliner2.5-multi-v1 on the toy set written by scripts/make_toy_dataset.py (recipes/smoke.sh). bf16 is used on CUDA and silently disabled elsewhere. Proves the library, the trainer, checkpoint writing and the two evaluators work on this machine; the numbers mean nothing."
+}

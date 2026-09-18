@@ -1,0 +1,12 @@
+nm-kvkk
+Copyright 2026 NewMind AI
+
+This repository includes work by third parties:
+
+- GLiNER2 (https://github.com/fastino-ai/GLiNER2), Apache License 2.0. Vendored under GLiNER2/ with the
+  modifications listed in GLiNER2/CHANGES.md.
+- Nemotron-PII catalogue (NVIDIA), CC BY 4.0. Only the domain, type, description and format fields are used as
+  generation seeds; no text or values.
+- Turkish address hierarchy: berkanumutlu/php-turkiye-il-ilce-adres (MIT; source adres.nvi.gov.tr), cross-checked
+  with ceyyyh/turkiye_mahalleleri (CC0).
+- Base checkpoints: fastino/gliner2.5-multi-v1 and newmindai/Mursit-Base, each under its own licence on Hugging Face.

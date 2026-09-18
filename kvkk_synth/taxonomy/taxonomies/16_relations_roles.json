@@ -1,0 +1,45 @@
+{
+  "concept": {"en": "role_relations", "tr": "rol_iliskileri"},
+  "layer": "relation",
+  "version": "2.2-ext1",
+  "description": "Extension proposed 2026-09-09 from the vekaletname ground truth (raw/cms_gt/vekaletname_v1): person-to-person and person-to-organisation role relations the base taxonomy lacks. Same conventions as 14_relations.json: directed, head_types/tail_types reference entity node ids, templates_tr are seeds. To be merged into the package by its owner; until then loaded alongside 14_relations.json in the build's taxonomy copy.",
+  "relation_groups": [
+    {
+      "group": "role",
+      "relations": [
+        {"id": "represented_by", "labels_en": ["represented_by", "attorney_of", "power_of_attorney"], "labels_tr": ["vekili", "vekalet_verdigi_kisi", "temsilcisi"],
+         "description": "HEAD kisisi (vekalet veren), TAIL kisisine (vekil) vekalet vermistir; TAIL, HEAD adina islem yapmaya yetkilidir.",
+         "head_types": ["full_name"], "tail_types": ["full_name"],
+         "templates_tr": ["{head}, {tail}'i vekil tayin etmiştir.", "{head} adına {tail} vekaleten hareket etmektedir.", "Vekalet veren: {head}, vekil: {tail}."]},
+        {"id": "authorised_signatory_of", "labels_en": ["authorised_signatory_of", "company_officer_of"], "labels_tr": ["imza_yetkilisi", "sirket_yetkilisi", "yetkilisi"],
+         "description": "HEAD kisisi TAIL sirketinin imza yetkilisi / yetkili temsilcisidir.",
+         "head_types": ["full_name"], "tail_types": ["company_name"],
+         "templates_tr": ["{head}, {tail} adına imzaya yetkilidir.", "{tail} şirketini temsilen {head} imzalamıştır.", "Şirket yetkilisi: {head} ({tail})."]},
+        {"id": "owner_of_company", "labels_en": ["owner_of_company", "shareholder_of"], "labels_tr": ["sahibi", "ortagi", "sirket_sahibi"],
+         "description": "HEAD kisisi TAIL sirketinin sahibi veya ortagidir.",
+         "head_types": ["full_name"], "tail_types": ["company_name"],
+         "templates_tr": ["{head}, {tail} şirketinin sahibidir.", "{tail} ortaklarından {head}", "{head}, {tail} unvanlı şirketin ortağıdır."]},
+        {"id": "guarantor_of", "labels_en": ["guarantor_of", "surety_of"], "labels_tr": ["kefili", "kefil_oldugu_kisi"],
+         "description": "HEAD kisisi (kefil), TAIL kisisinin borcuna / sozlesmesine kefil olmustur.",
+         "head_types": ["full_name"], "tail_types": ["full_name"],
+         "templates_tr": ["{head}, {tail} için kefil olmuştur.", "Kefil: {head}; borçlu: {tail}.", "{tail}'in kefili {head}'dir."]},
+        {"id": "heir_of", "labels_en": ["heir_of", "inheritor_of"], "labels_tr": ["mirascisi", "varisi"],
+         "description": "HEAD kisisi TAIL kisisinin mirascisidir (veraset ilami, tereke, miras paylasimi).",
+         "head_types": ["full_name"], "tail_types": ["full_name"],
+         "templates_tr": ["{head}, {tail}'in mirasçısıdır.", "Muris {tail}'in yasal mirasçısı {head}", "{tail}'in terekesinde {head} hak sahibidir."]},
+        {"id": "tenant_of", "labels_en": ["tenant_of", "lessee_of"], "labels_tr": ["kiracisi", "kiraya_verenin_kiracisi"],
+         "description": "HEAD kisisi (kiraci), TAIL kisisinin (kiraya veren) kiracisidir.",
+         "head_types": ["full_name"], "tail_types": ["full_name"],
+         "templates_tr": ["Kiracı {head}, kiraya veren {tail}", "{head}, {tail}'e ait taşınmazın kiracısıdır.", "{tail}, {head}'e kiraya vermiştir."]},
+        {"id": "witness_of", "labels_en": ["witness_of", "witness_in"], "labels_tr": ["tanigi", "tanik_oldugu_islem"],
+         "description": "HEAD kisisi TAIL noter islemine / dava dosyasina tanik olmustur.",
+         "head_types": ["full_name"], "tail_types": ["notary_record_number", "legal_case_number"],
+         "templates_tr": ["{head}, {tail} sayılı işlemde tanık olarak hazır bulunmuştur.", "Tanık: {head} ({tail})."]},
+        {"id": "property_at", "labels_en": ["property_at", "located_at_address"], "labels_tr": ["adresindeki_tasinmaz", "tasinmazin_adresi"],
+         "description": "HEAD tasinmaz kunyesi (ada/parsel, bagimsiz bolum) TAIL adresindeki tasinmaza aittir.",
+         "head_types": ["land_parcel_number", "independent_section_number"], "tail_types": ["full_address"],
+         "templates_tr": ["{tail} adresindeki taşınmaz ({head})", "{head} kayıtlı taşınmazın adresi: {tail}"]}
+      ]
+    }
+  ]
+}

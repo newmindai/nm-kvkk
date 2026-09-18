@@ -1,0 +1,13 @@
+# conda env for local work (Apple Silicon / Linux / CPU). Cluster runs use the container in launchers/ instead.
+#   conda env create -f environment.yml && conda activate gliner2-kvkk
+#   pip install -e GLiNER2          # optional; recipes/common.sh puts GLiNER2/ on PYTHONPATH anyway
+# Pinned to the versions the shipped models were evaluated with (requirements.txt): Python 3.11.16, torch 2.13.0,
+# transformers 4.57.6, peft 0.20.0, safetensors 0.8.0.
+name: gliner2-kvkk
+channels:
+  - conda-forge
+dependencies:
+  - python=3.11.16
+  - pip
+  - pip:
+      - -r requirements.txt

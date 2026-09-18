@@ -1,0 +1,100 @@
+{
+  "concept": { "en": "contact_info", "tr": "iletisim_bilgisi" },
+  "kvkk_category": { "en": "contact", "tr": "iletisim" },
+  "kvkk_sensitivity": "genel nitelikli (Madde 3)",
+  "span_policy": {
+    "address_granularity": "Fine modda adres bilesenleri (il, ilce, mahalle, sokak, bina no) ayri etiketlenir; coarse modda tum adres tek full_address spanidir. Veri seti fine etiketlenir.",
+    "phone_format": "Ulke kodu, parantez, bosluk ve tireler spane dahildir: '+90 (532) 123 45 67' tek span.",
+    "email": "E-posta her zaman tek tokendir; kesme ekleri span disinda ('ayse@x.com'a' -> span 'ayse@x.com')."
+  },
+  "nodes": [
+    {
+      "id": "phone_number",
+      "labels_en": ["phone_number", "mobile_number", "telephone", "gsm_number"],
+      "labels_tr": ["telefon_no", "cep_telefonu", "gsm_no", "telefon_numarasi"],
+      "description": "Sabit veya mobil telefon numarasi. TR mobil numaralari 5xx ile baslar; 0 veya +90 onekiyle yazilabilir.",
+      "validation": "TR: +90/0 + 10 hane; mobilde 5 ile baslar.",
+      "examples": [
+        { "text": "Bana +90 532 123 45 67 numarasından ulaşın.", "span": "+90 532 123 45 67" },
+        { "text": "tel 05321234567", "span": "05321234567" }
+      ]
+    },
+    {
+      "id": "email_address",
+      "labels_en": ["email_address", "email", "e_mail"],
+      "labels_tr": ["eposta_adresi", "eposta", "mail_adresi"],
+      "description": "E-posta adresi. Kisisel ve kurumsal e-postalar ayni etikettedir; kurumsal olanlar da gercek kisiyi belirleyebilir.",
+      "examples": [
+        { "text": "ayse.yilmaz@example.com adresine yazın.", "span": "ayse.yilmaz@example.com" }
+      ]
+    },
+    {
+      "id": "kep_address",
+      "labels_en": ["kep_address", "registered_email_address"],
+      "labels_tr": ["kep_adresi", "kayitli_elektronik_posta"],
+      "description": "Kayitli elektronik posta (KEP) adresi. Genellikle hs01/hs02/hs03 uzantili alan adlari icerir. E-posta ile yakalanabilir; hukuki tebligat baglaminda ayri etiket faydalidir.",
+      "examples": [
+        { "text": "KEP: ayse.yilmaz@hs01.kep.tr", "span": "ayse.yilmaz@hs01.kep.tr" }
+      ]
+    },
+    {
+      "id": "full_address",
+      "labels_en": ["full_address", "postal_address", "home_address", "address"],
+      "labels_tr": ["acik_adres", "posta_adresi", "ev_adresi", "adres"],
+      "description": "Mahalle, cadde/sokak, bina, daire, ilce ve ilin birlikte gectigi tam adres spani. Coarse modun ana etiketidir.",
+      "examples": [
+        { "text": "Adres: Çamlık Mah. Gül Sok. No:5 D:3 Kadıköy/İstanbul", "span": "Çamlık Mah. Gül Sok. No:5 D:3 Kadıköy/İstanbul" }
+      ]
+    },
+    {
+      "id": "street_line",
+      "labels_en": ["street_line", "street_address"],
+      "labels_tr": ["sokak_satiri", "cadde_sokak"],
+      "description": "Adresin mahalle/cadde/sokak/bina/daire kismi. Fine mod etiketi.",
+      "examples": [
+        { "text": "Çamlık Mah. Gül Sok. No:5 D:3 adresinde oturuyor.", "span": "Çamlık Mah. Gül Sok. No:5 D:3" }
+      ]
+    },
+    {
+      "id": "district",
+      "labels_en": ["district", "county"],
+      "labels_tr": ["ilce", "semt"],
+      "description": "Ilce veya semt adi. Tek basina dusuk riskli; adres baglaminda etiketlenir, cografi genel anlatimda etiketlenmez.",
+      "examples": [
+        { "text": "Kadıköy/İstanbul adresine kargo çıktı.", "span": "Kadıköy" }
+      ]
+    },
+    {
+      "id": "city",
+      "labels_en": ["city", "province"],
+      "labels_tr": ["il", "sehir"],
+      "description": "Il adi. Yalnizca kisiyle iliskilendirilmis adres baglaminda etiketlenir; 'Istanbul'a tasindi' gibi genel ifadeler politika geregi opsiyoneldir.",
+      "examples": [
+        { "text": "Kadıköy/İstanbul adresine kargo çıktı.", "span": "İstanbul" }
+      ]
+    },
+    {
+      "id": "postal_code",
+      "labels_en": ["postal_code", "zip_code"],
+      "labels_tr": ["posta_kodu"],
+      "description": "Posta kodu.",
+      "validation": "TR: 5 hane.",
+      "examples": [
+        { "text": "34710 Kadıköy", "span": "34710" }
+      ]
+    },
+    {
+      "id": "fax_number",
+      "labels_en": ["fax_number", "fax_no"],
+      "labels_tr": ["faks_no", "faks_numarasi"],
+      "description": "Faks numarasi. Telefonla ayni desendedir; baglam kelimesi (faks/fax) ile ayrilir.",
+      "examples": [
+        { "text": "Faks: 0212 123 45 67", "span": "0212 123 45 67" }
+      ]
+    }
+  ],
+  "negative_examples": [
+    { "text": "İstanbul Boğazı'nda tekne turu", "note": "cografi anlatim, adres degil" },
+    { "text": "Sipariş 5 iş gününde kargoda", "note": "sayi iceren metin, telefon degil" }
+  ]
+}
